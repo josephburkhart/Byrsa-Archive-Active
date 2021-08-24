@@ -1,0 +1,63 @@
+﻿FigureID,Drawn On map,Labeled on map,Map,Ref. Elev.,Notes
+B1.P.066,,,,51.92,
+B1.P.067,,,,(51.92),Reference elevation given in B1.P.066 (adjacent)
+B1.P.071,,,,51.83,
+B1.P.079-3,x,x,B1.P.078,49.13,
+B1.P.082-2,x,x,B1.P.078,50.00,
+B1.P.087,x,x,B1.P.078,50.00,Map extent markers are imprecise
+B1.P.088,,,(B1.P.078),(50.00),Reference elevation can be determined from B1.P.087 (colinear)
+B1.P.091-3,,,(B1.P.078),(49.10),Reference elevation can be determined from B2.J.078a-2
+B1.P.103,x,x,B1.J.100b,51.72,
+B1.P.108,x,x,B1.J.100b,51.61,Profile is split into two pieces that have some overlap
+B1.P.118,x,x,B1.J.100b,50.33,
+B1.P.120,x,x,B1.J.100b,49.85,
+B1.P.125,x,x,B1.P.123,50.70,Extents also shown incorrectly in B1.J.100b (width 4.13 m)
+B1.P.128-2,x,x,B1.P.128-1,53.40,
+B1.P.134,,,,50.00,
+B1.P.155-2,x,x,B1.P.153,,
+B1.P.157,x,x,B1.P.153,,
+B1.P.158-1,x,x,B1.P.153,,
+B1.P.160,x,x,B1.P.148,,
+B1.P.161-1,x,x,B1.P.148,,
+B1.P.161-2,x,x,B1.P.148,,
+B1.P.163,x,,B1.P.148,,
+B1.P.168a-2,x,x,B1.P.168a-1,56.00,
+B1.P.168a-3,x,x,B1.P.168a-1,56.00,
+B1.P.200,x,x,B1.P.199,48.53,"Multiple other reference elevations are given; width in georeferenced map has only one discontinuity (following the map symbology, which is incorrect - there should be two discontinuities)"
+B1.P.212-2,x,x,B1.P.211,44.95,
+B1.P.247,x,x,B1.P.242,(48.75),Reference elevation given in B1.P.242
+B1.P.253-2,,,(B1.P.251),47.47,
+B2.J.017,,,(B2.J.014),51.90,
+B2.J.032a,,,,46.35,"Multiple other reference elevations are given, but they are illegible"
+B2.J.048,,,(B2.J.046),48.53,Another reference elevation is given
+B2.J.068,,,(B2.J.161),(49.70),Reference elevation is given in B2.J.161
+B2.J.078a-2,x,x,B2.J.078a-1,46.80,Multiple other reference elevations are given
+B2.J.113,,,(B2.J.106a),45.05,Another reference elevation is given
+B2.J.151-2,x,x,B2.J.151-1,52.73,
+B2.J.151-3,x,x,B2.J.151-1,52.66,
+B2.J.165,x,,B2.J.161,(48.30),Reference elevation can be determined from B2.J.161 
+B2.J.167,x,,B2.J.161,(49.98),Reference elevation can be determined from B2.J.161 
+B2.J.191,x,x,B2.J.183,(50.50),Extents in B2.J.183 are very schematic; reference elevation can be determined from B2.J.185 (or from B1.P.108)
+B2.J.195,x,x,B2.J.183,50.40,Extents in B2.J.183 are very schematic; multiple other reference elevations are given
+B2.J.201,x,x,B2.J.183,49.30,Extents in B2.J.183 are very schematic and partially incorrect; multiple other reference elevations are given
+B2.J.203,x,x,B2.J.183,49.11,Extents in B2.J.183 are very schematic; multiple other reference elevations are given
+B2.J.224,x,x,B2.J.265,49.26,
+B2.J.225,x,x,B2.J.265,49.26,
+B2.J.232,x,x,B2.J.231,49.13,
+B2.J.238,x,,B2.J.247,49.18,
+B2.J.239,x,,B2.J.247,49.18,
+B2.J.243-3,x,,B2.J.218,49.43,Multiple other reference elevations are given
+B2.J.245-1,,,(B2.J.247),48.93,
+B2.J.245-2,,,(B2.J.247),49.02,
+B2.J.378,x,,B2.J.377,55.98,
+B2.J.382-1,x,,B2.J.377,55.98,
+B3.P.041-2,x,x,B3.P.041-1,49.14,
+B3.P.042-1,x,,B3.P.064a,(48.67),Reference elevation can be determined from B3.P.042-2 (adjacent)
+B3.P.042-2,x,,B3.P.064a,48.67,
+B3.P.050-1,x,,B3.P.064a,(50.55),Multiple other reference elevations are given
+B3.P.052,x,,B3.P.064a,(54.56),Reference elevation given in B3.P.064a (given also in B3.P.051)
+B3.P.054-2,x,,B3.P.064a,(55.61),Reference elevation given in B3.P.064a (given also in B3.P.053-2)
+B3.P.060-2,,,(B3.P.128-2),(54.90),Reference elevations are given in B3.P.059
+B3.P.060-3,,,(B3.P.128-2),(54.90),Reference elevations are given in B3.P.059
+B3.P.100,,,,49.14,Multiple other reference elevations are given
+B3.P.116-1,x,,B3.P.064a,(56.06),Reference elevation can be determined from B3.P.064a

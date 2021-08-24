@@ -1,0 +1,710 @@
+Source,FeatureID,Alt name,Constr,Period,Subperiod,BackupID,LocShort,LocLong
+B1.P.144a,MU-AS0001e,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",ddab6be29e6059b8e148b61efe563993,"C.IV.16; C.V.4","C.IV.16; C.V.4"
+B1.P.144a,MU-AS0002e,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",0749a68ad587205a85a23df9fa3906e3,"C.IV.11,12","C.IV.11; C.IV.12"
+"B1.P.144a (assumed S side under later wall is parallel to N side; assumed E side abutting MU-AS0018r)",MU-AR0001e,,opus quadratum,Roman,"Phase 1, Phase 2",e4cec11cf00a328ae439bdfdbf415fcc,"C.IV.11,14,15","C.IV.11; C.IV.14; C.IV.15"
+B1.P.144a (assume SE corner continues under later wall),MU-FA0002e,,opus quadratum,Roman,"Phase 1, Phase 2",d9a02f3d7fd6c1489b044d1aa6a1b05f,C.IV.14,C.IV.14
+B1.P.144a,MU-FA0001e,,opus reticulatum,Roman,"Phase 1, Phase 2",be60f296a710d05352ece541657e478c,"D.V.5,9,10","D.V.5; D.V.9; D.V.10"
+GD1980.P.320,MU-AS0003e,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",ff7460c2111525f8e4dd0a0c87fd7d0c,"C.IV.7,11","C.IV.7; C.IV.11"
+GD1980.P.320 (assumed construction identical to southwest apses),MU-AS0004e,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",51095ae6a365fe7714e3b19948345ed8,"C.IV.7,8","C.IV.7; C.IV.8"
+"GD1980.P.320 (assumed W side separated from adjacent feature in map, which appears to be rudus in Gros and Deneauve 1980: 322; assumed construction identical to MU-AS0003e)",MU-AS0005e,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",db0faac37bcce4fd610bdc82bc7c7623,"D.III.14,15","D.III.14; D.III.15"
+B3.P.064a,MU-AR0007e,,opus quadratum,Roman,Phase 2,403492b40e4bd9a0067042eb9c94b0d4,"L.VI.4,8; M.VI.1,5","L.VI.4; L.VI.8; M.VI.1; M.VI.5"
+B3.P.064a,MU-AR0008e,,opus quadratum,Roman,Phase 2,7578a211c4ffdd35ed78de4de04fe0f2,M.VI.9,M.VI.9
+B3.P.064a,MU-AR0009e,,opus quadratum,Roman,Phase 2,c18bc7c386f3ddad236bef77438a05c8,"M.VI.5,6,9,10","M.VI.5; M.VI.6; M.VI.9; M.VI.10"
+B3.P.064a,MU-AR0010e,,opus quadratum,Roman,Phase 2,2c87c8d46065ede2e961c32f18af21fb,"M.VI.13,14,15","M.VI.13; M.VI.14; M.VI.15"
+B3.P.064a,MU-AR0011e,,opus quadratum,Roman,Phase 2,5a3ac7c939c38b8cd5a3238189aac2ce,"M.VII.2,3,6","M.VII.2; M.VII.3; M.VII.6"
+GD1980.P.320 (type is implied in description),RU-0001e,,,Roman,"Phase 1, Phase 2",8d7210f84746c21ad488d456cb5002c6,"C.IV.3,7","C.IV.3; C.IV.7"
+GD1980.P.320 (type is implied in description),RU-0002e,,,Roman,"Phase 1, Phase 2",7bc96a6ab6b27044472962b29f21c87a,"C.III.15,16; C.IV.3,4","C.III.15; C.III.16; C.IV.3; C.IV.4"
+GD1980.P.320,MU-AS0013r,,"rubble joined with lime, lined with opus reticulatum",Roman,Phase 1,df497b3decc43ec9048acd38ebe5d976,"D.V.5,9","D.V.5; D.V.9"
+GD1980.P.320,MU-AS0015r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",ea42eb0d8d56e86e3ee2b4554115de84,C.V.4,C.V.4
+GD1980.P.320,MU-AS0018r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",98cf5c78c43ea2952e7f35dd082c8619,C.IV.11,C.IV.11
+GD1980.P.320 (assumed S side parallel to N side and contiguous with MU-AS0016r,MU-AR0017r,,opus quadratum,Roman,Phase 1,8103b024ff874b5bb3917689c0cc25cc,"C.IV.15; C.V.3","C.IV.15; C.V.3"
+GD1980.P.320,MU-AR0016r,,opus quadratum,Roman,Phase 1,1d3e5c5cf59020978d585c38f235a73d,"C.V.3,4","C.V.3; C.V.4"
+GD1980.P.320,MU-AR0015r,,opus quadratum,Roman,Phase 1,81cdab27437429c9d32b8c4d4819c016,"C.V.7,8","C.V.7; C.V.8"
+B1.P.168a-1,MU-AR0014r,,opus quadratum,Roman,Phase 1,231707902430bd6f6cf637cc2bafa955,"C.V.12; D.V.5,9","C.V.12; D.V.5; D.V.9"
+Assume same size and orientation as MU-FA0002e,MU-FA0010r,,opus quadratum,Roman,Phase 1,4525c926b0178ca33683f64d5a833ea6,"C.IV.14,15; C.V.2,3","C.IV.14; C.IV.15; C.V.2; C.V.3"
+Assume same size and orientation as MU-FA0002e,MU-FA0009r,,opus quadratum,Roman,Phase 1,a20aa3bdfe741023506d88ebcf572c1a,"C.V.3,7","C.V.3; C.V.7"
+Assume same size and orientation as MU-FA0002e,MU-FA0008r,,opus quadratum,Roman,Phase 1,5841c28f06988580a9e811801d92f247,"C.V.7,8","C.V.7; C.V.8"
+"Assume same size and orientation as MU-FA0002e, but truncated as in B1.P.168a-1",MU-FA0007r,,opus quadratum,Roman,Phase 1,6c756b55c8613ae8415e314decbe0cb2,C.V.12,C.V.12
+B1.P.168a-1,MU-AR0018r,,opus quadratum,Roman,"Phase 1, Phase 2",ca51ae8ca344a1a6f65f78e7dcdca723,"C.IV.10,11","C.IV.10; C.IV.11"
+B1.P.168a-1,MU-FA0011r,,opus quadratum,Roman,"Phase 1, Phase 2",b4dc2b30823cfc213a8659f55f00b2e5,C.IV.10,C.IV.10
+"GD1980.P.322 (assumed thickness 1 m; assumed construction identical to MU-AS0003e)",MU-AS0020r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",ac94d17334ba094ce64691b34ab0d230,"C.IV.4,7,8,11; D.III.14,15; D.IV.1,2,5","C.IV.4; C.IV.7; C.IV.8; C.IV.11; D.III.14; D.III.15; D.IV.1; D.IV.2; D.IV.5"
+"GD1980.P.320 (assumed thickness 1 m; assumed construction identical to MU-AS0003e)",MU-AS0021r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",c2bb160936e1e5e77f2e24a86fd2a5e1,"D.III.12,15,16; E.III.9","D.III.12; D.III.15; D.III.16; E.III.9"
+GD1980.P.320 (assumed thickness 0.6 m),MU-AR0019r,,opus quadratum,Roman,"Phase 1, Phase 2",4a697639308de42e3ad92064f85006f5,"C.IV.2,6,7","C.IV.2; C.IV.6; C.IV.7"
+GD1980.P.320,MU-FA0016r,,opus quadratum,Roman,"Phase 1, Phase 2",49eb0464f96be3ca4f27adfc80c213d0,"C.IV.2,6","C.IV.2; C.IV.6"
+GD1980.P.320,MU-AR0020r,,opus quadratum,Roman,"Phase 1, Phase 2",99d81a1947b34e7195612d3246ae8e71,"C.IV.3,7","C.IV.3; C.IV.7"
+GD1980.P.320,MU-AR0021r,,opus quadratum,Roman,"Phase 1, Phase 2",13a8c77fa947ed10447d1d55d9840375,C.IV.4,C.IV.4
+GD1980.P.320,MU-AR0022r,,opus quadratum,Roman,"Phase 1, Phase 2",3fad90c812a0010f00fc29cd91793d95,"C.III.16; C.IV.4; D.III.13; D.IV.1","C.III.16; C.IV.4; D.III.13; D.IV.1"
+GD1980.P.320,MU-AR0023r,,opus quadratum,Roman,"Phase 1, Phase 2",c8a2e96ab4d0707fe05a323cdc6ed4a6,"D.III.13,14; D.IV.1,2","D.III.13; D.III.14; D.IV.1; D.IV.2"
+GD1980.P.320,MU-AR0024r,,opus quadratum,Roman,"Phase 1, Phase 2",ef554bebe7a57364d828f5f1657458b4,"D.III.10,14","D.III.10; D.III.14"
+GD1980.P.320,MU-AR0025r,,opus quadratum,Roman,"Phase 1, Phase 2",914f976182d10b33519adfb8399dac13,"D.III.11,15","D.III.11; D.III.15"
+GD1980.P.320,MU-AR0026r,,opus quadratum,Roman,"Phase 1, Phase 2",2c08227575cc875319e89eb9563667f4,"D.III.7,11,12","D.III.7; D.III.11; D.III.12"
+GD1980.P.320,MU-AR0027r,,opus quadratum,Roman,"Phase 1, Phase 2",c1706c72466d74b93db25060cbc42aad,"D.III.8,12; E.III.9","D.III.8; D.III.12; E.III.9"
+GD1980.P.320,MU-FA0019r,,opus quadratum,Roman,"Phase 1, Phase 2",5f9ef7c7a65449a2195f1e5e9f017ea0,"C.III.16; D.III.13","C.III.16; D.III.13"
+GD1980.P.320 (assumed width 1.8 m),MU-FA0020r,,opus quadratum,Roman,"Phase 1, Phase 2",1667b1b2c8c5722e0cdd4befc7a41ab1,D.III.13,D.III.13
+GD1980.P.320 (assumed width 1.8 m),MU-FA0021r,,opus quadratum,Roman,"Phase 1, Phase 2",67af4d106a3f00a692491b54876061bf,D.III.10,D.III.10
+GD1980.P.320 (assumed length 1.8 m),MU-FA0022r,,opus quadratum,Roman,"Phase 1, Phase 2",4a4553c4a3265d06c1b4b94e8b4cdea6,"D.III.10,11","D.III.10; D.III.11"
+GD1980.P.320 (assumed width 1.8 m),MU-FA0023r,,opus quadratum,Roman,"Phase 1, Phase 2",b8bd6b8b6be23765d2db33ea552d717f,"D.III.7,8,11","D.III.7; D.III.8; D.III.11"
+"GD1980.P.320 (assumed width 1.8 m; assumed centered opening of the neighboring apse)",MU-FA0024r,,opus quadratum,Roman,"Phase 1, Phase 2",3afbdc967a62cbf8a8a4eadd94c8f5dc,D.III.8,D.III.8
+GD1980.P.320,MU-SN0001e,wall N,opus caementicium,Roman,Phase 2,7128c77ecaabb6c2f1030c6e241374c8,"C.V.7,8,11,12; D.V.1,5,6,9","C.V.7; C.V.8; C.V.11; C.V.12; D.V.1; D.V.5; D.V.6; D.V.9"
+GD1980.P.320,MU-SN0002e,wall N,opus caementicium,Roman,Phase 2,63849c53e774d0dd73b2fb820db9e123,"D.IV.15,16; D.V.2,3,4,6,7","D.IV.15; D.IV.16; D.V.2; D.V.3; D.V.4; D.V.6; D.V.7"
+GD1980.P.320,MU-SE0002e,wall Es,opus quadratum,Roman,Phase 2,bfc875aae0c34fff5969ff8052c53c8b,"D.IV.13; D.V.1,2,5,6","D.IV.13; D.V.1; D.V.2; D.V.5; D.V.6"
+GD1980.P.320,MU-SE0001e,wall Es,opus quadratum,Roman,Phase 2,031998a0db137d1ddd784d9605da7698,"C.IV.12,16; D.IV.13","C.IV.12; C.IV.16; D.IV.13"
+GD1980.P.320,MU-SX0003e,,opus caementicium,Roman,Phase 2,e23a6f7ae3b679bb36c1b1eb6d7d04a5,"D.IV.6,10,11,14,15; D.V.3","D.IV.6; D.IV.10; D.IV.11; D.IV.14; D.IV.15; D.V.3"
+GD1980.P.320,MU-SS0002e,wall S,opus caementicium,Roman,Phase 2,44107aeeb4b374a802f1aee20e2801cd,"D.IV.5,6,7,9,10","D.IV.5; D.IV.6; D.IV.7; D.IV.9; D.IV.10"
+GD1980.P.320,MU-SX0002e,,opus caementicium,Roman,Phase 2,19510accdd9677eeccbd8ad1b4c7a506,"C.IV.16; C.V.2,3,4","C.IV.16; C.V.2; C.V.3; C.V.4"
+GD1980.P.320,MU-SX0001e,,opus caementicium,Roman,Phase 2,2c4e435402debf9a08575c960c7cf050,"C.V.4,7,8","C.V.4; C.V.7; C.V.8"
+B1.P.168a-1,MU-SS0005r,wall S,opus caementicium,Roman,Phase 2,3c593af3e71771db7a65265734cb2e89,"C.IV.11,15","C.IV.11; C.IV.15"
+B1.P.168a-1,MU-SS0004r,wall S,opus caementicium,Roman,Phase 2,94853103a0b7989affbb3475e057ffd5,"C.IV.14,15","C.IV.14; C.IV.15"
+B1.P.168a-1,MU-SS0003r,wall S,opus caementicium,Roman,Phase 2,fc6858cca47b2ef426cadc0dbb12b963,C.IV.14,C.IV.14
+B1.P.168a-1,MU-SO0002r,wall O,opus caementicium,Roman,Phase 2,3fbd34db40a58fcb649e6a17de8813fc,"C.IV.14; C.V.1,2","C.IV.14; C.V.1; C.V.2"
+B1.P.168a-1 (wall in this figure is unrealistically wide),MU-SE0003r,wall Es,opus quadratum,Roman,Phase 2,54b3d3ed644655abdcf0e9acd338378a,D.IV.13,D.IV.13
+B1.P.168a-1,MU-SS0006r,wall S,opus caementicium,Roman,Phase 2,268db09592e833ce49e491d7f4779188,"C.IV.12; D.IV.5,9,10","C.IV.12; D.IV.5; D.IV.9; D.IV.10"
+B3.P.064a (shown more clearly in B3.P.013),MU-AS0011e,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 2,f1f47fa0992c98962cd1996d1ada9a23,"M.VIII.12,16","M.VIII.12; M.VIII.16"
+B3.P.064a,MU-AR0090r,,opus quadratum,Roman,Phase 2,9fd1c1f6342672683115bcb13bf95b7b,"M.VIII.12,16; N.VIII.9,13; N.IX.1","M.VIII.12; M.VIII.16; N.VIII.9; N.VIII.13; N.IX.1"
+B3.P.064a,MU-AR0089r,,opus quadratum,Roman,Phase 2,4a146ea0d84a84bf81646cd5bf87742b,"N.VIII.5,6","N.VIII.5; N.VIII.6"
+B3.P.064a,MU-AR0088r,,opus quadratum,Roman,Phase 2,4a1b1d7d1726c8cdbf480d313abf37f0,"M.VIII.4; N.VII.13; N.VIII.1","M.VIII.4; N.VII.13; N.VIII.1"
+B3.P.064a,MU-AR0087r,,opus quadratum,Roman,Phase 2,5825c821322071c41d87e91e71cfe60b,"M.VII.12,15,16; N.VII.9","M.VII.12; M.VII.15; M.VII.16; N.VII.9"
+B3.P.064a,MU-AR0086r,,opus quadratum,Roman,Phase 2,2d97d3b721fea64cd33ca5d27f928f9c,"M.VII.7,8,11","M.VII.7; M.VII.8; M.VII.11"
+B3.P.064a,MU-AR0077r,,opus quadratum,Roman,Phase 2,c8c25c4ae8a62e38e0b7fb61f37212fe,"K.V.11,15,16; K.VI.3,4","K.V.11; K.V.15; K.V.16; K.VI.3; K.VI.4"
+B3.P.064a,MU-AS0065r,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 2,ae244af09eb96a56f0681ca039421fda,"K.V.16; K.VI.3,4; L.V.9,10,13,14; L.VI.1","K.V.16; K.VI.3; K.VI.4; L.V.9; L.V.10; L.V.13; L.V.14; L.VI.1"
+B3.P.064a,MU-AR0078r,,opus quadratum,Roman,Phase 2,a3b48cf2f5dd67a2242b329cc8ec9a40,"K.V.12,16; L.V.13","K.V.12; K.V.16; L.V.13"
+B3.P.064a,MU-AR0079r,,opus quadratum,Roman,Phase 2,b2938f80ee516f97dbcfbd8d823e0343,"L.V.5,9,10","L.V.5; L.V.9; L.V.10"
+B3.P.064a,MU-AR0080r,,opus quadratum,Roman,Phase 2,f7386a26f2f7b97227967c56fcef3c07,"L.V.8,10,11,12","L.V.8; L.V.10; L.V.11; L.V.12"
+B3.P.064a,MU-AR0081r,,opus quadratum,Roman,Phase 2,d74119708aea3f32aa10d6d985a2d9b8,"L.V.15,16; L.VI.3","L.V.15; L.V.16; L.VI.3"
+B3.P.064a,MU-AR0082r,,opus quadratum,Roman,Phase 2,0b612d0f1ee0bbe955b8e96e0482a810,"L.VI.4,8; M.VI.1,5","L.VI.4; L.VI.8; M.VI.1; M.VI.5"
+B3.P.064a,MU-AR0083r,,opus quadratum,Roman,Phase 2,75a0d0224558fe65af8bbaf95b425b94,"M.VI.5,9,10","M.VI.5; M.VI.9; M.VI.10"
+B3.P.064a,MU-AR0084r,,opus quadratum,Roman,Phase 2,08e9031a09219c2608f72236cb3ea4b0,M.VI.6,M.VI.6
+B3.P.064a,MU-AR0085r,,,Roman,Phase 2,2f1ed460dae389d3cde6b3624e4ccbac,"M.VII.2,6","M.VII.2; M.VII.6"
+B3.P.064a (assumed length 2.6 m),MU-FA0084r,,opus quadratum,Roman,Phase 2,cd65fbd7bac5d27ddca5ea75a08e9a83,"L.V.8,12","L.V.8; L.V.12"
+B3.P.064a (assumed length 4.2 m),MU-FA0085r,,opus quadratum,Roman,Phase 2,60f6c52161071a46b458cb60699badab,"L.V.12,16; M.V.13","L.V.12; L.V.16; M.V.13"
+B3.P.064a (assumed length 4.2 m),MU-FA0086r,,opus quadratum,Roman,Phase 2,91ea03cd2293bf7875a830e60fa0c2b8,M.VI.1,M.VI.1
+B3.P.064a (assumed length 4.2 m),MU-FA0087r,,opus quadratum,Roman,Phase 2,c8a8ea2470df087a9bfbe7ee93e22130,"M.VI.6,10","M.VI.6; M.VI.10"
+B3.P.064a (assumed southward extent symmetrical to northward extent shown in map),MU-FA0089r,,opus quadratum,Roman,Phase 2,220e08777712f75e3d4cfa6cc5c93413,"M.VI.15; M.VII.3,4","M.VI.15; M.VII.3; M.VII.4"
+B3.P.064a (assumed length 4.2 m),MU-FA0090r,,opus quadratum,Roman,Phase 2,01ce1675145f99ed76a7bb7e3801cd0c,M.VII.8,M.VII.8
+B3.P.064a (assumed length 4.2 m),MU-FA0091r,,opus quadratum,Roman,Phase 2,e2a5e628cb42683dbf6a0a89f378ed4e,"M.VII.12; N.VII.9,13","M.VII.12; N.VII.9; N.VII.13"
+B3.P.064a (assumed length 4.2 m),MU-FA0092r,,opus quadratum,Roman,Phase 2,65f8b61f1eed3fe678101ee85024194d,"N.VII.13,14; N.VIII.1,2","N.VII.13; N.VII.14; N.VIII.1; N.VIII.2"
+B3.P.064a (assumed length 2.6 m),MU-FA0093r,,opus quadratum,Roman,Phase 2,a14832c8714f6716154334900c291941,"N.VIII.2,6","N.VIII.2; N.VIII.6"
+B3.P.064a,MU-AS0067r,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 2,e7c9950d83048f51d45a5fe620cb3a88,"M.VIII.11,12,15; N.VIII.9","M.VIII.11; M.VIII.12; M.VIII.15; N.VIII.9"
+B3.P.064a,MU-AS0008e,,,Roman,Phase 2,d07fa97720f989ffa72c737ed7faee6b,L.VI.8,L.VI.8
+"B3.P.064a (assumed length 2.3 m, proportional to coverage for northeastern apses)",MU-FA0097r,,opus quadratum,Roman,Phase 2,b616d8948d3cdc068889ed2c7237b511,"M.IX.7,8","M.IX.7; M.IX.8"
+"B3.P.064a (assumed length 3.6 m, proportional to coverage for northeastern apses)",MU-FA0096r,,opus quadratum,Roman,Phase 2,96fb1ac8e5ae1734dcef4af2248c92a9,"M.IX.4; N.IX.1","M.IX.4; N.IX.1"
+"B3.P.064a (assumed length 2.3, proportional to coverage for northeastern apses)",MU-FA0095r,,opus quadratum,Roman,Phase 2,d8738870a7270d332f64b304539c8deb,"N.VIII.13; N.IX.1","N.VIII.13; N.IX.1"
+"B3.P.064a (assumed length 2.6 m, proportional to coverage for northeastern apses)",MU-FA0080r,,opus quadratum,Roman,Phase 2,122416b8c4e22ebde4484cd3bd35bfad,"K.V.10,11","K.V.10; K.V.11"
+"B3.P.064a (assumed length 3.6 m, proportional to coverage for northeastern apses)",MU-FA0081r,,opus quadratum,Roman,Phase 2,e8a9d64c361d2caec81db2b7bd96e16e,"K.V.8,11,12","K.V.8; K.V.11; K.V.12"
+"B3.P.064a (assumed length 2.3 m, proportional to coverage for northeastern apses)",MU-FA0082r,,opus quadratum,Roman,Phase 2,357601d45cb66d3ba2aecf2fae101ef7,"K.V.8; L.V.5","K.V.8; L.V.5"
+B1.J.100b,MU-SD0002e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",a95e677781170c0850e63ccb8b48dc62,"E.IV.12,15,16; F.IV.6,9,10","E.IV.12; E.IV.15; E.IV.16; F.IV.6; F.IV.9; F.IV.10"
+B1.J.100b (assumed separate from other adjacent walls based on B2.J.010a),MU-SD0003e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",a78af3546dded039d98c296c06a153d0,F.IV.7,F.IV.7
+B1.J.100b (assumed separate from other adjacent walls based on B2.J.010a),MU-SD0004e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",711042add18a32fa52c12a3068857b5f,"F.IV.3,4,7,8; G.IV.1","F.IV.3; F.IV.4; F.IV.7; F.IV.8; G.IV.1"
+B2.J.218 (assumed separate from other adjacent walls based on B2.J.010a),MU-SD0005e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",3852dcb426b5b37dbb2163598b62cacc,"G.III.13; G.IV.1","G.III.13; G.IV.1"
+B2.J.010a,MU-SD0013r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",aff2a5d47e26ec79c998052c6e46da44,G.IV.1,G.IV.1
+B2.J.010a (assumed wall continues under later wall),MU-SD0012r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",413b2f4400af9b66020ede958510db06,F.IV.7,F.IV.7
+B2.J.010a,MU-SD0011r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",73da250eed5d8e4fbbd624df722c231d,"F.IV.6,7,10","F.IV.6; F.IV.7; F.IV.10"
+"assumed MU-SD0001e originally continuous with MU-SD0002e; assumed N side colinear with N side of MU-SD0001e",MU-SD0010r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",9d8b1b46ec02751eec123ff4ffcd5767,"E.IV.14,15; E.V.1,2","E.IV.14; E.IV.15; E.V.1; E.V.2"
+B1.P.227,MU-SF0004e,wall F,,Roman,Phase 2,187fb8ce5edf66ea7d958a9382f473f0,"H.III.13; H.IV.1","H.III.13; H.IV.1"
+B1.P.227,MU-SF0005e,wall F,,Roman,Phase 2,80f1ed6f6ee1425fc82a7cc484f99c92,"H.III.11,15","H.III.11; H.III.15"
+B1.P.227,MU-SG0003e,wall G,,Roman,"Phase 1, Phase 2",9c8d9c842404cdab73346c276e4bd269,"H.III.11,12,15,16","H.III.11; H.III.12; H.III.15; H.III.16"
+B1.P.199,MU-SD0006e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",f1b042c56f9972a9b4eeda394540093f,"H.III.5,6","H.III.5; H.III.6"
+B1.P.199,MU-SD0007e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",2e731f6a903056ec3930aaafea455a3a,"H.III.2,3,6","H.III.2; H.III.3; H.III.6"
+"D1990.K.151 (assumed same width as MU-SD0018r; assumed N side flush with AX-007)",MU-FA0058h,,,Roman,"Phase 1, Phase 2",c319762e224aa6997e5deaa6a1867ead,"J.I.14,15; J.II.2,3","J.I.14; J.I.15; J.II.2; J.II.3"
+assumed smooth façade,MU-SD0017r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",0c94158d89abf73a97490f620c090580,H.III.3,H.III.3
+assumed smooth façade,MU-SD0016r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",36544837669d1302ef559a9721a6e1ad,H.III.3,H.III.3
+B1.P.199,MU-SD0015r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",1b84d7cdbe626f8d5e5c775b7795a5a8,"H.III.2,5,6","H.III.2; H.III.5; H.III.6"
+assumed MU-SD0005e originally continuous with MU-SD0006e as shown in B2.J.010a,MU-SD0014r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",ec9b8c67ee345eec6eb88cfb12a08c7f,"G.III.8,11,12,13,14,15; G.IV.1H.III.5,9","G.III.8; G.III.11; G.III.12; G.III.13; G.III.14; G.III.15; G.IV.1; H.III.5; H.III.9"
+B1.P.227,MU-SF0008r,wall F,,Roman,Phase 2,e6fe031d7a2ea084618683f140cc748a,"H.III.11,13,14,15; H.IV.1,2","H.III.11; H.III.13; H.III.14; H.III.15; H.IV.1; H.IV.2"
+B1.P.227 and B1.P.078,MU-SF0007r,wall F,,Roman,Phase 2,2746962a063cf67ab7fa0caf41139298,"G.IV.4; H.IV.1","G.IV.4; H.IV.1"
+"B2.J.218 (this feature is also shown in B1.P.078, where it is poorly aligned with MU-SF0004e in B1.P.227, with which this feature is assumed to be contiguous)",MU-SF0003e,wall F,,Roman,Phase 2,c16307dd3dc67e7817a8e863e9e9ce2a,G.IV.4,G.IV.4
+"B1.P.186a (assumed to be more trustworthy than B1.P.078, which seems to be more poorly aligned with other maps of this area)",MU-SG0002e,wall G,,Roman,"Phase 1, Phase 2",560ece319dd6a2ac48a22ea556c1844a,"G.IV.4,7,8","G.IV.4; G.IV.7; G.IV.8"
+B1.P.186a (assumed to be part of a wall based on dotted lines on map),MU-SG0001e,wall G,,Roman,"Phase 1, Phase 2",9efab9c060286821268779c1f6e3ee6a,G.IV.10,G.IV.10
+B1.J.100b,MU-SF0002e,wall F,,Roman,Phase 2,84afc87362def01354ac88713f912288,"E.V.8; F.V.5","E.V.8; F.V.5"
+B1.J.100b,MU-SF0001e,wall F,,Roman,Phase 2,9ad12540c05dd6755fc1e91159ca0718,"E.V.7,10,11","E.V.7; E.V.10; E.V.11"
+B1.P.186a,PI-E0005e,pile E5,stones bound with clay,Roman,"Phase 1, Phase 2",14b2899f6ebe3025a74272f9abbb38fd,H.III.7,H.III.7
+"B2.J.010a (unclear if this part of the pile is extant, since it is not traced on any map except B2.J.010a; assumed to be reconstructed)",PI-E0024r,pile E5,stones bound with clay,Roman,"Phase 1, Phase 2",7327c5630886b3a8c757815276621350,"H.III.7,11","H.III.7; H.III.11"
+B1.P.186a,PI-E0004e,pile E4,stones bound with clay,Roman,"Phase 1, Phase 2",6610bd3b5ce4e555fd6ea34fea56447c,H.III.10,H.III.10
+B1.P.186a,PI-E0003e,pile E3,stones bound with clay,Roman,"Phase 1, Phase 2",89c64e724cc21aaea803fe1b396f6ecd,"H.III.9,10,13","H.III.9; H.III.10; H.III.13"
+B1.P.186a,PI-E0002e,pile E2,stones bound with clay,Roman,"Phase 1, Phase 2",13fb12954ab0abf883f970005cf3bf07,"G.III.16; H.III.13","G.III.16; H.III.13"
+B2.J.078a-1,PI-E0023r,pile E3,stones bound with clay,Roman,"Phase 1, Phase 2",06949ac6b36823c0d79f382cd5074e41,H.III.13,H.III.13
+B2.J.218,PI-E0001e,pile E1,stones bound with clay,Roman,"Phase 1, Phase 2",ac2bc6662e868514023e51f3d3d1e303,"G.III.15,16; G.IV.4","G.III.15; G.III.16; G.IV.4"
+B1.P.186a,PI-E0006e,pile E6,stones bound with clay,Roman,"Phase 1, Phase 2",3509406ecbcdb34e7514d28ce60d5e73,"G.IV.2,6","G.IV.2; G.IV.6"
+"B1.P.186a (assumed location halfway between PI-E0006e and PI-E0001e; assumed width and length of approximately 1.8 m)",PI-E0022r,pile Ea,stones bound with clay,Roman,"Phase 1, Phase 2",3b18fd156e3ba9b8a7b17cfa936d6543,G.IV.3,G.IV.3
+B1.P.186a,PI-E0009e,pile Ee,stones bound with clay,Roman,"Phase 1, Phase 2",710c41bd8f8cc6039bd1f4d623f3d27c,F.IV.11,F.IV.11
+B1.P.186a (assumed original extent based on detritus shown on map and discussion in Byrsa I: 129-130),PI-E0019r,pile Ee,stones bound with clay,Roman,"Phase 1, Phase 2",1619be3da0f94d46de73526c7887a461,"F.IV.11,12","F.IV.11; F.IV.12"
+B1.P.186a,PI-E0008e,pile Eh,stones bound with clay,Roman,"Phase 1, Phase 2",d4891d8eb74ef56ce41a6fb123c98a72,F.IV.13,F.IV.13
+assumed original width about 1.7 m,PI-E0017r,pile Eh,stones bound with clay,Roman,"Phase 1, Phase 2",900b27640d242167f0dd0d9f07881e1c,"F.IV.13,14","F.IV.13; F.IV.14"
+B1.J.100b,PI-E0007e,pile El,stones bound with clay,Roman,"Phase 1, Phase 2",754b122ae943e1c4bf7b03ffa7384040,"E.V.6,7","E.V.6; E.V.7"
+assumed original width and height about 1.65 m,PI-E0014r,pile El,stones bound with clay,Roman,"Phase 1, Phase 2",adc0367fdae90274e411635a43dc5e32,"E.V.6,7","E.V.6; E.V.7"
+B1.P.186a,PI-C0019e,pile C19,opus caementicium,Roman,Phase 2,ca08aa1c23d7e02403b95d1844ab20d0,H.II.14,H.II.14
+B1.P.186a,PI-C0018e,pile C18,opus caementicium,Roman,Phase 2,f4a022fc40f6edec7ba954122ca9f36c,"H.II.13; H.III.1","H.II.13; H.III.1"
+B1.P.186a,PI-C0017e,pile C17,opus caementicium,Roman,Phase 2,6dc8ee79ae5979ae3aca69774d05c4a5,"G.III.4; H.III.1","G.III.4; H.III.1"
+B1.P.186a,PI-C0016e,pile C16,opus caementicium,Roman,Phase 2,90cb6d5de68cda3adae4e0208b0ff362,"G.III.3,4,7,8","G.III.3; G.III.4; G.III.7; G.III.8"
+assumed original width and length about 1.8 m as shown in B2.J.106a,PI-C0023r,pile C16,opus caementicium,Roman,Phase 2,90ad7d2c6360959de7feb5bc947b8e41,"G.III.4,7,8","G.III.4; G.III.7; G.III.8"
+B1.P.186a,PI-C0015e,pile C15,opus caementicium,Roman,Phase 2,632f53768e34b485169aff8f051a329a,G.III.7,G.III.7
+B1.P.186a,PI-C0014e,pile C14,opus caementicium,Roman,Phase 2,5d5d9d8be501a7fcdfaecec4c60f378d,"G.III.6,10","G.III.6; G.III.10"
+B1.P.186a,PI-C0013e,pile C13,opus caementicium,Roman,Phase 2,7db5a06d1b99ab7800f9d37b8ac1c55d,G.III.9,G.III.9
+B1.P.186a,PI-C0012e,pile C12,opus caementicium,Roman,Phase 2,8f906fd22ee57fb586ed342f76afc766,"F.III.12,16; G.III.9,13","F.III.12; F.III.16; G.III.9; G.III.13"
+B1.P.186a,PI-C0011e,pile C11,opus caementicium,Roman,Phase 2,64c8c08056ee06a305b7b22e9f95ef2a,"F.III.15,16","F.III.15; F.III.16"
+B1.J.100b,PI-C0010e,pile C10,opus caementicium,Roman,Phase 2,975680d06724a28993b788022fe5b58a,"F.III.15; F.IV.3","F.III.15; F.IV.3"
+B1.J.100b,PI-C0009e,pile C9,opus caementicium,Roman,Phase 2,3354e8b5c8c28079a6a33faf75d23f84,F.IV.2,F.IV.2
+B1.J.100b,PI-C0008e,pile C8,opus caementicium,Roman,Phase 2,9e290f68ae4a7e89df8d7022b1618b39,"F.IV.1,2","F.IV.1; F.IV.2"
+assumed original width about 1.8 m as shown in B2.J.010a,PI-C0022r,pile C8,opus caementicium,Roman,Phase 2,3d99438bee90c38f7e66f3b541616780,"F.IV.1,5","F.IV.1; F.IV.5"
+B1.J.100b (pile continues under neighboring walls),PI-C0007e,pile C7,opus caementicium,Roman,Phase 2,f1f62cac378028f436d5ff6329a29bc7,"E.IV.8; F.IV.1,5","E.IV.8; F.IV.1; F.IV.5"
+B1.J.100b,PI-C0006e,pile C6,opus caementicium,Roman,Phase 2,624a4f9a336ac0fe372275c29805ae25,E.IV.8,E.IV.8
+B1.J.100b,PI-C0005e,pile C5,opus caementicium,Roman,Phase 2,98cbe30992c18bd34614432e26ea839e,"E.IV.7,11","E.IV.7; E.IV.11"
+B1.J.100b,PI-C0004e,pile C4,opus caementicium,Roman,Phase 2,e79e30bf58d6dde908acf0e57a8eb30f,"E.IV.10,11","E.IV.10; E.IV.11"
+B1.J.100b,PI-C0003e,pile C3,opus caementicium,Roman,Phase 2,6636520bf17ca54110108ce2ef95f3c7,"E.IV.9,10,14","E.IV.9; E.IV.10; E.IV.14"
+B1.J.100b,PI-C0002e,pile C2,opus caementicium,Roman,Phase 2,caee0acf5f0a3a77a6e347f0719af43c,E.IV.13,E.IV.13
+B1.P.144a,PI-C0001e,pile C2,opus caementicium,Roman,Phase 2,856463eec3969169077ba344e9e7550b,"D.IV.16; D.V.4","D.IV.16; D.V.4"
+B1.J.100b,PI-B0001e,pile B1,stone rubble and mortar,Roman,"Phase 1, Phase 2",a277e31c3e4a1c53d082de3f9f61ed4b,"E.IV.1,2","E.IV.1; E.IV.2"
+B1.J.100b,PI-B0002e,pile B2,stone rubble and mortar,Roman,"Phase 1, Phase 2",7c8f408e11d3567e60cd3c2b21acd092,"E.III.14; E.IV.2","E.III.14; E.IV.2"
+B1.J.100b,PI-B0003e,pile B3,stone rubble and mortar,Roman,"Phase 1, Phase 2",18185b8084fb1ffbb867182375f277e5,E.III.15,E.III.15
+B1.J.100b,PI-B0004e,pile B4,stone rubble and mortar,Roman,"Phase 1, Phase 2",2cca367e776ab4c385eeac1183af42c2,"E.III.15,16","E.III.15; E.III.16"
+B1.J.100b,PI-B0005e,pile B5,stone rubble and mortar,Roman,"Phase 1, Phase 2",f71fef2fb74c9ddd643c06146494a87a,"E.III.12,16","E.III.12; E.III.16"
+B1.P.186a,PI-B0006e,pile B6,stone rubble and mortar,Roman,"Phase 1, Phase 2",11677bbac3de81f6a2dc5f9d5b8c4b7e,F.III.9,F.III.9
+B1.P.186a,PI-B0007e,pile B7,stone rubble and mortar,Roman,"Phase 1, Phase 2",c90f2df434d672bcab886d439a583133,"F.III.6,10","F.III.6; F.III.10"
+B1.P.186a,PI-B0008e,pile B8,stone rubble and mortar,Roman,"Phase 1, Phase 2",557d825fabe62bcf5a02b7aa6d14cbf3,"F.III.6,7","F.III.6; F.III.7"
+B1.P.186a,PI-B0009e,pile B9,stone rubble and mortar,Roman,"Phase 1, Phase 2",b3867000c03e8728274331fa8d3ab039,"F.III.3,4,7,8","F.III.3; F.III.4; F.III.7; F.III.8"
+B1.P.186a,PI-B0010e,pile B10,stone rubble and mortar,Roman,"Phase 1, Phase 2",4aa6e1d815e31d364edc48e6228e9261,F.III.4,F.III.4
+B1.P.186a,PI-B0011e,pile B11,stone rubble and mortar,Roman,"Phase 1, Phase 2",e06cfac8eee843f3e35014c151fb1ea7,"F.III.4; G.III.1","F.III.4; G.III.1"
+B1.P.186a,PI-B0012r,pile B12,stone rubble and mortar,Roman,"Phase 1, Phase 2",306f44b2104d42afe1eb75ac30a5df34,"G.II.13,14; G.III.1,2","G.II.13; G.II.14; G.III.1; G.III.2"
+B1.P.186a,PI-B0013e,pile B13,stone rubble and mortar,Roman,"Phase 1, Phase 2",0ed4a73d88d5046b51586a54b9566915,"G.II.14,15","G.II.14; G.II.15"
+B2.J.010a,PI-B0014e,pile B14,stone rubble and mortar,Roman,"Phase 1, Phase 2",b1ad0b32c864e1163a0b48f6658418b8,"G.II.11,15","G.II.11; G.II.15"
+B2.J.106a,PI-B0015e,pile B15,stone rubble and mortar,Roman,"Phase 1, Phase 2",a42b30b278d352f5c52a989277c4a803,G.II.12,G.II.12
+B2.J.010a,PI-B0017e,,stone rubble and mortar,Roman,"Phase 1, Phase 2",1a471a2584e0cb16841c56701de98450,"H.II.5,6","H.II.5; H.II.6"
+B2.J.010a,PI-B0018e,,stone rubble and mortar,Roman,"Phase 1, Phase 2",62ad5507004e1ef54ff843060c052d28,"H.II.2,3,6,7","H.II.2; H.II.3; H.II.6; H.II.7"
+B2.J.010a,PI-C0020e,pile C20,opus caementicium,Roman,Phase 2,63e4400dd29ef8e698375d357db7357e,"H.II.14,15","H.II.14; H.II.15"
+B2.J.010a,PI-C0021e,pile C21,opus caementicium,Roman,Phase 2,d439ee51adeaf199fcb94d7d28e4c275,"H.II.11,12,15,16","H.II.11; H.II.12; H.II.15; H.II.16"
+B2.J.147,MU-SK0004e,wall K,opus caementicium,Roman,Phase 2,97ce69d88af4aa1f3025ea2fb54e2fb4,"G.V.6,7,10,11","G.V.6; G.V.7; G.V.10; G.V.11"
+B2.J.147,MU-SK0003e,wall K,opus caementicium,Roman,Phase 2,de2505977a8e4a107e714311efcf3b33,"G.V.9,10","G.V.9; G.V.10"
+B1.J.100b,MU-SK0002e,wall K,opus caementicium,Roman,Phase 2,a1b2d64f9eceb47ca1b5d18cfce73259,"F.V.16; G.V.13","F.V.16; G.V.13"
+B1.J.100b,MU-SK0001e,wall K,opus caementicium,Roman,Phase 2,7b89aeacd7fb662422d0a5479542bf7a,F.V.16,F.V.16
+B2.J.010a,MU-SK0009r,wall K,opus caementicium,Roman,Phase 2,b378057c71e4b44dc29946559822fcbc,F.V.16,F.V.16
+B2.J.010a,MU-SK0010r,wall K,opus caementicium,Roman,Phase 2,305cbfb0696c274646a0e7e41560733b,"F.V.16; G.V.13","F.V.16; G.V.13"
+B2.J.010a,MU-SK0011r,wall K,opus caementicium,Roman,Phase 2,b75d77b9d6c5dce2065340d3738a4667,"G.V.9,13","G.V.9; G.V.13"
+B2.J.010a,MU-SK0012r,wall K,opus caementicium,Roman,Phase 2,ab6495762cd3d41ea9869f3999aabd7d,"G.V.9,10","G.V.9; G.V.10"
+B2.J.010a,MU-SK0013r,wall K,opus caementicium,Roman,Phase 2,c1c5eada1bf7fefaa022f38054a2d470,"G.V.6,10,11","G.V.6; G.V.10; G.V.11"
+"B1.P.186a, B2.J.010a (assumed W side location following D1990.K.151; assumed N side flush with AX-004; assumed S side flush with AX-005",MU-SG0004h,wall G,,Roman,"Phase 1, Phase 2",15d8a745390acbdfc005af99ac868f92,"D.V.16; D.VI.3,4,7; E.V.10,13,14; E.VI.1","D.V.16; D.VI.3; D.VI.4; D.VI.7; E.V.10; E.V.13; E.V.14; E.VI.1"
+"B1.P.186a, B2.J.010a (assumed S side flush with AX-012)",MU-SF0006r,wall F,,Roman,Phase 2,dac2625436dad2457efaf435262d3028,"E.V.7,8,11; F.IV.12,14,15,16; F.V.1,2,3,5; G.IV.3,4,6,7,8,9,10","E.V.7; E.V.8; E.V.11; F.IV.12; F.IV.14; F.IV.15; F.IV.16; F.V.1; F.V.2; F.V.3; F.V.5; G.IV.3; G.IV.4; G.IV.6; G.IV.7; G.IV.8; G.IV.9; G.IV.10"
+B1.P.123,MU-SC0001e,wall C,,Roman,Phase 2,a7bdab2195b6aa0255fa9a6c8d243448,"E.IV.8; F.IV.5","E.IV.8; F.IV.5"
+assumed to extend to PI-C0006e based on Lapeyre 1934: pl. 2,MU-SC0002r,wall C,,Roman,Phase 2,4f738389430d69003198535a7f37c3cd,"D.IV.16; E.IV.7,8,9,10,11,12,13,14","D.IV.16; E.IV.7; E.IV.8; E.IV.9; E.IV.10; E.IV.11; E.IV.12; E.IV.13; E.IV.14"
+assumed to extend to PI-C0016e based on B1.P.098 (reproduction of Lapeyre 1934: pl. II),MU-SC0003r,wall C,,Roman,Phase 2,1dfb6907ba0399ed63716d25379efaa0,"F.III.12,15,16; F.IV.1,2,3,5; G.III.3,4,6,7,8,9,10,13","F.III.12; F.III.15; F.III.16; F.IV.1; F.IV.2; F.IV.3; F.IV.5; G.III.3; G.III.4; G.III.6; G.III.7; G.III.8; G.III.9; G.III.10; G.III.13"
+D1990.K.148,MU-SK0006e,wall K,opus caementicium,Roman,Phase 2,fc2afc91b209e1ab03c81f82c09b1907,"G.V.4,8; H.V.1,5","G.V.4; G.V.8; H.V.1; H.V.5"
+D1990.K.148,MU-SK0014r,wall K,opus caementicium,Roman,Phase 2,04bf007344e3b7555ad83377844cf199,"G.V.4,7,8","G.V.4; G.V.7; G.V.8"
+D1990.K.148,MU-SK0007e,wall K,opus caementicium,Roman,Phase 2,af0a9c36d8264a34608f8657196315fc,"H.IV.14,15; H.V.1,2,3,5","H.IV.14; H.IV.15; H.V.1; H.V.2; H.V.3; H.V.5"
+D1990.K.148,MU-SK0015r,wall K,opus caementicium,Roman,Phase 2,b26094106488830f612bc9f62faa23b4,"G.V.4; H.V.1","G.V.4; H.V.1"
+"B1.P.186a (W side), D1990.K.148 (E side)",MU-SH0001e,wall H,rubble linked with earth,Roman,"Phase 1, Phase 2",e19978939653b85b8f5b9cdc3cc42e23,"H.IV.7,8,11,12,15,16; I.IV.5,9","H.IV.7; H.IV.8; H.IV.11; H.IV.12; H.IV.15; H.IV.16; I.IV.5; I.IV.9"
+B2.J.151-1,MU-SH0004r,wall H,rubble linked with earth,Roman,"Phase 1, Phase 2",df2cb0a79a957ad5e9c5a2be5286da43,"H.IV.12,16; I.IV.9,13","H.IV.12; H.IV.16; I.IV.9; I.IV.13"
+B1.P.227 (for construction see Deneauve 1990: 157),MU-SX0012e,,large blocks (El Haouaria) linked with dovetail seals,Roman,"Phase 1, Phase 2",b8740fe50b8a35527f9bbc52cbcfae6d,"H.IV.10,11,14,15","H.IV.10; H.IV.11; H.IV.14; H.IV.15"
+B1.P.227 (for construction see Deneauve 1990: 157),MU-SX0011e,,large blocks (El Haouaria) linked with dovetail seals,Roman,"Phase 1, Phase 2",b34e1469dc593b2050b2ce5c0df4153a,"H.IV.9,13,14","H.IV.9; H.IV.13; H.IV.14"
+B1.P.227 (for construction see Deneauve 1990: 157),MU-SX0010e,,large blocks (El Haouaria) linked with dovetail seals,Roman,"Phase 1, Phase 2",6d8e0f2b6882c25468417e8d447827df,H.IV.13,H.IV.13
+B1.P.227 (assumed that the foundation trench found here was once contained wall continuous with MU-SX0013r and MU-SX0015r),MU-SX0014r,,large blocks (El Haouaria) linked with dovetail seals,Roman,"Phase 1, Phase 2",5d73d0f5feb2c9f999f200c30d4d403f,"F.V.8,12; G.V.5,9","F.V.8; F.V.12; G.V.5; G.V.9"
+D1990.K.148,MU-SH0003r,wall H,,Roman,"Phase 1, Phase 2",baf9bc67bb07d67b44b43c12dc06da3c,"H.IV.7,10,11,12","H.IV.7; H.IV.10; H.IV.11; H.IV.12"
+D1990.K.148,MU-SX0015r,,large blocks (El Haouaria) linked with dovetail seals,Roman,"Phase 1, Phase 2",500dfbfd6f99f83eb69a88b5b06946c6,"F.V.8; G.IV.15,16; G.V.2,3,4,5,6,7,9; H.IV.9,10,13,14; H.V.1","F.V.8; G.IV.15; G.IV.16; G.V.2; G.V.3; G.V.4; G.V.5; G.V.6; G.V.7; G.V.9; H.IV.9; H.IV.10; H.IV.13; H.IV.14; H.V.1"
+B1.J.100b,CI-0001e,,,Roman,"Phase 1, Phase 2",a8212e92e7cbdbd75e100c77934de15c,"F.VI.1,2,5,6","F.VI.1; F.VI.2; F.VI.5; F.VI.6"
+"assumed central axis along AX-014; assumed length 20.6 m following D1990.K.151",CI-0002r,,,Roman,"Phase 1, Phase 2",cc6c1dea8522076008d3a495bd463c55,"F.VI.2,3,5,6,7,10,11,12,14,15,16","F.VI.2; F.VI.3; F.VI.5; F.VI.6; F.VI.7; F.VI.10; F.VI.11; F.VI.12; F.VI.14; F.VI.15; F.VI.16"
+D1990.K.148,MU-SH0002e,wall H,,Roman,"Phase 1, Phase 2",c8b1c3c6808341df7740300bfa850388,"I.IV.9,13","I.IV.9; I.IV.13"
+D1990.K.151 (assumed symmetrical about AX-016),MU-SH0005r,wall H,rubble linked with earth,Roman,"Phase 1, Phase 2",2e6b858648bf3e9d808fbdecc89c5cd7,"H.V.8; I.IV.13,14; I.V.1,2,3,5,6,7,9,10","H.V.8; I.IV.13; I.IV.14; I.V.1; I.V.2; I.V.3; I.V.5; I.V.6; I.V.7; I.V.9; I.V.10"
+"assumed analagous to MU-SK0001e through MU-SK0016r, symmetrical about AX-016, as shown in D1990.K.151; assumed W side abutting MU-SX0013r",MU-SX0018r,,opus caementicium,Roman,Phase 2,d3439add0fd418f8158f14b62ebc4fa3,"G.V.16; G.VI.2,3,4,5,6,7; H.V.7,8,10,11,12,13,14","G.V.16; G.VI.2; G.VI.3; G.VI.4; G.VI.5; G.VI.6; G.VI.7; H.V.7; H.V.8; H.V.10; H.V.11; H.V.12; H.V.13; H.V.14"
+B2.J.010a,MU-SK0016r,wall K,opus caementicium,Roman,Phase 2,fc94386914a4fa471235ab4a62c86b24,"H.V.1,2","H.V.1; H.V.2"
+B2.J.010a (assumed W side abutting MU-SX0013r),MU-SK0008r,wall K,opus caementicium,Roman,Phase 2,eaf098ec425fca32f772f4fb90d9bc90,F.V.16,F.V.16
+"D1990.K.148 (assumed W side flush with AX-015, following D1990.K.151; assumed symmetrical about AX-016, following D1990.K.151; assumed W side width of 3.28 m; for construction see Deneauve 1990: 157)",MU-SX0013r,,large blocks (El Haouaria) linked with dovetail seals,Roman,"Phase 1, Phase 2",784a53aa78ad8710c94ec39be15b1330,"F.V.10,11,12,15,16; F.VI.3,4,8,12; G.VI.4,5,6,7,8,9,10,11,13,14; H.IV.14,15,16; H.V.3,4,7,8,11,12,13,14,15,16; H.VI.1,2,3,5; I.V.5,9,13","F.V.10; F.V.11; F.V.12; F.V.15; F.V.16; F.VI.3; F.VI.4; F.VI.8; F.VI.12; G.VI.4; G.VI.5; G.VI.6; G.VI.7; G.VI.8; G.VI.9; G.VI.10; G.VI.11; G.VI.13; G.VI.14; H.IV.14; H.IV.15; H.IV.16; H.V.3; H.V.4; H.V.7; H.V.8; H.V.11; H.V.12; H.V.13; H.V.14; H.V.15; H."
+GD1980.P.320,MU-AS0016r,,"rubble joined with lime, lined with opus reticulatum",Roman,Phase 1,bdec0976376104ed346c52904aa1ff01,"C.IV.11,12,15,16","C.IV.11; C.IV.12; C.IV.15; C.IV.16"
+GD1980.P.320,MU-AS0019r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",77d55d88365bd0b39f0e940389f83913,"C.IV.6,7,10,11,12","C.IV.6; C.IV.7; C.IV.10; C.IV.11; C.IV.12"
+GD1980.P.320,MU-AS0017r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",86de498672a5ca8990866f31df451c2b,C.IV.11,C.IV.11
+GD1980.P.320,MU-AS0014r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",b0bcf5cd92956a245f72a21626ec11d4,"C.V.4,8; D.V.1,5","C.V.4; C.V.8; D.V.1; D.V.5"
+B1.J.100b,MU-AR0003e,,opus quadratum,Roman,"Phase 1, Phase 2",cd0bbe2b5819ff8f6f15ffc51d03cc3d,E.III.4,E.III.4
+B1.J.100b,MU-AR0004e,,opus quadratum,Roman,"Phase 1, Phase 2",3f23370a7a2c1d070dae9b9b7bdc515e,F.III.1,F.III.1
+B1.J.100b,MU-AR0002e,,opus quadratum,Roman,"Phase 1, Phase 2",5a96258ce7f882c66b309b51c70286d2,"E.III.6,7","E.III.6; E.III.7"
+B1.P.186a,MU-IC0059e,,,Punic,,65145e5741eb7af397fb07c57b8c20f1,"H.IV.9,10","H.IV.9; H.IV.10"
+"B2.J.060a (southward spur on the east side), B2.J.078a-1 (everything else)",MU-IC0054r,,,Punic,,d6f4c2b5b345f7409988412b15b25b15,"H.IV.10,11,15","H.IV.10; H.IV.11; H.IV.15"
+B2.J.078a-1,MU-IC0055e,,,Punic,,a6a49c30f02104fd8f24f8aee135cffb,H.IV.15,H.IV.15
+B2.J.078a-1,MU-IC0056r,,,Punic,,a3c5dc9e49b879ecee18323d0b50d0c6,"H.IV.11,12,15,16","H.IV.11; H.IV.12; H.IV.15; H.IV.16"
+B2.J.078a-1,MU-IC0057e,,,Punic,,12cb6d776d10e662122189f4c820730d,"H.IV.11,12,15","H.IV.11; H.IV.12; H.IV.15"
+B2.J.078a-1,MU-IC0058r,,,Punic,,d7b34ff54c7c574b17bf64b200d6e218,H.IV.12,H.IV.12
+B2.J.060a,MU-IC0062e,,,Punic,,fe0c527cdd09ec8eba7c47eb91025e32,"H.IV.7,10,11","H.IV.7; H.IV.10; H.IV.11"
+B2.J.060a,MU-IC0063r,,,Punic,,64b1bfd00bb1661df3c09b790ada3e73,"H.IV.7,11","H.IV.7; H.IV.11"
+B2.J.060a,MU-IC0053e,,,Punic,,0e7400e57d202be6dc9ccc41bfc2b4ec,H.IV.11,H.IV.11
+B2.J.060a,MU-IC0052r,,,Punic,,422ada1022fb7bfd244372c67a70d228,"H.IV.7,8,11","H.IV.7; H.IV.8; H.IV.11"
+B2.J.060a,MU-IC0050e,,,Punic,,a4307974100f8e3d4cbb3b6f53d66678,"H.III.15,16; H.IV.3,4","H.III.15; H.III.16; H.IV.3; H.IV.4"
+B2.J.060a,MU-IC0048e,,,Punic,,2b469f98a87b8158ced72c126877ad1b,H.III.15,H.III.15
+B2.J.060a,MU-IC0049r,,,Punic,,3b7d7c633c0e67cedae61f081377cf29,"H.III.15,16; H.IV.3","H.III.15; H.III.16; H.IV.3"
+B2.J.060a,MU-IC0071r,,,Punic,,059d058a6da20aa8d639bc821c0d6d2d,H.III.15,H.III.15
+B2.J.060a,MU-IC0070e,,,Punic,,fe01f592d6d11b5116f52cd5680875f2,"H.III.15; H.IV.3,7","H.III.15; H.IV.3; H.IV.7"
+B2.J.060a,MU-IC0067e,,,Punic,,379dd54bf490cf9ad940e8a63eaa3fb8,H.IV.7,H.IV.7
+B2.J.060a,MU-IC0068r,,,Punic,,73a23c7e8711748154667b4b85b32f0c,"H.IV.3,7","H.IV.3; H.IV.7"
+B2.J.060a,MU-IC0069e,,,Punic,,9a66a45334a83a3323ea510549fcb298,"H.IV.3,7","H.IV.3; H.IV.7"
+B2.J.060a,MU-IC0065r,,,Punic,,309fa9298642366b4ef0ced0cc8c0e78,H.IV.7,H.IV.7
+B2.J.060a,MU-IC0036r,,,Punic,,dff3e280fc8beaba583066bead5ebbb6,"H.III.14,15; H.IV.2","H.III.14; H.III.15; H.IV.2"
+B2.J.060a,MU-IC0047r,,,Punic,,d8c11e96439dc44c380e9a80bab22983,H.III.15,H.III.15
+B2.J.060a,MU-IC0046e,,,Punic,,6a96efbd054c697668a7f17fdc343676,"H.III.15; H.IV.2,3","H.III.15; H.IV.2; H.IV.3"
+B2.J.060a,MU-IC0045r,,,Punic,,7dd86c991c84eeb1502dfa2c92a8d8dc,H.IV.2,H.IV.2
+B2.J.060a,MU-IC0038r,,,Punic,,f703a831cecfa6c72770a8dd102c3ce5,H.IV.2,H.IV.2
+B2.J.060a,MU-IC0037e,,,Punic,,c3d9d0960716ab96b63d0702d067cd10,H.IV.2,H.IV.2
+B2.J.078a-1,MU-IC0066r,,,Punic,,b7e44a56359073ddf0443863b61d70a6,H.IV.7,H.IV.7
+B2.J.060a,MU-IC0051e,,,Punic,,0926109bd4176749448a3cfb160c6029,"H.IV.3,4,7,8","H.IV.3; H.IV.4; H.IV.7; H.IV.8"
+B2.J.060a,MU-IC0060r,,,Punic,,aa058aed035abc7048fc7529acc7fb68,H.IV.10,H.IV.10
+B2.J.060a,MU-IC0039e,,,Punic,,973722960b5638f0aea5bc1f2c91abbb,"H.IV.2,5,6,9,10","H.IV.2; H.IV.5; H.IV.6; H.IV.9; H.IV.10"
+"B2.J.218, B1.P.186a",MU-IC0040e,,,Punic,,ef88b274ea82a58de5424c96ceff0076,"G.IV.8; H.IV.5,9","G.IV.8; H.IV.5; H.IV.9"
+B1.P.186a,MU-IC0043e,,,Punic,,43303a3da263b15398f60b90482acbd9,H.IV.5,H.IV.5
+B2.J.078a-1,MU-IC0044e,,,Punic,,d0c8f4089c3c10648dfb519096b9f29b,H.IV.5,H.IV.5
+B2.J.218,MU-IC0041r,,,Punic,,8ad5d6c7a68e30116e35619b2b81cc33,G.IV.8,G.IV.8
+B2.J.218,MU-IC0042r,,,Punic,,2a014ec9a30f8689bb5376f32c9e2f5d,"G.IV.7,8","G.IV.7; G.IV.8"
+B2.J.218,MU-IC0009e,,,Punic,,80241915542990db7f3559ce15212fa4,"G.IV.3,4,7","G.IV.3; G.IV.4; G.IV.7"
+B2.J.218,MU-IC0011r,,,Punic,,f55c1b61b161e26ceeca0b6fe8ee0029,G.IV.7,G.IV.7
+B2.J.218,MU-IC0012e,,,Punic,,f120b668afb9afd2914b950b34ff81e3,"G.IV.2,3,6,7","G.IV.2; G.IV.3; G.IV.6; G.IV.7"
+B2.J.078a-1,MU-IC0013r,,,Punic,,10ca1db6d872700f4ad151f12d501cc9,"G.IV.1,2,6","G.IV.1; G.IV.2; G.IV.6"
+B2.J.218,MU-IC0015e,,,Punic,,913c66e19a878845a17f585f2f608b95,"G.III.14; G.IV.2","G.III.14; G.IV.2"
+B2.J.218,MU-IC0014e,,,Punic,,999f03616d5e799b7e85f1038a781a3a,"G.III.14; G.IV.2,3","G.III.14; G.IV.2; G.IV.3"
+B2.J.060a,MU-IC0061e,,,Punic,,3f95ae1449521a41acb405040747587a,"H.IV.6,7,10","H.IV.6; H.IV.7; H.IV.10"
+GD1980.P.320,MU-SO0001e,wall O,opus caementicium,Roman,Phase 2,57de3e4e7d462df4070a39d6f385b7ed,"C.IV.14; C.V.2,6,7,10,11","C.IV.14; C.V.2; C.V.6; C.V.7; C.V.10; C.V.11"
+GD1980.P.320,MU-SS0001e,wall S,opus caementicium,Roman,Phase 2,c859918192e1e676abac59b0c15c9028,"C.IV.11,12,14,15,16; C.V.2,3","C.IV.11; C.IV.12; C.IV.14; C.IV.15; C.IV.16; C.V.2; C.V.3"
+"D1990.K.151 (assumed to be located two thirds of the way between PI-E0006e and PI-E0012r; assumed length and width about 1.8 m)",PI-E0020r,,stones bound with clay,Roman,"Phase 1, Phase 2",c3ffe7fa2efd564295ad82f36c856293,"F.IV.8,12","F.IV.8; F.IV.12"
+"D1990.K.151 (assumed to be located one third of the way between PI-E0006e and PI-E0012r; assumed length and width about 1.8 m)",PI-E0021r,,stones bound with clay,Roman,"Phase 1, Phase 2",ff73c1958a1c13df403b7495ac7c5712,G.IV.5,G.IV.5
+"D1990.K.151 (assumed to be located halfway between PI-E0012r and PI-E0009r; assumed length and width about 1.8 m)",PI-E0018r,,stones bound with clay,Roman,"Phase 1, Phase 2",a33ac68ff7c111ae37a511ab267e8dbf,"F.IV.10,14","F.IV.10; F.IV.14"
+"D1990.K.151 (assumed to be located one third of the way between PI-E0009e and PI-E0007e; assumed length and width about 1.8 m)",PI-E0016r,,stones bound with clay,Roman,"Phase 1, Phase 2",d6d3fe8f9c9f26560685e84ae8e66da8,"E.V.4; F.V.1","E.V.4; F.V.1"
+"D1990.K.151 (assumed to be located two thirds of the way between PI-E0009e and PI-E0007e; assumed length and width about 1.8 m)",PI-E0015r,,stones bound with clay,Roman,"Phase 1, Phase 2",5838afc21bd54f6516a0124ad9c28533,"E.V.3,4,7","E.V.3; E.V.4; E.V.7"
+"D1990.K.151 (assumed location on W end of AX-017; assumed length and width about 1.8 m)",PI-E0010h,,stones bound with clay,Roman,"Phase 1, Phase 2",5dc77753451efcc4545070712b6cc5d6,D.V.15,D.V.15
+"D1990.K.151 (assumed location on the quarters between PI-E0007e and PI-E0010h; assumed length and width about 1.8 m)",PI-E0011h,,stones bound with clay,Roman,"Phase 1, Phase 2",edfa6678ec0f5c147accfb83c34cc44f,"D.V.12,16","D.V.12; D.V.16"
+"D1990.K.151 (assumed location on the quarters between PI-E0007e and PI-E0010h; assumed length and width about 1.8 m)",PI-E0013h,,stones bound with clay,Roman,"Phase 1, Phase 2",6250cf326a58e334b1d4694e8c2ff6de,"E.V.5,6,9,10","E.V.5; E.V.6; E.V.9; E.V.10"
+B2.J.094,MU-ID0002e,wall c of block D,,Punic,,1d5cdd859a702e2d44dc4ce85103505e,"G.II.9,10,13,14","G.II.9; G.II.10; G.II.13; G.II.14"
+B2.J.094,MU-ID0006e,wall b of block D,,Punic,,ccf727c2451d3de507a10402ce6354fa,"F.II.16; G.II.9,13","F.II.16; G.II.9; G.II.13"
+B2.J.094,MU-ID0004e,wall a of block D,,Punic,,faf3f6dd1c479dde8141bbed305c5e88,"F.II.12,16; G.II.13,14; G.III.1,2","F.II.12; F.II.16; G.II.13; G.II.14; G.III.1; G.III.2"
+B2.J.094,MU-ID0001r,,,Punic,,55106f742a6b0da2a70fcdd700b88110,"F.II.12,16; G.II.9","F.II.12; F.II.16; G.II.9"
+B2.J.094,MU-ID0005r,,,Punic,,b8debb0b5f155b3d23e70cc2699c8f74,F.II.16,F.II.16
+B2.J.094,MU-ID0003r,,,Punic,,299caa670468e1b7675893ab358e4e74,"G.II.10,14","G.II.10; G.II.14"
+B2.J.106a,MU-IE0001e,wall a of block E,,Punic,,dc381198a6581c8e586dffb9f4e9e2b9,"G.II.8,12; H.II.5","G.II.8; G.II.12; H.II.5"
+B2.J.106a,MU-IE0002e,wall o of block E,,Punic,,d238b6a0ec9108ca58a5b049ee08cc45,"G.II.8; H.II.5,9","G.II.8; H.II.5; H.II.9"
+B2.J.106a,MU-IE0003r,wall a of block E,,Punic,,8b6e3b2b83f8f814f72712e5124bd955,"H.II.5,9","H.II.5; H.II.9"
+B2.J.106a,MU-IE0022r,wall a of block E,,Punic,,23cf60070255965141896640f5b1e5bd,G.II.12,G.II.12
+B2.J.106a,MU-IE0018e,wall a of block E,,Punic,,2cd3a65968f10f873956a384b523d01d,"G.II.12,16","G.II.12; G.II.16"
+B2.J.106a,MU-IE0004r,,,Punic,,5ba169db19553526c606995d9b65bc8d,"H.II.9,10,13,14","H.II.9; H.II.10; H.II.13; H.II.14"
+B2.J.106a,MU-IE0005r,,,Punic,,5622e0431a1c2552c719f27f6dabd6e4,"H.II.10,11,14,15; H.III.1,2,5","H.II.10; H.II.11; H.II.14; H.II.15; H.III.1; H.III.2; H.III.5"
+B2.J.106a,MU-IE0006e,,,Punic,,884b18bc95491f743f948ec6de3fb3e3,H.III.5,H.III.5
+B2.J.106a,MU-IE0007r,,,Punic,,5e6e06d31b2fcc2e63014b03a3f2fb79,"G.III.4,8; H.III.1,5","G.III.4; G.III.8; H.III.1; H.III.5"
+B2.J.106a,MU-IE0013r,,,Punic,,837d66d27d16e687a71be3c00ab66e78,G.III.4,G.III.4
+B2.J.106a,MU-IE0014r,wall f of block E,,Punic,,5b2d5d5805377d1b19c2f68c7d02cbec,"G.II.16; G.III.4","G.II.16; G.III.4"
+B2.J.106a,MU-IE0010e,wall c of block E,,Punic,,01dfe2f9be2dbf178bca3ca739222b7e,G.III.4,G.III.4
+B2.J.106a,MU-IE0008e,wall b of block E,,Punic,,7fb15515703bd8d8a58faaa61d75080f,"G.III.3,4","G.III.3; G.III.4"
+B2.J.106a,MU-IE0017e,wall e of block E,,Punic,,34d21340c052c580a231b07c07aed499,G.II.16,G.II.16
+B2.J.106a,MU-IE0015e,wall f of block E,,Punic,,0b5275e44c478888a46be84441a5b4d6,"G.II.16; H.II.13","G.II.16; H.II.13"
+B2.J.106a,MU-IE0011r,,,Punic,,1d4d9ad3faa021e9fda65faccd715e31,"G.II.16; G.III.4","G.II.16; G.III.4"
+B2.J.106a,MU-IE0016e,wall β of block E,,Punic,,69ff7e5a7cfc4df67571b2ae58749306,G.II.16,G.II.16
+B2.J.106a,MU-IE0021e,n of block E,,Punic,,c6f5e2370be5d05bd69f1f915b9e4044,G.II.16,G.II.16
+B2.J.106a,MU-IE0009e,wall a of block E,,Punic,,d39ad64e361bbfb5ed4ba8d4c0cb08cf,"G.II.15,16; G.III.3","G.II.15; G.II.16; G.III.3"
+B2.J.106a,MU-IE0012e,wall d of block E,,Punic,,986f9483c1ecc8e3595b3104bbd0211f,G.II.16,G.II.16
+B2.J.106a,MU-IE0023e,wall g of block E,,Punic,,dc6ee161eb452107050e6df8cfea13bf,H.II.13,H.II.13
+B2.J.106a,MU-IE0024e,wall h of block E,,Punic,,c9356da08a161183f21fc63464f12da5,H.II.13,H.II.13
+B2.J.106a,MU-IE0025e,,,Punic,,1d73c0c9f044ee7b151e5d6cca41a3ca,H.II.13,H.II.13
+B2.J.106a,MU-IE0030e,wall γ of block E,,Punic,,3f8a9a8f0c299b59ca62d70fa76f86e5,H.II.13,H.II.13
+B2.J.106a,MU-IE0029e,k of block E,,Punic,,764e5c7050c932ecc9b52f201b87c238,H.II.13,H.II.13
+B2.J.106a,MU-IE0027e,i of block E,,Punic,,6305b2850969d9e1a7d72d6061ffa59f,H.II.13,H.II.13
+B2.J.106a,MU-IE0026e,l of block E,,Punic,,b02011a1cf4fdc0c4e303b2dd275d2bc,H.II.13,H.II.13
+B2.J.106a,MU-IE0019r,wall m of block E,,Punic,,963b88f7f688476a7e406a0a7c1db396,"G.II.12,16","G.II.12; G.II.16"
+B2.J.106a,MU-IE0020e,wall m of block E,,Punic,,4420358abf2688ca6c281cfc714924d7,"G.II.16; H.II.13","G.II.16; H.II.13"
+B2.J.078a-1,MU-IB0024e,,,Punic,,1fe7e25e3f2f2560b02571cca6c859b9,"F.III.11,14,15,16","F.III.11; F.III.14; F.III.15; F.III.16"
+B2.J.078a-1,MU-IB0023r,,,Punic,,9b6ef5d3f1957a6645ba966d34ecbf8d,"F.III.15,16; F.IV.4","F.III.15; F.III.16; F.IV.4"
+B2.J.078a-1,MU-IB0028e,,,Punic,,f0a4d58bb205a04c59cbbae0ffc6c659,"F.III.11,15","F.III.11; F.III.15"
+B2.J.078a-1,MU-IB0018e,,,Punic,,68c018a75d918cc8bd672e955da98008,"F.III.7,8,11,12,16","F.III.7; F.III.8; F.III.11; F.III.12; F.III.16"
+B2.J.078a-1,MU-IB0025r,,,Punic,,78c29ddc56c7e15c574071e115a73514,F.III.11,F.III.11
+B2.J.078a-1,MU-IB0022e,,,Punic,,2187a9d4acdd38342f9814364fa1766c,F.III.16,F.III.16
+B2.J.078a-1,MU-IB0021r,,,Punic,,05d93652fc2194790159b3f435f29923,"F.III.12,16; G.III.9","F.III.12; F.III.16; G.III.9"
+B2.J.078a-1,MU-IB0020e,,,Punic,,81e2e0c6416f51a26befe53c7562c611,"F.III.12; G.III.9","F.III.12; G.III.9"
+B2.J.078a-1,MU-IB0016e,,,Punic,,06f21033e91c698e0acdaa4aae83ed56,G.III.9,G.III.9
+B2.J.078a-1,MU-IB0014e,,,Punic,,a3f53cb2ad14b645743a6e677bdb1ea7,G.III.5,G.III.5
+B2.J.078a-1,MU-IB0011e,,,Punic,,3e27258885faa203c9e5514c3b813215,"F.III.4,8; G.III.1,5","F.III.4; F.III.8; G.III.1; G.III.5"
+B2.J.078a-1,MU-IB0013r,,,Punic,,ee0885ae7562b531b273541e8096d1e4,G.III.5,G.III.5
+B2.J.078a-1,MU-IB0015r,,,Punic,,4abe233803e9e2cbf2e0b849f680d402,"G.III.5,9","G.III.5; G.III.9"
+B2.J.078a-1,MU-IB0019r,,,Punic,,2ca77eb2a9ab76ed5db0da44fed2b3ec,"F.III.12; G.III.9","F.III.12; G.III.9"
+B2.J.078a-1,MU-IB0017r,,,Punic,,c16538ddbd19a069c3aed7d1dc2016da,"F.III.12; G.III.9","F.III.12; G.III.9"
+B2.J.078a-1,MU-IB0012r,,,Punic,,931577a1e1dd1ed772ab74b8bd30a7cb,"F.III.8; G.III.5","F.III.8; G.III.5"
+B2.J.078a-1,MU-IB0005r,,,Punic,,effd7c65e2b7efd9b7ca92b2de4daf52,"F.III.4,8","F.III.4; F.III.8"
+B2.J.078a-1,MU-IB0010e,,,Punic,,015fcee9fc3636d29a7f778a112ddb5f,"F.III.4,8","F.III.4; F.III.8"
+B2.J.078a-1,MU-IB0006e,,,Punic,,1d22d066331c71e8ea029018b06f003d,"F.III.4,8","F.III.4; F.III.8"
+B2.J.078a-1 (assumed that wall continued under PI-B0009e),MU-IB0007r,,,Punic,,06edb59addb2f5522560784b925f49b3,"F.III.4,7,8,11","F.III.4; F.III.7; F.III.8; F.III.11"
+B2.J.078a-1,MU-IB0008e,,,Punic,,4415be51edb9a6bb4fb5e48b2f2dd9ab,"F.III.7,11","F.III.7; F.III.11"
+B2.J.078a-1,MU-IB0009r,,,Punic,,1d48eb81c3bfb4b0b677ec4f54c0fc64,F.III.7,F.III.7
+B2.J.078a-1,MU-IB0004e,,,Punic,,ec475629f036595de4969196f9da809b,"F.III.3,4","F.III.3; F.III.4"
+B2.J.078a-1,MU-IB0002e,,,Punic,,6218c49a44748da51de107939144b721,F.III.3,F.III.3
+B2.J.078a-1,MU-IB0003r,,,Punic,,93ae3c8eb38a80114d16496ab388a282,F.III.3,F.III.3
+B2.J.078a-1,MU-IB0001r,,,Punic,,cfacacddfea7c298f4b02d5feac9c64a,"F.III.3,6,7","F.III.3; F.III.6; F.III.7"
+B2.J.078a-1,MU-IB0027e,,,Punic,,0f77a35f54be26ced5454282a1ea6632,"F.III.10,11","F.III.10; F.III.11"
+B2.J.078a-1,MU-IB0026e,,,Punic,,b080b8964ab3c40fb377c29a0c272c14,F.III.10,F.III.10
+B2.J.078a-1,MU-IC0031r,,,Punic,,f54a1bfdc532b00d6b882f7d968ff21b,"G.IV.4,8","G.IV.4; G.IV.8"
+B2.J.218,MU-IC0030e,,,Punic,,2c083bb9fc81492b0cf9bd2280965be6,"G.III.16; G.IV.4","G.III.16; G.IV.4"
+B2.J.218,MU-IC0033e,,,Punic,,fdbd288e93ae55ab4f3c33f9ff8954d6,"G.III.16; H.III.9,13","G.III.16; H.III.9; H.III.13"
+B2.J.078a-1,MU-IC0026e,,,Punic,,5cf4013c71f3c9e83963e889e3c8e6b6,"H.III.9,13","H.III.9; H.III.13"
+B2.J.078a-1,MU-IC0025r,,,Punic,,27fa87102930a24095d6d91f9bcf0911,H.III.9,H.III.9
+B2.J.078a-1,MU-IC0027r,,,Punic,,89ebbe558c7ad9cbfd0a9761475e2886,"H.III.9,13","H.III.9; H.III.13"
+B2.J.078a-1,MU-IC0028e,,,Punic,,726f0f26c34864cbd429ca653eab0224,"H.III.13; H.IV.1","H.III.13; H.IV.1"
+B2.J.078a-1,MU-IC0034e,,,Punic,,f02dca6c8956458010729dad9710507c,"H.III.13,14","H.III.13; H.III.14"
+B2.J.078a-1,MU-IC0029r,,,Punic,,789b34db2782639c63252df5cda19d3d,"G.IV.4,8; H.III.13,14; H.IV.1,5","G.IV.4; G.IV.8; H.III.13; H.III.14; H.IV.1; H.IV.5"
+B2.J.078a-1,MU-IC0035r,,,Punic,,4bf6553bf73fafb7f28c1856769ff99f,H.III.14,H.III.14
+B2.J.218,MU-IC0007e,,,Punic,,133e2c1c01fb5050f0e124b007b1b026,"G.III.15; G.IV.3,4","G.III.15; G.IV.3; G.IV.4"
+B2.J.218 (assumed feature continues under PI-E0001e as shown in B2.J.078a-1),MU-IC0006r,,,Punic,,91e0b597f1ea81c11db414d62281acfb,"G.III.16; G.IV.4","G.III.16; G.IV.4"
+B2.J.218,MU-IC0005e,,,Punic,,62310b119211aafd493a2a06fb5263c5,"G.III.12,16","G.III.12; G.III.16"
+B2.J.218,MU-IC0004r,,,Punic,,3c5dd70344e5e6514f8df8c1f7987983,"G.III.12,16","G.III.12; G.III.16"
+B2.J.078a-1,MU-IC0003r,,,Punic,,f08f73f6e6099ba347a5e5ea789d6982,"G.III.7,11,12","G.III.7; G.III.11; G.III.12"
+B2.J.078a-1,MU-IC0008r,,,Punic,,b2f08b8e750d13cbaf2dd7783cfd3a9d,"G.III.15,16","G.III.15; G.III.16"
+B2.J.218,MU-IC0019e,,,Punic,,f5760e9a30101b0e8b5090b0ddf59605,G.III.15,G.III.15
+B2.J.218,MU-IC0020r,,,Punic,,9a77bff0d616b48ee7acaed8b28d01f3,G.III.15,G.III.15
+B2.J. 078a-1,MU-IC0018r,,,Punic,,5ae20ab065e3b3728ac827ac90ab3f49,"G.III.11,15","G.III.11; G.III.15"
+B2.J. 078a-1,MU-IC0017e,,,Punic,,3594dabcc8fdad24e92aa775b4dea551,"G.III.6,7,10,11","G.III.6; G.III.7; G.III.10; G.III.11"
+B2.J. 078a-1,MU-IC0022e,,,Punic,,d8701b7cb3e7ab7dea5de38993ff8db5,G.III.11,G.III.11
+B2.J. 078a-1,MU-IC0024e,,,Punic,,b720e6fd694ae9a843a858931705dc0e,G.III.11,G.III.11
+B2.J. 078a-1,MU-IC0023r,,,Punic,,9303b27d6c71abd68377f070adc2fdd3,G.III.11,G.III.11
+B2.J. 078a-1,MU-IC0021r,,,Punic,,49da150a2387116218d3e8269d310c65,G.III.11,G.III.11
+B2.J. 078a-1,MU-IC0001r,,,Punic,,de0548d625dd5c36b0a458eb08f3d0c3,"G.III.7,11","G.III.7; G.III.11"
+B2.J. 078a-1,MU-IC0002e,,,Punic,,1cca3a7d5fccfdb365fdb858ea862ca9,"G.III.7,11","G.III.7; G.III.11"
+B2.J.218,MU-IC0016r,,,Punic,,dbb34dba480b3425af82ca3723967637,"G.III.10,14","G.III.10; G.III.14"
+B2.J.078a-1,MU-IC0010r,,,Punic,,db1501140150a0c8661c9770681c3a49,G.IV.3,G.IV.3
+B2.J.010a,MU-IA0017e,,,Punic,,2b1c59e83d42bf9735b84c0ecb9075f8,G.IV.15,G.IV.15
+B2.J.010a,MU-IA0004e,,,Punic,,63e34bd55b3b7ff5f503e7dec965e3a9,"G.IV.13,14","G.IV.13; G.IV.14"
+B2.J.010a,MU-IA0007e,,,Punic,,de94cd212f8ebe911f07abf2e185db32,"G.IV.10,14","G.IV.10; G.IV.14"
+B2.J.010a,MU-IA0018e,,,Punic,,b57e247d2392abc4c77ac8e78ae369b5,G.V.3,G.V.3
+B2.J.010a,MU-IA0014e,,,Punic,,cc73c3af87b4cfd7ac9447985349ac89,"G.IV.11,15","G.IV.11; G.IV.15"
+B2.J.010a,MU-IA0012e,,,Punic,,d7f917c483f39e53e1e9546edc36f4c2,G.IV.10,G.IV.10
+B2.J.010a,MU-IA0016e,,,Punic,,3f54bc6a5404d49dcba1962a18424c01,G.IV.16,G.IV.16
+B2.J.010a,MU-IA0002e,,,Punic,,9a450626f7aa6ee6b1cd327938884c99,"F.V.4; G.V.1","F.V.4; G.V.1"
+B2.J.010a,MU-IA0003r,,,Punic,,3773740b1a00550de555b7006efda91b,G.V.1,G.V.1
+B2.J.010a,MU-IA0015r,,,Punic,,f5823e7216105268dd4c7b2243a40a5a,"G.IV.11,12,15,16","G.IV.11; G.IV.12; G.IV.15; G.IV.16"
+B2.J.010a (assumed feature continues under later wall),MU-IA0013r,,,Punic,,f59c02a71acc8ed9bb153b565192b536,"G.IV.10,11","G.IV.10; G.IV.11"
+B2.J.010a,MU-IA0011r,,,Punic,,5559eb85cb41433f571216ba595ea1dc,"G.IV.5,9,10","G.IV.5; G.IV.9; G.IV.10"
+B2.J.010a,MU-IA0010e,,,Punic,,fec4833a81d50b9aa1e326a7a7d20000,"G.IV.5,9","G.IV.5; G.IV.9"
+B2.J.010a,MU-IA0009r,,,Punic,,a4b103ea10b31ecf0bc2535856fe9fb4,"G.IV.5,9","G.IV.5; G.IV.9"
+B2.J.010a,MU-IA0006e,,,Punic,,148d14869ac54bc33e7c3220ca30b7de,G.IV.9,G.IV.9
+B2.J.010a,MU-IA0019e,,,Punic,,83ed359a3edfd05ff93e09e655e834c8,G.V.2,G.V.2
+B2.J.010a,MU-IA0020e,,,Punic,,4fc78bf1e81d74087ff4482bc6f5a449,G.V.2,G.V.2
+B2.J.010a,MU-IA0008e,,,Punic,,a15c96000a6fdc250cde9e2d8b013f90,"F.IV.12; G.IV.9","F.IV.12; G.IV.9"
+"B2.J.147 (assumed analagous to MU-SK0001e through MU-SK0016r, but with identical construction to MU-SH0001e)",MU-SX0016r,,rubble linked with earth,Roman,Phase 1,edd07f95f3181da6822ec08eadd38a5f,"F.V.16; G.V.4,6,7,8,9,10,11,13; H.IV.14,15; H.V.1,2,3,5","F.V.16; G.V.4; G.V.6; G.V.7; G.V.8; G.V.9; G.V.10; G.V.11; G.V.13; H.IV.14; H.IV.15; H.V.1; H.V.2; H.V.3; H.V.5"
+"assumed analagous to MU-SX0016r, symmetrical about AX-016, as shown in D1990.K.151; assumed W side abutting MU-SX0013r",MU-SX0017r,,rubble linked with earth,Roman,Phase 1,8721ab150c69a9b71a06aaa8355ca0c9,"G.V.16; G.VI.2,3,4,5,6,7; H.V.7,8,10,11,12,13,14","G.V.16; G.VI.2; G.VI.3; G.VI.4; G.VI.5; G.VI.6; G.VI.7; H.V.7; H.V.8; H.V.10; H.V.11; H.V.12; H.V.13; H.V.14"
+assumed original length and width of PI-B0001e were about 1.8 m,PI-B0026r,pile B1,,Roman,"Phase 1, Phase 2",c511cfe374692b76317ebf77f3a24153,"E.IV.1,2","E.IV.1; E.IV.2"
+assumed original length and width of PI-B0005e was about 1.8 m,PI-B0027r,,,Roman,"Phase 1, Phase 2",bcf31c6660bb26ef2f5f934f9dfb4e26,E.III.12,E.III.12
+assumed original length and width of PI-B0015e were about 1.8 m,PI-B0028r,pile B15,,Roman,"Phase 1, Phase 2",bb8551a056aa60bda5bbd2603beb0d15,G.II.12,G.II.12
+assumed original length and width of PI-B0017e were about 1.8 m,PI-B0029r,,,Roman,"Phase 1, Phase 2",2b28ed8d70ed635044bedee157d0f544,H.II.6,H.II.6
+assumed original length and width of PI-B0018e were about 1.8 m,PI-B0030r,,,Roman,"Phase 1, Phase 2",7a86f381be8738286256d35bc843a6e5,"H.II.6,7","H.II.6; H.II.7"
+"assumed location halfway between PI-B0015e and PI-B0017e; assumed original length and width about 1.8 m",PI-B0016r,,,Roman,"Phase 1, Phase 2",1a0a6d4feff450c6e3c29f5f6e98d1b2,"H.II.5,9","H.II.5; H.II.9"
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0025h,,,Roman,"Phase 1, Phase 2",58cc39fa979f401737571a2f23c58d50,"E.IV.1,5","E.IV.1; E.IV.5"
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0024h,,,Roman,"Phase 1, Phase 2",36f7412a516a1ac96bd02653a8aae00f,"D.IV.4,8","D.IV.4; D.IV.8"
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0023h,,,Roman,"Phase 1, Phase 2",6772808c079ea7465f1df770f6682f6c,"D.IV.7,8","D.IV.7; D.IV.8"
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0022h,,,Roman,Phase 1,0889a655d8d9efe1bf198d090584474b,"D.IV.6,7,11","D.IV.6; D.IV.7; D.IV.11"
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0021h,,,Roman,Phase 1,d612db38dcad2a56a9ee17c8f10742eb,D.IV.10,D.IV.10
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0020h,,,Roman,Phase 1,a2837e5e8367c536cecd6d9281f3240d,"D.IV.9,10","D.IV.9; D.IV.10"
+assumed location along the sevenths between PI-B0001e and MU-SE0001e,PI-B0019h,,,Roman,Phase 1,e83a0d9433c023a255c59b1f5596515f,"C.IV.12,16; D.IV.9,13","C.IV.12; C.IV.16; D.IV.9; D.IV.13"
+"B2.J.144, B1.P.100a, B2.J.010a (assumed N side flush with AX-022, assumed S side flush with MU-AS0006e; assumed E and W sides even with limits of MU-AS0006e)",MU-SX0004e,,,Roman,"Phase 1, Phase 2",6a4ab79852d80eae7575f77c48c74e7e,"E.III.4,6,7,8,10,11; F.II.14,15; F.III.1,2,5","E.III.4; E.III.6; E.III.7; E.III.8; E.III.10; E.III.11; F.II.14; F.II.15; F.III.1; F.III.2; F.III.5"
+"B1.J.100b (for construction, see Deneauve 1983: 95)",MU-SX0049e,,opus caementicium,Roman,Phase 2,71c97c013e25fbdc0a7319983db010bf,"D.V.10,11","D.V.10; D.V.11"
+"B1.J.100b (for construction, see Deneauve 1983: 95)",MU-SX0048e,,opus caementicium,Roman,Phase 2,a18bd6e2878caa20c217c4cef12e93da,"D.V.7,8,11,12","D.V.7; D.V.8; D.V.11; D.V.12"
+B1.J.100b,MU-SM0001e,wall M,opus caementicium,Roman,Phase 2,2a84155f597272c7e8c262d46fc13dd7,"D.V.8,12; E.V.5,9","D.V.8; D.V.12; E.V.5; E.V.9"
+B1.J.100b,MU-SM0002e,wall M,opus caementicium,Roman,Phase 2,0ed0dadd311ead182dea3e1f117b7126,"E.V.14; E.VI.2,3,6,7","E.V.14; E.VI.2; E.VI.3; E.VI.6; E.VI.7"
+"B1.J.100b (for subtype, see G1990.P.571 and Deneauve 1983: 95)",MU-SD0001e,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",9364a98dde51249909e635ed693e0f54,"D.V.4,7,8; E.V.1,5","D.V.4; D.V.7; D.V.8; E.V.1; E.V.5"
+B2.J.010a,MU-SM0003r,wall M,,Roman,Phase 2,f90cdf4295f540f5fba1274c60de31a2,"D.V.8; E.V.5,9,10,13,14; E.VI.1,2","D.V.8; E.V.5; E.V.9; E.V.10; E.V.13; E.V.14; E.VI.1; E.VI.2"
+"G1990.P.571 (assumed E side flush with AX-019; assumed N side flush with AX-019; assumed N side width of 4.0 m as shown in Deneauve 1983: 105 fig. 8)",MU-SM0004r,wall M,,Roman,Phase 2,1ccd280f82fe24b48c971b5c4c4705c4,"E.VI.2,3,6,7,8,10,11,12,15,16; E.VII.4,8; F.VI.13; F.VII.1,5,6,9,10,13,14,15; F.VIII.2,3,4,7,8","E.VI.2; E.VI.3; E.VI.6; E.VI.7; E.VI.8; E.VI.10; E.VI.11; E.VI.12; E.VI.15; E.VI.16; E.VII.4; E.VII.8; F.VI.13; F.VII.1; F.VII.5; F.VII.6; F.VII.9; F.VII.10; F.VII.13; F.VII.14; F.VII.15; F.VIII.2; F.VIII.3; F.VIII.4; F.VIII.7; F.VIII.8"
+G1990.P.571,MU-SD0009r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",1d8add34fe556f93855ebc72e1555524,"D.V.4,8; E.V.1","D.V.4; D.V.8; E.V.1"
+"G1990.P.571; D1990.K.151 (assumed W side flush with and perpendicular to AX-001, which is not quite as depicted in D1990.K.151 but does match G1990.P.571; assumed W side width same as E side)",MU-SD0008r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",2614814dbbe5ecf81301d51d1f70e199,"C.V.16; D.V.6,7,8,9,10,11,13","C.V.16; D.V.6; D.V.7; D.V.8; D.V.9; D.V.10; D.V.11; D.V.13"
+"D1990.K.151 and G1990.P.571 (assumed W side flush with and perpendicular to AX-001; assumed W side width same as E side)",MU-SX0050r,,opus caementicium,Roman,Phase 2,adc651dee8c67cc2784698cdcb26f495,"C.V.16; C.VI.4; D.V.9,10,11,13,14; D.VI.1","C.V.16; C.VI.4; D.V.9; D.V.10; D.V.11; D.V.13; D.V.14; D.VI.1"
+"D1990.K.151 and G1990.P.571 (assumed E side width of 2.1 m as shown in Deneauve 1983: 105 fig. 8; assumed W side width same as E side; assumed N side flush with AX-019)",MU-SX0052r,,opus caementicium,Roman,Phase 2,5a633576b581a3568eaeffa11b0320d8,"E.VIII.12,15,16; E.IX.3,4; F.VIII.6,7,9,10,11,13","E.VIII.12; E.VIII.15; E.VIII.16; E.IX.3; E.IX.4; F.VIII.6; F.VIII.7; F.VIII.9; F.VIII.10; F.VIII.11; F.VIII.13"
+"D1990.K.151 and G1990.P.571 (assumed W side flush with AX-001; assumed N and S side widths of 4.40 m following Deneauve 1983: 95)",MU-SX0051r,,opus caementicium,Roman,Phase 2,feb26f2ac10db5e5e4b4d0252c031d29,"C.VI.4,8; D.V.13; D.VI.1,5,6,9,10,11,14,15; D.VII.2,3,4,7,8,11,12,16; E.VII.9,13,14; E.VIII.1,2,5,6,7,10,11,14,15,16","C.VI.4; C.VI.8; D.V.13; D.VI.1; D.VI.5; D.VI.6; D.VI.9; D.VI.10; D.VI.11; D.VI.14; D.VI.15; D.VII.2; D.VII.3; D.VII.4; D.VII.7; D.VII.8; D.VII.11; D.VII.12; D.VII.16; E.VII.9; E.VII.13; E.VII.14; E.VIII.1; E.VIII.2; E.VIII.5; E.VIII.6; E.VIII.7; E.VIII.1"
+"D1990.K.151 and G1990.P.571 (assumed S side flush with AX-019; assumed W and E side widths of 1.1 m)",MU-SX0028r,wall D',,Roman,"Phase 1, Phase 2",55c76c0d6ca69efbf3fa0b6d8e78e5de,"E.VIII.16; E.IX.3,4; F.VIII.4,7,8,9,10,11,13,14; G.VII.12,14,15,16; G.VIII.1,2,3,5; H.VII.4,6,7,8,9,10; I.VI.11,12,13,14,15,16; I.VII.1,2; J.VI.2,3,5,6,7,9","E.VIII.16; E.IX.3; E.IX.4; F.VIII.4; F.VIII.7; F.VIII.8; F.VIII.9; F.VIII.10; F.VIII.11; F.VIII.13; F.VIII.14; G.VII.12; G.VII.14; G.VII.15; G.VII.16; G.VIII.1; G.VIII.2; G.VIII.3; G.VIII.5; H.VII.4; H.VII.6; H.VII.7; H.VII.8; H.VII.9; H.VII.10; I.VI.11;"
+"D1990.K.151 and G1990.P.571 (for dimensions see Deneauve 1983: 105 fig. 8; assumed E side abutting MU-SX0027h, as with MU-SF0009r; other assumptions are too numerous to include here - see section in my thesis on tracing the walls mirroring D, F, and G)",MU-SX0026h,wall F',,Roman,Phase 2,6bc7a724294c92792caed86d82f38b41,"I.V.16; I.VI.4J.V.9,10,13,14","I.V.16; I.VI.4; J.V.9; J.V.10; J.V.13; J.V.14"
+"D1990.K.151 and G1990.P.571 (for dimensions see Deneauve 1983: 105 fig. 8; assumed E side abutting MU-FA0078h and Mu-AR0076h; other assumptions are too numerous to include here - see section in my thesis on tracing the walls mirroring D, F, and G)",MU-SX0023h,wall G',,Roman,"Phase 1, Phase 2",648bcb62e82d8bf75a3940204bed52f7,"I.V.16; J.V.4,7,8,9,10,11,13; K.IV.14,15; K.V.1,2,3,5","I.V.16; J.V.4; J.V.7; J.V.8; J.V.9; J.V.10; J.V.11; J.V.13; K.IV.14; K.IV.15; K.V.1; K.V.2; K.V.3; K.V.5"
+"assumed 10.1 m away from MU-SX0028r and constant width of 2.3 m (see Deneauve 1983: 105 fig. 8); assumed N and S sides perpendicular to AX-020; assumed W side at limits of H.VII.16 (see Byrsa III: 140)",MU-SX0047r,,,Roman,"Phase 1, Phase 2",705cfa0df369431137bc9a01d3dac77a,"H.VII.12,16; I.VII.4,6,7,8,9,10,11,13; J.VI.11,12,14,15,16; J.VII.1,2,3,5","H.VII.12; H.VII.16; I.VII.4; I.VII.6; I.VII.7; I.VII.8; I.VII.9; I.VII.10; I.VII.11; I.VII.13; J.VI.11; J.VI.12; J.VI.14; J.VI.15; J.VI.16; J.VII.1; J.VII.2; J.VII.3; J.VII.5"
+"assumed constant width of 2.3 m, following Deneauve 1983: 105 fig. 8; assumed N and S sides perpendicular to AX-020; assumed W side flush with AX-001",MU-SX0046h,,,Roman,"Phase 1, Phase 2",657d223e3d21366a86fefed76124bf7f,"E.IX.8,12; F.VIII.16; F.IX.2,3,4,5,6,7,9; G.VIII.7,8,9,10,11,12,13,14; G.IX.1; H.VII.14,15,16; H.VIII.1,2,3,5,6","E.IX.8; E.IX.12; F.VIII.16; F.IX.2; F.IX.3; F.IX.4; F.IX.5; F.IX.6; F.IX.7; F.IX.9; G.VIII.7; G.VIII.8; G.VIII.9; G.VIII.10; G.VIII.11; G.VIII.12; G.VIII.13; G.VIII.14; G.IX.1; H.VII.14; H.VII.15; H.VII.16; H.VIII.1; H.VIII.2; H.VIII.3; H.VIII.5; H.VIII."
+"assumed 58.94 m away from MU-SX0047r and constant width of 1.75 m (Deneauve 1983: 98, 105 fig. 8); assumed N and S sides perpendicular to AX-020; assumed W side at limits of J.X.9,13 (see Byrsa III: 140)",MU-SX0045r,,,Roman,"Phase 1, Phase 2",821ff8533c189984423b6652bd3b0688,"J.X.3,4,6,7,8,9,10,13; K.IX.11,12,13,14,15,16; K.X.1,2; L.IX.5,6,9","J.X.3; J.X.4; J.X.6; J.X.7; J.X.8; J.X.9; J.X.10; J.X.13; K.IX.11; K.IX.12; K.IX.13; K.IX.14; K.IX.15; K.IX.16; K.X.1; K.X.2; L.IX.5; L.IX.6; L.IX.9"
+"assumed constant width of 1.75 m, following Deneauve 1983: 105 fig. 8; assumed N and S sides perpendicular to AX-020; assumed W side flush with AX-001",MU-SX0044h,,,Roman,"Phase 1, Phase 2",1d0dcb281cd3a3d09c7b4b90a7b94b60,"G.XI.15,16; G.XII.2,3,4,6; H.XI.4,7,8,9,10,11,13,14; I.X.12,14,15,16; I.XI.1,2,3,5; J.X.9","G.XI.15; G.XI.16; G.XII.2; G.XII.3; G.XII.4; G.XII.6; H.XI.4; H.XI.7; H.XI.8; H.XI.9; H.XI.10; H.XI.11; H.XI.13; H.XI.14; I.X.12; I.X.14; I.X.15; I.X.16; I.XI.1; I.XI.2; I.XI.3; I.XI.5; J.X.9"
+"D1990.K.151 and G1990.P.571 (for dimensions see Deneauve 1983: 105 fig. 8; assumptions are too numerous to include here - see section in my thesis on tracing the walls mirroring D, F, and G)",MU-SX0025r,wall F',,Roman,Phase 2,df37243ae2777f89eac5608d2933a31c,"F.VII.12; G.VII.3,4,5,6,7,8,9,10; H.VI.8,11,12,13,14,15; H.VII.1,2; I.V.16; I.VI.2,3,4,5,6,7,9","F.VII.12; G.VII.3; G.VII.4; G.VII.5; G.VII.6; G.VII.7; G.VII.8; G.VII.9; G.VII.10; H.VI.8; H.VI.11; H.VI.12; H.VI.13; H.VI.14; H.VI.15; H.VII.1; H.VII.2; I.V.16; I.VI.2; I.VI.3; I.VI.4; I.VI.5; I.VI.6; I.VI.7; I.VI.9"
+"D1990.K.151 and G1990.P.571 (for dimensions see Deneauve 1983: 105 fig. 8; assumptions are too numerous to include here - see section in my thesis on tracing the walls mirroring D, F, and G)",MU-SX0022r,wall G',,Roman,"Phase 1, Phase 2",942c6159e8d5f5d95c13744457de4240,"F.VII.12; G.VI.16; G.VII.3,4,5,6,7,9; H.VI.8,10,11,12,13,14,15; H.VII.1; I.V.15,16; I.VI.1,2,3,4,5,6","F.VII.12; G.VI.16; G.VII.3; G.VII.4; G.VII.5; G.VII.6; G.VII.7; G.VII.9; H.VI.8; H.VI.10; H.VI.11; H.VI.12; H.VI.13; H.VI.14; H.VI.15; H.VII.1; I.V.15; I.V.16; I.VI.1; I.VI.2; I.VI.3; I.VI.4; I.VI.5; I.VI.6"
+"D1990.K.151 and G1990.P.571 (for dimensions see Deneauve 1983: 105 fig. 8; assumptions are too numerous to include here - see section in my thesis on tracing the walls mirroring D, F, and G)",MU-SX0024h,wall F',,Roman,Phase 2,75384a5177053051c78c4f41a7019703,"F.VII.12,15,16","F.VII.12; F.VII.15; F.VII.16"
+"D1990.K.151 and G1990.P.571 (for dimensions see Deneauve 1983: 105 fig. 8; assumptions are too numerous to include here - see section in my thesis on tracing the walls mirroring D, F, and G)",MU-SX0021h,wall G',,Roman,"Phase 1, Phase 2",69632da58327c06976dcfdcf8d5867bd,"E.VIII.4,7,8; F.VII.11,12,13,14,15,16; F.VIII.1,2","E.VIII.4; E.VIII.7; E.VIII.8; F.VII.11; F.VII.12; F.VII.13; F.VII.14; F.VII.15; F.VII.16; F.VIII.1; F.VIII.2"
+B2.J.010a,MU-SX0008r,,,Roman,Phase 2,a99628909a8200d322347101e4083dfa,"H.III.3,4,8,12; I.III.5","H.III.3; H.III.4; H.III.8; H.III.12; I.III.5"
+D1990.K.151,MU-SX0027h,,,Roman,"Phase 1, Phase 2",3cf8e55f1ea7bd0b8dc5ddedb07e1ce2,"J.V.10,14,15; J.VI.2,3","J.V.10; J.V.14; J.V.15; J.VI.2; J.VI.3"
+B3.P.064a,MU-SX0031e,,,Roman,Phase 2,12cff8730f0d25919e7967bad9066445,"L.IX.4,8; M.IX.1,5","L.IX.4; L.IX.8; M.IX.1; M.IX.5"
+B3.P.064a,MU-SX0034r,,,Roman,Phase 2,ba12758d04865de63b954c36545d6ab6,"L.IX.8; M.IX.1,5,6,9,10","L.IX.8; M.IX.1; M.IX.5; M.IX.6; M.IX.9; M.IX.10"
+B3.P.064a,MU-SX0033r,,,Roman,Phase 2,d866dcb5e8847c8cce040ad5a19f7ced,M.IX.1,M.IX.1
+B3.P.064a,MU-SX0032r,,,Roman,Phase 2,869d03e9a649c307ff2a29e9e2614b36,"K.V.13; K.VI.1,2,5,6,7,10,11,15,16; K.VII.3,4,8,12; L.VII.5,9,10,13,14; L.VIII.2,3,6,7,11,12,15,16; L.IX.4; M.IX.1","K.V.13; K.VI.1; K.VI.2; K.VI.5; K.VI.6; K.VI.7; K.VI.10; K.VI.11; K.VI.15; K.VI.16; K.VII.3; K.VII.4; K.VII.8; K.VII.12; L.VII.5; L.VII.9; L.VII.10; L.VII.13; L.VII.14; L.VIII.2; L.VIII.3; L.VIII.6; L.VIII.7; L.VIII.11; L.VIII.12; L.VIII.15; L.VIII.16; L"
+GD1980.P.320,MU-FA0004e,,opus quadratum,Roman,"Phase 1, Phase 2",24af0021759cfb3e81abb8f9ff1ff306,C.IV.9,C.IV.9
+GD1980.P.320,MU-FA0005e,,opus quadratum,Roman,"Phase 1, Phase 2",eb3f9beab18a9160afc3f42237917244,"B.IV.8,12; C.IV.5,9","B.IV.8; B.IV.12; C.IV.5; C.IV.9"
+GD1980.P.320 (assumed based on Mu-FA0013r),MU-FA0014r,,opus quadratum,Roman,"Phase 1, Phase 2",e4245acef383cc8ad1b02f9f8a701e7c,"B.IV.8; C.IV.5,9","B.IV.8; C.IV.5; C.IV.9"
+GD1980.P.320,MU-FA0013r,,opus quadratum,Roman,"Phase 1, Phase 2",94952fc9de825e0fbd88f61f805fb9be,C.IV.9,C.IV.9
+B1.P.144a,MU-FA0003e,,opus reticulatum,Roman,"Phase 1, Phase 2",4a09a88c707231aca5e6ff82af935b68,"C.IV.9,10","C.IV.9; C.IV.10"
+GD1980.P.320,MU-FA0012r,,opus reticulatum,Roman,"Phase 1, Phase 2",ea29f8c29df427d10f64bcc7e93db12b,"C.IV.9,10,13","C.IV.9; C.IV.10; C.IV.13"
+GD1980.P.320 (assumed MU-FA0005e continuous with MU-FA0016r),MU-FA0015r,,opus reticulatum,Roman,"Phase 1, Phase 2",c7392af96ae85d2827bf8774e32a0ad5,"C.IV.2,5,6","C.IV.2; C.IV.5; C.IV.6"
+B1.J.100b,MU-AS0007e,,opus quadratum,Roman,"Phase 1, Phase 2",098dc9e74629429a6fb87890bd50e640,"E.III.3,4,8","E.III.3; E.III.4; E.III.8"
+B1.J.100b,MU-AR0005e,,opus quadratum,Roman,"Phase 1, Phase 2",d353233cb2bd2ab648e69c87275b36b6,F.II.13,F.II.13
+assumed S side continued the curve of MU-AS0006e,MU-AS0023r,,opus quadratum,Roman,"Phase 1, Phase 2",b95752fdd76abf6dd9c350eca61b615c,"E.III.3,4","E.III.3; E.III.4"
+assumed S side continued the curve of MU-AS0006e,MU-AS0024r,,opus quadratum,Roman,"Phase 1, Phase 2",3ac4acc63a557d2564c9bc96e87784da,"E.III.4; F.III.1","E.III.4; F.III.1"
+assumed S side continued the curve of MU-AS0006e,MU-AS0027r,,opus quadratum,Roman,"Phase 1, Phase 2",9a53ef60a77d2c1aa018214d204c9e24,"F.II.13; F.III.1","F.II.13; F.III.1"
+assumed S side continued the curve of MU-AS0006e,MU-AS0028r,,opus quadratum,Roman,"Phase 1, Phase 2",b2bcf04e24aef0b069b55f457ab43154,F.II.14,F.II.14
+B1.J.100b (features hidden behind grid labels traced from B1.P.100a),MU-AS0006e,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",3fd419fb378a353494808c6812793980,"E.III.3,4,6,7,8; F.II.13,14; F.III.1,2","E.III.3; E.III.4; E.III.6; E.III.7; E.III.8; F.II.13; F.II.14; F.III.1; F.III.2"
+B1.J.100b (features hidden behind grid labels traced from B1.P.100a),MU-AR0006e,,,Roman,"Phase 1, Phase 2",86575707e85e646c8da09fe235bb4b4e,"F.II.13,14; F.III.1,2","F.II.13; F.II.14; F.III.1; F.III.2"
+"assumed width about 1.1 m; assumed E and W sides perpendicular to AX-002",MU-AR0034r,,opus quadratum,Roman,"Phase 1, Phase 2",e7546e1a182967b463e91db126574079,"F.II.9,13","F.II.9; F.II.13"
+"assumed width about 1.0 m; assumed E and W sides perpendicular to AX-002",MU-AR0033r,,opus quadratum,Roman,"Phase 1, Phase 2",2ccee2cfdc924cdc5a1a4c82eb225fc1,"E.II.16; E.III.4; F.II.13; F.III.1","E.II.16; E.III.4; F.II.13; F.III.1"
+"assumed width about 1.1 m; assumed E and W sides perpendicular to AX-002",MU-AR0032r,,opus quadratum,Roman,"Phase 1, Phase 2",988656f6040e8d4cac80ec6e81565e4e,"E.II.15,16; E.III.3,4","E.II.15; E.II.16; E.III.3; E.III.4"
+"assumed width about 1.3 m; assumed E and W sides perpendicular to AX-002",MU-AR0031r,,opus quadratum,Roman,"Phase 1, Phase 2",0bab8f8f046c8e173ca3dad7e9f4dc8f,E.III.3,E.III.3
+"assumed width about 1.5 m; assumed E and W sides perpendicular to AX-002",MU-AR0030r,,opus quadratum,Roman,"Phase 1, Phase 2",ef9c87c36223265656b340853cdc7358,"E.III.2,6,7","E.III.2; E.III.6; E.III.7"
+"B3.P.064a (for construction, see Byrsa III: 55)",MU-SX0036e,,opus caementicium,Roman,Phase 2,1641801c15af45a3b552340af673274d,"K.VIII.12; L.VIII.9,13,14","K.VIII.12; L.VIII.9; L.VIII.13; L.VIII.14"
+"B3.P.064a (for construction, see Byrsa III: 50-51)",MU-SX0041e,,opus quadratum,Roman,Phase 2,0ebb6ea54f390b605c3d73ebb091a7b4,"M.IX.9,10","M.IX.9; M.IX.10"
+B3.P.064a,MU-FA0083h,,opus quadratum,Roman,Phase 2,2dd0e124e3f7bbe490a34eb5a373875b,"L.V.1,2,3,5,6,7,8,9,10,14","L.V.1; L.V.2; L.V.3; L.V.5; L.V.6; L.V.7; L.V.8; L.V.9; L.V.10; L.V.14"
+B3.P.064a,MU-FA0094r,,opus quadratum,Roman,Phase 2,ee00da17f61f9ddb5b61af7f18fa73c9,"N.VIII.6,7,11,13,14,15; N.IX.1,2","N.VIII.6; N.VIII.7; N.VIII.11; N.VIII.13; N.VIII.14; N.VIII.15; N.IX.1; N.IX.2"
+B3.P.064a,MU-FA0079r,,opus quadratum,Roman,Phase 2,71ca4c94dc938e2ead6701116facbb3f,"J.V.16; J.VI.3,4; K.V.10,11,13,14; K.VI.1","J.V.16; J.VI.3; J.VI.4; K.V.10; K.V.11; K.V.13; K.V.14; K.VI.1"
+assumed curve of MU-AS0006e was originally semicircular,MU-AS0026r,,rubble linked with lime,Roman,"Phase 1, Phase 2",40e708c0a6a0a827a6ada185e5910624,"F.II.13; F.III.1","F.II.13; F.III.1"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0052h,,,Roman,"Phase 1, Phase 2",6dad235097994e59f670f8d619adf1d7,J.XX.13,J.XX.13
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed contiguous with façade wall of adjacent corner room; assumed E side flush with AX-003",MU-FA0056h,,,Roman,"Phase 1, Phase 2",e17ddfc79936ade4ecb3900a07e9f598,J.I.11,J.I.11
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0053h,,,Roman,"Phase 1, Phase 2",9da25105a263bb893043dcd7836be9e0,"J.I.1,2","J.I.1; J.I.2"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0054h,,,Roman,"Phase 1, Phase 2",d5ee91e26291bf408666a30fc32dacf5,"J.I.2,6","J.I.2; J.I.6"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0055h,,,Roman,"Phase 1, Phase 2",5d456f7c6bf341b2ed5d0abbe4319e02,"J.I.6,7,10,11","J.I.6; J.I.7; J.I.10; J.I.11"
+D1990.K.151 (assumed length 30.2 m),ES-0001h,,,Roman,"Phase 1, Phase 2",cf64db601d8922a5b6876a33bafa75dd,"H.II.16; H.III.4,8; I.II.8,10,11,12,13,14,15,16; I.III.1,2,3,4,5,6,7,9; J.II.5,9,10,13,14","H.II.16; H.III.4; H.III.8; I.II.8; I.II.10; I.II.11; I.II.12; I.II.13; I.II.14; I.II.15; I.II.16; I.III.1; I.III.2; I.III.3; I.III.4; I.III.5; I.III.6; I.III.7; I.III.9; J.II.5; J.II.9; J.II.10; J.II.13; J.II.14"
+"B2.J.010a (assumed N side flush with AX-010; assumed S side flush with AX-011; assumed E side abutting MU-SX0009r as shown in B2.J.010a and G1990.P.571)",MU-SF0009r,wall F,,Roman,Phase 2,a063abcb646ec38d9188f3cadae7885e,"H.III.8,11,12; I.III.5,9","H.III.8; H.III.11; H.III.12; I.III.5; I.III.9"
+assumed curve of MU-AS0006e was originally semicircular,MU-AS0025r,,"rubble joined with lime, lined with opus reticulatum",Roman,"Phase 1, Phase 2",6fa3bb47a80393af9f649b96fd7ce7d9,"E.III.4; F.III.1","E.III.4; F.III.1"
+"assumed length such that apse opening was proportional to that reconstructed in GD1980.P.320; assumed S side flush with AX-002",MU-FA0027h,,opus quadratum,Roman,"Phase 1, Phase 2",9167c12cc9ce91179311115e95cfc8c3,E.III.2,E.III.2
+"assumed length such that apse opening was proportional to that reconstructed in GD1980.P.320; assumed S side flush with AX-002",MU-FA0028h,,opus quadratum,Roman,"Phase 1, Phase 2",25ceaf5fd40abf3b8cc70f58e34b3b15,"E.II.15; E.III.2,3","E.II.15; E.III.2; E.III.3"
+"assumed length such that apse opening was proportional to that reconstructed in GD1980.P.320; assumed S side flush with AX-002",MU-FA0029h,,opus quadratum,Roman,"Phase 1, Phase 2",a3f57b6383657dd19f9cc211e6d090dc,"E.II.15,16","E.II.15; E.II.16"
+"assumed length such that apse opening was proportional to that reconstructed in GD1980.P.320; assumed S side flush with AX-002",MU-FA0030h,,opus quadratum,Roman,"Phase 1, Phase 2",e42cd43a3ee9b654d87c0a00f3a1a71a,E.II.16,E.II.16
+"assumed length such that apse opening was proportional to that reconstructed in GD1980.P.320; assumed S side flush with AX-002",MU-FA0031h,,opus quadratum,Roman,"Phase 1, Phase 2",7ce69576481285702ec16071ffc543f0,F.II.9,F.II.9
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0042h,,,Roman,"Phase 1, Phase 2",364c638339ac418c27c914c0efd02b47,"H.I.5,6","H.I.5; H.I.6"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0043h,,,Roman,"Phase 1, Phase 2",a0b4a38c315f5105f31a91661ce64c42,H.I.6,H.I.6
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0044h,,,Roman,"Phase 1, Phase 2",af1d2afbaaac39d5ad15a9a942f035f6,"H.I.3,7","H.I.3; H.I.7"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0045h,,,Roman,"Phase 1, Phase 2",b385a65beb92484260ff9e9128307403,H.I.4,H.I.4
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0046h,,,Roman,"Phase 1, Phase 2",a42fcd8ab3b28c1483a2938b65a6a701,"H.I.4; H.XX.16; I.I.1; I.XX.13","H.I.4; H.XX.16; I.I.1; I.XX.13"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0047h,,,Roman,"Phase 1, Phase 2",284ed72087e7a0e754133ebcc6170e83,"I.XX.13,14","I.XX.13; I.XX.14"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0048h,,,Roman,"Phase 1, Phase 2",0ad0d42928d89624223be0e37c3ded3f,"I.XX.10,14","I.XX.10; I.XX.14"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed contiguous with façade walls of adjacent corner room; assumed S side flush with AX-002",MU-FA0049h,,,Roman,"Phase 1, Phase 2",6eddbbf9d0e7546ac0cfb7c97b6683a4,I.XX.11,I.XX.11
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0041h,,,Roman,"Phase 1, Phase 2",84e675b8e325f2214f4293eed27d4e12,"G.I.12; H.I.9","G.I.12; H.I.9"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0040h,,,Roman,"Phase 1, Phase 2",4ea8befaad91fef352d2e87ebe02814e,G.I.12,G.I.12
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0039h,,,Roman,"Phase 1, Phase 2",bb41f7a9a03c57754f8a81a7db6ec6b1,"G.I.11,15","G.I.11; G.I.15"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0038h,,,Roman,"Phase 1, Phase 2",19f42474bbdb5b04eb814504dc8c38a5,"G.I.14,15","G.I.14; G.I.15"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0037h,,,Roman,"Phase 1, Phase 2",37f75d6d1ba5848320e200cd4202d2c2,"G.I.13,14; G.II.1,2","G.I.13; G.I.14; G.II.1; G.II.2"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0036h,,,Roman,"Phase 1, Phase 2",390a84b7f275cd0e72d0799381f7ab93,G.II.1,G.II.1
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0035h,,,Roman,"Phase 1, Phase 2",ee6190db5842e82972e6c0b60ef86501,"F.II.4,8","F.II.4; F.II.8"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed contiguous with façade wall of adjacent corner room; assumed E side flush with AX-003",MU-FA0051h,,,Roman,"Phase 1, Phase 2",0ee72f2cb09c286b7de7f11ad2b2a308,"I.XX.12; J.XX.9,13","I.XX.12; J.XX.9; J.XX.13"
+"D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60; assumed contiguous with MU-AR0052h)",MU-AR0053h,,,Roman,"Phase 1, Phase 2",91068b06d53fced88bebc5e682d07d8d,"I.XX.12,15,16; J.XX.9,13","I.XX.12; I.XX.15; I.XX.16; J.XX.9; J.XX.13"
+assumed dimensions and shape described in Delattre (1894: 89-90),MU-SA0001r,,,Roman,"Phase 1, Phase 2",915ea2cb302bb265120b0803323091d9,"H.I.7,8,10,11,12,13,14,15; H.II.2; I.I.1,2,3,4,5,6,7,8,9,12; I.XX.15,16; J.I.1,5,9,10,13,14","H.I.7; H.I.8; H.I.10; H.I.11; H.I.12; H.I.13; H.I.14; H.I.15; H.II.2; I.I.1; I.I.2; I.I.3; I.I.4; I.I.5; I.I.6; I.I.7; I.I.8; I.I.9; I.I.12; I.XX.15; I.XX.16; J.I.1; J.I.5; J.I.9; J.I.10; J.I.13; J.I.14"
+"assumed thickness identical to MU-SD0018r; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed continuous with façade of adjacent corner room; assumed N side flush with AX-007",MU-FA0059h,,,Roman,"Phase 1, Phase 2",f662fb2b80ebebfb8dbbfe593baa8072,J.II.2,J.II.2
+"assumed thickness identical to MU-SD0018r; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed N side flush with AX-007",MU-FA0060h,,,Roman,"Phase 1, Phase 2",de8c446950b2bf6f7f1e6a7c9019eb42,"J.II.1,2","J.II.1; J.II.2"
+"assumed thickness identical to MU-SD0018r; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed N side flush with AX-007",MU-FA0061h,,,Roman,"Phase 1, Phase 2",0927da7ecb58b6bb62b64ba446b8d241,"J.II.1,5","J.II.1; J.II.5"
+"assumed S side flush with AX-008; assumed N side flush with AX-007; assumed E side abutting MU-FA0061h",MU-SD0018r,"wall D, Lapeyre's wall",,Roman,"Phase 1, Phase 2",bc5cd9a72287e36b585211dbc289a244,"H.II.16; H.III.3,4; I.II.7,8,9,10,11,12,13,14; J.II.5","H.II.16; H.III.3; H.III.4; I.II.7; I.II.8; I.II.9; I.II.10; I.II.11; I.II.12; I.II.13; I.II.14; J.II.5"
+"D1990.K.151 (assumed same width as façade walls of adjacent apses); assumed E side flush with AX-003",MU-FA0057h,,,Roman,"Phase 1, Phase 2",26b405ec13b695b2948d8d0de313d775,"J.I.11,15","J.I.11; J.I.15"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed thickness assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-010",MU-FA0062h,,,Roman,"Phase 1, Phase 2",48395d27c8cef766bd3d8c209ef1d902,J.II.14,J.II.14
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed thickness assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-010",MU-FA0063h,,,Roman,"Phase 1, Phase 2",cd6f8573a5f347b7ec607a17e20a4b19,"J.II.10,11","J.II.10; J.II.11"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed thickness assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-010",MU-FA0064h,,,Roman,"Phase 1, Phase 2",193e60170ff2f8d87b47893e72d4e83b,"J.II.11,12","J.II.11; J.II.12"
+"D1990.K.151 (assumed same width as façade walls of adjacent apses); assumed E side flush with AX-003; assumed S side flush with AX-010",MU-FA0065h,,,Roman,"Phase 1, Phase 2",95ab54a485fbe139f61f36b8670a0df3,"J.II.8,11,12; K.II.5,9","J.II.8; J.II.11; J.II.12; K.II.5; K.II.9"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed contiguous with façade wall of adjacent corner room; assumed E side flush with AX-003",MU-FA0066h,,,Roman,"Phase 1, Phase 2",4e4f8740a22933eb88e918675aeeb825,"K.II.9,13","K.II.9; K.II.13"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0067h,,,Roman,"Phase 1, Phase 2",b90c1dc5003bea633e332aded6e2ddf7,"K.II.13,14","K.II.13; K.II.14"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0068h,,,Roman,"Phase 1, Phase 2",aa71e36da2b7ddbee2e06a27bc3cef6d,K.III.2,K.III.2
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0069h,,,Roman,"Phase 1, Phase 2",de450f8bd51285f8439beebc90ce6cc2,"K.III.3,6,7","K.III.3; K.III.6; K.III.7"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0070h,,,Roman,"Phase 1, Phase 2",896ed52d6548c9e112dd94c0935aca0e,"K.III.7,11","K.III.7; K.III.11"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0071h,,,Roman,"Phase 1, Phase 2",c993c2b02bccc9b8d2a8e02aff365a91,"K.III.11,12","K.III.11; K.III.12"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0072h,,,Roman,"Phase 1, Phase 2",f783d2f1fdf8886df83239685c4da508,K.III.16,K.III.16
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed E side flush with AX-003",MU-FA0073h,,,Roman,"Phase 1, Phase 2",44e690e558d66ca1eab56568b1720b11,"K.IV.4; L.IV.1","K.IV.4; L.IV.1"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed contiguous with façade wall of adjacent corner room; assumed E side flush with AX-003",MU-FA0074h,,,Roman,"Phase 1, Phase 2",ba447dae9d7bd8762c9d9387175bf172,"L.IV.1,5","L.IV.1; L.IV.5"
+"D1990.K.151 (assumed same width as façade walls of adjacent apses); assumed S side flush with AX-002; assumed E side flush with AX-003",MU-FA0050h,,,Roman,"Phase 1, Phase 2",13ca03a6c16ca9ea17984f1b8f1b072b,"I.XX.8,11,12; J.XX.9","I.XX.8; I.XX.11; I.XX.12; J.XX.9"
+D1990.K.151 (assumed length 30.2 m),ES-0002h,,,Roman,"Phase 1, Phase 2",e5172af8324d676794d0a17ca405c02b,"J.V.7,8,10,11,12,14,15,16; J.VI.3,4; K.IV.15; K.V.1,2,3,4,5,6,7,8,9,10,11,12,13,14","J.V.7; J.V.8; J.V.10; J.V.11; J.V.12; J.V.14; J.V.15; J.V.16; J.VI.3; J.VI.4; K.IV.15; K.V.1; K.V.2; K.V.3; K.V.4; K.V.5; K.V.6; K.V.7; K.V.8; K.V.9; K.V.10; K.V.11; K.V.12; K.V.13; K.V.14"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed contiguous with façade wall of adjacent corner room",MU-FA0076h,,,Roman,"Phase 1, Phase 2",ff88cc7aceebcf0877e1c81ed09fe852,"K.IV.12; L.IV.9","K.IV.12; L.IV.9"
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses",MU-FA0077h,,,Roman,"Phase 1, Phase 2",fafef825a2390792b7179a28e202b950,K.IV.16,K.IV.16
+"assumed wall width of 1.0 m following Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses",MU-FA0078h,,,Roman,"Phase 1, Phase 2",ee7e45c34c89e096943e9fbb71368c78,K.IV.15,K.IV.15
+"D1990.K.151 (assumed same width as façade walls of adjacent apses); assumed E side flush with AX-003",MU-FA0075h,,,Roman,"Phase 1, Phase 2",3f2b3017895151f964c406cf7a17173e,"L.IV.5,9,10","L.IV.5; L.IV.9; L.IV.10"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0034h,,,Roman,"Phase 1, Phase 2",b15ef4b7eb58361c64b7cb1c0ead6beb,"F.II.7,8","F.II.7; F.II.8"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0033h,,,Roman,"Phase 1, Phase 2",7afc537fac2b0cc5b68efee7024646eb,"F.II.6,7","F.II.6; F.II.7"
+"assumed same dimensions as described by Beulé 1861: 60; assumed opening width of 2.28 m, proportional to openings of southwest apses; assumed S side flush with AX-002",MU-FA0032h,,,Roman,"Phase 1, Phase 2",afdf9bf3e22433eaeccdbd644e800d41,F.II.10,F.II.10
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0029h,,,Roman,"Phase 1, Phase 2",97d2be642bbb10dca808eb9b64050221,"F.II.10,11,14,15","F.II.10; F.II.11; F.II.14; F.II.15"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0030h,,,Roman,"Phase 1, Phase 2",686896eacafcf3ba909e464aae2c59a3,"F.II.7,8,11,12","F.II.7; F.II.8; F.II.11; F.II.12"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0031h,,,Roman,"Phase 1, Phase 2",3a3ec9abcec1389c901dec73bbcf120a,"F.II.8,12; G.II.5","F.II.8; F.II.12; G.II.5"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0032h,,,Roman,"Phase 1, Phase 2",31f2246fc625786ce87ac3e02a3d9041,"F.II.8; G.II.5","F.II.8; G.II.5"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0033h,,,Roman,"Phase 1, Phase 2",4ac2a81bc9dd6266d5741d2ab9bba311,"G.II.1,2,5,6","G.II.1; G.II.2; G.II.5; G.II.6"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0034h,,,Roman,"Phase 1, Phase 2",f27294070fb4b1141c995bd81c4b39fd,"G.II.2,3","G.II.2; G.II.3"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0035h,,,Roman,"Phase 1, Phase 2",633be332144474cf8e6554aeb0ed5069,"G.I.15,16; G.II.3,4","G.I.15; G.I.16; G.II.3; G.II.4"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0036h,,,Roman,"Phase 1, Phase 2",fabeabb1bdeac34f701c898f57ef7740,"G.I.16; G.II.4","G.I.16; G.II.4"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0037h,,,Roman,"Phase 1, Phase 2",59d716ef2161123c1d533442d95c9eff,"G.I.16; H.I.9,13","G.I.16; H.I.9; H.I.13"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0038h,,,Roman,"Phase 1, Phase 2",354feb279e478426fe094b3308ca66ea,"H.I.9,10,13,14","H.I.9; H.I.10; H.I.13; H.I.14"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0039h,,,Roman,"Phase 1, Phase 2",9ef57f23b6644d883ba08cc32fd0ed28,"H.I.6,10,11","H.I.6; H.I.10; H.I.11"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0040h,,,Roman,"Phase 1, Phase 2",da2fa0d5bfa7780e414680fb832bb4ee,"H.I.7,11","H.I.7; H.I.11"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0041h,,,Roman,"Phase 1, Phase 2",7f982dcb4c04b3b777a636e62d2251a1,"H.I.7,8","H.I.7; H.I.8"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0042h,,,Roman,"Phase 1, Phase 2",31f4335b8b7acb679eea82413fc00892,"H.I.4,8; I.I.1,5","H.I.4; H.I.8; I.I.1; I.I.5"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0043h,,,Roman,"Phase 1, Phase 2",675c89c94f58305f33b0835c1ae06ce4,"I.I.1,2","I.I.1; I.I.2"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0044h,,,Roman,"Phase 1, Phase 2",ede42612d0573708e36785b7da5b9c90,"I.I.2; I.XX.14","I.I.2; I.XX.14"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0045h,,,Roman,"Phase 1, Phase 2",7a9e23f147cb845421c00c65e4fbdb0b,"I.I.3; I.XX.14,15","I.I.3; I.XX.14; I.XX.15"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0046h,,,Roman,"Phase 1, Phase 2",fdb48e31e0b9c025f9d3a450faf64f4a,"I.I.4; I.XX.16","I.I.4; I.XX.16"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0047h,,,Roman,"Phase 1, Phase 2",e603016e64f0f9cc0083dffd3270c90a,"I.I.4; J.I.1","I.I.4; J.I.1"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0048h,,,Roman,"Phase 1, Phase 2",ae07ab45305ce2ded84f7b9489fa7226,"J.I.1,5","J.I.1; J.I.5"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0049h,,,Roman,"Phase 1, Phase 2",5a87976cd2985b61bf8b76d69756c630,"J.I.5,9,10","J.I.5; J.I.9; J.I.10"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0050h,,,Roman,"Phase 1, Phase 2",36e8482ba48272b7bcb923ac35a857a3,"J.I.9,10,14","J.I.9; J.I.10; J.I.14"
+"D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60; assumed contiguous with MU-SA0001r)",MU-AS0051h,,,Roman,"Phase 1, Phase 2",05d654b50dff6138db05d29a30520231,"J.I.13,14; J.II.1","J.I.13; J.I.14; J.II.1"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0052h,,,Roman,"Phase 1, Phase 2",2b2b498c40dfa35ddc5a68e9de853a56,"I.I.16; I.II.4; J.I.13; J.II.1","I.I.16; I.II.4; J.I.13; J.II.1"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0053h,,,Roman,"Phase 1, Phase 2",9eac2a810e14f934abc38b1af494b030,"J.II.14,15; J.III.2,3","J.II.14; J.II.15; J.III.2; J.III.3"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0054h,,,Roman,"Phase 1, Phase 2",4a28f7c6de1291f02e0b3d82a08f814c,"J.II.12,15,16","J.II.12; J.II.15; J.II.16"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0055h,,,Roman,"Phase 1, Phase 2",ed9ce71a415767973d715429664d8af0,"J.II.16; K.II.13; K.III.1","J.II.16; K.II.13; K.III.1"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0056h,,,Roman,"Phase 1, Phase 2",b8579b64dbc0a4be135088e6a24232bb,"K.III.1,2","K.III.1; K.III.2"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0057h,,,Roman,"Phase 1, Phase 2",5c3d2043862b675445a177a40438ad46,"K.III.1,2,5,6","K.III.1; K.III.2; K.III.5; K.III.6"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0058h,,,Roman,"Phase 1, Phase 2",6e3f542d0db9e1c87f7742d7a8f615c0,"K.III.6,10","K.III.6; K.III.10"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0059h,,,Roman,"Phase 1, Phase 2",3cb9f65d041cbd65c888e396de21435b,"K.III.10,11,14,15","K.III.10; K.III.11; K.III.14; K.III.15"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0060h,,,Roman,"Phase 1, Phase 2",a337df0dd71cb9df0f23d41ee50eb42d,"K.III.14,15","K.III.14; K.III.15"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0061h,,,Roman,"Phase 1, Phase 2",8f6fe913e4d4bd2ae7a4431551c7b8a9,"K.III.15; K.IV.3,4","K.III.15; K.IV.3; K.IV.4"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0062h,,,Roman,"Phase 1, Phase 2",b802cc12f91e4b4017a76426d27cb2b1,"K.IV.3,4,7,8","K.IV.3; K.IV.4; K.IV.7; K.IV.8"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0064h,,,Roman,"Phase 1, Phase 2",14dff9b4f3ac6201c7dab58503071d6a,"K.IV.11,15","K.IV.11; K.IV.15"
+D1990.K.151 (assumed same dimensions as described by Beulé 1861: 60),MU-AS0063h,,,Roman,"Phase 1, Phase 2",ef6e53b66e9d4465becefe46e32333fe,"K.IV.8,11,12","K.IV.8; K.IV.11; K.IV.12"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0035h,,,Roman,"Phase 1, Phase 2",e79f539f0514112fa5115f1a340246fa,"F.II.10,14","F.II.10; F.II.14"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0036h,,,Roman,"Phase 1, Phase 2",c7f0a1031db5bd7ad95ed9fb03f69943,"F.II.6,7,11","F.II.6; F.II.7; F.II.11"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0037h,,,Roman,"Phase 1, Phase 2",883aeb2ac1e550cbdad07cc8b7f20ad6,"F.II.7,8,12","F.II.7; F.II.8; F.II.12"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0038h,,,Roman,"Phase 1, Phase 2",c67f6c1de4bba72afe6cdb3be5b34dec,"F.II.4,8; G.II.5","F.II.4; F.II.8; G.II.5"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0039h,,,Roman,"Phase 1, Phase 2",aac12fcf762dab43ab5b5960e8ad1893,"G.II.1,5","G.II.1; G.II.5"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0040h,,,Roman,"Phase 1, Phase 2",90a516786ed70892821f7467591c41bb,"G.II.2,6","G.II.2; G.II.6"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0041h,,,Roman,"Phase 1, Phase 2",ec73a48b440e5a92f1f77880be70facb,"G.I.14,15; G.II.2,3","G.I.14; G.I.15; G.II.2; G.II.3"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0042h,,,Roman,"Phase 1, Phase 2",d64b3ee76f32e199e5304a38dc23d243,"G.I.15,16; G.II.4","G.I.15; G.I.16; G.II.4"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0043h,,,Roman,"Phase 1, Phase 2",65b0d5136dfedaf69a34c3eb205c7b51,"G.I.12,16; H.I.13","G.I.12; G.I.16; H.I.13"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0044h,,,Roman,"Phase 1, Phase 2",94d1d7924c134fbb87f404df91ee0f58,"H.I.9,13","H.I.9; H.I.13"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0045h,,,Roman,"Phase 1, Phase 2",eec29bbff9fd32ad32d8ed03200af660,"H.I.5,6,9,10","H.I.5; H.I.6; H.I.9; H.I.10"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0046h,,,Roman,"Phase 1, Phase 2",f2ad84937381084cbff31312cc631873,"H.I.6,7,10,11","H.I.6; H.I.7; H.I.10; H.I.11"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0047h,,,Roman,"Phase 1, Phase 2",757f56e87f83dac93287a1e57604f18d,"H.I.3,7,8","H.I.3; H.I.7; H.I.8"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0048h,,,Roman,"Phase 1, Phase 2",5ca90c69b7f052ce1aa89fb6ecce8f00,"H.I.4,8","H.I.4; H.I.8"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0049h,,,Roman,"Phase 1, Phase 2",6fafee17bf96c9d9b4c0b6fe52317a7d,"H.I.4; I.I.1,5","H.I.4; I.I.1; I.I.5"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0050h,,,Roman,"Phase 1, Phase 2",276137689ec8911a4290dc1b09644cb8,"I.I.1,2; I.XX.13,14","I.I.1; I.I.2; I.XX.13; I.XX.14"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0051h,,,Roman,"Phase 1, Phase 2",8fed3d5f5391708a27611e1f28f9e17e,"I.I.2,3; I.XX.14,15","I.I.2; I.I.3; I.XX.14; I.XX.15"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0052h,,,Roman,"Phase 1, Phase 2",0d9f7556a5093b500ca3cbdf66befd1e,"I.XX.11,15","I.XX.11; I.XX.15"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0054h,,,Roman,"Phase 1, Phase 2",fa001017723f1d51c6b66d8c3a7b2d88,"I.I.4; I.XX.16; J.I.1; J.XX.13","I.I.4; I.XX.16; J.I.1; J.XX.13"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0055h,,,Roman,"Phase 1, Phase 2",808ec3cc1ff76f56453b8bc37c283bd9,"I.I.4; J.I.1,5","I.I.4; J.I.1; J.I.5"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0056h,,,Roman,"Phase 1, Phase 2",da23731172243e6c94cfcd0c4501997b,"J.I.5,6","J.I.5; J.I.6"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0057h,,,Roman,"Phase 1, Phase 2",4319881944cfb8d381f8fe895eeca699,"J.I.6,9,10","J.I.6; J.I.9; J.I.10"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0058h,,,Roman,"Phase 1, Phase 2",15e9f55710e62e2a2e76f531642a1c67,"J.I.10,11,14","J.I.10; J.I.11; J.I.14"
+"D1990.K.151 (assumed wall width of 1.1 m following Beulé 1861: 60; asummed contiguous with MU-AR0058h; assumed contiguous with MU-SA0001r)",MU-AR0059h,,,Roman,"Phase 1, Phase 2",02dd43b5224a08c5372ab8f51e984726,"J.I.14; J.II.2","J.I.14; J.II.2"
+D1990.K.151 (assumed wall width of 1.1 m following Beulé 1861: 60),MU-AR0060h,,,Roman,"Phase 1, Phase 2",0a8612619ca94d205b08af4bfa6dee51,"J.I.13; J.II.1","J.I.13; J.II.1"
+"D1990.K.151 (assumed wall width of 1.1 m following Beulé 1861: 60; assumed E side colinear with E side of ES-0001h)",MU-AR0061h,,,Roman,"Phase 1, Phase 2",2d27f6d1c4582436e863007dbf7da1ee,"I.II.4,8; J.II.1,5","I.II.4; I.II.8; J.II.1; J.II.5"
+"D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60; assumed E side colinear with E side of ES-0001h)",MU-AR0062h,,,Roman,"Phase 1, Phase 2",ac5c27a7b4d5b41bd52504c077250b1a,"J.II.14; J.III.2,3","J.II.14; J.III.2; J.III.3"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0063h,,,Roman,"Phase 1, Phase 2",a387b63444ab23de9541961bb05edfaf,"J.II.11,15","J.II.11; J.II.15"
+"D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60; assumed to extend north and east until N side flush with N side of MU-AR0065h)",MU-AR0064h,,,Roman,"Phase 1, Phase 2",6f6eac9921f41c6020685e9d1043b700,"J.II.11,12,16","J.II.11; J.II.12; J.II.16"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0065h,,,Roman,"Phase 1, Phase 2",39c5c23b9968f10b47a46ec9e42aa3d7,"J.II.16; K.II.9,13","J.II.16; K.II.9; K.II.13"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0066h,,,Roman,"Phase 1, Phase 2",665a9d8f5204ec96d28427184ddbab7b,"K.II.13,14; K.III.1","K.II.13; K.II.14; K.III.1"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0067h,,,Roman,"Phase 1, Phase 2",8807dc7359f296f43e9e0eb7869722b4,"K.III.1,2,5","K.III.1; K.III.2; K.III.5"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0068h,,,Roman,"Phase 1, Phase 2",6125e43b2d29f91831fcad3101669174,"K.III.5,6,7","K.III.5; K.III.6; K.III.7"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0069h,,,Roman,"Phase 1, Phase 2",23fbe009c9e20bbe4b4928d87bc3a939,"K.III.7,10,11","K.III.7; K.III.10; K.III.11"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0070h,,,Roman,"Phase 1, Phase 2",f87612faa2ca72b2206f687ccccb3da7,"K.III.11,14,15","K.III.11; K.III.14; K.III.15"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0071h,,,Roman,"Phase 1, Phase 2",646f794f3a284e5c909a681e7759d2e1,"K.III.15,16; K.IV.3","K.III.15; K.III.16; K.IV.3"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0072h,,,Roman,"Phase 1, Phase 2",138609582226baec4959ba57ecca2d29,"K.IV.3,4","K.IV.3; K.IV.4"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0073h,,,Roman,"Phase 1, Phase 2",2bda4fa4178e4a54257d931bb407a1b6,"K.IV.8; L.IV.1,5","K.IV.8; L.IV.1; L.IV.5"
+"D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60; assumed S side abutting MU-AR0073h)",MU-AR0074h,,,Roman,"Phase 1, Phase 2",b32af7c42c104bb0dc581b3f7b9b0b4c,"K.IV.8,12; L.IV.9","K.IV.8; K.IV.12; L.IV.9"
+D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60),MU-AR0075h,,,Roman,"Phase 1, Phase 2",291d8c4b2da0ef7fff1cf17a5f9f5187,"K.IV.11,12,16","K.IV.11; K.IV.12; K.IV.16"
+"D1990.K.151 (assumed width of 1.1 m following Beulé 1861: 60; assumed E side colinear with E side of ES-0002h)",MU-AR0076h,,,Roman,"Phase 1, Phase 2",5604176c5cd20894b4d79edab1902768,"K.IV.10,11,15","K.IV.10; K.IV.11; K.IV.15"
+"assumed to exist based on analogy with adjacent MU-AS0006e; assumed N side abutting MU-SX0006r; assumed E side abutting MU-SA0001r",MU-SX0007h,,rubble linked with mortar,Roman,"Phase 1, Phase 2",979c8c910a98c3f2b142ee16503c2520,"F.II.8,11,12,14,15; G.I.16; G.II.2,3,4,5,6,7,9; H.I.13; H.II.1","F.II.8; F.II.11; F.II.12; F.II.14; F.II.15; G.I.16; G.II.2; G.II.3; G.II.4; G.II.5; G.II.6; G.II.7; G.II.9; H.I.13; H.II.1"
+"B2.J.144, B1.P.100a, B2.J.010a (assumed N side flush with AX-022, assumed constant width of 1.65 m; assumed E side abutting MU-SA0001r)",MU-SX0006r,,,Roman,"Phase 1, Phase 2",9a3789a72b1a7e0ba48e946fc64c1aae,"F.II.11,12,14,15,16; G.II.3,4,5,6,7,9,10; H.I.13; H.II.1","F.II.11; F.II.12; F.II.14; F.II.15; F.II.16; G.II.3; G.II.4; G.II.5; G.II.6; G.II.7; G.II.9; G.II.10; H.I.13; H.II.1"
+"assumed analagous to MU-SX0007h; assumed constant width of 1.98 m similar to W side of MU-SX0007h",MU-SX0020h,,rubble linked with mortar,Roman,"Phase 1, Phase 2",52df4cfb57be502632c90df6139202ce,"J.II.15,16; J.III.2,3,4; K.II.13; K.III.1,5,6,9,10,14,15; K.IV.2,3,7,8,10,11,12","J.II.15; J.II.16; J.III.2; J.III.3; J.III.4; K.II.13; K.III.1; K.III.5; K.III.6; K.III.9; K.III.10; K.III.14; K.III.15; K.IV.2; K.IV.3; K.IV.7; K.IV.8; K.IV.10; K.IV.11; K.IV.12"
+"assumed analagous to MU-SX0006r; assumed constant width of 1.66 m based on W side of MU-SX0006h",MU-SX0019h,,,Roman,"Phase 1, Phase 2",6176814a4448565912c938cad40fe16b,"J.II.16; J.III.3,4,8; K.III.1,5,9,10,13,14; K.IV.2,3,6,7,10,11","J.II.16; J.III.3; J.III.4; J.III.8; K.III.1; K.III.5; K.III.9; K.III.10; K.III.13; K.III.14; K.IV.2; K.IV.3; K.IV.6; K.IV.7; K.IV.10; K.IV.11"
+"B1.P.186a, B2.J.010a (assumed W side abutting MU-SM0003r, following B2.J.010a; assumed N side flush with AX-005; assumed S side flush with AX-006",MU-SG0005r,wall G,,Roman,"Phase 1, Phase 2",0fb2f380d92933c8d48e09b9e55e68ff,"E.V.7,8,10,11,12,14,15; F.IV.12,15,16; F.V.1,2,3,4,5,6; G.IV.4,6,7,8,9,10,11,13; H.III.14,15; H.IV.1,2,5","E.V.7; E.V.8; E.V.10; E.V.11; E.V.12; E.V.14; E.V.15; F.IV.12; F.IV.15; F.IV.16; F.V.1; F.V.2; F.V.3; F.V.4; F.V.5; F.V.6; G.IV.4; G.IV.6; G.IV.7; G.IV.8; G.IV.9; G.IV.10; G.IV.11; G.IV.13; H.III.14; H.III.15; H.IV.1; H.IV.2; H.IV.5"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0001h,,,Roman,"Phase 1, Phase 2",225ba77d35c8a6fd500684550961b3eb,"F.VIII.5,9","F.VIII.5; F.VIII.9"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0019h,,,Roman,"Phase 1, Phase 2",78f65b4942f0e8a3848a6309056058a4,"J.VI.1,2","J.VI.1; J.VI.2"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0002h,,,Roman,"Phase 1, Phase 2",dbd34a08cb2f85ecd37a6aae9ef6a8c1,"F.VIII.2,6","F.VIII.2; F.VIII.6"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0004h,,,Roman,"Phase 1, Phase 2",6366ee9e6302927f3df453a16e0437ea,"F.VII.16; F.VIII.4","F.VII.16; F.VIII.4"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0005h,,,Roman,"Phase 1, Phase 2",75557374c13fd91554699fdcdf9c75ff,"F.VII.16; G.VII.13","F.VII.16; G.VII.13"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0006h,,,Roman,"Phase 1, Phase 2",f65f96ac59a7ddf64a1153cb799ed28b,"G.VII.10,13,14","G.VII.10; G.VII.13; G.VII.14"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0007h,,,Roman,"Phase 1, Phase 2",10cbfa2c21e4d7e7a23fbfec96b80ec3,"G.VII.10,11","G.VII.10; G.VII.11"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0008h,,,Roman,"Phase 1, Phase 2",62232a79f05949e41154212822009172,"G.VII.7,8,11,12","G.VII.7; G.VII.8; G.VII.11; G.VII.12"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0009h,,,Roman,"Phase 1, Phase 2",fa378db25742829aaf5144e960da325d,"G.VII.8; H.VII.5","G.VII.8; H.VII.5"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0010h,,,Roman,"Phase 1, Phase 2",64d2f6a09c790bbaaee0622c5f60b3be,"H.VII.1,5,6","H.VII.1; H.VII.5; H.VII.6"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0011h,,,Roman,"Phase 1, Phase 2",8234e7724c9efd6df6e2688c6996eda9,H.VII.2,H.VII.2
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0012h,,,Roman,"Phase 1, Phase 2",251f9e3674901579be086a88ef7f2864,"H.VI.15; H.VII.3","H.VI.15; H.VII.3"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0013h,,,Roman,"Phase 1, Phase 2",953ea675e7e160b0b65d81cd14f3592f,H.VI.16,H.VI.16
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0014h,,,Roman,"Phase 1, Phase 2",ea3002faafebd755b06cac3e0947f834,"I.VI.9,13","I.VI.9; I.VI.13"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0015h,,,Roman,"Phase 1, Phase 2",5279c3e5bba291f5fcf5e57901965a84,I.VI.10,I.VI.10
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0016h,,,Roman,"Phase 1, Phase 2",18cc17e2bf76f1c22060cefbb5b2bdd9,"I.VI.7,11","I.VI.7; I.VI.11"
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0017h,,,Roman,"Phase 1, Phase 2",3b4e53833a6d6b7bc01ff6284defe5de,I.VI.8,I.VI.8
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0018h,,,Roman,"Phase 1, Phase 2",4e0b69d3df25147a5de862f2634c803e,"I.VI.4,8; J.VI.1,5","I.VI.4; I.VI.8; J.VI.1; J.VI.5"
+"assumed length and width of 1.8 m; assumed spacing of 4.4 m; assumed alignment from PI-C0017e and PI-C0021e",PI-C0024h,,opus caementicium,Roman,Phase 2,d8fc1b6aa2dff6dbadc5640c95d83e6f,H.II.12,H.II.12
+"assumed length and width of 1.8 m; assumed spacing of 4.4 m; assumed alignment from PI-C0017e and PI-C0021e",PI-C0025h,,opus caementicium,Roman,Phase 2,b5d145b7b0e6b56dd19c0e2d699f372c,"I.II.5,9","I.II.5; I.II.9"
+"assumed length and width of 1.8 m; assumed spacing of 4.4 m; assumed alignment from PI-C0017e and PI-C0021e",PI-C0026h,,opus caementicium,Roman,Phase 2,dc5f93f3e5e5478cdf5cc26e1a3a6c24,"I.II.5,6","I.II.5; I.II.6"
+"assumed length and width of 1.8 m; assumed spacing of 4.4 m; assumed alignment from PI-C0017e and PI-C0021e",PI-C0027h,,opus caementicium,Roman,Phase 2,dc49eafbb3dac929ac8c45e555a8d2ff,"I.II.2,3,6,7","I.II.2; I.II.3; I.II.6; I.II.7"
+"assumed length and width of 1.8 m; assumed spacing of 4.4 m; assumed alignment from PI-C0017e and PI-C0021e",PI-C0028h,,opus caementicium,Roman,Phase 2,ad91fae84fca1e26c6df3ace303fff56,I.II.3,I.II.3
+"assumed length and width of 1.8 m; assumed spacing of 4.8 m; assumed alignment from PI-B0002e and PI-B0007e",PI-B0031h,,stone rubble and mortar,Roman,"Phase 1, Phase 2",6ccb6d3300419f246c0bd2f8466cc52e,"H.II.3,4","H.II.3; H.II.4"
+"assumed length and width of 1.8 m; assumed spacing of 4.8 m; assumed alignment from PI-B0002e and PI-B0007e",PI-B0032h,,stone rubble and mortar,Roman,"Phase 1, Phase 2",118ff5817b80217d1ac8f9ad9b97f49f,"H.I.16; H.II.4; I.II.1","H.I.16; H.II.4; I.II.1"
+"assumed length and width of 1.8 m; assumed spacing of 4.8 m; assumed alignment from PI-B0002e and PI-B0007e",PI-B0033h,,stone rubble and mortar,Roman,"Phase 1, Phase 2",264646e8790a89e43e9c2f910108ef91,I.I.13,I.I.13
+"assumed length and width of 1.8 m; assumed spacing of 4.8 m; assumed alignment from PI-B0002e and PI-B0007e",PI-B0034h,,stone rubble and mortar,Roman,"Phase 1, Phase 2",e6f00b3166bd3956aa5f54b91ca1d769,"I.I.10,14","I.I.10; I.I.14"
+"assumed length and width of 1.8 m; assumed spacing of 4.8 m; assumed alignment from PI-B0002e and PI-B0007e",PI-B0035h,,stone rubble and mortar,Roman,"Phase 1, Phase 2",624f86807b0c8acb039b0a083360cfd8,I.I.11,I.I.11
+"assumed length and width of 1.8 m; assumed spacing of 4.8 m; assumed alignment from PI-B0002e and PI-B0007e",PI-B0036h,,stone rubble and mortar,Roman,"Phase 1, Phase 2",507e8c82f8daacb04f2f1bbfad203693,"I.I.11,12","I.I.11; I.I.12"
+assumed to extend east until PI-C0028h,MU-SC0004h,wall C,,Roman,Phase 2,1c596660e0db75b712cfe0895a8d3bc4,"G.III.4,8; H.II.11,12,13,14,15; H.III.1,2; I.II.2,3,5,6,7,9","G.III.4; G.III.8; H.II.11; H.II.12; H.II.13; H.II.14; H.II.15; H.III.1; H.III.2; I.II.2; I.II.3; I.II.5; I.II.6; I.II.7; I.II.9"
+B3.P.064a,MU-SX0030r,,opus quadratum,Roman,"Phase 1, Phase 2",14d064647fab16a6fc8188d945f71f84,"L.V.14; L.VI.2,3,7,8,11,12,16; L.VII.4; M.VI.13; M.VII.1,5,6,9,10,14,15; M.VIII.3,4,7,8,12; N.VIII.9","L.V.14; L.VI.2; L.VI.3; L.VI.7; L.VI.8; L.VI.11; L.VI.12; L.VI.16; L.VII.4; M.VI.13; M.VII.1; M.VII.5; M.VII.6; M.VII.9; M.VII.10; M.VII.14; M.VII.15; M.VIII.3; M.VIII.4; M.VIII.7; M.VIII.8; M.VIII.12; N.VIII.9"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0101h,,opus quadratum,Roman,Phase 1,53e5466d655fda8beb843856c047ec9e,"L.V.1,2,3,5,6,7,8,9,10,14","L.V.1; L.V.2; L.V.3; L.V.5; L.V.6; L.V.7; L.V.8; L.V.9; L.V.10; L.V.14"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0100h,,opus quadratum,Roman,Phase 1,1b80d20102ce7a00eaac3b1324fd06cc,"K.V.8; L.V.5","K.V.8; L.V.5"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0098h,,opus quadratum,Roman,Phase 1,b0ecede4137749e9165809d969c6a78b,"L.VI.4,8; M.VI.1,5","L.VI.4; L.VI.8; M.VI.1; M.VI.5"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0097h,,opus quadratum,Roman,Phase 1,d5c19a222e50cc748f25b7d5060bbccd,"L.V.15,16; L.VI.3","L.V.15; L.V.16; L.VI.3"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AS0070h,,,Roman,Phase 1,dc266e32271648429ebee00cc9f9455b,"L.V.10,11,14,15; L.VI.2,3,7,8,12,16; M.VI.9,13; M.VII.1,2,5,6,10,11,14,15,16; M.VIII.3,4,8,12; N.VIII.5,9","L.V.10; L.V.11; L.V.14; L.V.15; L.VI.2; L.VI.3; L.VI.7; L.VI.8; L.VI.12; L.VI.16; M.VI.9; M.VI.13; M.VII.1; M.VII.2; M.VII.5; M.VII.6; M.VII.10; M.VII.11; M.VII.14; M.VII.15; M.VII.16; M.VIII.3; M.VIII.4; M.VIII.8; M.VIII.12; N.VIII.5; N.VIII.9"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AS0071h,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 1,62a1f33c30af3502852b08d85335c133,"M.VIII.10,11,12,14,15; M.IX.2N.VIII.9","M.VIII.10; M.VIII.11; M.VIII.12; M.VIII.14; M.VIII.15; M.IX.2; N.VIII.9"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0100h,,opus quadratum,Roman,Phase 1,7454dbe4ebbafb1b8d92c78db3bdb510,"M.VI.13,14,15","M.VI.13; M.VI.14; M.VI.15"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0099h,,opus quadratum,Roman,Phase 1,194696bcbd7975383028160434826ff3,"M.VI.5,6,9,10","M.VI.5; M.VI.6; M.VI.9; M.VI.10"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0111h,,opus quadratum,Roman,Phase 1,13614e049e30a3a93afab1f42a35ae82,"N.VIII.2,6","N.VIII.2; N.VIII.6"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0110h,,opus quadratum,Roman,Phase 1,946ecd349c3812180122ada155fcad35,"N.VII.13,14; N.VIII.1,2","N.VII.13; N.VII.14; N.VIII.1; N.VIII.2"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0109h,,opus quadratum,Roman,Phase 1,950999d69353e9dba9a6ff5f7c538be3,"M.VII.12; N.VII.9,13","M.VII.12; N.VII.9; N.VII.13"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0108h,,opus quadratum,Roman,Phase 1,2cb5580625f304ecdbafa2cffb9bf009,M.VII.8,M.VII.8
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0107h,,opus quadratum,Roman,Phase 1,90821e8a903d9d99c87bbe56d64adb59,"M.VI.15; M.VII.3,4","M.VI.15; M.VII.3; M.VII.4"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0106h,,opus quadratum,Roman,Phase 1,f6fe31a5f120375966dceae90489bdea,"M.VI.10,11,14,15","M.VI.10; M.VI.11; M.VI.14; M.VI.15"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0102h,,opus quadratum,Roman,Phase 1,a070fe82e40cb827123fcb962d067023,"M.VII.7,8,11","M.VII.7; M.VII.8; M.VII.11"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0105h,,opus quadratum,Roman,Phase 1,6034cff2b43b2e47692010b4f7bd6a1d,"M.VI.6,10","M.VI.6; M.VI.10"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0103h,,opus quadratum,Roman,Phase 1,32997eb9274062a152c5804e91a5eab6,"M.VII.12,15,16; N.VII.9","M.VII.12; M.VII.15; M.VII.16; N.VII.9"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0104h,,opus quadratum,Roman,Phase 1,b0394fb75a1636a2629756b9bb7e048f,M.VI.1,M.VI.1
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0104h,,opus quadratum,Roman,Phase 1,194ecdb56a827ca38f9d0fb777666d31,"M.VIII.4; N.VII.13; N.VIII.1","M.VIII.4; N.VII.13; N.VIII.1"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0099h,,opus quadratum,Roman,Phase 1,f89160047fc2007da1f170642504125e,"K.V.8,11,12","K.V.8; K.V.11; K.V.12"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0105h,,opus quadratum,Roman,Phase 1,c949dfb45526e69704afb043660e5894,"N.VIII.5,6","N.VIII.5; N.VIII.6"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0098h,,opus quadratum,Roman,Phase 1,5dd0d6d36122c8cad2675ba0ae1a2037,"K.V.10,11","K.V.10; K.V.11"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0106h,,opus quadratum,Roman,Phase 1,4c9bd59e744b05d4ce8aa5b8b286c68d,"M.VIII.12,16; N.VIII.9,13; N.IX.1","M.VIII.12; M.VIII.16; N.VIII.9; N.VIII.13; N.IX.1"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0113h,,opus quadratum,Roman,Phase 1,22a30286da697983b90f27ae7702ab70,"N.VIII.13; N.IX.1","N.VIII.13; N.IX.1"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0096h,,opus quadratum,Roman,Phase 1,c6bf71442a7ab035adf140c253ef66ec,"L.V.8,10,11,12","L.V.8; L.V.10; L.V.11; L.V.12"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0114h,,opus quadratum,Roman,Phase 1,a8c1f2febd61740333cd3d8bea498195,"M.IX.4; N.IX.1","M.IX.4; N.IX.1"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0095h,,opus quadratum,Roman,Phase 1,0dca43a8b40d3fa38cb604a8aae2cc9e,"L.V.5,9,10","L.V.5; L.V.9; L.V.10"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0115h,,opus quadratum,Roman,Phase 1,450005423ee668c2aa4d164a0b6bc82d,"M.IX.7,8","M.IX.7; M.IX.8"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0094h,,opus quadratum,Roman,Phase 1,5d51f7aa9d2c77c21cb07eea2ee6d769,"K.V.12,16; L.V.13","K.V.12; K.V.16; L.V.13"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AS0069h,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 1,2a312341b1cda20d8b7219e75cf773c4,"K.V.16; K.VI.3,4; L.V.9,10,13,14; L.VI.1","K.V.16; K.VI.3; K.VI.4; L.V.9; L.V.10; L.V.13; L.V.14; L.VI.1"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0093h,,opus quadratum,Roman,Phase 1,58e46e9d27b5b98f17e210fa4c1118c4,"K.V.11,15,16; K.VI.3,4","K.V.11; K.V.15; K.V.16; K.VI.3; K.VI.4"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0107h,,opus quadratum,Roman,Phase 1,1cb768403b5bc30c05c89c4a9a2b5803,"M.VIII.15,16; M.IX.4","M.VIII.15; M.VIII.16; M.IX.4"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0108h,,opus quadratum,Roman,Phase 1,171be48299a47a39b4bd562333069204,"M.VIII.14,15; M.IX.2,3,7","M.VIII.14; M.VIII.15; M.IX.2; M.IX.3; M.IX.7"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0103h,,opus quadratum,Roman,Phase 1,b44f9729241b2b91da5233cb98b504f0,"L.V.12,16; M.V.13","L.V.12; L.V.16; M.V.13"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0102h,,opus quadratum,Roman,Phase 1,f32c1f534b9f9231a900ec9b053f1481,"L.V.8,12","L.V.8; L.V.12"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-AR0101h,,,Roman,Phase 1,c11003aeea1e2b6ade22d0d696e3c1a8,"M.VII.2,3,6","M.VII.2; M.VII.3; M.VII.6"
+B3.P.064a (assumed same dimensions as Phase 2 counterpart),MU-FA0112h,,opus quadratum,Roman,Phase 1,51b6698ae595b18118042fde788afa1c,"N.VIII.6,7,11,13,14,15; N.IX.1,2","N.VIII.6; N.VIII.7; N.VIII.11; N.VIII.13; N.VIII.14; N.VIII.15; N.IX.1; N.IX.2"
+B3.P.064a,MU-SX0040r,,opus caementicium,Roman,Phase 2,468fa0c23363ac65daaf57fda50c789a,"L.VIII.13,14; L.IX.1,2,6,7,10,11,15,16","L.VIII.13; L.VIII.14; L.IX.1; L.IX.2; L.IX.6; L.IX.7; L.IX.10; L.IX.11; L.IX.15; L.IX.16"
+B3.P.064a,MU-SX0039r,,opus caementicium,Roman,Phase 2,f237d1e0cf7e31ea7f496b72fd535a71,L.VIII.13,L.VIII.13
+B3.P.064a,MU-SX0038r,,opus caementicium,Roman,Phase 2,4b942fcd5084b9cab64a371d4b506451,"L.VIII.9,13","L.VIII.9; L.VIII.13"
+B3.P.064a,MU-SX0035r,,opus caementicium,Roman,Phase 2,df9371645a6f22eb48162a7d336fce9e,"J.VI.3,7,8,11,12,16; J.VII.4; K.VI.13; K.VII.1,2,5,6,10","J.VI.3; J.VI.7; J.VI.8; J.VI.11; J.VI.12; J.VI.16; J.VII.4; K.VI.13; K.VII.1; K.VII.2; K.VII.5; K.VII.6; K.VII.10"
+B3.P.064a,MU-SX0037r,,opus caementicium,Roman,Phase 2,a1e83d47405a2823f4a88dd40d8c9e9d,"K.VIII.8,12; L.VIII.5,9","K.VIII.8; K.VIII.12; L.VIII.5; L.VIII.9"
+B3.P.064a,MU-SX0043r,,opus quadratum,Roman,Phase 2,16fb5c59a3c003f7fc0edc60fca42dd8,"M.IX.6,7,9,10","M.IX.6; M.IX.7; M.IX.9; M.IX.10"
+B3.P.064a (assumed N side flush with AX-004),MU-SX0042r,,opus quadratum,Roman,Phase 2,f776b05a6986473afda37a6e824f0d08,"L.IX.12,16; M.IX.9","L.IX.12; L.IX.16; M.IX.9"
+"assumed same dimensions as MU-FA0027h; assumed S side flush with AX-002; assumed placement based on same apse dimensions as with MU-FA0027h",MU-FA0025h,,,Roman,"Phase 1, Phase 2",6515bac2a9ddab0d848359f42226c5bf,"D.III.8; E.III.1,5","D.III.8; E.III.1; E.III.5"
+"assumed same dimensions as MU-FA0027h; assumed S side flush with AX-002; assumed placement based on same apse dimensions as for MU-FA0027h",MU-FA0026h,,,Roman,"Phase 1, Phase 2",5cc62adc9c35724df124184aab438d46,"E.III.1,2","E.III.1; E.III.2"
+"assumed same dimensions as MU-AR0002e and MU-AR0030r; assumed placement based on same apse dimensions as with MU-AR0002e and MU-AR0030r, following D1893.G.094a",MU-AR0029h,,opus quadratum,Roman,"Phase 1, Phase 2",3dc36b2d177fb8300b87a910e5097b8c,"E.III.1,2,5,6","E.III.1; E.III.2; E.III.5; E.III.6"
+"assumed same dimensions as MU-AR0002e and MU-AR0030r; assumed placement based on same apse dimensions as with MU-AR0002e and MU-AR0030r, following D1893.G.094a",MU-AR0028h,,opus quadratum,Roman,"Phase 1, Phase 2",2d18d1780cfd78ef9e4b51b388989e44,"E.III.5,9","E.III.5; E.III.9"
+"assumed dimensions similar to W part of MU-AS0006e, following D1893.G.094a",MU-AS0022h,,,Roman,"Phase 1, Phase 2",d786746ebd663efb5281b04107839c11,"E.III.5,6,9,10","E.III.5; E.III.6; E.III.9; E.III.10"
+"B1.P.100a, B2.J.010a (assumed N side flush with AX-022, assumed S side abutting MU-AS0020r, MU-AS0005e, MU-AS0021r, and MU-AS0022h; assumed W side abutting MU-AS0019r)",MU-SX0005r,,,Roman,"Phase 1, Phase 2",e2491063a85d32aaa8b4a1a4ba1ab6b7,"C.IV.7,8,11,12; D.III.12,14,15,16; D.IV.1,2,3,4,5,6; E.III.6,9,10,11,13","C.IV.7; C.IV.8; C.IV.11; C.IV.12; D.III.12; D.III.14; D.III.15; D.III.16; D.IV.1; D.IV.2; D.IV.3; D.IV.4; D.IV.5; D.IV.6; E.III.6; E.III.9; E.III.10; E.III.11; E.III.13"
+assumed E side abutting MU-FA0098h,MU-SX0029h,,,Roman,Phase 1,20c37de54cd3b2afd27ab88ba3a7b5e4,"J.V.16; J.VI.3,4; K.V.10,11,13,14; K.VI.1","J.V.16; J.VI.3; J.VI.4; K.V.10; K.V.11; K.V.13; K.V.14; K.VI.1"
+B2.J.147,CI-0010e,,,Punic,,e03b2b8a384e45593400ae7c7d12dc93,F.V.4,F.V.4
+B2.J.147,CI-0009r,,,Punic,,8d656e1169b493f4a006328c64bf3223,F.V.4,F.V.4
+B2.J.147,CI-0011r,,,Punic,,8b94ab64d0720d39e996738bf8cf20f7,F.V.4,F.V.4
+B2.J.147,CI-0012r,,,Punic,,39f2bf302763c0c09a14a0d0047761e7,"F.V.4; G.V.1","F.V.4; G.V.1"
+B2.J.147,MU-IA0001e,,,Punic,,0db07c1c35877ebc199fcf9fad7a5f10,F.V.4,F.V.4
+B2.J.279,TO-A0192e,,,Punic,,4448b98fb42a9fc6c3140f1c64878ba2,F.IV.16,F.IV.16
+B2.J.010a,CI-0004e,,,Punic,,f9f4ed3753f3794ec574b17fb9dd9321,"G.IV.13,14","G.IV.13; G.IV.14"
+B2.J.010a,CI-0003r,,,Punic,,cf0b790303d4f84a1e300ef92abf7af7,G.IV.14,G.IV.14
+B2.J.010a,CI-0005e,,,Punic,,146476f45e92cce4d4af7fc10cd84f77,G.IV.14,G.IV.14
+B2.J.010a,CI-0008e,,,Punic,,78fde6b062beff2ff2e1b3496e799ce2,G.IV.10,G.IV.10
+B2.J.010a,CI-0007e,,,Punic,,ab980f52ce12b17fab321a6dcae2e067,"G.IV.10,14","G.IV.10; G.IV.14"
+B2.J.010a (assumed feature continued under later walls),CI-0006r,,,Punic,,a17271cfee43f13ab98d2d1d8d3b8f5f,"G.IV.10,13,14","G.IV.10; G.IV.13; G.IV.14"
+B2.J.310,TO-A0183e,,,Punic,,2168c8d92c7ef057f44f91bf2aa89a0c,"G.IV.11,12","G.IV.11; G.IV.12"
+B2.J.310,TO-A0184e,,,Punic,,a6e4f59d741e92496f533bdd8cb3ca43,"G.IV.8,12","G.IV.8; G.IV.12"
+"D1990.K.152 (assumed E side abutting MU-SX0040r; assumed W side flush with AX-001; assumed N and S sides perpendicular to AX-020; assumed width identical to MU-SX0042r)",MU-FA0117h,,,Roman,"Phase 1, Phase 2",8d2deafed7353c0055d80ee19a1e0db9,"G.XII.11,12,15,16; H.XI.16; H.XII.3,4,5,6,7,9; I.XI.8,10,11,12,13,14; I.XII.1; J.X.15,16; J.XI.1,2,3,4,5,6; K.X.4,7,8,9,10,11,13; L.IX.14,15; L.X.1,2,3,5","G.XII.11; G.XII.12; G.XII.15; G.XII.16; H.XI.16; H.XII.3; H.XII.4; H.XII.5; H.XII.6; H.XII.7; H.XII.9; I.XI.8; I.XI.10; I.XI.11; I.XI.12; I.XI.13; I.XI.14; I.XII.1; J.X.15; J.X.16; J.XI.1; J.XI.2; J.XI.3; J.XI.4; J.XI.5; J.XI.6; K.X.4; K.X.7; K.X.8; K.X."
+"D1990.K.151 (assumed E side abutting MU-FA0115h; assumed width identical to MU-FA0115h; assumed W side abutting MU-FA0117h; assumed N side flush with AX-004)",MU-FA0116h,,,Roman,Phase 1,dacd778a5e92179db1039df5a4e849a4,"L.IX.12,15,16; M.IX.6,7,9,10","L.IX.12; L.IX.15; L.IX.16; M.IX.6; M.IX.7; M.IX.9; M.IX.10"
+B1.J.100b,CI-0013e,,,Punic,,bd0ab69550d646d7e3e0c14e4b58633d,"E.V.11,12","E.V.11; E.V.12"
+"D1990.K.151 (assumed location on the quarters between PI-E0007e and PI-E0010h; assumed length and width about 1.8 m)",PI-E0012h,,stones bound with clay,Roman,"Phase 1, Phase 2",d5be16aae2203fea8bfa7169a7d93aa8,E.V.9,E.V.9
+"D1990.K.151 (assumed location from figure; assumed length and width about 1.8 m)",PI-X0003h,,,Roman,"Phase 1, Phase 2",eeafbe780c660a1adfdfebdc80cc6dde,F.VIII.3,F.VIII.3
+"B2.J.010a (assumed N side flush with AX-009; assumed S side flush with AX-010; assumed E side abutting MU-FA0062h and Mu-AR0062h)",MU-SG0006r,wall G,,Roman,"Phase 1, Phase 2",114f20f8f64166f0b2409de2f7f60ad3,"H.III.11,12,15,16; I.II.16; I.III.3,4,5,6,7,9,10; J.II.13,14; J.III.1","H.III.11; H.III.12; H.III.15; H.III.16; I.II.16; I.III.3; I.III.4; I.III.5; I.III.6; I.III.7; I.III.9; I.III.10; J.II.13; J.II.14; J.III.1"
+B2.J.010a,MU-SX0009r,,,Roman,"Phase 1, Phase 2",fc8aa007509e5461f096cda2051312b6,"H.III.4,8; I.III.5,9","H.III.4; H.III.8; I.III.5; I.III.9"
+B3.P.064a,MU-AS0012e,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 2,58f4e6ada1323ecce2bd00060da8d08d,"M.VIII.14,15","M.VIII.14; M.VIII.15"
+B3.P.064a (feature exists but is hidden by other features),MU-AR0092r,,opus quadratum,Roman,Phase 2,865101a80308fdd4ecf26ade0ea01885,"M.VIII.14; M.IX.2,3,7","M.VIII.14; M.IX.2; M.IX.3; M.IX.7"
+B3.P.064a (feature exists but is hidden by other features),MU-AR0091r,,opus quadratum,Roman,Phase 2,83ea7288f6fae1ecc56434c60ca5c100,"M.VIII.15,16; M.IX.4","M.VIII.15; M.VIII.16; M.IX.4"
+B3.P.064a (exists but is hidden by other features),MU-AS0068r,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 2,de36db97707093ba91846d98121f4c10,"M.VIII.10,11,14,15; M.IX.2","M.VIII.10; M.VIII.11; M.VIII.14; M.VIII.15; M.IX.2"
+B3.P.064a,MU-AR0013e,,opus quadratum,Roman,Phase 2,4dae6a1c30f0b29318097a328f1e5076,"M.VIII.14,15; M.IX.2,3,7","M.VIII.14; M.VIII.15; M.IX.2; M.IX.3; M.IX.7"
+"B3.P.064a (assumed thickness 0.5 m from intrados in map, thinned where needed to make room for adjacent substructure wall)",MU-AS0066r,,"opus quadratum (base); brick-like stonework (impost)",Roman,Phase 2,4a4b2cb21887f8dd23dcaec70f86cae2,"L.V.10,11,14,15; L.VI.2,3,7,8,12,16; M.VI.9,13; M.VII.1,2,5,6,10,11,14,15,16; M.VIII.3,4,8,12; N.VIII.5,9","L.V.10; L.V.11; L.V.14; L.V.15; L.VI.2; L.VI.3; L.VI.7; L.VI.8; L.VI.12; L.VI.16; M.VI.9; M.VI.13; M.VII.1; M.VII.2; M.VII.5; M.VII.6; M.VII.10; M.VII.11; M.VII.14; M.VII.15; M.VII.16; M.VIII.3; M.VIII.4; M.VIII.8; M.VIII.12; N.VIII.5; N.VIII.9"
+B3.P.064a,MU-AR0012e,,opus quadratum,Roman,Phase 2,19d4914568ad8afc05f6b97147bd5ca0,"M.VIII.15,16; M.IX.4","M.VIII.15; M.VIII.16; M.IX.4"
+B3.P.064a (assumed southward extent symmetrical to northward extent shown in map),MU-FA0088r,,opus quadratum,Roman,Phase 2,74dfe9233c7c7cc73dcb23cebdd32486,"M.VI.10,11,14,15","M.VI.10; M.VI.11; M.VI.14; M.VI.15"
+B3.P.064a,MU-AS0010e,,,Roman,Phase 2,f5bc37f768d6a8a5bbdddf4fabafb999,M.VI.13,M.VI.13
+B3.P.064a,MU-FA0006e,,opus quadratum,Roman,Phase 2,ddaf22ec85d0d5fe7aaf43a741b3792c,"M.VI.10,11,14,15","M.VI.10; M.VI.11; M.VI.14; M.VI.15"
+B3.P.064a,MU-AS0009e,,,Roman,Phase 2,02ae2c6c8b8ffdb6ca26a99b55f29be2,"L.VI.12,16; M.VI.9","L.VI.12; L.VI.16; M.VI.9"
+B2.J.010a,MU-IA0005e,,,Punic,,7eb6a94f5c62bd06329f2d57f3109f9a,F.IV.12,F.IV.12
+B2.J.218 (assumed feature continues unfer PI-E0002e,MU-IC0032r,,,Punic,,191604ff457c4180ad3189bdc341d0ab,"G.III.16; H.III.13","G.III.16; H.III.13"
+B2.J.060a,MU-IC0064e,,,Punic,,ce018861836d7f6743dc89f79ab21947,H.IV.11,H.IV.11
+B2.J.106a,MU-IE0028e,j of block E,,Punic,,4b5444bfc6c9fdcf4d10bf8f26c52a63,H.III.1,H.III.1
+D1990.K.148,MU-SK0005e,wall K,opus caementicium,Roman,Phase 2,5ba2eaedffc5734b92e0dcfdca64e2ad,G.V.8,G.V.8
+GD1980.P.320,MU-FA0018r,,opus quadratum,Roman,"Phase 1, Phase 2",bd149e2de36cc87d7381814a0af6c0d1,"C.III.16; C.IV.3,4","C.III.16; C.IV.3; C.IV.4"
+GD1980.P.320,MU-FA0017r,,opus quadratum,Roman,"Phase 1, Phase 2",c0c7d0ed3453b89a404bef0c6cf6e95d,C.IV.3,C.IV.3
+"D1990.K.151 (assumed E side flush with line between NE corner of MU-AR0093h and SE corner of MU-AR0108h; assumed W side flush with line between NW corner of MU-AR0093h and SW corner of MU-AR0108h",MU-SX0055h,,,Roman,Phase 1,8a270af0e12611a67f291dc131838f4d,"K.VI.3,4,8,12; L.VI.5,9,13,14; L.VII.2,6,7,11,12,15,16; L.VIII.4; M.VIII.1,5,9,10,14; M.IX.2","K.VI.3; K.VI.4; K.VI.8; K.VI.12; L.VI.5; L.VI.9; L.VI.13; L.VI.14; L.VII.2; L.VII.6; L.VII.7; L.VII.11; L.VII.12; L.VII.15; L.VII.16; L.VIII.4; M.VIII.1; M.VIII.5; M.VIII.9; M.VIII.10; M.VIII.14; M.IX.2"
+"D1990.K.151 (assumed W side continuous with MU-SX0047r; assumed identical width and orientation to MU-SX0047r; assumed E side abutting MU-SX0055h)",MU-SX0054h,,,Roman,Phase 1,ec039aacd736ef522fed07b588d5faae,"J.VI.12,16; K.VI.3,4,5,6,7,8,9,10","J.VI.12; J.VI.16; K.VI.3; K.VI.4; K.VI.5; K.VI.6; K.VI.7; K.VI.8; K.VI.9; K.VI.10"
+"D1990.K.151 (assumed W side continuous with MU-SX0045r; assumed identical width and orientation to MU-SX0045r; assumed E side abutting MU-SX0055h)",MU-SX0053h,,,Roman,Phase 1,e701dfcc209161ecb17187ded8a1ca73,"L.VIII.16; L.IX.3,4,6,7; M.VIII.13,14; M.IX.1","L.VIII.16; L.IX.3; L.IX.4; L.IX.6; L.IX.7; M.VIII.13; M.VIII.14; M.IX.1"
