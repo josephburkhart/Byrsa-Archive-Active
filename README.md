@@ -1,4 +1,3 @@
 # Byrsa Archive (Active)
-This is an actively updated repository that originally mirrored the restructured dataset from my MA thesis. Corrections to the old dataset and new data will be published here.
 
-The thesis can be found here: https://dx.doi.org/10.14288/1.0401823
+This is an actively updated repository that originally mirrored the restructured dataset from my MA thesis. Corrections to the old dataset and new data will be published here. The thesis can be found here: https://dx.doi.org/10.14288/1.0401823. In addition to the data and metadata files, there are also full sitemaps illustrating the state of the site during Phase 1 and Phase 2.
