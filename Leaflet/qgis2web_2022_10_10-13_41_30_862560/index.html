@@ -12,11 +12,22 @@
         #map {
             width: 1508px;
             height: 891px;
+            z-index: 0;
+        }
+        #title {
+            width: 1308 px;
+            height: 150 px;
+            font-weight: 700;
+            font-size: x-large;
+            z-index: 1;
+            font-family: Arial, Helvetica, sans-serif;
+
         }
         </style>
         <title></title>
     </head>
     <body>
+        <div id="title">The Byrsa Archive (Active)</div>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
@@ -37,23 +48,32 @@
             crossorigin=""
         />
         <script src="https://unpkg.com/leaflet.gridlayer.googlemutant@latest/dist/Leaflet.GoogleMutant.js"></script>
+        <script src="https://unpkg.com/@mapbox/leaflet-pip@latest/leaflet-pip.js"></script>
         <script>
         var highlightLayer;
         function highlightFeature(e) {
             highlightLayer = e.target;
             highlightLayer.openPopup();
         }
+
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
         }).fitBounds([[36.849966599996236,10.318254339837766],[36.855256914595664,10.329353052815796]]);
+
         var hash = new L.Hash(map);
+
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        
+        //map.on('zoomend', function(e)) {}
+
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
+        
         function pop_MapExtents_0(feature, layer) {
-            layer.on({
+            /*layer.on({
                 mouseout: function(e) {
                     if (typeof layer.closePopup == 'function') {
                         layer.closePopup();
@@ -64,14 +84,35 @@
                     }
                 },
                 mouseover: highlightFeature,
-            });
+            });*/
+            // function onMapClick(e) {
+            //     alert("You clicked the map at " + e.latlng);
+            // }
+
+            // map.on('click', onMapClick);
+            /*
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['FigureID'] !== null ? autolinker.link(feature.properties['FigureID'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (leafletPip.pointInLayer[36.852484, 10.324268], layer) + '</td>\
                     </tr>\
                 </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
+                */
+
+
+            // layer.bindPopup(popup_content, {maxHeight: 400});
+            
         }
+
+        leafletPip.bassackwards = true
+        var popup = L.popup();
+        function onMapClick(e) {
+                    popup
+                        .setLatLng(e.latlng)
+                        .setContent(leafletPip.pointInLayer(e.latlng, layer_MapExtents_0).map(function(sublayer) { return sublayer.feature.properties['FigureID']; }).join(', '))
+                        .openOn(map);
+                }
+        map.on('click', onMapClick);
 
         function style_MapExtents_0_0() {
             return {
@@ -88,6 +129,7 @@
                 interactive: true,
             }
         }
+
         map.createPane('pane_MapExtents_0');
         map.getPane('pane_MapExtents_0').style.zIndex = 400;
         map.getPane('pane_MapExtents_0').style['mix-blend-mode'] = 'normal';
@@ -100,6 +142,7 @@
             onEachFeature: pop_MapExtents_0,
             style: style_MapExtents_0_0,
         });
+
         var roads = L.gridLayer
             .googleMutant({
                 type: "roadmap", // valid values are 'roadmap', 'satellite', 'terrain' and 'hybrid'
@@ -107,7 +150,9 @@
             .addTo(map);
 
         bounds_group.addLayer(layer_MapExtents_0);
+
         map.addLayer(layer_MapExtents_0);
+
         setBounds();
         </script>
     </body>
