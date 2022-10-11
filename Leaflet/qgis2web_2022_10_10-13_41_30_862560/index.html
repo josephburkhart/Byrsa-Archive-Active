@@ -63,8 +63,6 @@
         var hash = new L.Hash(map);
 
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
-        
-        //map.on('zoomend', function(e)) {}
 
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
         
@@ -73,35 +71,6 @@
         }
         
         function pop_MapExtents_0(feature, layer) {
-            /*layer.on({
-                mouseout: function(e) {
-                    if (typeof layer.closePopup == 'function') {
-                        layer.closePopup();
-                    } else {
-                        layer.eachLayer(function(feature){
-                            feature.closePopup()
-                        });
-                    }
-                },
-                mouseover: highlightFeature,
-            });*/
-            // function onMapClick(e) {
-            //     alert("You clicked the map at " + e.latlng);
-            // }
-
-            // map.on('click', onMapClick);
-            /*
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['FigureID'] !== null ? autolinker.link(feature.properties['FigureID'].toLocaleString()) : '') + '</td>\
-                        <td colspan="2">' + (leafletPip.pointInLayer[36.852484, 10.324268], layer) + '</td>\
-                    </tr>\
-                </table>';
-                */
-
-
-            // layer.bindPopup(popup_content, {maxHeight: 400});
-            
         }
 
         leafletPip.bassackwards = true
