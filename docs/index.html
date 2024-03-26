@@ -55,12 +55,32 @@
         var defaultStyle = {
           color: 'blue'
         }
+        var selectedStyle = {color: 'red'}
+        var unselectedStyle = {color: '#dddde8'}
 
         // Interaction
-        function highlightFeature(e) {
-          var layer = e.target;
+        var selected = null;
 
-          layer.setStyle(highlightStyle);
+        function onClick(e, geoJsonLayer) {
+          // If something is not already selected, select it
+          var layer = e.target;
+          if (!selected) {
+            layer.setStyle(selectedStyle);
+            selected = true   // TODO: make this the actual selected feature
+          }
+          // Otherwise, deselect everything and reset their styles
+          else {
+            selected = null;
+            geoJsonLayer.resetStyle();
+            info.update();
+          }
+        }
+
+        function highlightFeature(e) {
+          if (!selected) {
+            var layer = e.target;
+            layer.setStyle(highlightStyle);
+          }
 
           // I'm not sure if this is necessary, but both GPT and
           // Stack Overflow (https://gis.stackexchange.com/q/227377)
@@ -70,18 +90,25 @@
           }
 
           // Update the info control
-          info.update(layer.feature.properties);
+          if (!selected) {
+            info.update(layer.feature.properties);
+          }
+        }
+
+        function resetHighlight(e, geoJsonLayer) {
+          if (!selected) {
+                geoJsonLayer.resetStyle(e.target);
+                info.update();
+          }
         }
 
         function onEachFeature(feature, layer, geoJsonLayer) {
           // Note the distinction between `layer` and `geoJsonLayer` - only the
           // former has the resetStyle() method
           layer.on({
+            click: function(e) {onClick(e, geoJsonLayer)},
             mouseover: highlightFeature,
-            mouseout: function(e) {
-              geoJsonLayer.resetStyle(e.target);
-              info.update();
-            }
+            mouseout: function(e) {resetHighlight(e, geoJsonLayer)}
           });
         }
 
@@ -145,7 +172,7 @@
               formatProperties(props, objectOrder)
               : 'Hover over a feature');
         };
-        
+
         info.addTo(map)
     </script>
     </body>
