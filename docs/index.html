@@ -6,7 +6,7 @@
 
     <!-- import styling -->
     <link rel="stylesheet" href="css/leaflet.css"/>
-
+    <link rel="stylesheet" href="css/custom.css"/>
     <!-- custom styling -->
     <style type="text/css">
       body{
@@ -68,6 +68,9 @@
           if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
             layer.bringToFront();
           }
+
+          // Update the info control
+          info.update(layer.feature.properties);
         }
 
         function onEachFeature(feature, layer, geoJsonLayer) {
@@ -77,6 +80,7 @@
             mouseover: highlightFeature,
             mouseout: function(e) {
               geoJsonLayer.resetStyle(e.target);
+              info.update();
             }
           });
         }
@@ -100,6 +104,49 @@
 
         // When you add a new GeoJSON layer, get the layer instance
         var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map);
+
+        // Info control
+        var info = L.control();
+
+        info.onAdd = function (map) {
+          this._div = L.DomUtil.create('div', 'info'); // create a div with the class "info"
+          this.update();
+          return this._div;
+        }
+
+        // Update info with new feature properties
+        objectOrder = {
+            'FeatureID': 1,
+            'Constr': 2,
+            'Period': 3,
+            'Subperiod': 4,
+            'Source': 5
+        };
+
+        function formatProperties (props, order) {
+          // Re-order keys (need to copy order because it is used for checks below)
+          const orderCopy = structuredClone(order)
+          props = Object.assign(orderCopy, props)
+
+          // Create formatted string - a table with a row for each property
+          str = "<table>"
+            for (let k of Object.keys(props)) {
+              if (k in order) {
+                row = "<tr><td><b>" + k + "</b></td><td>" + props[k] + "</td>"
+                str = str + row
+              }
+            };
+            str = str + "</table>"
+            return str
+        }
+
+        info.update = function (props) {
+          this._div.innerHTML = '<h4>Feature Info</h4>' + (props ?
+              formatProperties(props, objectOrder)
+              : 'Hover over a feature');
+        };
+        
+        info.addTo(map)
     </script>
     </body>
 </html>
