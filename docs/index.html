@@ -46,7 +46,6 @@
         // Basemap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
-
         // Styles
         var highlightStyle = {
           weight: 5,
@@ -101,14 +100,6 @@
 
         // When you add a new GeoJSON layer, get the layer instance
         var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map);
-
-        // L.geoJSON(features).addTo(map)
-        // L.geoJSON(profiles).addTo(map)
-        // L.geoJSON(axes).addTo(map)
-
-        // When user clicks on a feature (of any layer, show the metadata)
-
-
     </script>
     </body>
 </html>
