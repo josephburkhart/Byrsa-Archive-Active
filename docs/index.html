@@ -45,40 +45,7 @@
         
         // Basemap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
-        
-        // Vector Layers
-        // var layer;
-        // function highlightFeature(e) {
-        //   var layer = e.target;
-        //   // console.log(e.target)
 
-        //   layer.setStyle({
-        //     weight: 5,
-        //     color: '#666',
-        //     fillOpacity: 0.7
-        //   });
-        // };
-        // function resetHighlight(e, geoJsonLayer) {
-        //   // console.log(e.target)
-        //   // console.log(layer)
-        //   // var layer = e.target;
-        //   geoJsonLayer.resetStyle(e.target);
-        // }
-
-        // function onEachFeature(feature, layer, geoJsonLayer) {
-        //   layer.on({
-        //     mouseover: highlightFeature,
-        //     mouseout: function (e) { resetHighlight(e, geoJsonLayer) }
-        //   })
-        // }
-        // layer = L.geoJSON(featureTraces, {
-        //   style: function () {
-        //     return {
-        //       color: 'blue'
-        //     }
-        //   },
-        //   onEachFeature: onEachFeature
-        // }).addTo(map)
 
         // Styles
         var highlightStyle = {
@@ -86,6 +53,7 @@
           color: '#666',
           fillOpacity: 0.7
         }
+        // Interaction
         function highlightFeature(e) {
           var layer = e.target;
 
@@ -110,44 +78,25 @@
           });
         }
 
+        // Add Data to map
         function addGeoJsonLayer(geoJsonData, map) {
+          // Create a container layer to add interactivity to
           var geoJsonLayer = L.geoJSON(geoJsonData, {
             style: function () {
               return { color: 'blue' }; // Default style
             }
           }).addTo(map);
-          console.log(geoJsonLayer)
 
-          // Now set the onEachFeature option with the correct reference to geoJsonLayer
+          // Interactivity has to be added with explicit reference to container
           geoJsonLayer.eachLayer(function(layer) {
             onEachFeature(layer.feature, layer, geoJsonLayer);
           });
 
-          return geoJsonLayer; // Return the layer in case you need to use it elsewhere
+          return geoJsonLayer;
         }
 
         // When you add a new GeoJSON layer, get the layer instance
         var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map);
-
-
-        // layer = L.geoJSON(featureTraces, {
-        //   style: function () {
-        //       return {
-        //           color: 'red'
-        //       }
-        //   },
-        //   onEachFeature: function (feature, layer) {
-        //     layer.on('mouseover', function () {
-        //       this.setStyle({
-        //         color: 'green'
-        //       });
-        //     });
-        //     layer.on('mouseout', function () {
-        //       layer.resetStyle(this);
-        //     });
-        //   }
-        // }).addTo(map)
-        // map.addLayer(layer)
 
         // L.geoJSON(features).addTo(map)
         // L.geoJSON(profiles).addTo(map)
