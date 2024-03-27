@@ -156,15 +156,32 @@
           props = Object.assign(orderCopy, props)
 
           // Create formatted string - a table with a row for each property
-          str = "<table>"
-            for (let k of Object.keys(props)) {
-              if (k in order) {
-                row = "<tr><td><b>" + k + "</b></td><td>" + props[k] + "</td>"
-                str = str + row
-              }
-            };
-            str = str + "</table>"
-            return str
+          // Note: If on mobile, table can stretch whole screen width,
+          //       otherwise it is limited to 0.25 of screen width.
+          // TODO: allow user to adjust size of the table
+          // TODO: fix vertical alignment, which is currently not working
+          if (L.Browser.mobile) {
+            str = "<table style=\"vertical-align:top\">"
+          } else {
+            str = "<table style=\"width:25vw; vertical-align:top\">"
+          }
+          for (let k of Object.keys(props)) {
+            if (k in order) {
+              row = "<tr><td><b>" + k + "</b></td><td>" + props[k] + "</td>"
+              str = str + row
+            }
+          };
+          str = str + "</table>"
+          return str
+        }
+
+        regexs = {
+          featureTrace: "[A-Z]{2}-[A-Z]{0,2}[0-9]{4}[reh]{1}",
+          axis: "/AX-[0-9]{3}/g",
+          figure: "/[A-Za-z0-9]{1,10}\.[A-Z]{1}\.[0-9]{3}[a-z]{1}/g",
+        }
+        function linkProperties (str) {
+
         }
 
         info.update = function (props) {
