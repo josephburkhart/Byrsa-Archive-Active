@@ -17,23 +17,13 @@ class LeafLink extends HTMLElement {
       wrapper.setAttribute("class", "wrapper");
       const code = document.createElement("code");
       code.setAttribute("class", "code");
-      const anchor = document.createElement("a");
-      anchor.setAttribute("class", "a");
-      anchor.setAttribute("href", "")
-      
-      code.appendChild(anchor);
       
       // Check that callbacks for handlers are present and error if they aren't
       code.addEventListener("click", this.handleClick);
       
       // Take attribute content and put it inside the anchor
       const text = this.getAttribute("link-text");
-      anchor.textContent = text;
-      
-      // Tooltip with instructions
-      const tip = document.createElement("span");
-      tip.setAttribute("class", "tip");
-      tip.textContent = "click: highlight; Ctrl+click: go to feature";
+      code.textContent = text;
       
       // Create some CSS to apply to the shadow dom
       const style = document.createElement("style");
