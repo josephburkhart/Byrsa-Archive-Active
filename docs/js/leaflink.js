@@ -38,28 +38,6 @@ class LeafLink extends HTMLElement {
           border-radius: 3px;
           padding: 0 3px;
         }
-        
-        .tip {
-          font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-          font-size: 0.8rem;
-          width: 225px;
-          display: inline-block;
-          border: 1px solid #eee;
-          padding: 3px;
-          background: rgba(255,255,255,0.8);
-          box-shadow: 0 0 5px rgba(0,0,0,0.05);
-          border-radius: 5px;
-          opacity: 0;
-          transition: 0.2s all;
-          position: absolute;
-          bottom: 20px;
-          left: 10px;
-          z-index: 3;
-          text-align: center
-        }
-        
-        .code:hover  + .tip, .code:focus + .tip {
-          opacity: 1;
         }
       `;
       
@@ -67,7 +45,6 @@ class LeafLink extends HTMLElement {
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
       wrapper.appendChild(code);
-      wrapper.appendChild(tip);
     }
     
     disconnectedCallback() {
