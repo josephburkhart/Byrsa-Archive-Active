@@ -16,7 +16,6 @@ class SplittableSpan extends HTMLSpanElement {
 
       // Process each child node separately
       this.childNodes.forEach((child) => {
-        console.log(child);
         if (child.nodeType === Node.TEXT_NODE) {
           // Check for matches
           if (child.textContent.match(str)) {
