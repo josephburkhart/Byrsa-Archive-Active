@@ -29,32 +29,23 @@ customElements.define("insertable-table", InsertableTable, { extends: "table"});
  * columns, and optionally with the specified attributes.
  * @param {number} nrows - number of rows
  * @param {number} ncols - number of columns
- * @param {object} [tableAttributes] - [optional] in-line attributes to assign
- * to the table
  * @param {object} [rowAttributes] - [optional] - in-line attributes to assign
  * to each row
  * - Note: Must be of the form {attribute1: "value1", attribute2: "value2", ...}
  */
-function makeInsertableTable(nrows, 
-                             ncols, 
-                             tableAttributes = {}, 
-                             rowAttributes = {}) {
+function makeInsertableTable(nrows, ncols, rowAttributes = {}) {
     // Create parent table and table body
     const table = document.createElement("table", {is: 'insertable-table'});
     const tableBody = document.createElement("tbody");
 
-    // Assign the provided attributes to the table
-    for (k of Object.keys(tableAttributes)) {
-      table.setAttribute(k, tableAttributes[k]);
-    }
-
     for (let i = 0; i < nrows; i++) {
         // Create row
-        const row = document.createElement("tr");
+        let row = document.createElement("tr");
         
         // Assign the provided attributes to the row
         for (k of Object.keys(rowAttributes)) {
-          table.setAttribute(k, rowAttributes[k]);
+          // console.log(k, rowAttributes[k]);
+          row.setAttribute(k, rowAttributes[k]);
         }
         
         // Create cells in row

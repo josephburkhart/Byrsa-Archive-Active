@@ -142,6 +142,9 @@
           header.innerText = "Feature Info";
           this._div.appendChild(header)
 
+          // Note: If on mobile, div can stretch whole screen width,
+          //       otherwise it is limited to 0.33 of screen width.
+          // TODO: allow user to adjust size of the div
           let content = document.createElement("div");
           content.setAttribute("id", "control-info-content");
           if (!L.Browser.mobile) {
@@ -172,19 +175,10 @@
           props = pick(props, Object.keys(objectOrder));
 
           // Create table
-          // Note: If on mobile, table can stretch whole screen width,
-          //       otherwise it is limited to 0.33 of screen width.
-          // TODO: allow user to adjust size of the table
-          // TODO: fix vertical alignment, which is currently not working
-          //       (this will require adding the vertical-align style to rows)
-          if (L.Browser.mobile) {
-            atts = {style: "vertical-align:top"};
-          } else {
-            atts = {style: "width:33vw; vertical-align:top"}
-          }
-          nrows = Object.keys(props).length;
-          ncols = 2;
-          table = makeInsertableTable(nrows, ncols, atts);
+          const nrows = Object.keys(props).length;
+          const ncols = 2;
+          const rowAtts = {style: "vertical-align:top"};
+          table = makeInsertableTable(nrows, ncols, rowAtts);
           table.setAttribute("id", "properties-table")
 
           // Iterate over each field, adding links where necessary
