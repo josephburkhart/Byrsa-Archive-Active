@@ -26,6 +26,11 @@
     <!-- import packages -->
     <script src="js/leaflet.js"></script>
 
+    <!-- import custom scripts -->
+    <script src="js/leaflink.js"></script>
+    <script src="js/insertabletable.js"></script>
+    <script src="js/splittablespan.js"></script>
+
     <!-- load data -->
     <script src="data/axesofreconstruction_crs84.js"></script>
     <script src="data/featuretraces_crs84.js"></script>
@@ -52,11 +57,8 @@
           color: '#666',
           fillOpacity: 0.7
         }
-        var defaultStyle = {
-          color: 'blue'
-        }
+        var defaultStyle = {color: 'blue'}
         var selectedStyle = {color: 'red'}
-        var unselectedStyle = {color: '#dddde8'}
 
         // Interaction
         var selected = null;
@@ -97,7 +99,7 @@
         function resetHighlight(e, geoJsonLayer) {
           if (!selected) {
                 geoJsonLayer.resetStyle(e.target);
-                info.update();
+                info.update(null);
           }
         }
 
@@ -136,7 +138,17 @@
 
         info.onAdd = function (map) {
           this._div = L.DomUtil.create('div', 'info'); // create a div with the class "info"
-          this.update();
+          let header = document.createElement("h4");
+          header.innerText = "Feature Info";
+          this._div.appendChild(header)
+
+          let content = document.createElement("div");
+          content.setAttribute("id", "control-info-content");
+          if (!L.Browser.mobile) {
+            content.setAttribute("style", "width:33vw");
+          }
+          content.innerHTML = "Hover over a feature";
+          this._div.appendChild(content);
           return this._div;
         }
 
@@ -151,43 +163,91 @@
 
         function formatProperties (props, order) {
           // Re-order keys (need to copy order because it is used for checks below)
-          const orderCopy = structuredClone(order)
-          props = Object.assign(orderCopy, props)
+          const orderCopy = structuredClone(order);
+          props = Object.assign(orderCopy, props);
+          
+          // Filter out unordered fields
+          const pick = (obj, arr) =>
+            Object.fromEntries(Object.entries(obj).filter(([k]) => arr.includes(k)));
+          props = pick(props, Object.keys(objectOrder));
 
-          // Create formatted string - a table with a row for each property
+          // Create table
           // Note: If on mobile, table can stretch whole screen width,
-          //       otherwise it is limited to 0.25 of screen width.
+          //       otherwise it is limited to 0.33 of screen width.
           // TODO: allow user to adjust size of the table
           // TODO: fix vertical alignment, which is currently not working
+          //       (this will require adding the vertical-align style to rows)
           if (L.Browser.mobile) {
-            str = "<table style=\"vertical-align:top\">"
+            atts = {style: "vertical-align:top"};
           } else {
-            str = "<table style=\"width:25vw; vertical-align:top\">"
+            atts = {style: "width:33vw; vertical-align:top"}
           }
-          for (let k of Object.keys(props)) {
-            if (k in order) {
-              row = "<tr><td><b>" + k + "</b></td><td>" + props[k] + "</td>"
-              str = str + row
-            }
-          };
-          str = str + "</table>"
-          return str
+          nrows = Object.keys(props).length;
+          ncols = 2;
+          table = makeInsertableTable(nrows, ncols, atts);
+          table.setAttribute("id", "properties-table")
+
+          // Iterate over each field, adding links where necessary
+          for (const [i, k] of Object.entries(Object.keys(props))) {
+            let boldedKey = document.createElement("b");
+            boldedKey.innerText = k;
+            table.insert(data=boldedKey, rowIndex=i, colIndex=0);
+            table.insert(data=linkProperties(props[k]), rowIndex=i, colIndex=1);
+          }
+          return table
         }
 
-        regexs = {
-          featureTrace: "[A-Z]{2}-[A-Z]{0,2}[0-9]{4}[reh]{1}",
-          axis: "/AX-[0-9]{3}/g",
-          figure: "/[A-Za-z0-9]{1,10}\.[A-Z]{1}\.[0-9]{3}[a-z]{1}/g",
+        const regexs = {
+          "feature-trace": /[A-Z]{2}-[A-Z]{0,2}[0-9]{4}[reh]{1}/g,
+          "axis": /AX-[0-9]{3}/g,
+          "figure": /[A-Za-z0-9]{1,10}\.[A-Z]{1}\.[0-9]{3}[a-z]{0,1}-{0,1}[0-9]{0,1}/g,
         }
         function linkProperties (str) {
+          // Return a span containing the original string, with links where the
+          // linkable text originally was
+          // TODO: should I just use the replaceWith method?
+          if (str == null) {
+            return document.createElement("span", {is: "splittable-span"});
+          }
+          let parentSpan = document.createElement("span", {is: "splittable-span"});
+          parentSpan.textContent = str
 
+          // Iterate over all types of links - TODO: change style of links based on their type
+          let allMatches = {};
+          for (linkType of Object.keys(regexs)) {
+            const matches = str.match(regexs[linkType]);
+            const uniqueMatches = [... new Set(matches)];
+            const uniqueMatchesObject = Object.fromEntries(   //https://stackoverflow.com/a/53508215/15426433
+              uniqueMatches.map(m => [m, linkType])
+            );
+            allMatches = Object.assign(allMatches, uniqueMatchesObject);
+          }
+
+          for (k of Object.keys(allMatches)) {
+            const linkType = allMatches[k];
+            const matchText = k;
+            const link = document.createElement("leaf-link");
+            link.clickCallback = function(e) { alert('You clicked!') };
+            link.ctrlClickCallback = function(e) { alert('You ctrl-clicked!') };
+            link.setAttribute("link-text", matchText);
+            link.setAttribute("link-type", linkType);
+
+            parentSpan.replaceStringWithElement(str=matchText, element=link);
+          }
+          return parentSpan
         }
 
         info.update = function (props) {
-          this._div.innerHTML = '<h4>Feature Info</h4>' + (props ?
-              formatProperties(props, objectOrder)
-              : 'Hover over a feature');
-        };
+          // TODO: for some reason, this is called twice whenever the user
+          //       mouses over a feature
+          let content = document.getElementById("control-info-content");
+          content.innerHTML = "";
+          if (props) {
+            content.appendChild(formatProperties(props, objectOrder));
+          } else {
+            content.innerHTML = "Hover over a feature";
+          }
+        }
 
         info.addTo(map)
     </script>
