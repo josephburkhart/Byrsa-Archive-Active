@@ -35,10 +35,18 @@ class LeafLink extends HTMLElement {
         
         .code {
           background-color: #eee;
+          background-opacity: 0;
           border-radius: 3px;
           padding: 0 3px;
+          cursor: pointer;
         }
+
+        .code:hover {
+          background-color: #c9c9c9;
+          background-opacity: 1;
         }
+
+
       `;
       
       // Attach the created elements to the shadow dom
