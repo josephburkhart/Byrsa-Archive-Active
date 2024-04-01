@@ -39,19 +39,8 @@
 
     <!-- custom code for the leaflet map -->
     <script>
-        // Map Object
-        const map = L.map('map', {
-            center: [36.85324009154614, 10.323104630306315],
-            zoom: 18,
-            zoomControl: true,
-            maxZoom: 28,
-            minZoom: 18
-            });
-        
-        // Basemap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
-        // Styles
+        // ----------------------------- STYLING -------------------------------
         var highlightStyle = {
           weight: 5,
           color: '#666',
@@ -70,7 +59,15 @@
           strokeWidth: 5
       };
 
-        // Interaction
+      function flashFeatureLayer(featureLayer) {
+          // TODO: make flash animation better
+          featureLayer._path.style.animation = "flash-animation 1s ease-out";
+          setTimeout(function() {
+            featureLayer._path.style.animation = "";
+          }, 1000);
+        }
+
+        // --------------------------- INTERACTION -----------------------------
         var selected = null;
 
         function onClick(e, geoJsonLayer) {
@@ -114,14 +111,6 @@
           }
         }
 
-        // Store reference to layers for individual features with custom
-        // id field layer as key
-        // https://gis.stackexchange.com/a/367624
-        let featureLayerCache = {};
-        function cacheFeatureLayerById(feature, layer, idFieldName) {
-          featureLayerCache[feature.properties[idFieldName]] = layer
-        }
-
         function onEachFeature(feature, layer, geoJsonLayer, idFieldName) {
           // Note the distinction between `layer` and `geoJsonLayer` - only the
           // former has the resetStyle() method
@@ -133,8 +122,31 @@
           cacheFeatureLayerById(feature, layer, idFieldName);
         }
 
-        // Add Data to map
+        // --------------------------- MAP CONTROL -----------------------------
+        function goToFeatureLayer(featureLayer) {
+          // Zoom to target layer
+          map.flyTo(featureLayer.getCenter());
+
+          // Reset Selection
+          selected[1].resetStyle();
+          selected = null;
+
+          // Reset info control
+          info.update();
+
+          // Click on target layer to select it
+          featureLayer.fireEvent("click");
+        }
+
+        function cacheFeatureLayerById(feature, layer, idFieldName) {
+        // Store reference to layers for individual features with custom
+        // id field layer as key
+        // https://gis.stackexchange.com/a/367624
+          featureLayerCache[feature.properties[idFieldName]] = layer;
+        }
+
         function addGeoJsonLayer(geoJsonData, map, idFieldName) {
+          // Add a GeoJson Layer to the map
           // Create a container layer to add interactivity to
           var geoJsonLayer = L.geoJSON(geoJsonData, {
             style: function () {
@@ -150,8 +162,14 @@
           return geoJsonLayer;
         }
 
-        // When you add a new GeoJSON layer, get the layer instance
-        var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map, "FeatureID");
+        // --------------------------- FEATURE INFO ----------------------------
+        // Regexs for use with info control; also determines the link type for
+        // leaf-link
+        const regexs = {
+          "feature-trace": /[A-Z]{2}-[A-Z]{0,2}[0-9]{4}[reh]{1}/g,
+          "axis": /AX-[0-9]{3}/g,
+          "figure": /[A-Za-z0-9]{1,10}\.[A-Z]{1}\.[0-9]{3}[a-z]{0,1}-{0,1}[0-9]{0,1}/g,
+        }
 
         // Info control
         var info = L.control();
@@ -175,6 +193,18 @@
           return this._div;
         }
 
+        info.update = function (props) {
+          // TODO: for some reason, this is called twice whenever the user
+          //       mouses over a feature
+          let content = document.getElementById("control-info-content");
+          content.innerHTML = "";
+          if (props) {
+            content.appendChild(formatProperties(props, objectOrder));
+          } else {
+            content.innerHTML = "Hover over a feature";
+          }
+        }
+        
         // Update info with new feature properties
         objectOrder = {
             'FeatureID': 1,
@@ -211,11 +241,6 @@
           return table
         }
 
-        const regexs = {
-          "feature-trace": /[A-Z]{2}-[A-Z]{0,2}[0-9]{4}[reh]{1}/g,
-          "axis": /AX-[0-9]{3}/g,
-          "figure": /[A-Za-z0-9]{1,10}\.[A-Z]{1}\.[0-9]{3}[a-z]{0,1}-{0,1}[0-9]{0,1}/g,
-        }
         function linkProperties (str) {
           // Return a span containing the original string, with links where the
           // linkable text originally was
@@ -259,42 +284,26 @@
           return parentSpan
         }
 
-        info.update = function (props) {
-          // TODO: for some reason, this is called twice whenever the user
-          //       mouses over a feature
-          let content = document.getElementById("control-info-content");
-          content.innerHTML = "";
-          if (props) {
-            content.appendChild(formatProperties(props, objectOrder));
-          } else {
-            content.innerHTML = "Hover over a feature";
-          }
-        }
+        // --------------------------- CREATE MAP ------------------------------
+        const map = L.map('map', {
+            center: [36.85324009154614, 10.323104630306315],
+            zoom: 18,
+            zoomControl: true,
+            maxZoom: 28,
+            minZoom: 18
+            });
+        
+        // Basemap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
+        // Container for use with cacheFeatureLayerById()
+        let featureLayerCache = {};
+
+        // When you add a new GeoJSON layer, get the layer instance
+        var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map, "FeatureID");
+
+        // Feature info widget
         info.addTo(map)
-
-        function flashFeatureLayer(featureLayer) {
-          // TODO: make flash animation better
-          featureLayer._path.style.animation = "flash-animation 1s ease-out";
-          setTimeout(function() {
-            featureLayer._path.style.animation = "";
-          }, 1000);
-        }
-
-        function goToFeatureLayer(featureLayer) {
-          // Zoom to target layer
-          map.flyTo(featureLayer.getCenter());
-
-          // Reset Selection
-          selected[1].resetStyle();
-          selected = null;
-
-          // Reset info control
-          info.update();
-
-          // Click on target layer to select it
-          featureLayer.fireEvent("click");
-        }
     </script>
     </body>
 </html>
