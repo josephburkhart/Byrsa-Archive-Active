@@ -44,29 +44,118 @@
         var highlightStyle = {
           weight: 5,
           color: '#666',
-          fillOpacity: 0.7
+          fillOpacity: 1.0
         }
-        var defaultStyle = {
-          color: 'blue', 
-          stroke: 'blue', 
-          fillOpacity: 0.2,
-          strokeWidth: 3
-        };
         var selectedStyle = {
           color: 'red', 
           stroke: 'red', 
           fillOpacity: 0.5,
           strokeWidth: 5
-      };
-
-      function flashFeatureLayer(featureLayer) {
-          // TODO: make flash animation better
-          featureLayer._path.style.animation = "flash-animation 1s ease-out";
-          setTimeout(function() {
-            featureLayer._path.style.animation = "";
-          }, 1000);
+        };
+        const conditionalStyles = {
+          'Roman E Phase 1': {
+            fillColor: '#34579c',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0,
+            fill: true,
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            dashArray: ''
+          },
+          'Roman R Phase 1': {
+            fillColor: '#4fa1ff',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0,
+            fill: true,
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            dashArray: ''
+          },
+          'Roman H Phase 1': {
+            fillColor: '#d8eafe',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0,
+            fill: true,
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            dashArray: ''
+          },
+          'Roman E Phase 2': {
+            fillColor: '#cc5454',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0,
+            fill: true,
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            dashArray: ''
+          },
+          'Roman R Phase 2': {
+            fillColor: '#ff9f2b',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0,
+            fill: true,
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            dashArray: ''
+          },
+          'Roman H Phase 2': {
+            fillColor: '#ffebc0',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0,
+            fill: true,
+            lineCap: 'butt',
+            lineJoin: 'miter',
+            dashArray: ''
+          },
+          'Punic E': {
+            fillColor: '#000000',
+            stroke: '##969696'
+          },
+          'Punic R': {
+            fillColor: '#969696'
+          }
+        }
+        let axesStyle = {
+          color: '#2c6100',
+          weight: 2.0
         }
 
+        function flashFeatureLayer(featureLayer) {
+            // TODO: make flash animation better
+            featureLayer._path.style.animation = "flash-animation 1s ease-out";
+            setTimeout(function() {
+              featureLayer._path.style.animation = "";
+            }, 1000);
+        }
+
+        function featureStyle(feature) {
+          let p = feature.properties;
+          if (p === undefined) {p = feature.feature.properties};  // I have no idea why this is necessary
+          if (p['Period'] === 'Roman' && p['Subperiod'].includes('Phase 1') && p['FeatureID'].slice(-1) === 'e') {
+            return conditionalStyles['Roman E Phase 1'];
+          } else if (p['Period'] === 'Roman' && p['Subperiod'].includes('Phase 1') && p['FeatureID'].slice(-1) === 'r') {
+            return conditionalStyles['Roman R Phase 1'];
+          } else if (p['Period'] === 'Roman' && p['Subperiod'].includes('Phase 1') && p['FeatureID'].slice(-1) === 'h') {
+            return conditionalStyles['Roman H Phase 1'];
+          } else if (p['Period'] === 'Roman' && p['Subperiod'].includes('Phase 2') && p['FeatureID'].slice(-1) === 'e') {
+            return conditionalStyles['Roman E Phase 2'];
+          } else if (p['Period'] === 'Roman' && p['Subperiod'].includes('Phase 2') && p['FeatureID'].slice(-1) === 'r') {
+            return conditionalStyles['Roman R Phase 2'];
+          } else if (p['Period'] === 'Roman' && p['Subperiod'].includes('Phase 2') && p['FeatureID'].slice(-1) === 'h') {
+            return conditionalStyles['Roman H Phase 2'];
+          } else if (p['Period'] === 'Punic' && p['FeatureID'].slice(-1) === 'e') {
+            return conditionalStyles['Punic E'];
+          } else if (p['Period'] === 'Punic' && p['FeatureID'].slice(-1) === 'r') {
+            return conditionalStyles['Punic R'];
+          }
+        }
+      
         // --------------------------- INTERACTION -----------------------------
         var selected = null;
 
@@ -145,13 +234,11 @@
           featureLayerCache[feature.properties[idFieldName]] = layer;
         }
 
-        function addGeoJsonLayer(geoJsonData, map, idFieldName) {
+        function addGeoJsonLayer(geoJsonData, map, style, idFieldName) {
           // Add a GeoJson Layer to the map
           // Create a container layer to add interactivity to
           var geoJsonLayer = L.geoJSON(geoJsonData, {
-            style: function () {
-              return { color: 'blue' }; // Default style
-            }
+            style: style
           }).addTo(map);
 
           // Interactivity has to be added with explicit reference to container
@@ -314,7 +401,9 @@
         let featureLayerCache = {};
 
         // When you add a new GeoJSON layer, get the layer instance
-        var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map, "FeatureID");
+        let featureTraceGeoJsonLayer = addGeoJsonLayer(featureTraces, map, featureStyle, "FeatureID");
+        // let mapExtentsGeoJsonLayer = addGeoJsonLayer(extents, map, "FigureID");
+        let axesGeoJsonLayer = addGeoJsonLayer(axes, map, axesStyle, "AxisID");
 
         // Feature info widget
         info.addTo(map)
