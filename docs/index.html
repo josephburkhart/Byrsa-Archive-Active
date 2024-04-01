@@ -57,8 +57,8 @@
           color: '#666',
           fillOpacity: 0.7
         }
-        var defaultStyle = {color: 'blue'}
-        var selectedStyle = {color: 'red'}
+        var defaultStyle = {color: 'blue', stroke: 'blue'};
+        var selectedStyle = {color: 'red', stroke: 'red'};
 
         // Interaction
         var selected = null;
@@ -103,7 +103,15 @@
           }
         }
 
-        function onEachFeature(feature, layer, geoJsonLayer) {
+        // Store reference to layers for individual features with custom
+        // id field layer as key
+        // https://gis.stackexchange.com/a/367624
+        let featureLayerCache = {};
+        function cacheFeatureLayerById(feature, layer, idFieldName) {
+          featureLayerCache[feature.properties[idFieldName]] = layer
+        }
+
+        function onEachFeature(feature, layer, geoJsonLayer, idFieldName) {
           // Note the distinction between `layer` and `geoJsonLayer` - only the
           // former has the resetStyle() method
           layer.on({
@@ -111,10 +119,11 @@
             mouseover: highlightFeature,
             mouseout: function(e) {resetHighlight(e, geoJsonLayer)}
           });
+          cacheFeatureLayerById(feature, layer, idFieldName);
         }
 
         // Add Data to map
-        function addGeoJsonLayer(geoJsonData, map) {
+        function addGeoJsonLayer(geoJsonData, map, idFieldName) {
           // Create a container layer to add interactivity to
           var geoJsonLayer = L.geoJSON(geoJsonData, {
             style: function () {
@@ -124,14 +133,14 @@
 
           // Interactivity has to be added with explicit reference to container
           geoJsonLayer.eachLayer(function(layer) {
-            onEachFeature(layer.feature, layer, geoJsonLayer);
+            onEachFeature(layer.feature, layer, geoJsonLayer, idFieldName);
           });
 
           return geoJsonLayer;
         }
 
         // When you add a new GeoJSON layer, get the layer instance
-        var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map);
+        var myGeoJsonLayer = addGeoJsonLayer(featureTraces, map, "FeatureID");
 
         // Info control
         var info = L.control();
@@ -221,7 +230,10 @@
             const linkType = allMatches[k];
             const matchText = k;
             const link = document.createElement("leaf-link");
-            link.clickCallback = function(e) { alert('You clicked!') };
+            link.clickCallback = function(e) {
+              linkedFeatureLayer = featureLayerCache[link.getAttribute("link-text")];
+              flashFeatureLayer(linkedFeatureLayer);
+            };
             link.ctrlClickCallback = function(e) { alert('You ctrl-clicked!') };
             link.setAttribute("link-text", matchText);
             link.setAttribute("link-type", linkType);
@@ -244,6 +256,14 @@
         }
 
         info.addTo(map)
+
+        function flashFeatureLayer(featureLayer) {
+          // TODO: make flash animation better
+          featureLayer._path.style.animation = "flash-animation 1s ease-out";
+          setTimeout(function() {
+            featureLayer._path.style.animation = "";
+          }, 1000);
+        }
     </script>
     </body>
 </html>

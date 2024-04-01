@@ -45,8 +45,6 @@ class LeafLink extends HTMLElement {
           background-color: #c9c9c9;
           background-opacity: 1;
         }
-
-
       `;
       
       // Attach the created elements to the shadow dom
