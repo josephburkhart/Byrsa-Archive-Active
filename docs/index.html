@@ -211,19 +211,23 @@
             'Constr': 2,
             'Period': 3,
             'Subperiod': 4,
-            'Source': 5
+            'Source': 5,
+            'FigureID': 6,
+            'AxisID': 7,
+            'descriptio': 8
         };
 
         function formatProperties (props, order) {
-          // Re-order keys (need to copy order because it is used for checks below)
-          const orderCopy = structuredClone(order);
-          props = Object.assign(orderCopy, props);
+          // Filter and sort the properties based on `order`
+          // (method provided by GPT)
+          props = Object.keys(props)
+            .filter(key => Object.keys(order).includes(key))
+            .sort((keyA, keyB) => order[keyA] - order[keyB])
+            .reduce((acc, key) => {
+              acc[key] = props[key];
+              return acc;
+            }, {});
           
-          // Filter out unordered fields
-          const pick = (obj, arr) =>
-            Object.fromEntries(Object.entries(obj).filter(([k]) => arr.includes(k)));
-          props = pick(props, Object.keys(objectOrder));
-
           // Create table
           const nrows = Object.keys(props).length;
           const ncols = 2;
