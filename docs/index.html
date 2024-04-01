@@ -216,6 +216,16 @@
             'AxisID': 7,
             'descriptio': 8
         };
+        fieldAliases = {
+            'FeatureID': 'Feature ID',
+            'Constr': 'Construction',
+            'Period': 'Period',
+            'Subperiod': 'Subperiod',
+            'Source': 'Source',
+            'FigureID': 'Figure ID',
+            'AxisID': 'Axis ID',
+            'descriptio': 'Description'
+        }
 
         function formatProperties (props, order) {
           // Filter and sort the properties based on `order`
@@ -238,7 +248,7 @@
           // Iterate over each field, adding links where necessary
           for (const [i, k] of Object.entries(Object.keys(props))) {
             let boldedKey = document.createElement("b");
-            boldedKey.innerText = k;
+            boldedKey.innerText = fieldAliases[k];
             table.insert(data=boldedKey, rowIndex=i, colIndex=0);
             table.insert(data=linkProperties(props[k]), rowIndex=i, colIndex=1);
           }
