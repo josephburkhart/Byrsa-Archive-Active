@@ -125,6 +125,11 @@
           color: '#2c6100',
           weight: 2.0
         }
+        let extentsStyle = {
+          color: '#ad8eb0',
+          fillOpacity: 0,
+          weight: 1.0
+        }
 
         function flashFeatureLayer(featureLayer) {
             // TODO: make flash animation better
@@ -402,8 +407,29 @@
 
         // When you add a new GeoJSON layer, get the layer instance
         let featureTraceGeoJsonLayer = addGeoJsonLayer(featureTraces, map, featureStyle, "FeatureID");
-        // let mapExtentsGeoJsonLayer = addGeoJsonLayer(extents, map, "FigureID");
         let axesGeoJsonLayer = addGeoJsonLayer(axes, map, axesStyle, "AxisID");
+
+        // Create map extents layer that only plots the outlines of the features
+        // Method adapted from output of GPT
+        let extentsFeatures = [];
+        extents.features.forEach(function(feature) {
+          let properties = feature.properties;
+          let coordinates = feature.geometry.coordinates[0][0];
+          let polylineFeature = {
+            "type": "Feature",
+            "properties": properties,
+            "geometry": {
+              "type": "LineString",
+              "coordinates": coordinates
+            }
+          };
+          extentsFeatures.push(polylineFeature);
+        });
+        let extentsOutlinesGeoJSON = {
+          "type": "FeatureCollection",
+          "features": extentsFeatures
+        }
+        mapExtentsGeoJsonLayer = addGeoJsonLayer(extentsOutlinesGeoJSON, map, extentsStyle, "FigureID");
 
         // Feature info widget
         info.addTo(map)
