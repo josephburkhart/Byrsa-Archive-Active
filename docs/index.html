@@ -32,10 +32,9 @@
     <script src="js/splittablespan.js"></script>
 
     <!-- load data -->
-    <script src="data/axesofreconstruction_crs84.js"></script>
-    <script src="data/featuretraces_crs84.js"></script>
-    <script src="data/profileextents_crs84.js"></script>
-    <script src="data/mapextents_crs84.js"></script>
+    <script src="data/axesofreconstruction.js"></script>
+    <script src="data/featuretraces.js"></script>
+    <script src="data/mapextents.js"></script>
 
     <!-- custom code for the leaflet map -->
     <script>
@@ -115,10 +114,15 @@
           },
           'Punic E': {
             fillColor: '#000000',
-            stroke: '##969696'
+            color: '#969696',
+            fillOpacity: 1.0,
+            weight: 1.0
           },
           'Punic R': {
-            fillColor: '#969696'
+            fillColor: '#969696',
+            color: '#000000',
+            fillOpacity: 1.0,
+            weight: 1.0
           }
         }
         let axesStyle = {
@@ -407,12 +411,12 @@
 
         // When you add a new GeoJSON layer, get the layer instance
         let featureTraceGeoJsonLayer = addGeoJsonLayer(featureTraces, map, featureStyle, "FeatureID");
-        let axesGeoJsonLayer = addGeoJsonLayer(axes, map, axesStyle, "AxisID");
+        let axesGeoJsonLayer = addGeoJsonLayer(axesOfReconstruction, map, axesStyle, "AxisID");
 
         // Create map extents layer that only plots the outlines of the features
         // Method adapted from output of GPT
         let extentsFeatures = [];
-        extents.features.forEach(function(feature) {
+        mapExtents.features.forEach(function(feature) {
           let properties = feature.properties;
           let coordinates = feature.geometry.coordinates[0][0];
           let polylineFeature = {
@@ -431,6 +435,7 @@
         }
         mapExtentsGeoJsonLayer = addGeoJsonLayer(extentsOutlinesGeoJSON, map, extentsStyle, "FigureID");
 
+        // TODO: add grid cells
         // Feature info widget
         info.addTo(map)
     </script>
