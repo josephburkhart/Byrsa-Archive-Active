@@ -57,8 +57,18 @@
           color: '#666',
           fillOpacity: 0.7
         }
-        var defaultStyle = {color: 'blue', stroke: 'blue'};
-        var selectedStyle = {color: 'red', stroke: 'red'};
+        var defaultStyle = {
+          color: 'blue', 
+          stroke: 'blue', 
+          fillOpacity: 0.2,
+          strokeWidth: 3
+        };
+        var selectedStyle = {
+          color: 'red', 
+          stroke: 'red', 
+          fillOpacity: 0.5,
+          strokeWidth: 5
+      };
 
         // Interaction
         var selected = null;
@@ -68,7 +78,8 @@
           var layer = e.target;
           if (!selected) {
             layer.setStyle(selectedStyle);
-            selected = true   // TODO: make this the actual selected feature
+            selected = [layer, geoJsonLayer]
+            info.update(layer.feature.properties);
           }
           // Otherwise, deselect everything and reset their styles
           else {
@@ -230,11 +241,16 @@
             const linkType = allMatches[k];
             const matchText = k;
             const link = document.createElement("leaf-link");
+
             link.clickCallback = function(e) {
               linkedFeatureLayer = featureLayerCache[link.getAttribute("link-text")];
               flashFeatureLayer(linkedFeatureLayer);
             };
-            link.ctrlClickCallback = function(e) { alert('You ctrl-clicked!') };
+            link.ctrlClickCallback = function(e) { 
+              linkedFeatureLayer = featureLayerCache[link.getAttribute("link-text")];
+              goToFeatureLayer(linkedFeatureLayer);
+            };
+            
             link.setAttribute("link-text", matchText);
             link.setAttribute("link-type", linkType);
 
@@ -263,6 +279,21 @@
           setTimeout(function() {
             featureLayer._path.style.animation = "";
           }, 1000);
+        }
+
+        function goToFeatureLayer(featureLayer) {
+          // Zoom to target layer
+          map.flyTo(featureLayer.getCenter());
+
+          // Reset Selection
+          selected[1].resetStyle();
+          selected = null;
+
+          // Reset info control
+          info.update();
+
+          // Click on target layer to select it
+          featureLayer.fireEvent("click");
         }
     </script>
     </body>
