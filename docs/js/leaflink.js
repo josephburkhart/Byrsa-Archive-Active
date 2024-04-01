@@ -42,7 +42,7 @@ class LeafLink extends HTMLElement {
         }
 
         .code:hover {
-          background-color: #c9c9c9;
+          background-color: #b0b0b0;
           background-opacity: 1;
         }
       `;
