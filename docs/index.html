@@ -7,6 +7,8 @@
     <!-- import styling -->
     <link rel="stylesheet" href="css/leaflet.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
+    <link rel="stylesheet" href="css/leaflet-ruler.css"/>
+
     <!-- custom styling -->
     <style type="text/css">
       body{
@@ -25,6 +27,7 @@
 
     <!-- import packages -->
     <script src="js/leaflet.js"></script>
+    <script src="js/leaflet-ruler.js"></script>
 
     <!-- import custom scripts -->
     <script src="js/leaflink.js"></script>
@@ -371,9 +374,7 @@
             );
             allMatches = Object.assign(allMatches, uniqueMatchesObject);
           }
-          console.log('all matches: ', allMatches);
           for (k of Object.keys(allMatches)) {
-            console.log('doing matching for ', k)
             const linkType = allMatches[k];
             const matchText = k;
             const link = document.createElement("leaf-link");
@@ -389,7 +390,6 @@
             
             link.setAttribute("link-text", matchText);
             link.setAttribute("link-type", linkType);
-            console.log('pre-matching parentSpan: ', parentSpan.cloneNode(true));
             parentSpan.replaceStringWithElement(
               str=matchText, 
               element=link,
@@ -443,6 +443,22 @@
         // TODO: add grid cells
         // Feature info widget
         info.addTo(map)
+
+        // Measure Tool
+        let rulerOptions = {
+          position: "topleft",
+          lineStyle: {
+            color: 'yellow',
+            dashArray: '1,6'
+          },
+          lengthUnit: {
+            display: 'm',
+            decimal: 2,
+            factor: 1000,
+            label: 'Distance:'
+          }
+        }
+        L.control.ruler(rulerOptions).addTo(map);
     </script>
     </body>
 </html>
