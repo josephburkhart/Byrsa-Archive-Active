@@ -10,7 +10,7 @@ class SplittableSpan extends HTMLSpanElement {
      * @param {HTMLElement} [insertElement] - [optional] element to insert at
      * each split
      */
-    replaceStringWithElement(str, element) {
+    replaceStringWithElement(str, element, cloneCallback=null) {
       // Container for new/processed child nodes
       const newChildNodes = [];
 
@@ -24,8 +24,16 @@ class SplittableSpan extends HTMLSpanElement {
             for (let [i, s] of splits.entries()) {
               newChildNodes.push(document.createTextNode(s));
 
+              let clone;
               if (i != splits.length -1 ) {
-                newChildNodes.push(element);
+                // When pushing multiple instances of an element with callbacks,
+                // cloneNode is not sufficient
+                if (cloneCallback) {
+                  clone = cloneCallback();
+                } else {
+                  clone = element.cloneNode(true);
+                }
+                newChildNodes.push(clone);
               }
             }
           } else {

@@ -371,8 +371,9 @@
             );
             allMatches = Object.assign(allMatches, uniqueMatchesObject);
           }
-
+          console.log('all matches: ', allMatches);
           for (k of Object.keys(allMatches)) {
+            console.log('doing matching for ', k)
             const linkType = allMatches[k];
             const matchText = k;
             const link = document.createElement("leaf-link");
@@ -388,8 +389,12 @@
             
             link.setAttribute("link-text", matchText);
             link.setAttribute("link-type", linkType);
-
-            parentSpan.replaceStringWithElement(str=matchText, element=link);
+            console.log('pre-matching parentSpan: ', parentSpan.cloneNode(true));
+            parentSpan.replaceStringWithElement(
+              str=matchText, 
+              element=link,
+              cloneCallback=function() { return link.cloneWithCallbacks() }
+            );
           }
           return parentSpan
         }

@@ -1,4 +1,7 @@
 class LeafLink extends HTMLElement {
+    // Initialize the event listener registry
+    #eventListenerRegistry = new Map();
+
     constructor () {
       // Always call super first in constructor
       // Return value from super() is a reference to this element
@@ -6,6 +9,9 @@ class LeafLink extends HTMLElement {
       
       // Bind the event handler to `this`
       this.handleClick = this.handleClick.bind(this);
+
+      // Bind the cloning method to `this`
+      this.cloneWithCallbacks = this.cloneWithCallbacks.bind(this);
     }
     
     connectedCallback() {  
@@ -74,6 +80,20 @@ class LeafLink extends HTMLElement {
     
     set ctrlClickCallback(callback) {
       this._ctrlClickCallback = callback;
+    }
+
+    cloneWithCallbacks() {
+      //Clone the element
+      const clone = this.cloneNode(true);
+
+      // Add the callbacks
+      clone.clickCallback = this._clickCallback;
+      clone.ctrlClickCallback = this._ctrlClickCallback;
+
+      // Add the Event Listener
+      clone.addEventListener("click", clone.handleClick);
+
+      return clone;
     }
   }
   
