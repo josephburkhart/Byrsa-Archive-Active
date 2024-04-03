@@ -33,6 +33,7 @@
     <script src="js/leaflink.js"></script>
     <script src="js/insertabletable.js"></script>
     <script src="js/splittablespan.js"></script>
+    <script src="js/leaflet-title.js"></script>
 
     <!-- load data -->
     <script src="data/axesofreconstruction.js"></script>
@@ -440,6 +441,17 @@
         }
         mapExtentsGeoJsonLayer = addGeoJsonLayer(extentsOutlinesGeoJSON, map, extentsStyle, "FigureID");
 
+        
+        // Title
+        let titleOptions = {
+          position: 'topleft',
+          text: 'The Byrsa Hill'
+        }
+        L.control.title(titleOptions).addTo(map);
+
+        // Zoom Control
+        L.control.zoom().addTo(map);
+        
         // TODO: add grid cells
         // Feature info widget
         info.addTo(map)
