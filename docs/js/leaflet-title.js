@@ -21,7 +21,6 @@ The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 */
 (function(factory, window) {
-    // This boilerplate was copied from leaflet-ruler
     "use strict";
     if (typeof define === 'function' && define.amd) {
         define(['leaflet'], factory);
@@ -33,7 +32,6 @@ copies or substantial portions of the Software.
     }
 }(function (L) {
     "use strict";
-    // This code is my own
     L.Control.Title = L.Control.extend({
         options: {
             position: 'topleft',
@@ -43,17 +41,14 @@ copies or substantial portions of the Software.
             this._map = map;    //necessary?
             this._container = L.DomUtil.create('div', 'leaflet-bar');
             this._container.classList.add('leaflet-title');
-            console.log('here')
             L.DomEvent.disableClickPropagation(this._container);
             this._container.innerText = this.options.text;
-            this._allLayers
             return this._container;
         },
         onRemove: function() {
             // do nothing here
         }
     });
-    // This boilerplate was adapted from leaflet-ruler
     L.control.title = function(options) {
         return new L.Control.Title(options)
     };
