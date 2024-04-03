@@ -276,6 +276,7 @@
 
         info.onAdd = function (map) {
           this._div = L.DomUtil.create('div', 'info'); // create a div with the class "info"
+          L.DomEvent.disableClickPropagation(this._div);
           let header = document.createElement("h4");
           header.innerText = "Feature Info";
           this._div.appendChild(header)
@@ -406,7 +407,8 @@
             zoom: 18,
             zoomControl: true,
             maxZoom: 28,
-            minZoom: 18
+            minZoom: 5,
+            zoomControl: false
             });
         
         // Basemap
