@@ -491,35 +491,7 @@
           })
         })
 
-        // Timeline
-        // let romanExistsInPhase1LayerGroup = L.layerGroup();
-        // let romanExistsInPhase2LayerGroup = L.layerGroup();
-
         // Legend
-        // Note: this block of code was adapted from output of GPT
-        // Sort features into layer groups
-        let romanConstructedPhase1LayerGroup = L.layerGroup();
-        let romanConstructedPhase2LayerGroup = L.layerGroup();
-        let punicConstructedLayerGroup = L.layerGroup();
-        featureTraceGeoJsonLayer.eachLayer(function (layer) {
-          // if (!layer.feature.properties) {console.log(feature.layer.properties)}
-          if (layer.feature.properties["Period"] === "Roman" && 
-              layer.feature.properties["Subperiod"].includes("Phase 1")) {
-              romanConstructedPhase1LayerGroup.addLayer(layer);
-          } else if (layer.feature.properties["Period"] === "Roman" &&
-                     layer.feature.properties["Subperiod"] === "Phase 2") {
-              romanConstructedPhase2LayerGroup.addLayer(layer);
-          } else if (layer.feature.properties["Period"] === "Punic") {
-            punicConstructedLayerGroup.addLayer(layer);
-          }
-        });
-
-        map.removeLayer(featureTraceGeoJsonLayer);
-
-        romanConstructedPhase1LayerGroup.addTo(map);
-        romanConstructedPhase2LayerGroup.addTo(map);
-        punicConstructedLayerGroup.addTo(map);
-
         let legendOptions = {
           position: "bottomleft",
           legends: [{
@@ -618,6 +590,46 @@
         }
         let htmlLegend = L.control.htmllegend(legendOptions);
         map.addControl(htmlLegend);
+
+        // Timeline
+        // Note: this block of code was adapted from output of GPT
+        let existsInPunicLayerGroup = L.layerGroup();
+        let existsInPhase1LayerGroup = L.layerGroup();
+        let existsInPhase2LayerGroup = L.layerGroup();
+        featureTraceGeoJsonLayer.eachLayer(function (layer) {
+          if (layer.feature.properties["Period"] === "Punic") {
+              existsInPunicLayerGroup.addLayer(layer);
+          }
+          if ((layer.feature.properties["Period"] === "Punic") || // note problem in assuming punic R features existed in Roman phases...
+              (layer.feature.properties["Period"] === "Roman" &&
+               layer.feature.properties["Subperiod"].includes("Phase 1"))) {
+              existsInPhase1LayerGroup.addLayer(layer);
+          }
+          if ((layer.feature.properties["Period"] === "Punic") ||
+              (layer.feature.properties["Period"] === "Roman" &&
+               layer.feature.properties["Subperiod"].includes("Phase 2"))) {
+              existsInPhase2LayerGroup.addLayer(layer);
+          }
+        });
+        let groups = {
+          "Punic Era": existsInPunicLayerGroup,
+          "Roman Phase 1": existsInPhase1LayerGroup,
+          "Roman Phase 2": existsInPhase2LayerGroup
+        }
+        let layersControlOptions = {collapsed: false, position: "bottomleft"};
+        let layersControl = L.control.layers(
+          groups, 
+          null, 
+          layersControlOptions
+        ).addTo(map);
+
+        // Click through the timeline options and then pick the second one
+        // (super hacky but no time currently for better solution)
+        let layersControlButtons = document.getElementsByClassName("leaflet-control-layers-selector");
+        for (b of layersControlButtons) {
+          b.click();
+        }
+        layersControlButtons[1].click();
     </script>
     </body>
 </html>
