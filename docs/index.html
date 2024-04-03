@@ -34,6 +34,7 @@
     <script src="js/insertabletable.js"></script>
     <script src="js/splittablespan.js"></script>
     <script src="js/leaflet-title.js"></script>
+    <script src="js/leaflet-helpbutton.js"></script>
 
     <!-- load data -->
     <script src="data/axesofreconstruction.js"></script>
@@ -453,7 +454,7 @@
 
         // Zoom Control
         L.control.zoom().addTo(map);
-        
+
         // TODO: add grid cells
         // Feature info widget
         info.addTo(map)
@@ -473,6 +474,21 @@
           }
         }
         L.control.ruler(rulerOptions).addTo(map);
+
+        // Help Button
+        let html;
+        fetch('./help.html').then((response) => {
+          response.text().then((text) => {
+            let helpElement = document.createElement('div');
+            helpElement.innerHTML = text;
+            let helpOptions = {
+              position: 'topleft',
+              helpElement: helpElement
+            }
+            L.control.help(helpOptions).addTo(map);
+          })
+        })
+
     </script>
     </body>
 </html>
