@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/leaflet.css"/>
     <link rel="stylesheet" href="css/custom.css"/>
     <link rel="stylesheet" href="css/leaflet-ruler.css"/>
+    <link rel="stylesheet" href="css/L.Control.HtmlLegend.css"/>
 
     <!-- custom styling -->
     <style type="text/css">
@@ -28,6 +29,7 @@
     <!-- import packages -->
     <script src="js/leaflet.js"></script>
     <script src="js/leaflet-ruler.js"></script>
+    <script src="js/L.Control.HtmlLegend.js"></script>
 
     <!-- import custom scripts -->
     <script src="js/leaflink.js"></script>
@@ -489,6 +491,116 @@
           })
         })
 
+        // Timeline
+        // let romanExistsInPhase1LayerGroup = L.layerGroup();
+        // let romanExistsInPhase2LayerGroup = L.layerGroup();
+
+        // Legend
+        // Note: this block of code was adapted from output of GPT
+        // Sort features into layer groups
+        let romanConstructedPhase1LayerGroup = L.layerGroup();
+        let romanConstructedPhase2LayerGroup = L.layerGroup();
+        let punicConstructedLayerGroup = L.layerGroup();
+        featureTraceGeoJsonLayer.eachLayer(function (layer) {
+          // if (!layer.feature.properties) {console.log(feature.layer.properties)}
+          if (layer.feature.properties["Period"] === "Roman" && 
+              layer.feature.properties["Subperiod"].includes("Phase 1")) {
+              romanConstructedPhase1LayerGroup.addLayer(layer);
+          } else if (layer.feature.properties["Period"] === "Roman" &&
+                     layer.feature.properties["Subperiod"] === "Phase 2") {
+              romanConstructedPhase2LayerGroup.addLayer(layer);
+          } else if (layer.feature.properties["Period"] === "Punic") {
+            punicConstructedLayerGroup.addLayer(layer);
+          }
+        });
+
+        map.removeLayer(featureTraceGeoJsonLayer);
+
+        romanConstructedPhase1LayerGroup.addTo(map);
+        romanConstructedPhase2LayerGroup.addTo(map);
+        punicConstructedLayerGroup.addTo(map);
+
+        let legendOptions = {
+          position: "bottomleft",
+          legends: [{
+            name: "Roman - Constructed in Phase 1", // should be possible to add layer groups here, but I couldn't get it to work
+            elements: [{
+              label: "Extant",
+              html: "",
+              style: {
+                "background-color": "#34579c",
+                "width": "10px",
+                "height": "10px"
+              }
+            }, {
+              label: "Reconstructed",
+              html: "",
+              style: {
+                "background-color": "#4fa0fc",
+                "width": "10px",
+                "height": "10px"
+              }
+            }, {
+              label: "Hypothesized",
+              html: "",
+              style: {
+                "background-color": "#d8eafe",
+                "width": "10px",
+                "height": "10px"
+              }
+            }]
+          }, {
+            name: "Roman - Constructed in Phase 2",
+            elements: [{
+              label: "Extant",
+              html: "",
+              style: {
+                "background-color": "#cc5454",
+                "width": "10px",
+                "height": "10px"
+              }
+            }, {
+              label: "Reconstructed",
+              html: "",
+              style: {
+                "background-color": "#ff9f2b",
+                "width": "10px",
+                "height": "10px"
+              }
+            }, {
+              label: "Hypothesized",
+              html: "",
+              style: {
+                "background-color": "#ffebc0",
+                "width": "10px",
+                "height": "10px"
+              }
+            }]
+          }, {
+            name: "Punic - Constructed before Phase 1",
+            elements: [{
+              label: "Extant",
+              html: "",
+              style: {
+                "background-color": "#000000",
+                "width": "10px",
+                "height": "10px"
+              }
+            }, {
+              label: "Reconstructed",
+              html: "",
+              style: {
+                "background-color": "#969696",
+                "width": "10px",
+                "height": "10px"
+              }
+            }]
+          }]
+        }
+        let htmlLegend = L.control.htmllegend(legendOptions);
+        map.addControl(htmlLegend);
     </script>
     </body>
 </html>
+
+
