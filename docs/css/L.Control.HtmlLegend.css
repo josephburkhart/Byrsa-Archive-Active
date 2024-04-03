@@ -57,10 +57,10 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     background: #FFF;
     border: 2px solid #FFF;
     padding: 6px;
-    max-height: 250px;
+    max-height: 300px;
     overflow-y: auto;
     line-height: 1.2;
-    width: 255px;
+    width: 260px;
     font: 14px/16px Arial, Helvetica, sans-serif;
 
 }
