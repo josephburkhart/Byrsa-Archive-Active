@@ -6,7 +6,7 @@ In addition to updated data and metadata files, this repository also contains fu
 
 ## Usage
 
-These files have not yet been published under a license, though I expect to publish them by early 2022. Consequently, while you may download and examine the files freely, you may not redistribute or republish them in any way, altered or unaltered, without my written permission. To request permission, please contact me at [josephburkhart.public@gmail.com](mailto:josephburkhart.public@gmail.com).
+These files have not yet been published under a license, though I expect to publish them soon. Consequently, while you may download and examine the files freely, you may not redistribute or republish them in any way, altered or unaltered, without my written permission. To request permission, please contact me at [josephburkhart.public@gmail.com](mailto:josephburkhart.public@gmail.com).
 
 Files in the original dataset are published under a [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license, and may be copied, used, and shared without my permission, under some minor restrictons.
 
