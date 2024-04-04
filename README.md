@@ -2,7 +2,7 @@
 
 This is an actively updated repository that originally mirrored the restructured dataset from my MA thesis. Corrections to the original dataset and new data will be published here. The thesis can be found [here](https://dx.doi.org/10.14288/1.0401823). The original restructured dataset can be found [here](http://hdl.handle.net/2429/79727) ([mirror](https://github.com/josephburkhart/Byrsa-Archive-Static)). 
 
-In addition to updated data and metadata files, this repository also contains full sitemaps illustrating the state of the site during Phase 1 and Phase 2.
+In addition to updated data and metadata files, this repository also contains full sitemaps illustrating the state of the site during Phase 1 and Phase 2. Currently, these sitemaps reflect the static dataset.
 
 ## Usage
 
@@ -12,4 +12,4 @@ Files in the original dataset are published under a [CC BY-NC-SA 4.0](https://cr
 
 ## Online Interactive Map
 
-An interactive web-map for my dataset, created using the plugin [qgis2web](https://plugins.qgis.org/plugins/qgis2web/), can be found [here](https://josephburkhart.github.io/Byrsa-Archive-Active/). This web-map is still under active development, and currently displays only the extents of the maps used as sources for this dataset.
+An interactive web-map for my dataset, created using [Leaflet](https://leafletjs.com/), [leaflet-ruler](https://github.com/gokertanrisever/leaflet-ruler), and [Leaflet.HTMLLegend](https://github.com/consbio/Leaflet.HtmlLegend), can be found [here](https://josephburkhart.github.io/Byrsa-Archive-Active/). This web-map is still under active development, and currently displays only the archaeological features, published map extents, and axes of reconstruction.
