@@ -36,6 +36,15 @@
     font: 14px/16px Arial, Helvetica, sans-serif;
     padding: 6px 8px;
 }
+.leaflet-help-message code {
+    background-color: #eee;
+    border-radius: 3px;
+    padding: 0 3px;
+    cursor: pointer;
+}
+.leaflet-help-message code:hover {
+    background-color: #b0b0b0;
+}
 
 .info {
     padding: 6px 8px;
