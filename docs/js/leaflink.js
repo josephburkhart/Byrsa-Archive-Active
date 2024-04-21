@@ -27,9 +27,24 @@ class LeafLink extends HTMLElement {
       // Check that callbacks for handlers are present and error if they aren't
       code.addEventListener("click", this.handleClick);
       
-      // Take attribute content and put it inside the anchor
+      // Get attribute information
+      const href = this.getAttribute("href");
       const text = this.getAttribute("link-text");
-      code.textContent = text;
+
+      // Populate inner text with the href if no custom link text was provided
+      if (!text) {
+        code.textContent = href;
+      } else {
+        code.textContent = text;
+      }
+
+      // If href and inner text are different, create a tooltip
+      let tooltip;
+      if (href !== code.textContent) {
+        tooltip = document.createElement("div");
+        tooltip.setAttribute("class", "tooltip");
+        tooltip.innerText = this.getAttribute("href");
+      }
       
       // Create some CSS to apply to the shadow dom
       const style = document.createElement("style");
@@ -51,12 +66,36 @@ class LeafLink extends HTMLElement {
           background-color: #b0b0b0;
           background-opacity: 1;
         }
+        
+        .tooltip {
+          display: none;
+          width: 60px;
+          position: absolute;
+          z-index: 100;
+          left: 50%;
+          bottom: 100%;
+          margin-left: -30px;
+          background-color: #ffffff;
+          opacity: 0;
+          border-radius: 3px;
+          border: 1px solid black;
+          text-align: center;
+          box-shadow: 0 0 3px rgba(0,0,0,0.2);
+        }
+        
+        .code:hover + .tooltip {
+          display: block;
+          opacity: 1;
+        }
       `;
       
       // Attach the created elements to the shadow dom
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
       wrapper.appendChild(code);
+      if (tooltip) {
+        wrapper.appendChild(tooltip);
+      }
     }
     
     disconnectedCallback() {
