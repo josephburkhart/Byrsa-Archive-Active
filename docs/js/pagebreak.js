@@ -1,18 +1,3 @@
-// Utility Function
-function urlPageNumber(labelledPageNumber) {
-  console.log('here')
-    let romanNumerals = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix',
-                         'x', 'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii',
-                         'xviii', 'xix', 'xx', 'xxi'];
-    if (romanNumerals.includes(labelledPageNumber)) {
-      console.log('here')
-        return romanNumerals.indexOf(labelledPageNumber) + 1
-    } else {
-      console.log('here')
-        return parseInt(labelledPageNumber) + romanNumerals.length
-    }
-}
-
 /** 
  Class for displaying where page breaks occur in the thesis's PDF 
  Must be initialized with the following attributes:
@@ -52,14 +37,35 @@ class PB extends HTMLElement {
       after.innerText = pnafter;
       
       // Create callbacks
+      // Note: I tried to abstract this away into a lookup function, but it
+      // kept failing in ways I couldn't understand. Keeping the functionality
+      // here, although inelegant, solved the problems.
       before.addEventListener("click", function (e) {
+        let urlPageNumber;
+        let romanNumerals = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix',
+        'x', 'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii',
+        'xviii', 'xix', 'xx', 'xxi'];
+        if (romanNumerals.includes(pnbefore)) {
+          urlPageNumber = romanNumerals.indexOf(pnbefore) + 1
+        } else {
+          urlPageNumber = parseInt(pnbefore) + romanNumerals.length
+        }
         let url = `https://open.library.ubc.ca/media/stream/pdf/24/1.0401823/` +
-                   `3#page=${urlPageNumber(pnbefore)}`;
+                   `3#page=${urlPageNumber}`;
         window.open(url, "");   // doesn't always open to new tab - prompt user to confirm first?
       });
       after.addEventListener("click", function (e) {
+        let urlPageNumber;
+        let romanNumerals = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix',
+        'x', 'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii',
+        'xviii', 'xix', 'xx', 'xxi'];
+        if (romanNumerals.includes(pnafter)) {
+          urlPageNumber = romanNumerals.indexOf(pnafter) + 1
+        } else {
+          urlPageNumber = parseInt(pnafter) + romanNumerals.length
+        }
         let url = `https://open.library.ubc.ca/media/stream/pdf/24/1.0401823/` +
-                   `3#page=${urlPageNumber(pnbefore)}`;
+                   `3#page=${urlPageNumber}`;
         window.open(url, "");
       });
 
