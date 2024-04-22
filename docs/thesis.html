@@ -58,7 +58,7 @@
 			margin-top: 2ex;
 			margin-bottom: 0.8ex;
 			text-align: left;
-
+			line-height: 100%;
 		}
 
 		blockquote.quote {
@@ -232,12 +232,10 @@
 		/* Figures */
 		.redacted-figure {
 			width: 500px;
-			/*   height: 100px; */
 			margin-left: auto;
 			margin-right: auto;
 			margin-top: 20px;
 			margin-bottom: 20px;
-			display: inline-block;
 			text-align: left;
 			padding: 20px;
 			background-color: #d4d4ff;
@@ -250,7 +248,6 @@
 		}
 
 		.float-figure > div:has(.float-caption) {
-			/* max-width: 70vw; */
 			margin-top: 5px;
 			margin-bottom: 10px;
 			margin-left: 5%;
@@ -261,16 +258,44 @@
 			text-align: center;
 		}
 
+		/* Table */
 		table {
 			border-collapse: collapse;
-			display: inline-block;
+			/* display: inline-block; */
+			font-size: small;
+			margin-left: auto;
+			margin-right: auto;
 		}
-
 		td {
 			border: 1px solid black;
-			padding: 0.5ex;
+			padding: 1ex;
+			text-align: center;
+			white-space: nowrap;
 		}
+		th {
+			text-align: center;
+		}
+		tr td:first-child, td:last-child, th:first-child, th:last-child {
+			text-align: left;
+		}
+		tr td:last-child {
+			white-space: wrap;
+		}
+		th {
+			padding-left: 20px;
+			padding-right: 20px;
 
+		}
+		.float-table {
+			max-width: 60vw;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.float-table > div:has(.float-caption) {
+			margin-top: 5px;
+			margin-bottom: 10px;
+			margin-left: 5%;
+		}
 		div.float-caption {
 			text-align: center;
 			border: 2px solid black;
