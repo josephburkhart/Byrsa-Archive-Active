@@ -162,37 +162,81 @@
 			font-weight: normal;
 		}
 
-		div.note_comment {
-			display: none;
-		}
-
+		/* Footnotes - Footnote Label */
 		span.foot_label {
 			vertical-align: super;
 			font-size: smaller;
-			font-weight: bold;
-			text-decoration: underline;
 		}
-
+		div.foot:hover span.foot_label {
+			cursor: pointer;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+		div.foot:has(span.foot_label.active) {
+			text-decoration: underline;
+			font-weight: bold;
+		}
 		div.foot {
 			display: inline;
 			font-size: small;
-			font-weight: medium;
-			font-family: serif;
-			font-variant: normal;
-			font-style: normal;
 		}
 
-		div.foot_inner {
-			display: none;
-		}
-
+		/* Footnotes - Footnote Content */
+		div.foot_inner { display: none; }
 		div.foot:hover div.foot_inner {
-			display: block;
-			border: 1px double black;
-			margin: 0em 1em;
+			display: inline;
+			position: absolute;
+			right: 2%;
+			left: 80%;
+			border: 1px solid rgba(0,0,0,0.2);
+			background-color: rgb(255,255,255);
 			padding: 1em;
+			border-radius: 5px;
+		}
+		div.foot_inner.active {
+			display: inline;
+			position: absolute;
+			right: 2%;
+			left: 80%;
+			border: 1px solid rgba(0,0,0,0.2);
+			background-color: rgb(255,255,255);
+			padding: 1em;
+			border-radius: 5px;
+		}
+		div div.foot_inner.active:hover {
+			border: 1.2px solid rgba(0,0,0,1.0);
+			box-shadow: 0 0 15px rgba(0,0,0,0.1);
+			z-index: 10;
 		}
 
+		/* Footnotes - Footnote Content - Close Button */
+		div.foot_inner > div.close {
+			position: absolute;
+			right: 0.5em;
+			top: 0em;
+			opacity: 0.5;
+			user-select: none;
+		}
+		div.foot_inner > div.close:hover {
+			opacity: 1.0;
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		.redacted-figure {
+			width: 500px;
+			/*   height: 100px; */
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			display: inline-block;
+			text-align: left;
+			padding: 20px;
+			background-color: #d4d4ff;
+			border-radius: 10px;
+		}
+		
 		div.float {
 			border: 2px solid black;
 			text-align: center;
@@ -28631,5 +28675,5 @@ development of the substructural walls of the Phase 2 southwest
 
 </a>
 
-<script src="js/preprocessing.js"></script>
+<script src="js/processing.js"></script>
 </body></html>
