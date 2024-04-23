@@ -303,12 +303,98 @@
 			margin: 1ex;
 		}
 	</style>
+	<!-- Import additional styles -->
+	<link rel="stylesheet" href="css/tocbot.css"/>
+
 	<!-- Import/Initialize Packages -->
-	<!-- <script src="js/tocbot.js"></script> -->
+	<script src="js/tocbot.js"></script>
 	<script src="js/pagebreak.js"></script>
 	<script src="js/leaflink.js"></script>
 
+	<!-- Additional Styles -->
+	<style>
+		#sticky-toc {
+			position: sticky;
+			top: 5px;
+			display: flex;
+			flex-wrap: wrap;
+			width: min-content;
+			height: min-content;
+			padding: 5px;
+			z-index: 5;
+			align-items: center;
+			overflow: clip;
+			border-radius: 5px;
+		}
+		#sticky-toc:has(#sticky-toc-title[class*="active"]) {
+			background-color: rgba(255,255,255,0.9);
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			border: 2px solid rgba(0,0,0,0.2);
+			border-radius: 5px;
+		}
+		#sticky-toc-button {
+			top: 5px;
+			width: 20px;
+			height: 20px;
+			border: 1px solid gray;
+			background-color: white;
+			z-index: 10;
+			border-radius: 3px;
+			background-color: rgba(255,255,255,0.9);
+			border: 2px solid rgba(0,0,0,0.2);
+			border-radius: 5px;
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			background-image: url('img/ui/toc.svg');
+			background-size: contain;
+		}
+		#sticky-toc-button[class*="active"] {
+			background-color: lightgray;
+			box-shadow: none;
+		}
+		#sticky-toc-button:hover {
+			background-color: lightgray;
+		}
+
+		#sticky-toc-content, #sticky-toc-title {
+			display: none;
+			padding: 5px;
+		}
+
+		#sticky-toc-content[class*="active"], 
+		#sticky-toc-title[class*="active"] {
+			display: block;
+			padding: 5px;
+		}
+
+		#sticky-toc-content[class*="active"] {
+			min-width: 30vw;
+			width: 100%;
+			flex-basis: 100%;
+			max-height: 50vh;
+			overflow-y: scroll;
+			scrollbar-width: thin;
+		}
+		.toc-list {
+			margin-left: 5px !important;
+			padding-left: 15px !important;
+			list-style: none;
+		}
+		.toc-list-item > a {
+			text-decoration: none;
+		}
+		.toc-list-item > a:hover {
+			text-decoration: underline;
+		}
+	</style>
+
 </head><body dir="auto">
+	<div id="sticky-toc">
+		<div id="sticky-toc-button"></div>
+		<div id="sticky-toc-title"><b>Table of Contents</b></div>
+		<div id="sticky-toc-content"></div>
+	</div>
+	<div id="thesis">
+
 	<div class="standard" id="magicparlabel-1"><br>
 	</div>
 
@@ -497,7 +583,7 @@
 
 
 	<div class="toc">
-		<h2 class="tochead chapter">Table of Contents</h2>
+		<h1 class="tochead chapter">Table of Contents</h1>
 
 		<div class="lyxtoc-1"><a href="#magicparlabel-96" class="tocentry">Abstract</a>
 		</div>
@@ -866,7 +952,7 @@
 	<div style="text-align: center;"><p-b pnbefore="xii" pnafter="xiii"></p-b></div>
 
 	<div class="toc toc-floats">
-		<h2 class="tochead toc-table numberless_chapter">List of Tables</h2>
+		<h1 class="tochead toc-table numberless_chapter">List of Tables</h1>
 		<div class="lyxtoc-floats lyxtoc-table"><a href="#magicparlabel-493" class="lyxtoc-floats">Table 2.1: Source
 				codes used in Figure IDs.</a></div>
 		<div class="lyxtoc-floats lyxtoc-table"><a href="#magicparlabel-593" class="lyxtoc-floats">Table 2.2: Scanner
@@ -916,7 +1002,7 @@
 	<div style="text-align: center;"><p-b pnbefore="xiii" pnafter="xiv"></p-b></div>
 
 	<div class="toc toc-floats">
-		<h2 class="tochead toc-figure numberless_chapter">List of Figures</h2>
+		<h1 class="tochead toc-figure numberless_chapter">List of Figures</h1>
 		<div class="lyxtoc-floats lyxtoc-figure"><a href="#magicparlabel-1191" class="lyxtoc-floats">Figure 2.1: Diagram
 				of the feature location system.</a></div>
 		<div class="lyxtoc-floats lyxtoc-figure"><a href="#magicparlabel-1497" class="lyxtoc-floats">Figure 4.1:
@@ -7740,7 +7826,7 @@ modern constructions, so it
 			</div> <leaf-link link-type="figure" href="B2.J.032a">B2.J.032a</leaf-link> is partially colinear with <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link>, but extends almost 40 m farther northwest, crossing
 			through a large area (Punic block <b>A</b>) that has no other profiles, making it one of the widest and
 			potentially most important profiles in all of the <em>Byrsa</em> volumes.</div>
-		<h3 class="subsection" id="magicparlabel-5652"><span class="subsection_label">6.2.1</span> <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link><a id="subsec_Example_Profile_B1_P_200">
+		<h3 class="subsection" id="magicparlabel-5652" data-heading-label="6.2.1 B1.P.200"><span class="subsection_label">6.2.1</span> <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link><a id="subsec_Example_Profile_B1_P_200">
 		</a></h3><a id="subsec_Example_Profile_B1_P_200">
 
 		</a><div class="standard" id="magicparlabel-5681"><a id="subsec_Example_Profile_B1_P_200">The extents of profile <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link> are clearly plotted and labeled in
@@ -7871,7 +7957,7 @@ modern constructions, so it
 			extents plotted in <leaf-link link-type="figure" href="B1.P.199">B1.P.199</leaf-link> are basically correct, provided that the northern and southern endpoints are
 			adjusted, and that the grid cell labels in <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link> are incorrect. The corrected labels are shown in Figure
 			<a href="#fig_B1_P_200_corrected_labels">6.5</a>.</div>
-		<h3 class="subsection" id="magicparlabel-5727"><span class="subsection_label">6.2.2</span> <leaf-link link-type="figure" href="B2.J.032a">B2.J.032a</leaf-link><a id="subsec_Example_Profile_B2_J_032a">
+		<h3 class="subsection" id="magicparlabel-5727"><span class="subsection_label" data-heading-label="6.2.2 B2.J.032a">6.2.2</span> <leaf-link link-type="figure" href="B2.J.032a">B2.J.032a</leaf-link><a id="subsec_Example_Profile_B2_J_032a">
 		</a></h3><a id="subsec_Example_Profile_B2_J_032a">
 		</a><div class="standard" id="magicparlabel-5728"><a id="subsec_Example_Profile_B2_J_032a">Profile <leaf-link link-type="figure" href="B2.J.032a">B2.J.032a</leaf-link> is presented almost without mention in <em>Byrsa
 				II</em>: it is briefly cited only twice, in reference to the steep NW-SE slope along Punic roads II (</a><a href="#Bibliography-ByrsaII"><span class="bib-shorttitle">Byrsa II</span></a>, <span class="bib-textafter">32</span>) and III (<a href="#Bibliography-ByrsaII"><span class="bib-shorttitle">Byrsa II</span></a>, <span class="bib-textafter">46</span>). On the surface,
@@ -28535,7 +28621,7 @@ development of the substructural walls of the Phase 2 southwest
 
 		</a><h2 class="section" id="magicparlabel-27225"><a id="chap_Corrective_Notes"><span class="section_label">D.1</span> <em>Byrsa I</em></a><em><a id="sec_Corrective_Notes_Byrsa_I">
 			</a></em></h2><a id="sec_Corrective_Notes_Byrsa_I">
-		<h3 class="subsection" id="magicparlabel-27226"><span class="subsection_label">D.1.1</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27226" data-heading-label="D.1.1 The extents of profiles B1.P.066 and 067 are missing"><span class="subsection_label">D.1.1</span> The extents of
 			profiles <leaf-link link-type="figure" href="B1.P.066">B1.P.066</leaf-link> and <leaf-link link-type="figure" href="B1.P.067" link-text="067">B1.P.067</leaf-link> are missing</h3>
 		<div class="standard" id="magicparlabel-27227">The extents of <leaf-link link-type="figure" href="B1.P.066">B1.P.066</leaf-link> and <leaf-link link-type="figure" href="B1.P.067" link-text="067">B1.P.067</leaf-link> (both 4.00 m wide) are not
 			labeled on any map, though their figure captions give their orientations (west and south) and assign them to
@@ -28543,14 +28629,14 @@ development of the substructural walls of the Phase 2 southwest
 			wall with the correct dimensions and it does not have a west wall at all. Based on photo <leaf-link link-type="figure" href="B1.P.065-2">B1.P.065-2</leaf-link>, the
 			extents are located a fraction of a meter (I assumed 50 cm) inward from the western and southern boundaries
 			of <leaf-link link-type="grid-minor" href="H.II.13"></leaf-link>.<p-b pnbefore="285" pnafter="286"></p-b></div>
-		<h3 class="subsection" id="magicparlabel-27228"><span class="subsection_label">D.1.2</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27228" data-heading-label="D.1.2 The extents od profile B1.P.071 are missing"><span class="subsection_label">D.1.2</span> The extents of
 			profile <leaf-link link-type="figure" href="B1.P.071">B1.P.071</leaf-link> are missing</h3>
 		<div class="standard" id="magicparlabel-27229">The extents of <leaf-link link-type="figure" href="B1.P.071">B1.P.071</leaf-link> (4.00 m wide) are not labeled on any map,
 			though the figure caption gives its orientation (west) and assigns it to <leaf-link link-type="grid-minor" href="G.II.16"></leaf-link>. A trench is shown in this
 			location in maps <leaf-link link-type="figure" href="B1.P.061">B1.P.061</leaf-link>, <leaf-link link-type="figure" href="B1.P.186a" link-text="186a">B1.P.186a</leaf-link>, and <leaf-link link-type="figure" href="B1.P.199" link-text="199">B1.P.199</leaf-link>, but it does not have a west wall. Based on photo <leaf-link link-type="figure" href="B1.P.065-2">B1.P.065-2</leaf-link>, the
 			extents are located a fraction of a meter (I assumed 50 cm) inward from the western boundary of <leaf-link link-type="grid-minor" href="G.II.16"></leaf-link>.
 		</div>
-		<h3 class="subsection" id="magicparlabel-27230"><span class="subsection_label">D.1.3</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27230" data-heading-label="D.1.3 The extents of profile B1.P.120 in the given maps are incorrect"><span class="subsection_label">D.1.3</span> The extents of
 			profile <leaf-link link-type="figure" href="B1.P.120">B1.P.120</leaf-link> in the given maps are incorrect</h3>
 		<div class="standard" id="magicparlabel-27231">In profile <leaf-link link-type="figure" href="B1.P.120">B1.P.120</leaf-link>, the rightmost limit, denoted <b>C</b>, is
 			2.80 m away from <b>B</b>, which marks a bend in the profile wall. This does not match the extents of the
@@ -28572,14 +28658,14 @@ development of the substructural walls of the Phase 2 southwest
 				</div>
 			</div><p-b pnbefore="286" pnafter="287"></p-b>
 		</div>
-		<h3 class="subsection" id="magicparlabel-27237"><span class="subsection_label">D.1.4</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27237" data-heading-label="D.1.4 The extents of profile B1.P.163 are not clearly identified"><span class="subsection_label">D.1.4</span> The extents of
 			profile <leaf-link link-type="figure" href="B1.P.163">B1.P.163</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27238">There is no label for profile <leaf-link link-type="figure" href="B1.P.163">B1.P.163</leaf-link> that can be used to link
 			it to extents plotted in maps <leaf-link link-type="figure" href="B1.P.148">B1.P.148</leaf-link> and <leaf-link link-type="figure" href="B1.P.153">B1.P.153</leaf-link>, and no grid cell labels appear in the corresponding
 			text, either. Two observations are sufficient to link <leaf-link link-type="figure" href="B1.P.163">B1.P.163</leaf-link> to the <b>m-n </b>profile in <leaf-link link-type="figure" href="B1.P.148">B1.P.148</leaf-link>: their
 			widths are equivalent (just under 8.00 m), and the placement of features in the former is identical to the
 			latter.</div>
-		<h3 class="subsection" id="magicparlabel-27243"><span class="subsection_label">D.1.5</span> The scale given for
+		<h3 class="subsection" id="magicparlabel-27243" data-heading-label="D.1.5 The scale given for profile B1.P.200 is incorrect"><span class="subsection_label">D.1.5</span> The scale given for
 			profile <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link> is incorrect</h3>
 		<div class="standard" id="magicparlabel-27244">The figure caption for profile <leaf-link link-type="figure" href="B1.P.200">B1.P.200</leaf-link> gives a scale of 1:100.
 			No scale bar is given, but the scale can still be checked against the dimension labels at the bottom of the
@@ -28587,73 +28673,73 @@ development of the substructural walls of the Phase 2 southwest
 			scale is about 1:114.3. This distortion appears to be identical in the vertical direction. It seems likely
 			that this distortion arose during the printing process: perhaps the publisher shrank the profile so that it
 			would fit better within the required margins.</div>
-		<h3 class="subsection" id="magicparlabel-27245"><span class="subsection_label">D.1.6</span> The scale given for
+		<h3 class="subsection" id="magicparlabel-27245" data-heading-label="D.1.6 The scale given for map B1.P.227 is incorrect"><span class="subsection_label">D.1.6</span> The scale given for
 			map <leaf-link link-type="figure" href="B1.P.227">B1.P.227</leaf-link> is incorrect</h3>
 		<div class="standard" id="magicparlabel-27246">The figure caption for map <leaf-link link-type="figure" href="B1.P.227">B1.P.227</leaf-link> gives the scale as 1:50, but
 			as it is printed, 5.00 m on the map (the side length of one grid cell) measures 5.00 cm on the page.
 			Therefore, the scale is actually 1:100.<p-b pnbefore="287" pnafter="288"></p-b></div>
 		</a><h2 class="section" id="magicparlabel-27247"><a id="sec_Corrective_Notes_Byrsa_I"><span class="section_label">D.2</span> <em>Byrsa II</em></a><em><a id="sec_Corrective_Notes_Byrsa_II">
 			</a></em></h2><a id="sec_Corrective_Notes_Byrsa_II">
-		<h3 class="subsection" id="magicparlabel-27248"><span class="subsection_label">D.2.1</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27248" data-heading-label="D.2.1 The extents of the profile B2.J.017 are not clearly identified"><span class="subsection_label">D.2.1</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.017">B2.J.017</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27249">The extents of profile <leaf-link link-type="figure" href="B2.J.017">B2.J.017</leaf-link> are not plotted on any map, but
 			its width (4.38 m from the edge of pile <b>C16</b>) is consistent with a line between the southeast corner
 			of pile <b>C16</b> and the southeast edge of the excavations shown on map <leaf-link link-type="figure" href="B2.J.014">B2.J.014</leaf-link> (staying within the
 			bounds of <leaf-link link-type="grid-minor" href="G.III.4"></leaf-link>). This assignment is also consistent with photographs <leaf-link link-type="figure" href="B2.J.015">B2.J.015</leaf-link> and <leaf-link link-type="figure" href="B2.J.016" link-text="016">B2.J.016</leaf-link>.</div>
-		<h3 class="subsection" id="magicparlabel-27254"><span class="subsection_label">D.2.2</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27254" data-heading-label="D.2.2 The extents of profile B2.J.048 are not clearly identified"><span class="subsection_label">D.2.2</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.048">B2.J.048</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27255">The extents of profile <leaf-link link-type="figure" href="B2.J.048">B2.J.048</leaf-link> are not labeled on any map, but
 			its width of 7.40 m almost perfectly matches the length of the southwest limit of the excavations in
 			<leaf-link link-type="figure" href="B2.J.046">B2.J.046</leaf-link>. Photographs of the profile wall (<leaf-link link-type="figure" href="B2.J.049">B2.J.049</leaf-link> and <leaf-link link-type="figure" href="B2.J.050" link-text="050">B2.J.050</leaf-link>) are consistent with this assignment.</div>
-		<h3 class="subsection" id="magicparlabel-27256"><span class="subsection_label">D.2.3</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27256" data-heading-label="D.2.3 The extents of profile B2.J.068 are not clearly identified"><span class="subsection_label">D.2.3</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.068">B2.J.068</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27257">The extents of profile <leaf-link link-type="figure" href="B2.J.068">B2.J.068</leaf-link> are not plotted on any map, but
 			its width (2.61 m) and features are consistent with a stretch of the northeast limits of Punic block
 			<b>C</b> excavations shown in <leaf-link link-type="figure" href="B2.J.161">B2.J.161</leaf-link>. Photographs <leaf-link link-type="figure" href="B2.J.062-2">B2.J.062-2</leaf-link>, <leaf-link link-type="figure" href="B2.J.067" link-text="067">B2.J.067</leaf-link>, and <leaf-link link-type="figure" href="B2.J.069" link-text="069">B2.J.069</leaf-link> are consistent with this
 			assignment.</div>
-		<h3 class="subsection" id="magicparlabel-27258"><span class="subsection_label">D.2.4</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27258" data-heading-label="D.2.4 The extents of profile B2.J.113 are missing"><span class="subsection_label">D.2.4</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.113">B2.J.113</leaf-link> are missing</h3>
 		<div class="standard" id="magicparlabel-27259">The extents of profile <leaf-link link-type="figure" href="B2.J.113">B2.J.113</leaf-link> are not plotted on any map. Its
 			width is 3.97 m, the distance from its south limit to the south side of the wall is 1.62 m, the distance
 			from the north side <p-b pnbefore="288" pnafter="289"></p-b> of the wall to the profile's north limit is 1.84 m. There are no gaps or bends in the
 			profile. Based on these factors and photographs <leaf-link link-type="figure" href="B2.J.112">B2.J.112</leaf-link>, <leaf-link link-type="figure" href="B2.J.114" link-text="114">B2.J.114</leaf-link>, and <leaf-link link-type="figure" href="B2.J.115" link-text="115">B2.J.115</leaf-link>, it appears that the profile is
 			located on the east side of courtyard <b>E</b> in Punic block<b> E</b>.</div>
-		<h3 class="subsection" id="magicparlabel-27260"><span class="subsection_label">D.2.5</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27260" data-heading-label="D.2.5 The extents of profile B2.J.165 are not clearly identified"><span class="subsection_label">D.2.5</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.165">B2.J.165</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27261">The extents of <leaf-link link-type="figure" href="B2.J.165">B2.J.165</leaf-link> are not labeled on any map, but its
 			figure caption and width of 4.28 m are consistent with the easternmost limit of the easternmost trench in
 			<leaf-link link-type="figure" href="B2.J.161">B2.J.161</leaf-link>—note that this means the profile stretches about 30 cm into <leaf-link link-type="grid-minor" href="I.IV.2"></leaf-link>, even though its label only
 			specifies <leaf-link link-type="grid-minor" href="I.III.14"></leaf-link>.</div>
-		<h3 class="subsection" id="magicparlabel-27262"><span class="subsection_label">D.2.6</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27262" data-heading-label="D.2.6 The extents of profile B2.J.167 are not clearly identified"><span class="subsection_label">D.2.6</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.167">B2.J.167</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27263">As with <leaf-link link-type="figure" href="B2.J.165">B2.J.165</leaf-link>, the extents of profile <leaf-link link-type="figure" href="B2.J.167">B2.J.167</leaf-link> are not labeled
 			on any map. The profile's width of 9.95 m is consistent with the westernmost limit of the easternmost trench
 			in map <leaf-link link-type="figure" href="B2.J.161">B2.J.161</leaf-link>, provided that the profile stops 40 cm south of the northwest limit. (This is consistent
 			with <leaf-link link-type="figure" href="B2.J.167">B2.J.167</leaf-link>'s label (“<leaf-link link-type="grid-minor" href="I.III.13"></leaf-link> - <leaf-link link-type="grid-minor" href="I.IV.1"></leaf-link>”), since that extra 40 cm extends into <leaf-link link-type="grid-minor" href="I.IV.5"></leaf-link>.)</div>
-		<h3 class="subsection" id="magicparlabel-27264"><span class="subsection_label">D.2.7</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27264" data-heading-label="D.2.7 The extents of profiles B2.J.191, 195, and 203 in the given map are incorrect"><span class="subsection_label">D.2.7</span> The extents of
 			profiles <leaf-link link-type="figure" href="B2.J.191">B2.J.191</leaf-link>, <leaf-link link-type="figure" href="B2.J.195" link-text="195">B2.J.195</leaf-link>, and <leaf-link link-type="figure" href="B2.J.203" link-text="203">B2.J.203</leaf-link> in the given map are incorrect</h3>
 		<div class="standard" id="magicparlabel-27269">The extents of profiles <leaf-link link-type="figure" href="B2.J.191">B2.J.191</leaf-link>, <leaf-link link-type="figure" href="B2.J.195" link-text="195">B2.J.195</leaf-link>, and <leaf-link link-type="figure" href="B2.J.203" link-text="203">B2.J.203</leaf-link> are plotted on map
 			<leaf-link link-type="figure" href="B2.J.183">B2.J.183</leaf-link>, but only in schematic fashion: their widths do not match the widths of the profiles. I transferred
 			these extents in <leaf-link link-type="figure" href="B2.J.183">B2.J.183</leaf-link> over to <leaf-link link-type="figure" href="B2.J.010a">B2.J.010a</leaf-link> and adjusted them so that they match their respective profiles' <p-b pnbefore="289" pnafter="290"></p-b> 
 			widths and features. </div>
-		<h3 class="subsection" id="magicparlabel-27278"><span class="subsection_label">D.2.8</span> The grid cell label
+		<h3 class="subsection" id="magicparlabel-27278" data-heading-label="D.2.8 The grid cell label for profile B2.J.191 is incorrect"><span class="subsection_label">D.2.8</span> The grid cell label
 			for profile <leaf-link link-type="figure" href="B2.J.191">B2.J.191</leaf-link> is incorrect</h3>
 		<div class="standard" id="magicparlabel-27279">The grid cell label of profile <leaf-link link-type="figure" href="B2.J.191">B2.J.191</leaf-link> is inconsistent with the
 			extents plotted on map <leaf-link link-type="figure" href="B2.J.183">B2.J.183</leaf-link>. On the map, the extents stretch into <leaf-link link-type="grid-minor" href="F.IV.9"></leaf-link>, even though the profile is
 			only labeled <leaf-link link-type="grid-minor" href="E.IV.12"></leaf-link>.</div>
-		<h3 class="subsection" id="magicparlabel-27280"><span class="subsection_label">D.2.9</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27280" data-heading-label="D.2.9 The extents of profile B2.J.201 in the given map are incorrect"><span class="subsection_label">D.2.9</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.201">B2.J.201</leaf-link> in the given map are incorrect</h3>
 		<div class="standard" id="magicparlabel-27281">The extents of profile <leaf-link link-type="figure" href="B2.J.201">B2.J.201</leaf-link> are plotted on map <leaf-link link-type="figure" href="B2.J.183">B2.J.183</leaf-link>, but
 			in exceedingly schematic fashion. I adjusted the extents to better reflect the width and features
 			illustrated in the profile.</div>
-		<h3 class="subsection" id="magicparlabel-27286"><span class="subsection_label">D.2.10</span> The grid cell label
+		<h3 class="subsection" id="magicparlabel-27286" data-heading-label="D.2.10 The grid cell label for profile B2.J.201 is incorrect"><span class="subsection_label">D.2.10</span> The grid cell label
 			for profile <leaf-link link-type="figure" href="B2.J.201">B2.J.201</leaf-link> is incorrect</h3>
 		<div class="standard" id="magicparlabel-27287">The grid cell label for profile <leaf-link link-type="figure" href="B2.J.201">B2.J.201</leaf-link> is inconsistent with the
 			extents plotted on map <leaf-link link-type="figure" href="B2.J.183">B2.J.183</leaf-link>. On the map, the extents stretch into <leaf-link link-type="grid-minor" href="E.IV.3"></leaf-link>, 4, 8 and <leaf-link link-type="grid-minor" href="F.IV.5"></leaf-link> and 1, while
 			the profile's label only specifies <leaf-link link-type="grid-minor" href="E.IV.4"></leaf-link>, 8, and <leaf-link link-type="grid-minor" href="F.IV.5"></leaf-link>. Note that <leaf-link link-type="figure" href="B2.J.201">B2.J.201</leaf-link> has some discontinuities: it
 			displays part of wall <b>C</b>, an arch between piles<em> </em><b>C6</b> and <b>C7</b> located in <leaf-link link-type="grid-minor" href="E.IV.8"></leaf-link>.
 			which is disconnected from the other features.</div>
-		<h3 class="subsection" id="magicparlabel-27288"><span class="subsection_label">D.2.11</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27288" data-heading-label="D.2.11 The extents of profile B2.J.225 in the given map are incorrect"><span class="subsection_label">D.2.11</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.225">B2.J.225</leaf-link> in the given map are incorrect</h3>
 		<div class="standard" id="magicparlabel-27289">The width of profile <leaf-link link-type="figure" href="B2.J.225">B2.J.225</leaf-link> (1.68 m) does not match the width
 			of the extents plotted in map <leaf-link link-type="figure" href="B2.J.265">B2.J.265</leaf-link> 1.93 m). This is strange, considering that the width of neighboring
@@ -28671,35 +28757,35 @@ development of the substructural walls of the Phase 2 southwest
 			on a line toward <b>x'</b> until it reaches the closest point to the southwest corner of grave <b>A325</b>.
 			That yields a width of1.72 m, which is almost identical to the width of profile <leaf-link link-type="figure" href="B2.J.225">B2.J.225</leaf-link> (1.68 m, as noted
 			above).</div>
-		<h3 class="subsection" id="magicparlabel-27336"><span class="subsection_label">D.2.12</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27336" data-heading-label="D.2.12 The extents of profile B2.J.239 are missing"><span class="subsection_label">D.2.12</span> The extents of
 			profile <leaf-link link-type="figure" href="B2.J.239">B2.J.239</leaf-link> are missing</h3>
 		<div class="standard" id="magicparlabel-27337">The extents of profile <leaf-link link-type="figure" href="B2.J.239">B2.J.239</leaf-link> are not plotted on a map, but the
 			profile's width (1.79 m) and features are consistent with the east wall of trench 2 in <leaf-link link-type="figure" href="B2.J.247">B2.J.247</leaf-link>, if it is
 			extended about 60 cm to the south.</div>
-		<h3 class="subsection" id="magicparlabel-27338"><span class="subsection_label">D.2.13</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27338" data-heading-label="D.2.13 The extents of profiles B2.J.243-3 cannot be georeferenced from the given map"><span class="subsection_label">D.2.13</span> The extents of
 			profiles <leaf-link link-type="figure" href="B2.J.243-3">B2.J.243-3</leaf-link> cannot be georeferenced from the given map</h3>
 		<div class="standard" id="magicparlabel-27343">The extents of <leaf-link link-type="figure" href="B2.J.243-3">B2.J.243-3</leaf-link> are plotted on <leaf-link link-type="figure" href="B2.J.243-1">B2.J.243-1</leaf-link>, but this map
 			is not reliably georeferenceable. They must be transferred over to the corresponding location on map
 			<leaf-link link-type="figure" href="B2.J.218">B2.J.218</leaf-link>, <p-b pnbefore="291" pnafter="292"></p-b> which is georeferenceable.</div>
-		<h3 class="subsection" id="magicparlabel-27344"><span class="subsection_label">D.2.14</span> The grid cell
+		<h3 class="subsection" id="magicparlabel-27344" data-heading-label="D.2.14 The grid cell labels for B2.J.378 and 382-1 are incorrect"><span class="subsection_label">D.2.14</span> The grid cell
 			labels for profiles <leaf-link link-type="figure" href="B2.J.378">B2.J.378</leaf-link> and <leaf-link link-type="figure" href="B2.J.382-1" link-text="382-1">B2.J.382-1</leaf-link> are incorrect</h3>
 		<div class="standard" id="magicparlabel-27345">The grid cell labels for profiles <leaf-link link-type="figure" href="B2.J.378">B2.J.378</leaf-link> and <leaf-link link-type="figure" href="B2.J.382-1" link-text="382-1">B2.J.382-1</leaf-link> say that
 			they are located in <leaf-link link-type="grid-minor" href="E.VI.5"></leaf-link> and 6, but the profiles are actually located only in <leaf-link link-type="grid-minor" href="E.VI.5"></leaf-link>.</div>
 		</a><h2 class="section" id="magicparlabel-27346"><a id="sec_Corrective_Notes_Byrsa_II"><span class="section_label">D.3</span> <em>Byrsa III</em></a><em><a id="sec_Corrective_Notes_Byrsa_III">
 			</a></em></h2><a id="sec_Corrective_Notes_Byrsa_III">
-		<h3 class="subsection" id="magicparlabel-27347"><span class="subsection_label">D.3.1</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27347" data-heading-label="D.3.1 The extents of profile B3.P.042-1 are not clearly identified"><span class="subsection_label">D.3.1</span> The extents of
 			profile <leaf-link link-type="figure" href="B3.P.042-1">B3.P.042-1</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27348">The extents of profile <leaf-link link-type="figure" href="B3.P.042-1">B3.P.042-1</leaf-link> (width 7.39 m) are not labeled
 			on any map, but they correspond almost exactly to the east wall of a trench at the mouth of the first apse
 			north of the central apse on <leaf-link link-type="figure" href="B3.P.064a">B3.P.064a</leaf-link>. The grid cell labels for <leaf-link link-type="figure" href="B3.P.042-1">B3.P.042-1</leaf-link> are consistent with this
 			assignment.</div>
-		<h3 class="subsection" id="magicparlabel-27349"><span class="subsection_label">D.3.2</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27349" data-heading-label="D.3.2 The extents of profile B3.P.042-2 are not clearly identified"><span class="subsection_label">D.3.2</span> The extents of
 			profile <leaf-link link-type="figure" href="B3.P.042-2">B3.P.042-2</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27350">The extents of profile <leaf-link link-type="figure" href="B3.P.042-2">B3.P.042-2</leaf-link> (width 3.43 m) are not labeled
 			on any map, but they correspond almost exactly to the south wall of a trench at the mouth of the first apse
 			north of the central apse on <leaf-link link-type="figure" href="B3.P.064a">B3.P.064a</leaf-link>. The grid cell labels for <leaf-link link-type="figure" href="B3.P.042-2">B3.P.042-2</leaf-link> are consistent with this
 			assignment. <p-b pnbefore="292" pnafter="293"></p-b></div>
-		<h3 class="subsection" id="magicparlabel-27351"><span class="subsection_label">D.3.3</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27351" data-heading-label="D.3.2 The extents of profile B3.P.050-1 are not clearly identified"><span class="subsection_label">D.3.3</span> The extents of
 			profile <leaf-link link-type="figure" href="B3.P.050-1">B3.P.050-1</leaf-link> are not clearly identified</h3>
 		<div class="standard" id="magicparlabel-27352">The extents of profile <leaf-link link-type="figure" href="B3.P.050-1">B3.P.050-1</leaf-link> are not labeled on any map.
 			According to the profile's figure caption, the profile follows the wall of the modern staircase in the
@@ -28707,7 +28793,7 @@ development of the substructural walls of the Phase 2 southwest
 			on map <leaf-link link-type="figure" href="B3.P.064a">B3.P.064a</leaf-link>, I can constrain the extents to about 10 stairs (2.79 m) at the mouth of the apse. This is
 			consistent with the profile's width of 2.92 m. Note that this means that the profile's extents stretch 40 cm
 			into <leaf-link link-type="grid-minor" href="M.IX.8"></leaf-link>, even though this grid cell is not included in the profile's grid label.</div>
-		<h3 class="subsection" id="magicparlabel-27353"><span class="subsection_label">D.3.4</span> The extents of
+		<h3 class="subsection" id="magicparlabel-27353" data-heading-label="D.3.2 The extents of profile B3.P.100 are not clearly identified"><span class="subsection_label">D.3.4</span> The extents of
 			profile <leaf-link link-type="figure" href="B3.P.100">B3.P.100</leaf-link> are missing</h3>
 		<div class="standard" id="magicparlabel-27354">The extents of profile <leaf-link link-type="figure" href="B3.P.100">B3.P.100</leaf-link> are not plotted on any map. The
 			profile stretches 7.87 m from the outer edge of the basilica's east facade into <em>cardo</em> IV east, and
@@ -28718,6 +28804,30 @@ development of the substructural walls of the Phase 2 southwest
 
 
 </a>
+</div>
 
+<script>
+	// Initialize the Sticky ToC
+	// Populate the ToC content
+	tocbot.init({
+	tocSelector: '#sticky-toc-content',
+	contentSelector: '#thesis',
+	headingSelector: 'h1, h2, h3, h4',
+	collapseDepth: 6,
+	});
+
+	// When the ToC button is clicked, show the ToC content
+	const tocButton = document.getElementById('sticky-toc-button');
+	tocButton.addEventListener("click", function(e) {
+	
+		// Toggle the activeness of the toc content and toc title
+		const tocTitle = document.getElementById('sticky-toc-title');
+		const tocContent = document.getElementById('sticky-toc-content');
+		
+		tocButton.classList.toggle("active");
+		tocTitle.classList.toggle("active");
+		tocContent.classList.toggle("active");
+	});
+</script>
 <script src="js/processing.js"></script>
 </body></html>
