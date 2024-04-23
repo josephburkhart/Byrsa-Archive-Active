@@ -24,7 +24,7 @@ class PB extends HTMLElement {
       const wrapper = document.createElement("span");
       wrapper.setAttribute("class", "page-break-wrapper")
 
-      const before = document.createElement("span");
+      const before = document.createElement("small");
       before.setAttribute("class", "page-number");
       before.innerText = pnbefore;
 
@@ -32,7 +32,7 @@ class PB extends HTMLElement {
       line.setAttribute("class", "page-break-mark");
       line.innerText = "|";
 
-      const after = document.createElement("span");
+      const after = document.createElement("small");
       after.setAttribute("class", "page-number")
       after.innerText = pnafter;
       
@@ -81,8 +81,6 @@ class PB extends HTMLElement {
           font-weight: bold;
         }
         .page-number {
-          vertical-align: sub;
-          font-size: xx-small;
           margin-right: 3px;
           margin-left: 3px;
         }
