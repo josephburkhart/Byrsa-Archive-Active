@@ -251,7 +251,7 @@
     
     
         <div class="toc">
-          <h1 class="tochead chapter">Table of Contents</h1>
+          <h1 class="tochead chapter" id="TableOfContents">Table of Contents</h1>
     
           <div class="lyxtoc-1"><a href="#magicparlabel-96" class="tocentry">Abstract</a>
           </div>
@@ -627,7 +627,7 @@
         <div style="text-align: center;"><p-b pnbefore="xii" pnafter="xiii"></p-b></div>
     
         <div class="toc toc-floats">
-          <h1 class="tochead toc-table numberless_chapter">List of Tables</h1>
+          <h1 class="tochead toc-table numberless_chapter" id="ListOfTables">List of Tables</h1>
           <div class="lyxtoc-floats lyxtoc-table"><a href="#magicparlabel-493" class="lyxtoc-floats">Table 2.1: Source
               codes used in Figure IDs.</a></div>
           <div class="lyxtoc-floats lyxtoc-table"><a href="#magicparlabel-593" class="lyxtoc-floats">Table 2.2: Scanner
@@ -677,7 +677,7 @@
         <div style="text-align: center;"><p-b pnbefore="xiii" pnafter="xiv"></p-b></div>
     
         <div class="toc toc-floats">
-          <h1 class="tochead toc-figure numberless_chapter">List of Figures</h1>
+          <h1 class="tochead toc-figure numberless_chapter" id="ListOfFigures">List of Figures</h1>
           <div class="lyxtoc-floats lyxtoc-figure"><a href="#magicparlabel-1191" class="lyxtoc-floats">Figure 2.1: Diagram
               of the feature location system.</a></div>
           <div class="lyxtoc-floats lyxtoc-figure"><a href="#magicparlabel-1497" class="lyxtoc-floats">Figure 4.1:
@@ -34950,6 +34950,7 @@
       contentSelector: '#thesis-body',
       headingSelector: 'h1, h2, h3, h4',
       collapseDepth: 6,
+      scrollContainer: '#thesis'
       });
     
       // When the ToC button is clicked, show the ToC content
