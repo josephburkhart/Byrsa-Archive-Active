@@ -312,7 +312,8 @@ div.foot_inner > div.close:hover {
 
 /* Figures */
 .redacted-figure {
-    width: 500px;
+    width: auto;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
