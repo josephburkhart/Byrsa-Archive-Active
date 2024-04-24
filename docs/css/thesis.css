@@ -80,7 +80,7 @@
 
 /* Body and footnote zone */
 #thesis-body, p-b {
-    width: 77%;
+    width: 65%;
     text-align: justify;
     font: 14px/16px Arial, Helvetica, sans-serif;
     line-height: 125%;
@@ -273,30 +273,23 @@ div.foot {
 /* Footnotes - Footnote Content */
 div.foot_inner { 
     display: none; 
+    position: absolute;
     text-decoration: none;
     font-weight: normal;
     font-style: normal;
-}
-div.foot:hover div.foot_inner {
-    display: inline;
-    position: absolute;
-    right: -23%;
+    right: calc(-50vw + 104%);  /* absolutely ridiculous, but it works - Alison, I hope you're proud of me */
     left: 102%;
     border: 1px solid rgba(0,0,0,0.2);
     background-color: rgb(255,255,255);
     padding: 1em;
     border-radius: 5px;
+    min-width: 10em;
 }
+div.foot:hover div.foot_inner, 
 div.foot_inner.active {
     display: inline;
-    position: absolute;
-    right: -23%;
-    left: 102%;
-    border: 1px solid rgba(0,0,0,0.2);
-    background-color: rgb(255,255,255);
-    padding: 1em;
-    border-radius: 5px;
 }
+
 div div.foot_inner.active:hover {
     border: 1.2px solid rgba(0,0,0,1.0);
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
