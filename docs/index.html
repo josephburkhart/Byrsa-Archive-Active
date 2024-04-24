@@ -33744,7 +33744,7 @@
 
         function flashFeatureLayer(featureLayer) {
             // TODO: make flash animation better
-            featureLayer._path.style.animation = "flash-animation 1s ease-out";
+            featureLayer._path.style.animation = "flash-animation 0.75s ease-out 2";
             setTimeout(function() {
               featureLayer._path.style.animation = "";
             }, 1000);
