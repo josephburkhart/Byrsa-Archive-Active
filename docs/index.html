@@ -33776,18 +33776,32 @@
         var selected = null;
 
         function onClick(e, geoJsonLayer) {
-          // If something is not already selected, select it
           var layer = e.target;
+          // If something is not already selected, select it
           if (!selected) {
             layer.setStyle(selectedStyle);
-            selected = [layer, geoJsonLayer]
+            selected = {"layer": layer, "geoJsonLayer": geoJsonLayer};
             info.update(layer.feature.properties);
-          }
-          // Otherwise, deselect everything and reset their styles
-          else {
+          } else {
+            // Check if the targeted layer is identical to the currently
+            // selected layer. If so, raise a flag
+            let sameLayerFlag;
+            if (selected.layer === layer) {
+              sameLayerFlag = true;
+            }
+            // Deselect everything abd reset their styles
+            selected.geoJsonLayer.resetStyle(); //just to be sure
             selected = null;
             geoJsonLayer.resetStyle();
             info.update();
+
+            // If the targeted layer is not the previously selected layer, 
+            // select it
+            if (!sameLayerFlag) {
+              layer.setStyle(selectedStyle);
+              selected = {"layer": layer, "geoJsonLayer": geoJsonLayer};
+              info.update(layer.feature.properties);
+            }
           }
         }
 
