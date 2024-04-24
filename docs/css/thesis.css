@@ -34,6 +34,7 @@
     /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
     background-image: url('../img/ui/toc.svg');
     background-size: contain;
+    margin-bottom: 3px;
 }
 #sticky-toc-button[class*="active"] {
     background-color: lightgray;
