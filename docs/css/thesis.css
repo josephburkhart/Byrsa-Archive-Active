@@ -21,16 +21,17 @@
 }
 #sticky-toc-button {
     top: 5px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid gray;
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(0,0,0,0.2);
     background-color: white;
+    background-clip: padding-box;
     z-index: 10;
-    border-radius: 3px;
+    border-radius: 4px;
     background-color: rgba(255,255,255,0.9);
     border: 2px solid rgba(0,0,0,0.2);
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
     background-image: url('../img/ui/toc.svg');
     background-size: contain;
 }
@@ -51,6 +52,9 @@
 #sticky-toc-title[class*="active"] {
     display: block;
     padding: 5px;
+}
+#sticky-toc-title {
+    font-size: x-large;
 }
 
 #sticky-toc-content[class*="active"] {
@@ -81,7 +85,7 @@
     line-height: 125%;
 }
 #thesis-body {
-    margin-left: 5ex;
+    margin-left: 6ex;
     position: relative;
     flex-basis: 75%;
 }
