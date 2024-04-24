@@ -33848,7 +33848,7 @@
           map.flyTo(featureLayer.getCenter());
 
           // Reset Selection
-          selected[1].resetStyle();
+          if (selected) { selected.geoJsonLayer.resetStyle() };
           selected = null;
 
           // Reset info control
