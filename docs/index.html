@@ -34908,11 +34908,24 @@
 
         // Click through the timeline options and then pick the second one
         // (super hacky but no time currently for better solution)
-        let layersControlButtons = document.getElementsByClassName("leaflet-control-layers-selector");
-        for (b of layersControlButtons) {
-          b.click();
-        }
-        layersControlButtons[1].click();
+        // let layersControlButtons = document.getElementsByClassName("leaflet-control-layers-selector");
+        // for (b of layersControlButtons) {
+        //   b.click();
+        // }
+        // layersControlButtons[1].click();
+
+        // Link all of the leaf-links in the thesis to layers in the map
+        const initialLinks = document.querySelectorAll("#thesis-body leaf-link");
+        initialLinks.forEach((link) => {
+          link.clickCallback = function(e) {
+              linkedFeatureLayer = featureLayerCache[link.getAttribute("href")];
+              flashFeatureLayer(linkedFeatureLayer);
+            };
+            link.ctrlClickCallback = function(e) { 
+              linkedFeatureLayer = featureLayerCache[link.getAttribute("href")];
+              goToFeatureLayer(linkedFeatureLayer);
+            };
+        })
     </script>
     <script>
       // Initialize the Sticky ToC
