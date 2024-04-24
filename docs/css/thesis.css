@@ -228,10 +228,12 @@ div.lyxtoc-6 {
 a.tocentry {
     text-decoration: none;
     color: black;
+    line-height: 110%;
 }
 
 a.tocentry:visited {
     color: black;
+    line-height: 110%;
 }
 
 a.lyxtoc-floats {
