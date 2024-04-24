@@ -151,7 +151,7 @@ h2.section {
     margin-top: 1.3ex;
     margin-bottom: 0.7ex;
     text-align: left;
-
+    line-height: 100%;
 }
 
 h3.subsection {
@@ -340,29 +340,32 @@ div.float {
 }
 
 /* Table */
-table {
+#thesis table {
     border-collapse: collapse;
     /* display: inline-block; */
     font-size: small;
     margin-left: auto;
     margin-right: auto;
 }
-td {
+#thesis td {
     border: 1px solid black;
     padding: 1ex;
     text-align: center;
     white-space: nowrap;
 }
-th {
+#thesis th {
     text-align: center;
 }
-tr td:first-child, td:last-child, th:first-child, th:last-child {
+#thesis tr td:first-child, 
+#thesis td:last-child, 
+#thesis th:first-child, 
+#thesis th:last-child {
     text-align: left;
 }
-tr td:last-child {
+#thesis tr td:last-child {
     white-space: wrap;
 }
-th {
+#thesis th {
     padding-left: 20px;
     padding-right: 20px;
 

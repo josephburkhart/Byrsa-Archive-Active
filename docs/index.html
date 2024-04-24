@@ -33884,14 +33884,9 @@
           header.innerText = "Feature Info";
           this._div.appendChild(header)
 
-          // Note: If on mobile, div can stretch whole screen width,
-          //       otherwise it is limited to 0.33 of screen width.
           // TODO: allow user to adjust size of the div
           let content = document.createElement("div");
           content.setAttribute("id", "control-info-content");
-          if (!L.Browser.mobile) {
-            content.setAttribute("style", "width:33vw");
-          }
           content.innerHTML = "Hover over a feature";
           this._div.appendChild(content);
           return this._div;
