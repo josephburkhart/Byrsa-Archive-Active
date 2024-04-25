@@ -14,10 +14,7 @@ class LeafLink extends HTMLElement {
       this.cloneWithCallbacks = this.cloneWithCallbacks.bind(this);
     }
     
-    connectedCallback() {  
-      // Create a shadow root
-      const shadow = this.attachShadow({ mode: "open" });
-      
+    connectedCallback() {        
       // Create elements
       const wrapper = document.createElement("span")
       wrapper.setAttribute("class", "wrapper");
@@ -45,67 +42,13 @@ class LeafLink extends HTMLElement {
         tooltip.setAttribute("class", "tooltip");
         tooltip.innerText = this.getAttribute("href");
       }
-      
-      // Create some CSS to apply to the shadow dom
-      const style = document.createElement("style");
-      
-      style.textContent = `
-        :host {
-          display: inline;
-        }
-        .wrapper {
-          position: relative;
-        }
-        
-        .code {
-          background-color: #eee;
-          background-opacity: 0;
-          border-radius: 3px;
-          padding: 0 3px;
-          cursor: pointer;
-        }
-
-        .code:hover {
-          background-color: #b0b0b0;
-          background-opacity: 1;
-        }
-        
-        .tooltip {
-          display: none;
-          width: fit-content;
-          padding: 0.2em;
-          position: absolute;
-          z-index: 100;
-          left: 50%;
-          bottom: 100%;
-          margin-left: -30px;
-          background-color: #ffffff;
-          opacity: 0;
-          border-radius: 3px;
-          border: 1px solid black;
-          text-align: center;
-          box-shadow: 0 0 3px rgba(0,0,0,0.2);
-        }
-        
-        .code:hover + .tooltip {
-          display: block;
-          opacity: 1;
-        }
-      `;
-      
-      // Attach the created elements to the shadow dom
-      shadow.appendChild(style);
-      shadow.appendChild(wrapper);
+    
+      // Attach the created elements
+      this.appendChild(wrapper);
       wrapper.appendChild(code);
       if (tooltip) {
         wrapper.appendChild(tooltip);
       }
-
-      // If the parent had pre-existing content text, it might be a good idea to
-      // remove it. This could happen if leaf-links were manually inserted into 
-      // the HTML before this callback was called. Unfortunately, such removal
-      // cannot really be done in this class definition: see 
-      // https://stackoverflow.com/q/64169068/15426433
     }
     
     disconnectedCallback() {
