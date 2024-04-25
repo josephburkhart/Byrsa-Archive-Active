@@ -50,6 +50,9 @@ class LeafLink extends HTMLElement {
       const style = document.createElement("style");
       
       style.textContent = `
+        :host {
+          display: inline;
+        }
         .wrapper {
           position: relative;
         }
@@ -69,7 +72,8 @@ class LeafLink extends HTMLElement {
         
         .tooltip {
           display: none;
-          width: 60px;
+          width: fit-content;
+          padding: 0.2em;
           position: absolute;
           z-index: 100;
           left: 50%;
@@ -96,6 +100,12 @@ class LeafLink extends HTMLElement {
       if (tooltip) {
         wrapper.appendChild(tooltip);
       }
+
+      // If the parent had pre-existing content text, it might be a good idea to
+      // remove it. This could happen if leaf-links were manually inserted into 
+      // the HTML before this callback was called. Unfortunately, such removal
+      // cannot really be done in this class definition: see 
+      // https://stackoverflow.com/q/64169068/15426433
     }
     
     disconnectedCallback() {
