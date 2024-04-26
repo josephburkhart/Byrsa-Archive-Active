@@ -34,6 +34,7 @@
         flex-basis: 50%;
         overflow-y: scroll;
       }
+      .leaflet-fade-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-zoom-animated { will-change:auto !important; }
     </style>
   </head>
   <body>
@@ -32849,6 +32850,32 @@
     <script src="data/featuretraces.js"></script>
     <script src="data/mapextents.js"></script>
 
+    <!-- Create Sticky Table of Contents -->
+    <script>
+      // Initialize the Sticky ToC
+      // Populate the ToC content
+      tocbot.init({
+      tocSelector: '#sticky-toc-content',
+      contentSelector: '#thesis-body',
+      headingSelector: 'h1, h2, h3, h4',
+      collapseDepth: 6,
+      scrollContainer: '#thesis'
+      });
+    
+      // When the ToC button is clicked, show the ToC content
+      const tocButton = document.getElementById('sticky-toc-button');
+      tocButton.addEventListener("click", function(e) {
+      
+        // Toggle the activeness of the toc content and toc title
+        const tocTitle = document.getElementById('sticky-toc-title');
+        const tocContent = document.getElementById('sticky-toc-content');
+        
+        tocButton.classList.toggle("active");
+        tocTitle.classList.toggle("active");
+        tocContent.classList.toggle("active");
+      });
+    </script>
+
     <!-- custom code for the leaflet map -->
     <script>
 
@@ -33062,27 +33089,13 @@
           // Click on target layer to select it
           featureLayer.fireEvent("click");
         }
-
+        
+        let featureLayerCache = {}; // Container for use with cacheFeatureLayerById()
         function cacheFeatureLayerById(feature, layer, idFieldName) {
         // Store reference to layers for individual features with custom
         // id field layer as key
         // https://gis.stackexchange.com/a/367624
           featureLayerCache[feature.properties[idFieldName]] = layer;
-        }
-
-        function addGeoJsonLayer(geoJsonData, map, style, idFieldName) {
-          // Add a GeoJson Layer to the map
-          // Create a container layer to add interactivity to
-          var geoJsonLayer = L.geoJSON(geoJsonData, {
-            style: style
-          }).addTo(map);
-
-          // Interactivity has to be added with explicit reference to container
-          geoJsonLayer.eachLayer(function(layer) {
-            onEachFeature(layer.feature, layer, geoJsonLayer, idFieldName);
-          });
-
-          return geoJsonLayer;
         }
 
         // --------------------------- FEATURE INFO ----------------------------
@@ -33228,15 +33241,815 @@
             minZoom: 5,
             zoomControl: false
             });
-        
+        const originalMapBounds = map.getBounds();
+
         // Basemap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
 
-        // Container for use with cacheFeatureLayerById()
-        let featureLayerCache = {};
+        // Create custom panes
+        let paneDefinitionsByType = {
+          'underlay': {
+            'highlightUnderlay': {
+              'defaultZIndex': 0,
+              'highlightZIndex': 459
+            },
+          },
+          'other': {          
+            'GridMajor': {
+              'defaultZIndex': 458,
+              'highlightZIndex': 457
+            },
+            'GridMinor': {
+              'defaultZIndex': 457,
+              'highlightZIndex': 456
+            },
+            'MapExtents': {
+              'defaultZIndex': 456,
+              'highlightZIndex': 455
+            },
+            'Axes': {
+              'defaultZIndex': 455,
+              'highlightZIndex': 454
+            },
+            'ProfilesB1': {
+              'defaultZIndex': 454,
+              'highlightZIndex': 453
+            },
+            'ProfilesB2': {
+              'defaultZIndex': 453,
+              'highlightZIndex': 452
+            },
+            'ProfilesB3': {
+              'defaultZIndex': 452,
+              'highlightZIndex': 451
+            },
+          },
+          'featureTraces': {
+            'WallMEtc': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SM0001e",
+                  "MU-SX0049e",
+                  "MU-SX0048e",
+                  "MU-SM0002e",
+                  "MU-SM0003r",
+                  "MU-SM0004r",
+                  "MU-SX0050r",
+                  "MU-SX0052r",
+                  "MU-SX0051r",
+                ]
+              },
+              'defaultZIndex': 451,
+              'highlightZIndex': 475
+            },
+            'WallD': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SD0002e",
+                  "MU-SD0003e",
+                  "MU-SD0004e",
+                  "MU-SD0005e",
+                  "MU-SD0013r",
+                  "MU-SD0012r",
+                  "MU-SD0011r",
+                  "MU-SD0010r",
+                  "MU-SD0006e",
+                  "MU-SD0007e",
+                  "MU-SD0017r",
+                  "MU-SD0016r",
+                  "MU-SD0015r",
+                  "MU-SD0014r",
+                  "MU-SD0001e",
+                  "MU-SD0009r",
+                  "MU-SD0008r",
+                  "MU-SD0018r",
+                ]
+              },
+              'defaultZIndex': 450,
+              'highlightZIndex': 475
+            },
+            'WallG': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SG0004h",
+                  "MU-SG0005r",
+                  "MU-SG0003e",
+                  "MU-SG0006r",
+                  "MU-SG0002e",
+                  "MU-SG0001e",
+                ]
+              },
+              'defaultZIndex': 449,
+              'highlightZIndex': 475
+            },
+            'WallHEtc': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "CI-0001e",
+                  "CI-0002r",
+                  "MU-SH0001e",
+                  "MU-SH0004r",
+                  "MU-SX0012e",
+                  "MU-SX0011e",
+                  "MU-SX0010e",
+                  "MU-SX0014r",
+                  "MU-SH0003r",
+                  "MU-SX0015r",
+                  "MU-SH0002e",
+                  "MU-SH0005r",
+                  "MU-SX0013r",
+                ]
+              },
+              'defaultZIndex': 448,
+              'highlightZIndex': 475
+            },
+            'WallK': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SX0018r", //NB: Phase 1 equivalents MU-SX0016r and MU-SX0017r are not included here
+                  "MU-SK0004e",
+                  "MU-SK0003e",
+                  "MU-SK0002e",
+                  "MU-SK0001e",
+                  "MU-SK0009r",
+                  "MU-SK0010r",
+                  "MU-SK0011r",
+                  "MU-SK0012r",
+                  "MU-SK0013r",
+                  "MU-SK0006e",
+                  "MU-SK0014r",
+                  "MU-SK0007e",
+                  "MU-SK0015r",
+                  "MU-SK0016r",
+                  "MU-SK0008r",
+                  "MU-SK0005e",
+                ]
+              },
+              'defaultZIndex': 447,
+              'highlightZIndex': 475
+            },
+            'WallD2F2G2': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SX0028r",
+                  "MU-SX0026h",
+                  "MU-SX0023h",
+                  "MU-SX0025r",
+                  "MU-SX0022r",
+                  "MU-SX0024h",
+                  "MU-SX0021h",
+                ]
+              },
+              'defaultZIndex': 446,
+              'highlightZIndex': 475
+            },
+            'OtherWalls': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SN0001e",
+                  "MU-SN0002e",
+                  "MU-SE0002e",
+                  "MU-SE0001e",
+                  "MU-SX0003e",
+                  "MU-SS0002e",
+                  "MU-SX0002e",
+                  "MU-SX0001e",
+                  "MU-SS0005r",
+                  "MU-SS0004r",
+                  "MU-SS0003r",
+                  "MU-SO0002r",
+                  "MU-SE0003r",
+                  "MU-SS0006r",
+                  "MU-SO0001e",
+                  "MU-SS0001e",
+                  "MU-SX0047r",
+                  "MU-SX0046h",
+                  "MU-SX0045r",
+                  "MU-SX0044h",
+                  "MU-SX0008r",
+                  "MU-SX0027h",
+                  "MU-SX0031e",
+                  "MU-SX0034r",
+                  "MU-SX0032r",
+                  "MU-SX0036e",
+                  "MU-SX0030r",
+                  "MU-SX0040r",
+                  "MU-SX0039r",
+                  "MU-SX0038r",
+                  "MU-SX0035r",
+                  "MU-SX0037r",
+                  "MU-SX0009r",
+                ]
+              },
+              'defaultZIndex': 445,
+              'highlightZIndex': 475
+            },
+            'EPiles': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "PI-E0024r",
+                  "PI-E0023r",
+                  "PI-E0022r",
+                  "PI-E0021r",
+                  "PI-E0020r",
+                  "PI-E0019r",
+                  "PI-E0018r",
+                  "PI-E0017r",
+                  "PI-E0016r",
+                  "PI-E0015r",
+                  "PI-E0014r",
+                  "PI-E0013h",
+                  "PI-E0012h",
+                  "PI-E0011h",
+                  "PI-E0010h",
+                  "PI-E0009e",
+                  "PI-E0008e",
+                  "PI-E0007e",
+                  "PI-E0006e",
+                  "PI-E0005e",
+                  "PI-E0004e",
+                  "PI-E0003e",
+                  "PI-E0002e",
+                  "PI-E0001e",
+                ]
+              },
+              'defaultZIndex': 444,
+              'highlightZIndex': 475
+            },
+            'CPiles': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "PI-C0028h",
+                  "PI-C0027h",
+                  "PI-C0026h",
+                  "PI-C0025h",
+                  "PI-C0024h",
+                  "PI-C0023r",
+                  "PI-C0022r",
+                  "PI-C0021e",
+                  "PI-C0020e",
+                  "PI-C0019e",
+                  "PI-C0018e",
+                  "PI-C0017e",
+                  "PI-C0016e",
+                  "PI-C0015e",
+                  "PI-C0014e",
+                  "PI-C0013e",
+                  "PI-C0012e",
+                  "PI-C0011e",
+                  "PI-C0010e",
+                  "PI-C0009e",
+                  "PI-C0008e",
+                  "PI-C0007e",
+                  "PI-C0006e",
+                  "PI-C0005e",
+                  "PI-C0004e",
+                  "PI-C0003e",
+                  "PI-C0002e",
+                  "PI-C0001e",
+                ]
+              },
+              'defaultZIndex': 443,
+              'highlightZIndex': 475
+            },
+            'BPiles': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "PI-B0036h",
+                  "PI-B0035h",
+                  "PI-B0034h",
+                  "PI-B0033h",
+                  "PI-B0032h",
+                  "PI-B0031h",
+                  "PI-B0030r",
+                  "PI-B0029r",
+                  "PI-B0028r",
+                  "PI-B0027r",
+                  "PI-B0026r",
+                  "PI-B0025h",
+                  "PI-B0024h",
+                  "PI-B0023h",
+                  "PI-B0022h",
+                  "PI-B0021h",
+                  "PI-B0020h",
+                  "PI-B0019h",
+                  "PI-B0018e",
+                  "PI-B0017e",
+                  "PI-B0016r",
+                  "PI-B0015e",
+                  "PI-B0014e",
+                  "PI-B0013e",
+                  "PI-B0012r",
+                  "PI-B0011e",
+                  "PI-B0010e",
+                  "PI-B0009e",
+                  "PI-B0008e",
+                  "PI-B0007e",
+                  "PI-B0006e",
+                  "PI-B0005e",
+                  "PI-B0004e",
+                  "PI-B0003e",
+                  "PI-B0002e",
+                  "PI-B0001e",
+                ]
+              },
+              'defaultZIndex': 442,
+              'highlightZIndex': 475
+            },
+            'OtherPiles': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "PI-X0019h",
+                  "PI-X0018h",
+                  "PI-X0017h",
+                  "PI-X0016h",
+                  "PI-X0015h",
+                  "PI-X0014h",
+                  "PI-X0013h",
+                  "PI-X0012h",
+                  "PI-X0011h",
+                  "PI-X0010h",
+                  "PI-X0009h",
+                  "PI-X0008h",
+                  "PI-X0007h",
+                  "PI-X0006h",
+                  "PI-X0005h",
+                  "PI-X0004h",
+                  "PI-X0003h",
+                  "PI-X0002h",
+                  "PI-X0001h",
+                ]
+              },
+              'defaultZIndex': 441,
+              'highlightZIndex': 475
+            },
+            'SWPerimeter': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "RU-0002e",
+                  "RU-0001e",
+                  "MU-SX0005r",
+                  "MU-FA0026h",
+                  "MU-FA0025h",
+                  "MU-FA0024r",
+                  "MU-FA0023r",
+                  "MU-FA0022r",
+                  "MU-FA0021r",
+                  "MU-FA0020r",
+                  "MU-FA0019r",
+                  "MU-FA0018r",
+                  "MU-FA0017r",
+                  "MU-FA0016r",
+                  "MU-FA0015r",
+                  "MU-FA0014r",
+                  "MU-FA0013r",
+                  "MU-FA0012r",
+                  "MU-FA0011r",
+                  "MU-FA0010r",
+                  "MU-FA0009r",
+                  "MU-FA0008r",
+                  "MU-FA0007r",
+                  "MU-FA0005e",
+                  "MU-FA0004e",
+                  "MU-FA0003e",
+                  "MU-FA0002e",
+                  "MU-FA0001e",
+                  "MU-AS0022h",
+                  "MU-AS0021r",
+                  "MU-AS0020r",
+                  "MU-AS0019r",
+                  "MU-AS0018r",
+                  "MU-AS0017r",
+                  "MU-AS0016r",
+                  "MU-AS0015r",
+                  "MU-AS0014r",
+                  "MU-AS0013r",
+                  "MU-AS0005e",
+                  "MU-AS0004e",
+                  "MU-AS0003e",
+                  "MU-AS0002e",
+                  "MU-AS0001e",
+                  "MU-AR0029h",
+                  "MU-AR0028h",
+                  "MU-AR0027r",
+                  "MU-AR0026r",
+                  "MU-AR0025r",
+                  "MU-AR0024r",
+                  "MU-AR0023r",
+                  "MU-AR0022r",
+                  "MU-AR0021r",
+                  "MU-AR0020r",
+                  "MU-AR0019r",
+                  "MU-AR0018r",
+                  "MU-AR0017r",
+                  "MU-AR0016r",
+                  "MU-AR0015r",
+                  "MU-AR0014r",
+                  "MU-AR0001e",
+                ]
+              },
+              'defaultZIndex': 440,
+              'highlightZIndex': 475
+            },
+            'SPerimeter': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SX0007h",
+                  "MU-SX0006r",
+                  "MU-SX0004e",
+                  "MU-FA0038h",
+                  "MU-FA0037h",
+                  "MU-FA0036h",
+                  "MU-FA0035h",
+                  "MU-FA0034h",
+                  "MU-FA0033h",
+                  "MU-FA0032h",
+                  "MU-FA0031h",
+                  "MU-FA0030h",
+                  "MU-FA0029h",
+                  "MU-FA0028h",
+                  "MU-FA0027h",
+                  "MU-AS0034h",
+                  "MU-AS0033h",
+                  "MU-AS0032h",
+                  "MU-AS0031h",
+                  "MU-AS0030h",
+                  "MU-AS0029h",
+                  "MU-AS0028r",
+                  "MU-AS0027r",
+                  "MU-AS0026r",
+                  "MU-AS0025r",
+                  "MU-AS0024r",
+                  "MU-AS0023r",
+                  "MU-AS0007e",
+                  "MU-AS0006e",
+                  "MU-AR0041h",
+                  "MU-AR0040h",
+                  "MU-AR0039h",
+                  "MU-AR0038h",
+                  "MU-AR0037h",
+                  "MU-AR0036h",
+                  "MU-AR0035h",
+                  "MU-AR0034r",
+                  "MU-AR0033r",
+                  "MU-AR0032r",
+                  "MU-AR0031r",
+                  "MU-AR0030r",
+                  "MU-AR0006e",
+                  "MU-AR0005e",
+                  "MU-AR0004e",
+                  "MU-AR0003e",
+                  "MU-AR0002e",
+                ]
+              },
+              'defaultZIndex': 439,
+              'highlightZIndex': 475
+            },
+            'SEPerimeter': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SA0001r",
+                  "MU-FA0061h",
+                  "MU-FA0060h",
+                  "MU-FA0059h",
+                  "MU-FA0058h",
+                  "MU-FA0057h",
+                  "MU-FA0056h",
+                  "MU-FA0055h",
+                  "MU-FA0054h",
+                  "MU-FA0053h",
+                  "MU-FA0052h",
+                  "MU-FA0051h",
+                  "MU-FA0050h",
+                  "MU-FA0049h",
+                  "MU-FA0048h",
+                  "MU-FA0047h",
+                  "MU-FA0046h",
+                  "MU-FA0045h",
+                  "MU-FA0044h",
+                  "MU-FA0043h",
+                  "MU-FA0042h",
+                  "MU-FA0041h",
+                  "MU-FA0040h",
+                  "MU-FA0039h",
+                  "MU-AS0052h",
+                  "MU-AS0051h",
+                  "MU-AS0050h",
+                  "MU-AS0049h",
+                  "MU-AS0048h",
+                  "MU-AS0047h",
+                  "MU-AS0046h",
+                  "MU-AS0045h",
+                  "MU-AS0044h",
+                  "MU-AS0043h",
+                  "MU-AS0042h",
+                  "MU-AS0041h",
+                  "MU-AS0040h",
+                  "MU-AS0039h",
+                  "MU-AS0038h",
+                  "MU-AS0037h",
+                  "MU-AS0036h",
+                  "MU-AS0035h",
+                  "MU-AR0061h",
+                  "MU-AR0060h",
+                  "MU-AR0059h",
+                  "MU-AR0058h",
+                  "MU-AR0057h",
+                  "MU-AR0056h",
+                  "MU-AR0055h",
+                  "MU-AR0054h",
+                  "MU-AR0053h",
+                  "MU-AR0052h",
+                  "MU-AR0051h",
+                  "MU-AR0050h",
+                  "MU-AR0049h",
+                  "MU-AR0048h",
+                  "MU-AR0047h",
+                  "MU-AR0046h",
+                  "MU-AR0045h",
+                  "MU-AR0044h",
+                  "MU-AR0043h",
+                  "MU-AR0042h",
+                ]
+              },
+              'defaultZIndex': 438,
+              'highlightZIndex': 475
+            },
+            'EPerimeter': {
+              'layerDefinition': {
+                'fieldName': 'FeatureID',
+                'fieldValues': [
+                  "MU-SX0020h",
+                  "MU-SX0019h",
+                  "MU-FA0078h",
+                  "MU-FA0077h",
+                  "MU-FA0076h",
+                  "MU-FA0075h",
+                  "MU-FA0074h",
+                  "MU-FA0073h",
+                  "MU-FA0072h",
+                  "MU-FA0071h",
+                  "MU-FA0070h",
+                  "MU-FA0069h",
+                  "MU-FA0068h",
+                  "MU-FA0067h",
+                  "MU-FA0066h",
+                  "MU-FA0065h",
+                  "MU-FA0064h",
+                  "MU-FA0063h",
+                  "MU-FA0062h",
+                  "MU-AS0064h",
+                  "MU-AS0063h",
+                  "MU-AS0062h",
+                  "MU-AS0061h",
+                  "MU-AS0060h",
+                  "MU-AS0059h",
+                  "MU-AS0058h",
+                  "MU-AS0057h",
+                  "MU-AS0056h",
+                  "MU-AS0055h",
+                  "MU-AS0054h",
+                  "MU-AS0053h",
+                  "MU-AR0076h",
+                  "MU-AR0075h",
+                  "MU-AR0074h",
+                  "MU-AR0073h",
+                  "MU-AR0072h",
+                  "MU-AR0071h",
+                  "MU-AR0070h",
+                  "MU-AR0069h",
+                  "MU-AR0068h",
+                  "MU-AR0067h",
+                  "MU-AR0066h",
+                  "MU-AR0065h",
+                  "MU-AR0064h",
+                  "MU-AR0063h",
+                  "MU-AR0062h",
+                  "MU-SX0030r",
+                  "MU-FA0097r",
+                  "MU-FA0096r",
+                  "MU-FA0095r",
+                  "MU-FA0094r",
+                  "MU-FA0093r",
+                  "MU-FA0092r",
+                  "MU-FA0091r",
+                  "MU-FA0090r",
+                  "MU-FA0089r",
+                  "MU-FA0088r",
+                  "MU-FA0087r",
+                  "MU-FA0086r",
+                  "MU-FA0085r",
+                  "MU-FA0084r",
+                  "MU-FA0083h",
+                  "MU-FA0082r",
+                  "MU-FA0081r",
+                  "MU-FA0080r",
+                  "MU-FA0079r",
+                  "MU-FA0006e",
+                  "MU-AS0068r",
+                  "MU-AS0067r",
+                  "MU-AS0066r",
+                  "MU-AS0065r",
+                  "MU-AS0012e",
+                  "MU-AS0011e",
+                  "MU-AS0010e",
+                  "MU-AS0009e",
+                  "MU-AS0008e",
+                  "MU-AR0092r",
+                  "MU-AR0091r",
+                  "MU-AR0090r",
+                  "MU-AR0089r",
+                  "MU-AR0088r",
+                  "MU-AR0087r",
+                  "MU-AR0086r",
+                  "MU-AR0085r",
+                  "MU-AR0084r",
+                  "MU-AR0083r",
+                  "MU-AR0082r",
+                  "MU-AR0081r",
+                  "MU-AR0080r",
+                  "MU-AR0079r",
+                  "MU-AR0078r",
+                  "MU-AR0077r",
+                  "MU-AR0013e",
+                  "MU-AR0012e",
+                  "MU-AR0011e",
+                  "MU-AR0010e",
+                  "MU-AR0009e",
+                  "MU-AR0008e",
+                  "MU-AR0007e",
+                  "MU-SX0055h",
+                  "MU-SX0054h",
+                  "MU-SX0053h",
+                  "MU-FA0116h",
+                  "MU-FA0115h",
+                  "MU-FA0114h",
+                  "MU-FA0113h",
+                  "MU-FA0112h",
+                  "MU-FA0111h",
+                  "MU-FA0110h",
+                  "MU-FA0109h",
+                  "MU-FA0108h",
+                  "MU-FA0107h",
+                  "MU-FA0106h",
+                  "MU-FA0105h",
+                  "MU-FA0104h",
+                  "MU-FA0103h",
+                  "MU-FA0102h",
+                  "MU-FA0101h",
+                  "MU-FA0100h",
+                  "MU-FA0099h",
+                  "MU-FA0098h",
+                  "MU-AS0071h",
+                  "MU-AS0070h",
+                  "MU-AS0069h",
+                  "MU-AR0108h",
+                  "MU-AR0107h",
+                  "MU-AR0106h",
+                  "MU-AR0105h",
+                  "MU-AR0104h",
+                  "MU-AR0103h",
+                  "MU-AR0102h",
+                  "MU-AR0101h",
+                  "MU-AR0100h",
+                  "MU-AR0099h",
+                  "MU-AR0098h",
+                  "MU-AR0097h",
+                  "MU-AR0096h",
+                  "MU-AR0095h",
+                  "MU-AR0094h",
+                  "MU-AR0093h",
+                ]
+              },
+              'defaultZIndex': 437,
+              'highlightZIndex': 475
+            },
+            'Punic': {
+              'layerDefinition': {
+                'fieldName': 'Period',
+                'fieldValues': ["Punic"]
+              },
+              'defaultZIndex': 436,
+              'highlightZIndex': 475
+            },
+          }
+        }
+
+        function createCustomPanes(paneDefinitionsByType) {
+          for ([paneType, paneDefinitions] of Object.entries(paneDefinitionsByType)) {
+            for ([paneName, paneProperties] of Object.entries(paneDefinitions)) {
+              map.createPane(paneName);
+              map.getPane(paneName).style.zIndex = paneProperties.defaultZIndex;
+            }
+          }
+        }
+        createCustomPanes(paneDefinitionsByType);
+
+        // Sort feature traces into custom panes
+        let paneFeatureGroups = {};
+        function filterGeoJSONByProperty(geoJSON, propertyName, propertyValues, invert=false) {
+          let newGeoJSON = JSON.parse(JSON.stringify(geoJSON))  // note: inefficient, maybe use lodash ._clone?
+          let newFeatures = [];
+          let newFeatureIDs = [];
+          let test = function (feature, propertyValues, propertyName) {
+            return propertyValues.includes(feature.properties[propertyName]);
+          };
+          if (invert) {
+            let invert = (f) => (x,y,z) => !f(x,y,z); // from https://stackoverflow.com/a/70220129/15426433
+            test = invert(test);
+          };
+          newGeoJSON.features.forEach(function (feature, i) {
+            if (test(feature, propertyValues, propertyName)) {
+              newFeatures.push(feature);
+              newFeatureIDs.push(feature.properties["FeatureID"]);
+            }
+          })
+          newGeoJSON.features = newFeatures;
+          return [newGeoJSON, newFeatureIDs];
+        }
+
+        function createFeatureGroupsForFeatureTraces(geoJSON, paneDefinitions) {
+          let paneGeoJSONs = [];
+          let includedFeatureIDs = [];
+          for ([paneName, paneProperties] of Object.entries(paneDefinitions)) {
+            if (paneProperties.layerDefinition) {
+              // Create geoJSON for pane
+              let layerDefinition = paneProperties.layerDefinition;
+              [paneGeoJSON, paneFeatureIDs] = filterGeoJSONByProperty(
+                geoJSON, layerDefinition.fieldName, layerDefinition.fieldValues
+              );
+              
+              // Track the IDs of all Features added so far
+              includedFeatureIDs = includedFeatureIDs.concat(
+                paneFeatureIDs.filter((item) => includedFeatureIDs.indexOf(item) < 0)
+              );
+              
+              // Convert to leaflet class, adding style callback, and add to map
+              paneGeoJSON = L.geoJSON(paneGeoJSON, {
+                pane: paneName,
+                style: featureStyle
+              });
+
+              // Interactivity has to be added with explicit reference to container
+              paneGeoJSON.eachLayer(function(layer) {
+                onEachFeature(layer.feature, layer, paneGeoJSON, "FeatureID");
+              });
+
+              // Wrap in feature group
+              let paneFeatureGroup = L.featureGroup([paneGeoJSON]).addTo(map);
+
+              // Add reference to external tracker
+              paneFeatureGroups[paneName] = paneFeatureGroup;
+            }
+          }
+
+          // Create a geoJSON layer for all unincluded features and add it to
+          // the default pane
+          [unincludedPaneGeoJSON, _] = filterGeoJSONByProperty(
+            geoJSON, "FeatureID", includedFeatureIDs, invert=true
+          )
+          unincludedPaneGeoJSON = L.geoJSON(unincludedPaneGeoJSON, {
+            style: featureStyle
+          });
+          unincludedPaneGeoJSON.eachLayer(function(layer) {
+            onEachFeature(layer.feature, layer, unincludedPaneGeoJSON, "FeatureID");
+          })
+          unincludedPaneGeoJSON.addTo(map);
+        }
+
+        createFeatureGroupsForFeatureTraces(featureTraces, paneDefinitionsByType["featureTraces"]);
 
         // When you add a new GeoJSON layer, get the layer instance
-        let featureTraceGeoJsonLayer = addGeoJsonLayer(featureTraces, map, featureStyle, "FeatureID");
+        function addGeoJsonLayer(geoJsonData, map, style, idFieldName) {
+          // Add a GeoJson Layer to the map
+          // Create a container layer to add interactivity to
+          var geoJsonLayer = L.geoJSON(geoJsonData, {
+            style: style
+          }).addTo(map);
+
+          // Interactivity has to be added with explicit reference to container
+          geoJsonLayer.eachLayer(function(layer) {
+            onEachFeature(layer.feature, layer, geoJsonLayer, idFieldName);
+          });
+
+          return geoJsonLayer;
+        }
+
+        // let featureTraceGeoJsonLayer = addGeoJsonLayer(featureTraces, map, featureStyle, "FeatureID");
         let axesGeoJsonLayer = addGeoJsonLayer(axesOfReconstruction, map, axesStyle, "AxisID");
 
         // Create map extents layer that only plots the outlines of the features
@@ -33406,694 +34219,191 @@
         let htmlLegend = L.control.htmllegend(legendOptions);
         map.addControl(htmlLegend);
 
-        // Sort features into panes
-        paneDefinitions = {
-          'highlightUnderlay': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 458
+        // Animate the map on scrolling through the thesis
+        headingHighlightDefinitions = {
+          "Chapter-5": {
+            "paneName": null,
+            "overlay": false,
+            "flyTo": "map"
           },
-          'GridMajor': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 457
+          "Section-5-1-1-1": {
+            "paneName": "WallD",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'GridMinor': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 456
+          "Section-5-1-1-2": {
+            "paneName": "WallG",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'MapExtents': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 455
+          "Section-5-1-1-3": {
+            "paneName": "WallHEtc",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'Axes': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 454
+          "Section-5-1-1-4": {
+            "paneName": "WallK",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'ProfilesB1': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 453
+          "Section-5-1-1-5": {
+            "paneName": "WallMEtc",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'ProfilesB2': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 452
+          "Section-5-1-1-6": {
+            "paneName": "WallD2F2G2",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'ProfilesB3': {
-            'defaultZIndex': 0,
-            'highlightZIndex': 451
+          "Section-5-1-1-7": {
+            "paneName": "OtherWalls",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'WallMEtc': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SX0049e",
-                "MU-SX0048e",
-                "MU-SM0002e",
-                "MU-SM0003r",
-                "MU-SM0004r",
-                "MU-SX0050r",
-                "MU-SX0052r",
-                "MU-SX0051r",
-              ]
-            },
-            'defaultZIndex': 450,
-            'highlightZIndex': 475
+          "Section-5-1-2-1": {
+            "paneName": "EPiles",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'WallD': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SD0002e",
-                "MU-SD0003e",
-                "MU-SD0004e",
-                "MU-SD0005e",
-                "MU-SD0013r",
-                "MU-SD0012r",
-                "MU-SD0011r",
-                "MU-SD0010r",
-                "MU-SD0006e",
-                "MU-SD0007e",
-                "MU-SD0017r",
-                "MU-SD0016r",
-                "MU-SD0015r",
-                "MU-SD0014r",
-                "MU-SD0001e",
-                "MU-SD0009r",
-                "MU-SD0008r",
-                "MU-SD0018r",
-              ]
-            },
-            'defaultZIndex': 449,
-            'highlightZIndex': 475
+          "Section-5-1-2-2": {
+            "paneName": "CPiles",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'WallG': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SG0004h",
-                "MU-SG0005r",
-                "MU-SG0003e",
-                "MU-SG0006r",
-              ]
-            },
-            'defaultZIndex': 448,
-            'highlightZIndex': 475
+          "Section-5-1-2-3": {
+            "paneName": "BPiles",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'WallHEtc': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "CI-0001e",
-                "CI-0002r",
-                "MU-SH0001e",
-                "MU-SH0004r",
-                "MU-SX0012e",
-                "MU-SX0011e",
-                "MU-SX0010e",
-                "MU-SX0014r",
-                "MU-SH0003r",
-                "MU-SX0015r",
-                "MU-SH0002e",
-                "MU-SH0005r",
-                "MU-SX0013r",
-              ]
-            },
-            'defaultZIndex': 447,
-            'highlightZIndex': 475
+          "Section-5-1-2-4": {
+            "paneName": "OtherPiles",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'WallD2F2G2': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SX0028r",
-                "MU-SX0026h",
-                "MU-SX0023h",
-                "MU-SX0025r",
-                "MU-SX0022r",
-                "MU-SX0024h",
-                "MU-SX0021h",
-              ]
-            },
-            'defaultZIndex': 446,
-            'highlightZIndex': 475
+          "Section-5-1-3-1": {
+            "paneName": "SWPerimeter",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'OtherWalls': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SN0001e",
-                "MU-SN0002e",
-                "MU-SE0002e",
-                "MU-SE0001e",
-                "MU-SX0003e",
-                "MU-SS0002e",
-                "MU-SX0002e",
-                "MU-SX0001e",
-                "MU-SS0005r",
-                "MU-SS0004r",
-                "MU-SS0003r",
-                "MU-SO0002r",
-                "MU-SE0003r",
-                "MU-SS0006r",
-                "MU-SO0001e",
-                "MU-SS0001e",
-                "MU-SX0028r",
-                "MU-SX0047r",
-                "MU-SX0046h",
-                "MU-SX0045r",
-                "MU-SX0044h",
-                "MU-SX0008r",
-                "MU-SX0027h",
-                "MU-SX0031e",
-                "MU-SX0034r",
-                "MU-SX0032r",
-                "MU-SX0036e",
-                "MU-SX0030r",
-                "MU-SX0040r",
-                "MU-SX0039r",
-                "MU-SX0038r",
-                "MU-SX0035r",
-                "MU-SX0037r",
-                "MU-SX0009r",
-              ]
-            },
-            'defaultZIndex': 445,
-            'highlightZIndex': 475
+          "Section-5-1-3-2": {
+            "paneName": "SPerimeter",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'EPiles': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "PI-E0024r",
-                "PI-E0023r",
-                "PI-E0022r",
-                "PI-E0021r",
-                "PI-E0020r",
-                "PI-E0019r",
-                "PI-E0018r",
-                "PI-E0017r",
-                "PI-E0016r",
-                "PI-E0015r",
-                "PI-E0014r",
-                "PI-E0013h",
-                "PI-E0012h",
-                "PI-E0011h",
-                "PI-E0010h",
-                "PI-E0009e",
-                "PI-E0008e",
-                "PI-E0007e",
-                "PI-E0006e",
-                "PI-E0005e",
-                "PI-E0004e",
-                "PI-E0003e",
-                "PI-E0002e",
-                "PI-E0001e",
-              ]
-            },
-            'defaultZIndex': 444,
-            'highlightZIndex': 475
+          "Section-5-1-3-3": {
+            "paneName": "SEPerimeter",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'CPiles': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "PI-C0028h",
-                "PI-C0027h",
-                "PI-C0026h",
-                "PI-C0025h",
-                "PI-C0024h",
-                "PI-C0023r",
-                "PI-C0022r",
-                "PI-C0021e",
-                "PI-C0020e",
-                "PI-C0019e",
-                "PI-C0018e",
-                "PI-C0017e",
-                "PI-C0016e",
-                "PI-C0015e",
-                "PI-C0014e",
-                "PI-C0013e",
-                "PI-C0012e",
-                "PI-C0011e",
-                "PI-C0010e",
-                "PI-C0009e",
-                "PI-C0008e",
-                "PI-C0007e",
-                "PI-C0006e",
-                "PI-C0005e",
-                "PI-C0004e",
-                "PI-C0003e",
-                "PI-C0002e",
-                "PI-C0001e",
-              ]
-            },
-            'defaultZIndex': 443,
-            'highlightZIndex': 475
+          "Section-5-1-3-4": {
+            "paneName": "EPerimeter",
+            "overlay": true,
+            "flyTo": "group"
           },
-          'BPiles': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "PI-B0036h",
-                "PI-B0035h",
-                "PI-B0034h",
-                "PI-B0033h",
-                "PI-B0032h",
-                "PI-B0031h",
-                "PI-B0030r",
-                "PI-B0029r",
-                "PI-B0028r",
-                "PI-B0027r",
-                "PI-B0026r",
-                "PI-B0025h",
-                "PI-B0024h",
-                "PI-B0023h",
-                "PI-B0022h",
-                "PI-B0021h",
-                "PI-B0020h",
-                "PI-B0019h",
-                "PI-B0018e",
-                "PI-B0017e",
-                "PI-B0016r",
-                "PI-B0015e",
-                "PI-B0014e",
-                "PI-B0013e",
-                "PI-B0012r",
-                "PI-B0011e",
-                "PI-B0010e",
-                "PI-B0009e",
-                "PI-B0008e",
-                "PI-B0007e",
-                "PI-B0006e",
-                "PI-B0005e",
-                "PI-B0004e",
-                "PI-B0003e",
-                "PI-B0002e",
-                "PI-B0001e",
-              ]
-            },
-            'defaultZIndex': 442,
-            'highlightZIndex': 475
-          },
-          'OtherPiles': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "PI-X0019h",
-                "PI-X0018h",
-                "PI-X0017h",
-                "PI-X0016h",
-                "PI-X0015h",
-                "PI-X0014h",
-                "PI-X0013h",
-                "PI-X0012h",
-                "PI-X0011h",
-                "PI-X0010h",
-                "PI-X0009h",
-                "PI-X0008h",
-                "PI-X0007h",
-                "PI-X0006h",
-                "PI-X0005h",
-                "PI-X0004h",
-                "PI-X0003h",
-                "PI-X0002h",
-                "PI-X0001h",
-              ]
-            },
-            'defaultZIndex': 441,
-            'highlightZIndex': 475
-          },
-          'SWPerimeter': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "RU-0002e",
-                "RU-0001e",
-                "MU-SX0005r",
-                "MU-FA0026h",
-                "MU-FA0025h",
-                "MU-FA0024r",
-                "MU-FA0023r",
-                "MU-FA0022r",
-                "MU-FA0021r",
-                "MU-FA0020r",
-                "MU-FA0019r",
-                "MU-FA0018r",
-                "MU-FA0017r",
-                "MU-FA0016r",
-                "MU-FA0015r",
-                "MU-FA0014r",
-                "MU-FA0013r",
-                "MU-FA0012r",
-                "MU-FA0011r",
-                "MU-FA0010r",
-                "MU-FA0009r",
-                "MU-FA0008r",
-                "MU-FA0007r",
-                "MU-FA0005e",
-                "MU-FA0004e",
-                "MU-FA0003e",
-                "MU-FA0002e",
-                "MU-FA0001e",
-                "MU-AS0022h",
-                "MU-AS0021r",
-                "MU-AS0020r",
-                "MU-AS0019r",
-                "MU-AS0018r",
-                "MU-AS0017r",
-                "MU-AS0016r",
-                "MU-AS0015r",
-                "MU-AS0014r",
-                "MU-AS0013r",
-                "MU-AS0005e",
-                "MU-AS0004e",
-                "MU-AS0003e",
-                "MU-AS0002e",
-                "MU-AS0001e",
-                "MU-AR0029h",
-                "MU-AR0028h",
-                "MU-AR0027r",
-                "MU-AR0026r",
-                "MU-AR0025r",
-                "MU-AR0024r",
-                "MU-AR0023r",
-                "MU-AR0022r",
-                "MU-AR0021r",
-                "MU-AR0020r",
-                "MU-AR0019r",
-                "MU-AR0018r",
-                "MU-AR0017r",
-                "MU-AR0016r",
-                "MU-AR0015r",
-                "MU-AR0014r",
-                "MU-AR0001e",
-              ]
-            },
-            'defaultZIndex': 440,
-            'highlightZIndex': 475
-          },
-          'SPerimeter': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SX0007h",
-                "MU-SX0006r",
-                "MU-SX0004e",
-                "MU-FA0038h",
-                "MU-FA0037h",
-                "MU-FA0036h",
-                "MU-FA0035h",
-                "MU-FA0034h",
-                "MU-FA0033h",
-                "MU-FA0032h",
-                "MU-FA0031h",
-                "MU-FA0030h",
-                "MU-FA0029h",
-                "MU-FA0028h",
-                "MU-FA0027h",
-                "MU-AS0034h",
-                "MU-AS0033h",
-                "MU-AS0032h",
-                "MU-AS0031h",
-                "MU-AS0030h",
-                "MU-AS0029h",
-                "MU-AS0028r",
-                "MU-AS0027r",
-                "MU-AS0026r",
-                "MU-AS0025r",
-                "MU-AS0024r",
-                "MU-AS0023r",
-                "MU-AS0007e",
-                "MU-AS0006e",
-                "MU-AR0041h",
-                "MU-AR0040h",
-                "MU-AR0039h",
-                "MU-AR0038h",
-                "MU-AR0037h",
-                "MU-AR0036h",
-                "MU-AR0035h",
-                "MU-AR0034r",
-                "MU-AR0033r",
-                "MU-AR0032r",
-                "MU-AR0031r",
-                "MU-AR0030r",
-                "MU-AR0006e",
-                "MU-AR0005e",
-                "MU-AR0004e",
-                "MU-AR0003e",
-                "MU-AR0002e",
-              ]
-            },
-            'defaultZIndex': 439,
-            'highlightZIndex': 475
-          },
-          'SEPerimeter': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SA0001r",
-                "MU-FA0061h",
-                "MU-FA0060h",
-                "MU-FA0059h",
-                "MU-FA0058h",
-                "MU-FA0057h",
-                "MU-FA0056h",
-                "MU-FA0055h",
-                "MU-FA0054h",
-                "MU-FA0053h",
-                "MU-FA0052h",
-                "MU-FA0051h",
-                "MU-FA0050h",
-                "MU-FA0049h",
-                "MU-FA0048h",
-                "MU-FA0047h",
-                "MU-FA0046h",
-                "MU-FA0045h",
-                "MU-FA0044h",
-                "MU-FA0043h",
-                "MU-FA0042h",
-                "MU-FA0041h",
-                "MU-FA0040h",
-                "MU-FA0039h",
-                "MU-AS0052h",
-                "MU-AS0051h",
-                "MU-AS0050h",
-                "MU-AS0049h",
-                "MU-AS0048h",
-                "MU-AS0047h",
-                "MU-AS0046h",
-                "MU-AS0045h",
-                "MU-AS0044h",
-                "MU-AS0043h",
-                "MU-AS0042h",
-                "MU-AS0041h",
-                "MU-AS0040h",
-                "MU-AS0039h",
-                "MU-AS0038h",
-                "MU-AS0037h",
-                "MU-AS0036h",
-                "MU-AS0035h",
-                "MU-AR0061h",
-                "MU-AR0060h",
-                "MU-AR0059h",
-                "MU-AR0058h",
-                "MU-AR0057h",
-                "MU-AR0056h",
-                "MU-AR0055h",
-                "MU-AR0054h",
-                "MU-AR0053h",
-                "MU-AR0052h",
-                "MU-AR0051h",
-                "MU-AR0050h",
-                "MU-AR0049h",
-                "MU-AR0048h",
-                "MU-AR0047h",
-                "MU-AR0046h",
-                "MU-AR0045h",
-                "MU-AR0044h",
-                "MU-AR0043h",
-                "MU-AR0042h",
-              ]
-            },
-            'defaultZIndex': 438,
-            'highlightZIndex': 475
-          },
-          'EPerimeter': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SX0020h",
-                "MU-SX0019h",
-                "MU-FA0078h",
-                "MU-FA0077h",
-                "MU-FA0076h",
-                "MU-FA0075h",
-                "MU-FA0074h",
-                "MU-FA0073h",
-                "MU-FA0072h",
-                "MU-FA0071h",
-                "MU-FA0070h",
-                "MU-FA0069h",
-                "MU-FA0068h",
-                "MU-FA0067h",
-                "MU-FA0066h",
-                "MU-FA0065h",
-                "MU-FA0064h",
-                "MU-FA0063h",
-                "MU-FA0062h",
-                "MU-AS0064h",
-                "MU-AS0063h",
-                "MU-AS0062h",
-                "MU-AS0061h",
-                "MU-AS0060h",
-                "MU-AS0059h",
-                "MU-AS0058h",
-                "MU-AS0057h",
-                "MU-AS0056h",
-                "MU-AS0055h",
-                "MU-AS0054h",
-                "MU-AS0053h",
-                "MU-AR0076h",
-                "MU-AR0075h",
-                "MU-AR0074h",
-                "MU-AR0073h",
-                "MU-AR0072h",
-                "MU-AR0071h",
-                "MU-AR0070h",
-                "MU-AR0069h",
-                "MU-AR0068h",
-                "MU-AR0067h",
-                "MU-AR0066h",
-                "MU-AR0065h",
-                "MU-AR0064h",
-                "MU-AR0063h",
-                "MU-AR0062h",
-              ]
-            },
-            'defaultZIndex': 437,
-            'highlightZIndex': 475
-          },
-          'NEPerimeterPhase2': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SX0030r",
-                "MU-FA0097r",
-                "MU-FA0096r",
-                "MU-FA0095r",
-                "MU-FA0094r",
-                "MU-FA0093r",
-                "MU-FA0092r",
-                "MU-FA0091r",
-                "MU-FA0090r",
-                "MU-FA0089r",
-                "MU-FA0088r",
-                "MU-FA0087r",
-                "MU-FA0086r",
-                "MU-FA0085r",
-                "MU-FA0084r",
-                "MU-FA0083h",
-                "MU-FA0082r",
-                "MU-FA0081r",
-                "MU-FA0080r",
-                "MU-FA0079r",
-                "MU-FA0006e",
-                "MU-AS0068r",
-                "MU-AS0067r",
-                "MU-AS0066r",
-                "MU-AS0065r",
-                "MU-AS0012e",
-                "MU-AS0011e",
-                "MU-AS0010e",
-                "MU-AS0009e",
-                "MU-AS0008e",
-                "MU-AR0092r",
-                "MU-AR0091r",
-                "MU-AR0090r",
-                "MU-AR0089r",
-                "MU-AR0088r",
-                "MU-AR0087r",
-                "MU-AR0086r",
-                "MU-AR0085r",
-                "MU-AR0084r",
-                "MU-AR0083r",
-                "MU-AR0082r",
-                "MU-AR0081r",
-                "MU-AR0080r",
-                "MU-AR0079r",
-                "MU-AR0078r",
-                "MU-AR0077r",
-                "MU-AR0013e",
-                "MU-AR0012e",
-                "MU-AR0011e",
-                "MU-AR0010e",
-                "MU-AR0009e",
-                "MU-AR0008e",
-                "MU-AR0007e",
-              ]
-            },
-            'defaultZIndex': 436,
-            'highlightZIndex': 475
-          },
-          'NEPerimeterPhase1': {
-            'layerDefinition': {
-              'fieldName': 'FeatureID',
-              'fieldValues': [
-                "MU-SX0055h",
-                "MU-SX0054h",
-                "MU-SX0053h",
-                "MU-SX0030r",
-                "MU-FA0116h",
-                "MU-FA0115h",
-                "MU-FA0114h",
-                "MU-FA0113h",
-                "MU-FA0112h",
-                "MU-FA0111h",
-                "MU-FA0110h",
-                "MU-FA0109h",
-                "MU-FA0108h",
-                "MU-FA0107h",
-                "MU-FA0106h",
-                "MU-FA0105h",
-                "MU-FA0104h",
-                "MU-FA0103h",
-                "MU-FA0102h",
-                "MU-FA0101h",
-                "MU-FA0100h",
-                "MU-FA0099h",
-                "MU-FA0098h",
-                "MU-AS0071h",
-                "MU-AS0070h",
-                "MU-AS0069h",
-                "MU-AR0108h",
-                "MU-AR0107h",
-                "MU-AR0106h",
-                "MU-AR0105h",
-                "MU-AR0104h",
-                "MU-AR0103h",
-                "MU-AR0102h",
-                "MU-AR0101h",
-                "MU-AR0100h",
-                "MU-AR0099h",
-                "MU-AR0098h",
-                "MU-AR0097h",
-                "MU-AR0096h",
-                "MU-AR0095h",
-                "MU-AR0094h",
-                "MU-AR0093h",
-              ]
-            },
-            'defaultZIndex': 435,
-            'highlightZIndex': 475
-          },
-          'Punic': {
-            'layerDefinition': {
-              'fieldName': 'Period',
-              'fieldValues': ["Punic"]
-            },
-            'defaultZIndex': 434,
-            'highlightZIndex': 475
+          "Section-5-2": {
+            "paneName": "Punic",
+            "overlay": true,
+            "flyTo": "group"
           },
         }
+        
+        function highlightOnScroll(paneName=null, overlayAction='none', direction='none', flyTo='none') {
+          // Add an overlay (or remove it)
+          if (overlayAction === 'add') {
+            map.getPane('highlightUnderlay').style.zIndex = paneDefinitionsByType["underlay"]["highlightUnderlay"].highlightZIndex;
+          } else if (overlayAction === 'remove') {
+            map.getPane('highlightUnderlay').style.zIndex = paneDefinitionsByType["underlay"]["highlightUnderlay"].defaultZIndex;
+          }
+          // Bring pane to front (or reset z-index to what it was originally)
+          if (direction === 'forward' && paneName) {
+            map.getPane(paneName).style.zIndex = paneDefinitions[paneName].highlightZIndex;
+          } else if (direction === 'backward' && paneName) {
+            map.getPane(paneName).style.zIndex = paneDefinitions[paneName].defaultZIndex;
+          }
+          // Fly to layergroup
+          if ((flyTo === 'map') || (paneName && flyTo !== 'none')) {
+            // console.log('here');
+            let bounds;
+            if (flyTo === 'group') {
+              bounds = paneFeatureGroups[paneName].getBounds().pad(0.25);
+            } else if (flyTo === 'map') {
+              bounds = originalMapBounds;
+            }
+            map.flyToBounds(bounds, {animate: true, duration: 0.5});
+          }
+        }
 
+        function observerCallback(entries, observer) {
+          // This callback needs to determine the following:
+          // - should there be an overlay
+          // - should a pane be brought to front (and flown-to), and if so, which one
+          
+          entries.forEach((entry) => {
+            if (entry.intersectionRatio > -0.1) {
+              // Get lookup information, trimming container if necessary
+              let headingName;
+              if (entry.target.id.includes("Container-")) {
+                headingName = entry.target.id.replace("Container-", "");
+              } else {
+                headingName = entry.target.id;
+              }
+              let paneName = headingHighlightDefinitions[headingName]["paneName"];
+
+              // Determine direction
+              let direction;
+              if (entry.isIntersecting) { direction = "forward" } else { direction = "backward" };
+              
+              // Determine overlay (if any intersecting targets want an overlay, then there should be one)
+              let wantsOverlay = headingHighlightDefinitions[headingName]["overlay"]
+              let overlayAction = "none";
+              if (entry.isIntersecting && !wantsOverlay) {
+                overlayAction = "remove";
+              } else if (entry.isIntersecting && wantsOverlay) {
+                overlayAction = "add";
+              }
+              
+              // Determine flyto
+              let flyTo = "none";
+              if (entry.isIntersecting) {
+                flyTo = headingHighlightDefinitions[headingName]["flyTo"];
+              }
+
+              // Run the map command
+                highlightOnScroll(
+                  paneName=paneName, 
+                  overlayAction=overlayAction, 
+                  direction=direction, 
+                  flyTo=flyTo);
+            }
+          });
+        }
+        options = {
+          root: document.querySelector("#thesis"),
+          rootMargin: "-75% 0% -25% 0%",
+          threshold: 0,
+        };
+
+        // Add highlight underlay
+        // const underlayUrl = "file:///C:/Users/Joseph/computer/GithubCloned/Byrsa-Archive-Active/docs/img/ui/white.png";
+        let svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+        svgElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
+        svgElement.setAttribute('viewBox', "0 0 200 200");
+        svgElement.innerHTML = '<rect x="0" y="0" width="200" height="200" style="fill:#ffffff"/>';
+        const underlayBounds = [[[36.3532, 9.8238], [37.3532, 10.8238]]];
+        const underlayOptions = {opacity: 0.75, pane: 'highlightUnderlay'};
+        const underlay = L.svgOverlay(
+          svgElement, underlayBounds, underlayOptions
+        ).addTo(map);
+
+        // Initialize the observer and set its targets
+        const observer = new IntersectionObserver(observerCallback, options);
+        const targets = headingsToContainify.map(h => "Container-"+h);   // NB: headingsToContainify is defined in js/processing.js
+        targets.forEach((target) => {
+          target = document.getElementById(target);
+          observer.observe(target);
+        });
+        
         // Timeline
         // Note: this block of code was adapted from output of GPT
         // let existsInPunicLayerGroup = L.layerGroup();
@@ -34147,31 +34457,6 @@
             };
         })
     </script>
-    <script>
-      // Initialize the Sticky ToC
-      // Populate the ToC content
-      tocbot.init({
-      tocSelector: '#sticky-toc-content',
-      contentSelector: '#thesis-body',
-      headingSelector: 'h1, h2, h3, h4',
-      collapseDepth: 6,
-      scrollContainer: '#thesis'
-      });
-    
-      // When the ToC button is clicked, show the ToC content
-      const tocButton = document.getElementById('sticky-toc-button');
-      tocButton.addEventListener("click", function(e) {
-      
-        // Toggle the activeness of the toc content and toc title
-        const tocTitle = document.getElementById('sticky-toc-title');
-        const tocContent = document.getElementById('sticky-toc-content');
-        
-        tocButton.classList.toggle("active");
-        tocTitle.classList.toggle("active");
-        tocContent.classList.toggle("active");
-      });
-    </script>
-    <script src="js/processing.js"></script>
     </body>
 </html>
 
