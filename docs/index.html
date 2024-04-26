@@ -32852,6 +32852,7 @@
     <script src="data/mapextents.js"></script>
     <script src="data/gridmajor.js"></script>
     <script src="data/gridminor.js"></script>
+    <script src="data/profileextents.js"></script>
 
     <!-- Create Sticky Table of Contents -->
     <script>
@@ -32966,7 +32967,17 @@
             color: '#000000',
             fillOpacity: 1.0,
             weight:1.5
+          },
+          'Real Profile': {
+            color: '#b510b0',
+            weight: 1.5
+          },
+          'Reconstructed Profile': {
+            color: '#b510b0',
+            weight: 1.5,
+            'dashArray': '0 8 0'
           }
+
         }
         let axesStyle = {
           color: '#2c6100',
@@ -33015,6 +33026,15 @@
             return conditionalStyles['Punic E'];
           } else if (p['Period'] === 'Punic' && p['FeatureID'].slice(-1) === 'r') {
             return conditionalStyles['Punic R'];
+          }
+        }
+        function profileExtentStyle(feature) {
+          let p = feature.properties;
+          if (p === undefined) {p = feature.feature.properties};  // I have no idea why this is necessary
+          if (p['Reconstruc'] == 0) {
+            return conditionalStyles['Real Profile']
+          } else if (p['Reconstruc'] == 1) {
+            return conditionalStyles['Reconstructed Profile']
           }
         }
       
@@ -33284,22 +33304,85 @@
               'defaultZIndex': 455,
               'highlightZIndex': 454
             },
-            'ProfilesB1': {
+            'Profiles': {
+              'layerDefinition': {
+                'style': profileExtentStyle,
+                'fieldName': 'FigureID',
+                'fieldValues': [
+                  'B1.P.066',
+                  'B1.P.067',
+                  'B1.P.071',
+                  'B1.P.079-3',
+                  'B1.P.082-2',
+                  'B1.P.087',
+                  'B1.P.088',
+                  'B1.P.091-3',
+                  'B1.P.103',
+                  'B1.P.108',
+                  'B1.P.118',
+                  'B1.P.120',
+                  'B1.P.125',
+                  'B1.P.128-2',
+                  'B1.P.134',
+                  'B1.P.155-2',
+                  'B1.P.157',
+                  'B1.P.158-1',
+                  'B1.P.160',
+                  'B1.P.161-1',
+                  'B1.P.161-2',
+                  'B1.P.163',
+                  'B1.P.168a-2',
+                  'B1.P.168a-3',
+                  'B1.P.200',
+                  'B1.P.212-2',
+                  'B1.P.247',
+                  'B1.P.253-2',
+                  'B2.J.017',
+                  'B2.J.032a (segment 3)',
+                  'B2.J.032a (segment 4)',
+                  'B2.J.032a (segment 5)',
+                  'B2.J.048',
+                  'B2.J.068',
+                  'B2.J.078a-2',
+                  'B2.J.113',
+                  'B2.J.151-2',
+                  'B2.J.151-3',
+                  'B2.J.165',
+                  'B2.J.167',
+                  'B2.J.191',
+                  'B2.J.195',
+                  'B2.J.201',
+                  'B2.J.203',
+                  'B2.J.224',
+                  'B2.J.225',
+                  'B2.J.232',
+                  'B2.J.238',
+                  'B2.J.239',
+                  'B2.J.243-3',
+                  'B2.J.245-1',
+                  'B2.J.245-2',
+                  'B2.J.378',
+                  'B2.J.382-1',
+                  'B3.P.041-2',
+                  'B3.P.042-1',
+                  'B3.P.042-2',
+                  'B3.P.050-1',
+                  'B3.P.052',
+                  'B3.P.054-2',
+                  'B3.P.060-2',
+                  'B3.P.060-3',
+                  'B3.P.100',
+                  'B3.P.116-1',
+                ]
+              },
               'defaultZIndex': 454,
-              'highlightZIndex': 453
-            },
-            'ProfilesB2': {
-              'defaultZIndex': 453,
-              'highlightZIndex': 452
-            },
-            'ProfilesB3': {
-              'defaultZIndex': 452,
-              'highlightZIndex': 451
-            },
+              'highlightZIndex': 475
+            }
           },
           'featureTraces': {
             'WallMEtc': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SM0001e",
@@ -33318,6 +33401,7 @@
             },
             'WallD': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SD0002e",
@@ -33345,6 +33429,7 @@
             },
             'WallG': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SG0004h",
@@ -33360,6 +33445,7 @@
             },
             'WallHEtc': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "CI-0001e",
@@ -33382,6 +33468,7 @@
             },
             'WallK': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SX0018r", //NB: Phase 1 equivalents MU-SX0016r and MU-SX0017r are not included here
@@ -33408,6 +33495,7 @@
             },
             'WallD2F2G2': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SX0028r",
@@ -33424,6 +33512,7 @@
             },
             'OtherWalls': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SN0001e",
@@ -33466,6 +33555,7 @@
             },
             'EPiles': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "PI-E0024r",
@@ -33499,6 +33589,7 @@
             },
             'CPiles': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "PI-C0028h",
@@ -33536,6 +33627,7 @@
             },
             'BPiles': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "PI-B0036h",
@@ -33581,6 +33673,7 @@
             },
             'OtherPiles': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "PI-X0019h",
@@ -33609,6 +33702,7 @@
             },
             'SWPerimeter': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "RU-0002e",
@@ -33678,6 +33772,7 @@
             },
             'SPerimeter': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SX0007h",
@@ -33733,6 +33828,7 @@
             },
             'SEPerimeter': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SA0001r",
@@ -33804,6 +33900,7 @@
             },
             'EPerimeter': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'FeatureID',
                 'fieldValues': [
                   "MU-SX0020h",
@@ -33953,6 +34050,7 @@
             },
             'Punic': {
               'layerDefinition': {
+                'style': featureStyle,
                 'fieldName': 'Period',
                 'fieldValues': ["Punic"]
               },
@@ -33995,7 +34093,7 @@
           return [newGeoJSON, newFeatureIDs];
         }
 
-        function createFeatureGroupsForFeatureTraces(geoJSON, paneDefinitions) {
+        function createFeatureGroups(geoJSON, paneDefinitions, idFieldName) {
           let paneGeoJSONs = [];
           let includedFeatureIDs = [];
           for ([paneName, paneProperties] of Object.entries(paneDefinitions)) {
@@ -34014,12 +34112,12 @@
               // Convert to leaflet class, adding style callback, and add to map
               paneGeoJSON = L.geoJSON(paneGeoJSON, {
                 pane: paneName,
-                style: featureStyle
+                style: layerDefinition.style
               });
 
               // Interactivity has to be added with explicit reference to container
               paneGeoJSON.eachLayer(function(layer) {
-                onEachFeature(layer.feature, layer, paneGeoJSON, "FeatureID");
+                onEachFeature(layer.feature, layer, paneGeoJSON, idFieldName);
               });
 
               // Wrap in feature group
@@ -34047,11 +34145,15 @@
           unincludedPaneGeoJSON.addTo(map);
         }
 
-        createFeatureGroupsForFeatureTraces(featureTraces, paneDefinitionsByType["featureTraces"]);
+        createFeatureGroups(
+          featureTraces, paneDefinitionsByType["featureTraces"], "FeatureID"
+        );
+        createFeatureGroups(
+          profileExtents, paneDefinitionsByType["other"], "FigureID"
+        )
 
         // When you add a new GeoJSON layer, get the layer instance
         function addGeoJsonLayer(geoJsonData, map, style, idFieldName, pane=null, interactive=true) {
-          console.log(pane);
           // Add a GeoJson Layer to the map
           // Create a container layer to add interactivity to
           let options;
@@ -34098,6 +34200,8 @@
         // Create minor grid layer
         gridMinorGeoJsonLayer = addGeoJsonLayer(gridMinor, map, gridMinorStyle, "GridID", "GridMinor", interactive=false);
         
+        // Create profile extents layer
+        // profilsExtentsGeoJsonLayer = addGeoJsonLayer(profileExtents, map, profileExtentsStyle, "FigureID", "Profiles");
         // Create 
         // Title
         let titleOptions = {
@@ -34334,6 +34438,16 @@
             "overlay": true,
             "flyTo": "group"
           },
+          "Chapter-6": {
+            "paneName": "Profiles",
+            "overlay": true,
+            "flyTo": "group"
+          },
+          "Chapter-7": {
+            "paneName": null,
+            "overlay": false,
+            "flyTo": "map"
+          }
         }
         
         function highlightOnScroll(paneName=null, overlayAction='none', direction='none', flyTo='none') {
@@ -34344,6 +34458,13 @@
             map.getPane('highlightUnderlay').style.zIndex = paneDefinitionsByType["underlay"]["highlightUnderlay"].defaultZIndex;
           }
           // Bring pane to front (or reset z-index to what it was originally)
+          // TODO: very hacky, needs refactoring
+          let paneDefinitions;
+          if (paneDefinitionsByType["featureTraces"][paneName]) {
+            paneDefinitions = paneDefinitionsByType["featureTraces"];
+          } else if (paneDefinitionsByType["other"][paneName]) {
+            paneDefinitions = paneDefinitionsByType["other"];
+          }
           if (direction === 'forward' && paneName) {
             map.getPane(paneName).style.zIndex = paneDefinitions[paneName].highlightZIndex;
             topPaneName = paneName;
