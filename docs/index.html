@@ -32844,6 +32844,7 @@
     <script src="js/leaflet-title.js"></script>
     <script src="js/leaflet-helpbutton.js"></script>
     <script src="js/pagebreak.js"></script>
+    <script src="js/leaflet-togglebutton.js"></script>
 
     <!-- load data -->
     <script src="data/axesofreconstruction.js"></script>
@@ -34220,6 +34221,10 @@
         map.addControl(htmlLegend);
 
         // Animate the map on scrolling through the thesis
+        let aosEnabled = false;  // flag for enabling/disabling this functionality
+        let topPaneName = null; // container for referencing the currently active feature pane
+        let deferredIntersectionEntries = []; // container for holding IntersectionObserverEntries that are deferred when aos is disabled
+
         headingHighlightDefinitions = {
           "Chapter-5": {
             "paneName": null,
@@ -34318,8 +34323,10 @@
           // Bring pane to front (or reset z-index to what it was originally)
           if (direction === 'forward' && paneName) {
             map.getPane(paneName).style.zIndex = paneDefinitions[paneName].highlightZIndex;
+            topPaneName = paneName;
           } else if (direction === 'backward' && paneName) {
             map.getPane(paneName).style.zIndex = paneDefinitions[paneName].defaultZIndex;
+            if (topPaneName == paneName) {topPaneName = null};
           }
           // Fly to layergroup
           if ((flyTo === 'map') || (paneName && flyTo !== 'none')) {
@@ -34338,45 +34345,46 @@
           // This callback needs to determine the following:
           // - should there be an overlay
           // - should a pane be brought to front (and flown-to), and if so, which one
-          
-          entries.forEach((entry) => {
-            if (entry.intersectionRatio > -0.1) {
-              // Get lookup information, trimming container if necessary
-              let headingName;
-              if (entry.target.id.includes("Container-")) {
-                headingName = entry.target.id.replace("Container-", "");
-              } else {
-                headingName = entry.target.id;
-              }
-              let paneName = headingHighlightDefinitions[headingName]["paneName"];
+          if (aosEnabled) {
+            entries.forEach((entry) => {
+              if (entry.intersectionRatio > -0.1) {
+                // Get lookup information, trimming container if necessary
+                let headingName;
+                if (entry.target.id.includes("Container-")) {
+                  headingName = entry.target.id.replace("Container-", "");
+                } else {
+                  headingName = entry.target.id;
+                }
+                let paneName = headingHighlightDefinitions[headingName]["paneName"];
 
-              // Determine direction
-              let direction;
-              if (entry.isIntersecting) { direction = "forward" } else { direction = "backward" };
-              
-              // Determine overlay (if any intersecting targets want an overlay, then there should be one)
-              let wantsOverlay = headingHighlightDefinitions[headingName]["overlay"]
-              let overlayAction = "none";
-              if (entry.isIntersecting && !wantsOverlay) {
-                overlayAction = "remove";
-              } else if (entry.isIntersecting && wantsOverlay) {
-                overlayAction = "add";
-              }
-              
-              // Determine flyto
-              let flyTo = "none";
-              if (entry.isIntersecting) {
-                flyTo = headingHighlightDefinitions[headingName]["flyTo"];
-              }
+                // Determine direction
+                let direction;
+                if (entry.isIntersecting) { direction = "forward" } else { direction = "backward" };
+                
+                // Determine overlay (if any intersecting targets want an overlay, then there should be one)
+                let wantsOverlay = headingHighlightDefinitions[headingName]["overlay"]
+                let overlayAction = "none";
+                if (entry.isIntersecting && !wantsOverlay) {
+                  overlayAction = "remove";
+                } else if (entry.isIntersecting && wantsOverlay) {
+                  overlayAction = "add";
+                }
+                
+                // Determine flyto
+                let flyTo = "none";
+                if (entry.isIntersecting) {
+                  flyTo = headingHighlightDefinitions[headingName]["flyTo"];
+                }
 
-              // Run the map command
-                highlightOnScroll(
-                  paneName=paneName, 
-                  overlayAction=overlayAction, 
-                  direction=direction, 
-                  flyTo=flyTo);
-            }
-          });
+                // Run the map command
+                  highlightOnScroll(
+                    paneName=paneName, 
+                    overlayAction=overlayAction, 
+                    direction=direction, 
+                    flyTo=flyTo);
+              }
+            });
+          } else {deferredIntersectionEntries = entries}
         }
         options = {
           root: document.querySelector("#thesis"),
@@ -34404,6 +34412,46 @@
           observer.observe(target);
         });
         
+        // Add button to enable/disable animate-on-scroll
+        let aosToggleOptions = {
+          position: "topleft",
+          customClassName: "leaflet-aos-button",
+          toggleCallback: function() {
+            // Toggle the flag
+            aosEnabled = !aosEnabled;
+
+            // Only toggle pane visibility if there is a pane to highlight
+            if (topPaneName) {
+              // Bring forward/send back the underlay
+              let underlayPane = map.getPane("highlightUnderlay");
+              let underlayHighlightZIndex = paneDefinitionsByType["underlay"]["highlightUnderlay"].highlightZIndex;
+              let underlayDefaultZIndex = paneDefinitionsByType["underlay"]["highlightUnderlay"].defaultZIndex;
+              if (underlayPane.style.zIndex == underlayHighlightZIndex) {
+                underlayPane.style.zIndex = underlayDefaultZIndex;
+              } else if (underlayPane.style.zIndex == underlayDefaultZIndex) {
+                underlayPane.style.zIndex = underlayHighlightZIndex;
+              }
+            
+              // Send back the top feature pane
+              let topPane = map.getPane(topPaneName);
+              console.log(topPaneName);
+              let topHighlightZIndex = paneDefinitionsByType["featureTraces"][topPaneName].highlightZIndex;
+              let topDefaultZIndex = paneDefinitionsByType["featureTraces"][topPaneName].defaultZIndex;
+              if (topPane.style.zIndex == topHighlightZIndex) {
+                topPane.style.zIndex = topDefaultZIndex;
+              } 
+
+              // If we just enabled AoS, catch up on AoS
+              console.log(deferredIntersectionEntries);
+              observerCallback(deferredIntersectionEntries, observer);
+              
+              // Wipe the deferred intersection entries
+              deferredIntersectionEntries = [];
+            }
+          }
+        }
+        aosToggleButton = L.control.toggleButton(aosToggleOptions).addTo(map);
+        aosToggleButton._container.click();
         // Timeline
         // Note: this block of code was adapted from output of GPT
         // let existsInPunicLayerGroup = L.layerGroup();

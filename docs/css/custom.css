@@ -17,10 +17,25 @@
 .leaflet-help-button {
     width: 30px;
     height: 30px;
-    background-image: url("../img/help.svg");
+    background-image: url("../img/ui/help.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #ffffff;
+}
+.leaflet-aos-button {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/ui/aos.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #ffffff;
+    background-origin: content-box;
+}
+.leaflet-aos-button[class*="active"], 
+.leaflet-aos-button:hover, 
+.leaflet-help-button:hover {
+    background-color: lightgray;
 }
 .leaflet-help-message {
     position: fixed;
