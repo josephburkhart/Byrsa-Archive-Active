@@ -24,20 +24,20 @@ copies or substantial portions of the Software.
 .leaflet-ruler{
   height: 30px;
   width: 30px;
-  background-image: url("../img/icon.png"); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+  background-image: url("../img/ui/ruler.png"); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
   background-repeat: no-repeat;
   background-position: center;
   background-color: #ffffff
 }
 .leaflet-ruler:hover{
-  background-image: url("../img/icon-colored.png"); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
+  background-image: url("../img/ui/ruler-colored.png"); /* <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */
 }
 .leaflet-ruler-clicked{
   height: 30px;
   width: 30px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("../img/icon-colored.png");
+  background-image: url("../img/ui/ruler-colored.png");
   border-color: chartreuse !important;
 }
 
