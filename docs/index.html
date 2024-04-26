@@ -32850,6 +32850,8 @@
     <script src="data/axesofreconstruction.js"></script>
     <script src="data/featuretraces.js"></script>
     <script src="data/mapextents.js"></script>
+    <script src="data/gridmajor.js"></script>
+    <script src="data/gridminor.js"></script>
 
     <!-- Create Sticky Table of Contents -->
     <script>
@@ -32974,6 +32976,16 @@
           color: '#ad8eb0',
           fillOpacity: 0,
           weight:1.5
+        }
+        let gridMajorStyle = {
+          color: 'rgba(0,0,0,0.5)',
+          fillOpacity: 0,
+          weight: 0.5
+        }
+        let gridMinorStyle = {
+          color: 'rgba(0,0,0,0.5)',
+          fillOpacity: 0,
+          weight: 0.1
         }
 
         function flashFeatureLayer(featureLayer) {
@@ -33257,11 +33269,11 @@
           },
           'other': {          
             'GridMajor': {
-              'defaultZIndex': 458,
+              'defaultZIndex': 490, // always on top
               'highlightZIndex': 457
             },
             'GridMinor': {
-              'defaultZIndex': 457,
+              'defaultZIndex': 489, // always on top
               'highlightZIndex': 456
             },
             'MapExtents': {
@@ -34038,12 +34050,14 @@
         createFeatureGroupsForFeatureTraces(featureTraces, paneDefinitionsByType["featureTraces"]);
 
         // When you add a new GeoJSON layer, get the layer instance
-        function addGeoJsonLayer(geoJsonData, map, style, idFieldName) {
+        function addGeoJsonLayer(geoJsonData, map, style, idFieldName, pane=null, interactive=true) {
+          console.log(pane);
           // Add a GeoJson Layer to the map
           // Create a container layer to add interactivity to
-          var geoJsonLayer = L.geoJSON(geoJsonData, {
-            style: style
-          }).addTo(map);
+          let options;
+          if (pane) {options = {style: style, pane: pane, interactive: interactive}}
+          else {options = {style: style, interactive: interactive}};
+          var geoJsonLayer = L.geoJSON(geoJsonData, options).addTo(map);
 
           // Interactivity has to be added with explicit reference to container
           geoJsonLayer.eachLayer(function(layer) {
@@ -34078,7 +34092,13 @@
         }
         mapExtentsGeoJsonLayer = addGeoJsonLayer(extentsOutlinesGeoJSON, map, extentsStyle, "FigureID");
 
+        // Create major grid layer
+        gridMajorGeoJsonLayer = addGeoJsonLayer(gridMajor, map, gridMajorStyle, "GridID", "GridMajor", interactive=false);
         
+        // Create minor grid layer
+        gridMinorGeoJsonLayer = addGeoJsonLayer(gridMinor, map, gridMinorStyle, "GridID", "GridMinor", interactive=false);
+        
+        // Create 
         // Title
         let titleOptions = {
           position: 'topleft',
