@@ -37,6 +37,9 @@
 .leaflet-help-button:hover {
     background-color: lightgray;
 }
+.underlay:hover {
+    cursor: default;
+}
 .leaflet-help-message {
     position: fixed;
     top: 50%;

@@ -33961,7 +33961,7 @@
         createCustomPanes(paneDefinitionsByType);
 
         // Sort feature traces into custom panes
-        let paneFeatureGroups = {};
+        let paneFeatureGroups = {}; // each entry will have a featureGroup and a featureIDs
         function filterGeoJSONByProperty(geoJSON, propertyName, propertyValues, invert=false) {
           let newGeoJSON = JSON.parse(JSON.stringify(geoJSON))  // note: inefficient, maybe use lodash ._clone?
           let newFeatures = [];
@@ -34013,8 +34013,11 @@
               // Wrap in feature group
               let paneFeatureGroup = L.featureGroup([paneGeoJSON]).addTo(map);
 
-              // Add reference to external tracker
-              paneFeatureGroups[paneName] = paneFeatureGroup;
+              // Add references to external tracker
+              paneFeatureGroups[paneName] = {
+                "featureGroup": paneFeatureGroup,
+                "featureIDs": paneFeatureIDs
+              }
             }
           }
 
@@ -34330,10 +34333,9 @@
           }
           // Fly to layergroup
           if ((flyTo === 'map') || (paneName && flyTo !== 'none')) {
-            // console.log('here');
             let bounds;
             if (flyTo === 'group') {
-              bounds = paneFeatureGroups[paneName].getBounds().pad(0.25);
+              bounds = paneFeatureGroups[paneName]["featureGroup"].getBounds().pad(0.25);
             } else if (flyTo === 'map') {
               bounds = originalMapBounds;
             }
@@ -34377,11 +34379,20 @@
                 }
 
                 // Run the map command
-                  highlightOnScroll(
-                    paneName=paneName, 
-                    overlayAction=overlayAction, 
-                    direction=direction, 
-                    flyTo=flyTo);
+                highlightOnScroll(
+                  paneName=paneName, 
+                  overlayAction=overlayAction, 
+                  direction=direction, 
+                  flyTo=flyTo);
+
+                // If the underlay is now covering a selected feature, deselect it
+                if (overlayAction === "add" && selected) {
+                  let paneFeatureIDs = paneFeatureGroups[paneName]["featureIDs"];
+                  let selectedFeatureID = selected.layer.feature.properties["FeatureID"];
+                  if (!paneFeatureIDs.includes(selectedFeatureID)) {
+                    selected.layer.fireEvent("click");
+                  }
+                }
               }
             });
           } else {deferredIntersectionEntries = entries}
@@ -34399,7 +34410,12 @@
         svgElement.setAttribute('viewBox', "0 0 200 200");
         svgElement.innerHTML = '<rect x="0" y="0" width="200" height="200" style="fill:#ffffff"/>';
         const underlayBounds = [[[36.3532, 9.8238], [37.3532, 10.8238]]];
-        const underlayOptions = {opacity: 0.75, pane: 'highlightUnderlay'};
+        const underlayOptions = {
+          opacity: 0.75, 
+          pane: 'highlightUnderlay', 
+          interactive: true,
+          className: 'underlay'
+        };
         const underlay = L.svgOverlay(
           svgElement, underlayBounds, underlayOptions
         ).addTo(map);
@@ -34434,7 +34450,6 @@
             
               // Send back the top feature pane
               let topPane = map.getPane(topPaneName);
-              console.log(topPaneName);
               let topHighlightZIndex = paneDefinitionsByType["featureTraces"][topPaneName].highlightZIndex;
               let topDefaultZIndex = paneDefinitionsByType["featureTraces"][topPaneName].defaultZIndex;
               if (topPane.style.zIndex == topHighlightZIndex) {
@@ -34442,7 +34457,6 @@
               } 
 
               // If we just enabled AoS, catch up on AoS
-              console.log(deferredIntersectionEntries);
               observerCallback(deferredIntersectionEntries, observer);
               
               // Wipe the deferred intersection entries
