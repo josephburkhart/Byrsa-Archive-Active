@@ -34234,19 +34234,35 @@
         L.control.ruler(rulerOptions).addTo(map);
 
         // Help Button
-        let html;
         fetch('./help.html').then((response) => {
           response.text().then((text) => {
-            let helpElement = document.createElement('div');
+            // Create the help element
+            let helpElement = L.DomUtil.create('div', null, null);
+            helpElement.classList.add("leaflet-help-message")
             helpElement.innerHTML = text;
+            helpElement.style.display = "none";
+            document.body.appendChild(helpElement)
+
+            // Create options for control
             let helpOptions = {
               position: 'topleft',
-              helpElement: helpElement
+              customClassName: 'leaflet-help-button',
+              toggleCallback: function() {
+                if (helpElement.style.display === "none") {
+                  console.log('here')
+                  helpElement.style.display = "block";
+                } else {
+                  helpElement.style.display = "none";
+                }
+              }
             }
-            L.control.help(helpOptions).addTo(map);
-          })
-        })
 
+            // Initialize control
+            L.control.toggleButton(helpOptions).addTo(map);
+          })
+        });
+
+        // document.appendChild(helpElement);
         // Legend
         let legendOptions = {
           position: "bottomleft",

@@ -54,7 +54,7 @@ copies or substantial portions of the Software.
             L.DomEvent.off(this._container, 'click', this._onToggle, this);
         },
         _onToggle: function() {
-            this._container.classList.toggle("active");
+            this._container.classList.toggle("activated");
             if (typeof this.options.toggleCallback === 'function') {
                 this.options.toggleCallback.call(this);
             }
