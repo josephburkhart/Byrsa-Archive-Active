@@ -60,7 +60,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
     max-height: 350px;
     overflow-y: auto;
     line-height: 1.2;
-    width: 260px;
+    width: 290px;
     font: 14px/16px Arial, Helvetica, sans-serif;
 
 }
@@ -282,12 +282,25 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
 .leaflet-html-legend .visibility-toggle {
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 0px;
+    right: 5px;
     cursor: pointer;
 }
-
 .leaflet-html-legend .visibility-toggle.disabled {
     color: #666;
     opacity: 0.5;
+}
+.leaflet-html-legend .visibility-toggle-element {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    cursor: pointer; 
+}
+.leaflet-html-legend .visibility-toggle-element.disabled {
+    color: #666;
+    opacity: 0.5;
+}
+
+.leaflet-html-legend .legend-row {
+    contain: content;
 }

@@ -32842,7 +32842,6 @@
     <script src="js/insertabletable.js"></script>
     <script src="js/splittablespan.js"></script>
     <script src="js/leaflet-title.js"></script>
-    <script src="js/leaflet-helpbutton.js"></script>
     <script src="js/pagebreak.js"></script>
     <script src="js/leaflet-togglebutton.js"></script>
 
@@ -34249,7 +34248,6 @@
               customClassName: 'leaflet-help-button',
               toggleCallback: function() {
                 if (helpElement.style.display === "none") {
-                  console.log('here')
                   helpElement.style.display = "block";
                 } else {
                   helpElement.style.display = "none";
@@ -34262,119 +34260,150 @@
           })
         });
 
-        // document.appendChild(helpElement);
         // Legend
         let legendOptions = {
           position: "bottomleft",
-          legends: [{
-            name: "Roman - Constructed in Phase 1", // should be possible to add layer groups here, but I couldn't get it to work
-            elements: [{
-              label: "Extant",
-              html: "",
-              style: {
-                "background-color": "#34579c",
-                "width": "30px",
-                "height": "10px"
-              }
-            }, {
-              label: "Reconstructed",
-              html: "",
-              style: {
-                "background-color": "#4fa0fc",
-                "width": "30px",
-                "height": "10px"
-              }
-            }, {
-              label: "Hypothesized",
-              html: "",
-              style: {
-                "background-color": "#d8eafe",
-                "width": "30px",
-                "height": "10px"
-              }
-            }]
-          }, {
-            name: "Roman - Constructed in Phase 2",
-            elements: [{
-              label: "Extant",
-              html: "",
-              style: {
-                "background-color": "#cc5454",
-                "width": "30px",
-                "height": "10px"
-              }
-            }, {
-              label: "Reconstructed",
-              html: "",
-              style: {
-                "background-color": "#ff9f2b",
-                "width": "30px",
-                "height": "10px"
-              }
-            }, {
-              label: "Hypothesized",
-              html: "",
-              style: {
-                "background-color": "#ffebc0",
-                "width": "30px",
-                "height": "10px"
-              }
-            }]
-          }, {
-            name: "Punic - Constructed before Phase 1",
-            elements: [{
-              label: "Extant",
-              html: "",
-              style: {
-                "background-color": "#000000",
-                "width": "30px",
-                "height": "10px"
-              }
-            }, {
-              label: "Reconstructed",
-              html: "",
-              style: {
-                "background-color": "#969696",
-                "width": "30px",
-                "height": "10px"
-              }
-            }]
-          }, {
-            name: "Other Features",
-            elements: [{
-              label: "Axis of Reconstruction",
-              html: "",
-              style: {
-                "background-color": "#2c6100",
-                "width": "30px",
-                "height": "4px" 
-              }
-            }, {
-              label: "Published Map Extents",
-              html: "",
-              style: {
-                "border": "3px solid #ad8eb0",
-                "width": "24px",
-                "height": "7px"
-              }
-            }, {
-              label: "Profile Extents (Real)",
-              html: "",
-              style: {
-                "background-color": "#b510b0",
-                "width": "30px",
-                "height": "4px"
-              }
-            }, {
-              label: "Profile Extents (Reconstructed)",
-              html: "",
-              style: {
-                "border": "3px dashed #b510b0",
-                "width": "24px",
-                "height": "0px"
-              }
-            }]
-          }]
+          legends: [
+            {
+              name: "Roman - Constructed in Phase 1", // should be possible to add layer groups here, but I couldn't get it to work
+              elements: [
+                {
+                  label: "Extant",
+                  html: "",
+                  style: {
+                    "background-color": "#34579c",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }, 
+                {
+                  label: "Reconstructed",
+                  html: "",
+                  style: {
+                    "background-color": "#4fa0fc",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }, 
+                {
+                  label: "Hypothesized",
+                  html: "",
+                  style: {
+                    "background-color": "#d8eafe",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }
+              ],
+              visibilityToggleCallback: function(e, isDisabled) {}
+            },
+            {
+              name: "Roman - Constructed in Phase 2",
+              elements: [
+                {
+                  label: "Extant",
+                  html: "",
+                  style: {
+                    "background-color": "#cc5454",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }, 
+                {
+                  label: "Reconstructed",
+                  html: "",
+                  style: {
+                    "background-color": "#ff9f2b",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }, 
+                {
+                  label: "Hypothesized",
+                  html: "",
+                  style: {
+                    "background-color": "#ffebc0",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }
+              ],
+              visibilityToggleCallback: function(e, isDisabled) {}  
+            },
+            {
+              name: "Punic - Constructed before Phase 1",
+              elements: [
+                {
+                  label: "Extant",
+                  html: "",
+                  style: {
+                    "background-color": "#000000",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }, 
+                {
+                  label: "Reconstructed",
+                  html: "",
+                  style: {
+                    "background-color": "#969696",
+                    "width": "30px",
+                    "height": "10px"
+                  }
+                }
+              ],
+              visibilityToggleCallback: function(e, isDisabled) {}
+            }, 
+            {
+              name: "Other Data",
+              elements: [
+                {
+                  label: "Axis of Reconstruction",
+                  html: "",
+                  style: {
+                    "background-color": "#2c6100",
+                    "width": "30px",
+                    "height": "4px" 
+                  },
+                  visibilityToggleCallback: function(e, isDisabled) {alert('wow!')}
+                }, 
+                {
+                  label: "Published Map Extents",
+                  html: "",
+                  style: {
+                    "border": "3px solid #ad8eb0",
+                    "width": "24px",
+                    "height": "7px"
+                  },
+                  visibilityToggleCallback: function(e, isDisabled) {}
+                }, 
+                {
+                  label: "Profile Extents (Real)",
+                  html: "",
+                  style: {
+                    "background-color": "#b510b0",
+                    "width": "30px",
+                    "height": "4px"
+                  },
+                  visibilityToggleCallback: function(e, isDisabled) {}
+                }, 
+                {
+                  label: "Profile Extents (Reconstructed)",
+                  html: "",
+                  style: {
+                    "border": "3px dashed #b510b0",
+                    "width": "24px",
+                    "height": "0px"
+                  },
+                  visibilityToggleCallback: function(e, isDisabled) {}
+                }
+              ],
+            }
+          ],
+          collapseSimple: true,
+          defaultOpacity: 0.7,
+          visibleIcon: 'icon icon-eye',
+          hiddenIcon: 'icon icon-eye-slash'
         }
         let htmlLegend = L.control.htmllegend(legendOptions);
         map.addControl(htmlLegend);
