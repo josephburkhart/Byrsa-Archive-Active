@@ -387,3 +387,11 @@ div.float-caption {
     padding: 1ex;
     margin: 1ex;
 }
+
+/* COMMITTEE PAGE */
+.committee-page-fill-box {
+    text-decoration: underline;
+    text-decoration-color: #808080;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}
