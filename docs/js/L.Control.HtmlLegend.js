@@ -163,7 +163,6 @@ L.Control.HtmlLegend = L.Control.extend({
         // JB - If the user provides a custom visibility callback as part of the element, create
         // the visibility button
         if (visibilityToggleCallback) {
-            console.log('check passed')
             const toggleButton = L.DomUtil.create('i', `visibility-toggle-element ${this.options.toggleIcon}`, row);
             L.DomEvent.on(toggleButton, 'click', (e) => {
                 const button = e.target;
