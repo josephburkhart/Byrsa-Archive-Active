@@ -117,3 +117,57 @@ for ([key, div] of Object.entries(foots)) {
     }
   })
 }
+
+// Encapsulate certain headings in containers to be tracked for map controls
+// Note: check that this does not break tocbot
+function containifyHeadings(headingIDs) {
+  // Select all headings to be containified
+  headingIDs = headingIDs.map(h => "#"+h);
+  let headings = document.querySelectorAll(headingIDs.join(', '));
+  
+  headings.forEach((heading, i) => {
+    // Make container and insert it before the current heading
+    let container = document.createElement('div');
+    container.setAttribute('id', `Container-${heading.id}`);
+    heading.parentNode.insertBefore(container, heading);
+    
+    // Traverse the DOM until the next heading is reached, adding all intervening
+    // elements to the container. If this is the last heading, add all remaining
+    // elements in the parent node.
+    let currentElement = heading;
+    let nextHeading = headings[i+1];
+    let reachedNextHeading = false;
+    
+    while (currentElement && !reachedNextHeading) {
+      let nextElement = currentElement.nextElementSibling;
+      container.appendChild(currentElement);
+      if (nextElement && nextHeading && nextElement.id == nextHeading.id) {
+        reachedNextHeading = true;
+      } else {
+        currentElement = nextElement;
+      }
+    }
+  });
+}
+let headingsToContainify = [
+  "Chapter-5",
+  "Section-5-1-1-1",
+  "Section-5-1-1-2",
+  "Section-5-1-1-3",
+  "Section-5-1-1-4",
+  "Section-5-1-1-5",
+  "Section-5-1-1-6",
+  "Section-5-1-1-7",
+  "Section-5-1-2-1",
+  "Section-5-1-2-2",
+  "Section-5-1-2-3",
+  "Section-5-1-2-4",
+  "Section-5-1-3-1",
+  "Section-5-1-3-2",
+  "Section-5-1-3-3",
+  "Section-5-1-3-4",
+  "Section-5-2",
+  "Chapter-6",
+  "Chapter-7"
+];
+containifyHeadings(headingsToContainify);
