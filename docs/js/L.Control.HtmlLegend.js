@@ -39,12 +39,13 @@ L.Control.HtmlLegend = L.Control.extend({
         // if true, legends will be collapsed when a new instance is initialized
         collapsedOnInit: false,
 
+        disableVisibilityControls: false,
         updateOpacity: null,
         defaultOpacity: 1,
-        removeIcon: 'leaflet-html-legend-icon-remove',
         visibleIcon: 'leaflet-html-legend-icon-eye',
         hiddenIcon: 'leaflet-html-legend-icon-eye-slash',
-        toggleIcon: 'leaflet-html-legend-icon-eye'
+        toggleIcon: 'leaflet-html-legend-icon-eye',
+        visibilityToggleCallback: null
     },
 
     onAdd(map) {
@@ -83,10 +84,6 @@ L.Control.HtmlLegend = L.Control.extend({
         if (entry) {
             if (entry.layer && entry.events) {
                 Object.entries(entry.events).forEach(([event, handler]) => entry.layer.off(event, handler))
-                if (this._map.hasLayer(entry.layer)) {
-                    this._activeLayers -= 1;
-                    this._checkVisibility();
-                }
             }
             L.DomUtil.remove(this._entries[itemIdx].container)
             delete this._entries[itemIdx]
@@ -117,13 +114,6 @@ L.Control.HtmlLegend = L.Control.extend({
         const entryIdx = ++this._lastId;
         this._entries[entryIdx] = { container: block }
 
-        if (legend.allowRemove) {
-            const removeButton = L.DomUtil.create('i', `remove-button ${this.options.removeIcon}`, block);
-            L.DomEvent.on(removeButton, 'click', (e) => {
-                this.removeLegend(entryIdx);
-            });
-        }
-
         if (this.options.collapseSimple && elements.length === 1 && !elements[0].label) {
             this._addElement(elements[0].html, legend.name, elements[0].style, block);
             this._connectLayer(block, legend, entryIdx);
@@ -152,22 +142,39 @@ L.Control.HtmlLegend = L.Control.extend({
         const elementContainer = L.DomUtil.create('div', 'legend-elements', block);
 
         elements.forEach((element) => {
-            this._addElement(element.html, element.label, element.style, elementContainer);
+            this._addElement(element.html, element.label, element.style, elementContainer, element.visibilityToggleCallback);
         }, this);
 
         this._connectLayer(block, legend, entryIdx);
         return block;
     },
 
-    _addElement(html, label, style, container) {
+    _addElement(html, label, style, container, visibilityToggleCallback) {
         const row = L.DomUtil.create('div', 'legend-row', container);
         const symbol = L.DomUtil.create('span', 'symbol', row);
         if (style) {
             Object.entries(style).forEach(([k, v]) => { symbol.style[k] = v; });
         }
-        symbol.innerHTML = html || '';
+        symbol.innerHTML = html;
         if (label) {
             L.DomUtil.create('label', null, row).innerHTML = label;
+        }
+
+        // JB - If the user provides a custom visibility callback as part of the element, create
+        // the visibility button
+        if (visibilityToggleCallback) {
+            const toggleButton = L.DomUtil.create('i', `visibility-toggle-element ${this.options.toggleIcon}`, row);
+            L.DomEvent.on(toggleButton, 'click', (e) => {
+                const button = e.target;
+                if (L.DomUtil.hasClass(button, 'disabled')) {
+                    L.DomUtil.removeClass(button, 'disabled');
+                    visibilityToggleCallback(e, isDisabled=false);
+                }
+                else {
+                    L.DomUtil.addClass(button, 'disabled');
+                    visibilityToggleCallback(e, isDisabled=true);
+                }
+            })
         }
     },
 
@@ -198,6 +205,22 @@ L.Control.HtmlLegend = L.Control.extend({
 
         if (!layer) {
             this._alwaysShow = true;
+
+            // JB - If the user provides a custom visibility callback as part of the legend, create
+            // the visibility button regardless
+            if (legend.visibilityToggleCallback) {
+                const toggleButton = L.DomUtil.create('i', `visibility-toggle ${this.options.toggleIcon}`, container);
+                L.DomEvent.on(toggleButton, 'click', (e) => {
+                    const button = e.target;
+                    if (L.DomUtil.hasClass(button, 'disabled')) {
+                        L.DomUtil.removeClass(button, 'disabled');
+                        legend.visibilityToggleCallback(e, isDisabled=false);
+                    }
+                    else {
+                        L.DomUtil.addClass(button, 'disabled');
+                        legend.visibilityToggleCallback(e, isDisabled=true);
+                    }})
+            }
             return;
         }
 
@@ -210,8 +233,7 @@ L.Control.HtmlLegend = L.Control.extend({
 
         container.classList.add('layer-control');
 
-
-        if (!legend.disableVisibilityControls) {
+        if (!this.options.disableVisibilityControls) {
             const opacity = layer.opacity || this.options.defaultOpacity || 1;
             this._updateOpacity(layer, opacity);
 

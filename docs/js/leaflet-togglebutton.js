@@ -32,49 +32,35 @@ copies or substantial portions of the Software.
     }
 }(function (L) {
     "use strict";
-    L.Control.Help = L.Control.extend({
+    L.Control.ToggleButton = L.Control.extend({
         options: {
             position: 'topleft',
-            helpElement: document.createElement('div')
+            customClassName: null,
+            toggleCallback: null
         },
         onAdd: function(map) {
             this._map = map;
             this._choice = false;
             this._container = L.DomUtil.create('div', 'leaflet-bar');
-            this._container.classList.add('leaflet-help-button');
+            this._container.classList.add('leaflet-toggle-button');
+            if (this.options.customClassName) {
+                this._container.classList.add(this.options.customClassName);
+            }
             L.DomEvent.disableClickPropagation(this._container);
-            L.DomEvent.on(this._container, 'click', this._toggleHelp, this);
+            L.DomEvent.on(this._container, 'click', this._onToggle, this);
             return this._container;
         },
         onRemove: function() {
-            L.DomEvent.off(this._container, 'click', this._toggleHelp, this);
+            L.DomEvent.off(this._container, 'click', this._onToggle, this);
         },
-        _toggleHelp: function() {
-            this._choice = !this._choice;
-            let helpElement = document.getElementById("leaflet-help-message");
-
-            // When toggling on
-            if (this._choice) {
-                // Make help element if it doesn't already exist
-                if (!helpElement) {
-                    helpElement = this.options.helpElement;
-                    helpElement.classList.add('leaflet-help-message');
-                    helpElement.setAttribute("id", "leaflet-help-message");
-                    document.body.append(helpElement);
-                }
-                // otherwise just toggle visibility on
-                else {
-                    helpElement.style.display = 'block';
-                }
-            }
-            // When toggling off
-            else {
-                console.log('here')
-                helpElement.style.display = 'none';
+        _onToggle: function() {
+            this._container.classList.toggle("activated");
+            if (typeof this.options.toggleCallback === 'function') {
+                this.options.toggleCallback.call(this);
             }
         }
     });
-    L.control.help = function(options) {
-        return new L.Control.Help(options)
+    L.control.toggleButton = function(options) {
+        return new L.Control.ToggleButton(options)
     };
 }, window))

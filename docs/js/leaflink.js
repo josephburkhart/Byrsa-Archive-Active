@@ -14,10 +14,7 @@ class LeafLink extends HTMLElement {
       this.cloneWithCallbacks = this.cloneWithCallbacks.bind(this);
     }
     
-    connectedCallback() {  
-      // Create a shadow root
-      const shadow = this.attachShadow({ mode: "open" });
-      
+    connectedCallback() {        
       // Create elements
       const wrapper = document.createElement("span")
       wrapper.setAttribute("class", "wrapper");
@@ -27,36 +24,31 @@ class LeafLink extends HTMLElement {
       // Check that callbacks for handlers are present and error if they aren't
       code.addEventListener("click", this.handleClick);
       
-      // Take attribute content and put it inside the anchor
+      // Get attribute information
+      const href = this.getAttribute("href");
       const text = this.getAttribute("link-text");
-      code.textContent = text;
-      
-      // Create some CSS to apply to the shadow dom
-      const style = document.createElement("style");
-      
-      style.textContent = `
-        .wrapper {
-          position: relative;
-        }
-        
-        .code {
-          background-color: #eee;
-          background-opacity: 0;
-          border-radius: 3px;
-          padding: 0 3px;
-          cursor: pointer;
-        }
 
-        .code:hover {
-          background-color: #b0b0b0;
-          background-opacity: 1;
-        }
-      `;
-      
-      // Attach the created elements to the shadow dom
-      shadow.appendChild(style);
-      shadow.appendChild(wrapper);
+      // Populate inner text with the href if no custom link text was provided
+      if (!text) {
+        code.textContent = href;
+      } else {
+        code.textContent = text;
+      }
+
+      // If href and inner text are different, create a tooltip
+      let tooltip;
+      if (href !== code.textContent) {
+        tooltip = document.createElement("div");
+        tooltip.setAttribute("class", "tooltip");
+        tooltip.innerText = this.getAttribute("href");
+      }
+    
+      // Attach the created elements
+      this.appendChild(wrapper);
       wrapper.appendChild(code);
+      if (tooltip) {
+        wrapper.appendChild(tooltip);
+      }
     }
     
     disconnectedCallback() {

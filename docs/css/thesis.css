@@ -1,0 +1,415 @@
+/* Buttons */
+#sticky-toc-button, #help-button {
+    border-radius: 2px;
+    border: 2px solid rgba(0,0,0,0.2);
+    background-color: white;
+    background-clip: padding-box;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.9);
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    background-size: contain;
+    margin-bottom: 3px;
+}
+#sticky-toc-button[class*="activated"], #help-button[class*="active"] {
+    background-color: lightgray;
+    box-shadow: none;
+}
+#sticky-toc-button:hover, #help-button:hover {
+    background-color: lightgray;
+}
+#sticky-toc-button {
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/ui/toc.svg');
+}
+#help-button {
+    position: sticky;
+    top: 57px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/ui/help.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #ffffff;
+    background-origin: content-box;
+    padding: 3px;
+}
+
+/* Sticky Table of Contents */
+#sticky-toc {
+    position: sticky;
+    top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: min-content;
+    height: min-content;
+    padding: 10px;
+    z-index: 5;
+    align-items: center;
+    overflow: clip;
+    border-radius: 5px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+}
+#sticky-toc:has(#sticky-toc-title[class*="activated"]) {
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+#sticky-toc-content, #sticky-toc-title {
+    display: none;
+    padding: 5px;
+}
+
+#sticky-toc-content[class*="activated"], 
+#sticky-toc-title[class*="activated"] {
+    display: block;
+    padding: 5px;
+}
+#sticky-toc-title {
+    font-size: x-large;
+}
+
+#sticky-toc-content[class*="activated"] {
+    min-width: 30vw;
+    width: 100%;
+    flex-basis: 100%;
+    max-height: 50vh;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+.toc-list {
+    margin-left: 5px !important;
+    padding-left: 15px !important;
+    list-style: none;
+}
+.toc-list-item > a {
+    text-decoration: none;
+}
+.toc-list-item > a:hover {
+    text-decoration: underline;
+}
+
+/* Body and footnote zone */
+#thesis-body, p-b {
+    width: 65%;
+    text-align: justify;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    line-height: 125%;
+}
+#thesis-body {
+    padding-left: 52px;
+    position: relative;
+    flex-basis: 75%;
+}
+
+/* LyX Provided Styles */
+div.bibtexentry {
+    margin-left: 2em;
+    text-indent: -2em;
+}
+
+span.bibtexlabel:before {
+    content: "[";
+}
+
+span.bibtexlabel:after {
+    content: "] ";
+}
+
+/* Layout-provided Styles */
+div.standard {
+    margin-bottom: 2ex;
+}
+
+h1.numberless_chapter {
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 2ex;
+    margin-bottom: 0.8ex;
+    text-align: left;
+
+}
+
+ul.itemize {
+    margin-top: 0.7ex;
+    margin-bottom: 0.7ex;
+    margin-left: 3ex;
+    text-align: left;
+
+}
+
+div.plain_layout {
+    text-align: left;
+
+}
+
+h1.chapter {
+    font-weight: bold;
+    font-size: xx-large;
+    margin-top: 2ex;
+    margin-bottom: 0.8ex;
+    text-align: left;
+    line-height: 100%;
+}
+
+blockquote.quote {
+    margin-top: 0.5ex;
+    margin-bottom: 0.5ex;
+    margin-left: 3ex;
+    margin-right: 3ex;
+    text-align: left;
+
+}
+
+h2.section {
+    font-weight: bold;
+    font-size: x-large;
+    margin-top: 1.3ex;
+    margin-bottom: 0.7ex;
+    text-align: left;
+    line-height: 100%;
+}
+
+h3.subsection {
+    font-weight: bold;
+    font-size: large;
+    margin-top: 0.9ex;
+    margin-bottom: 0.5ex;
+    text-align: left;
+
+}
+
+h4.subsubsection {
+    font-weight: bold;
+    font-size: medium;
+    margin-top: 0.7ex;
+    margin-bottom: 0.4ex;
+    text-align: left;
+
+}
+
+div.toc {
+    margin: 2em 0em;
+    border-style: solid;
+    border-width: 2px 0px;
+    padding: 1em 0em;
+}
+
+h2.tochead {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+div.lyxtoc-0 {
+    margin: 2em 0em 0em 0em;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+div.lyxtoc-1 {
+    margin: 1em 0em 0em 0em;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+div.lyxtoc-2 {
+    margin: 0.3em 0.1em 0em 1em;
+    font-size: large;
+    font-weight: normal;
+}
+
+div.lyxtoc-3 {
+    margin: 0.2em 0.1em 0em 0.5em;
+    font-size: medium;
+}
+
+div.lyxtoc-4 {
+    margin: 0.2em 0.1em 0em 0.5em;
+}
+
+div.lyxtoc-5 {
+    margin: 0em 0.1em 0em 0.5em;
+}
+
+div.lyxtoc-6 {
+    margin: 0em 0.1em 0em 0.5em;
+}
+
+a.tocentry {
+    text-decoration: none;
+    color: black;
+    line-height: 110%;
+}
+
+a.tocentry:visited {
+    color: black;
+    line-height: 110%;
+}
+
+a.lyxtoc-floats {
+    text-decoration: none;
+    color: black;
+}
+
+a.lyxtoc-floats:visited {
+    color: black;
+}
+
+div.lyxtoc-floats {
+    margin: 0em 0em 0.1em 1em;
+    font-size: large;
+    font-weight: normal;
+}
+
+/* Footnotes - Footnote Label */
+span.foot_label {
+    vertical-align: super;
+    font-size: smaller;
+}
+div.foot:hover span.foot_label {
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+}
+div.foot:has(span.foot_label.active) {
+    text-decoration: underline;
+    font-weight: bold;
+}
+div.foot {
+    display: inline;
+    font-size: small;
+}
+
+/* Footnotes - Footnote Content */
+div.foot_inner { 
+    display: none; 
+    position: absolute;
+    text-decoration: none;
+    font-weight: normal;
+    font-style: normal;
+    left: 102%;
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: rgb(255,255,255);
+    padding: 1em;
+    border-radius: 5px;
+    min-width: 10em;
+    width: 32%;
+}
+div.foot:hover div.foot_inner, 
+div.foot_inner.active {
+    display: inline;
+}
+
+div div.foot_inner.active:hover {
+    border: 1.2px solid rgba(0,0,0,1.0);
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+/* Footnotes - Footnote Content - Close Button */
+div.foot_inner > div.close {
+    position: absolute;
+    right: 0.5em;
+    top: 0em;
+    opacity: 0.5;
+    user-select: none;
+}
+div.foot_inner > div.close:hover {
+    opacity: 1.0;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Figures */
+.redacted-figure {
+    width: auto;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 20px;
+    background-color: #d4d4ff;
+    border-radius: 10px;
+}
+
+img {
+    max-width: 80%;
+    margin-left: 10%;
+}
+
+.float-figure > div:has(.float-caption) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+
+div.float {
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* Table */
+#thesis table {
+    border-collapse: collapse;
+    /* display: inline-block; */
+    font-size: small;
+    margin-left: auto;
+    margin-right: auto;
+}
+#thesis td {
+    border: 1px solid black;
+    padding: 1ex;
+    text-align: center;
+    white-space: nowrap;
+}
+#thesis th {
+    text-align: center;
+}
+#thesis tr td:first-child, 
+#thesis td:last-child, 
+#thesis th:first-child, 
+#thesis th:last-child {
+    text-align: left;
+}
+#thesis tr td:last-child {
+    white-space: wrap;
+}
+#thesis th {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.float-table {
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.float-table > div:has(.float-caption) {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+div.float-caption {
+    text-align: center;
+    border: 2px solid black;
+    padding: 1ex;
+    margin: 1ex;
+}
+
+/* COMMITTEE PAGE */
+.committee-page-fill-box {
+    text-decoration: underline;
+    text-decoration-color: #808080;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+}

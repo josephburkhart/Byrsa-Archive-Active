@@ -1,30 +1,54 @@
 <p style="text-align: center; color: #a6a6a6"><em>click the help button again to remove this message</em></p>
+
+<h1 style="text-align: center; margin-top:40px">The Byrsa Archive</h1>
+
 <h2 id="introduction">Introduction</h2>
-<p>This map presents the actively updated dataset that was originally created as part of my master&#39;s thesis, <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0401823">Burkhart 2021</a>. The archaeological features shown in this map have been digitized from maps, figures, and schematic drawings from numerous publications. The features are linked to these publications through identifier codes in the feature metadata. Sometimes, assumptions had to be made to overcome a gap in the published data: these assumptions are encoded in auxiliary features called &quot;axes of reconstruction&quot;. In the sections below, an overview will be given of these different data types, as well as how you can navigate between them using the map&#39;s interface.</p>
+<p>This page presents the actively updated dataset that was originally created as part of my master&#39;s thesis, <a href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0401823">Burkhart 2021</a>. The document shown in the pane on the left is an interactive version of the original thesis, while the map in the pane on the right displays the geospatial dataset contained in the actively maintained <a href="https://github.com/josephburkhart/Byrsa-Archive-Active">Byrsa Archive</a>.</p>
+
+<p>The archaeological features shown in this map have been digitized from maps, figures, and schematic drawings from numerous publications. The features are linked to these publications through identifier codes in the feature metadata. Sometimes, assumptions had to be made to overcome a gap in the published data: these assumptions are encoded in auxiliary features called &quot;axes of reconstruction&quot;. In the sections below, an overview will be given of these different data types, as well as how you can navigate between them using the map&#39;s interface.</p>
+
+<p><em><strong>Note: the text of the thesis is identical to the original text&mdash;no corrections or alterations have been made, not even for basic typos. In contrast, the map represents a dataset that is periodically updated.</strong></em></p>
+
+
 
 <h2 id="navigation">Navigation</h2>
-<h3 id="basic-controls">Basic controls</h3>
-<p>This map has been designed to work similarly to widely popular web mapping applications. The basic controls are as follows:</p>
+<h3 id="basic-controls">Basic Map Controls</h3>
+<p>The map has been designed to work similarly to widely popular web mapping applications. The basic controls are as follows:</p>
 <ul>
-<li><strong>Zoom</strong>: scroll on the mouse wheel, double-click with the mouse, or use the zoom buttons in the top left.</li>
+<li><strong>Zoom</strong>: scroll on the mouse wheel or double-click with the mouse.</li>
 <li><strong>Pan</strong>: click and drag, or select a feature to fly to it.</li>
-<li><strong>Select</strong>: left-click on a feature to select it. Selection is indicated by a red border. Upon selection, the feature&#39;s metadata will appear in the Feature Info Box (see next section for details).</li>
-<li><strong>Deselect</strong>: left-click on an unselected feature. There is sometimes a bug where the previously-selected features still appears to be selected&mdashif this happens, try mousing over or clicking the previous feature.</li>
-<li><strong>Measure</strong>: click on the measure button beneath the zoom buttons to activate the linear measurement tool. Click repeatedly to measure distances between points. Press Esc twice to exit the measure tool.</li>
-<li><strong>Toggle</strong>: click the circular buttons in the box above the legend to toggle between different phases in of the site. Note that not all Punic features necessarily existed during the Roman phases; this issue cannot currently be resolved given the state of the published data.</li>
+<li><strong>Select</strong>: click on a feature to select it.</li>
+<li><strong>Deselect</strong>: click on a selected feature to deselect it.</li>
 </ul>
+<p>In addition, there are additional map tools provided by the following buttons:</p>
 
-<h3 id="feature-info-box">Feature Info Box</h3>
-The box in the upper right corner of the map presents essential feature metadata. To populate it, hover over or select a feature. In the metadata, all <code>Feature ID</code>, <code>Figure ID</code>, and <code>Axis ID</code> codes are automatically linked to their corresponding feature in the map: <code>Feature ID</code> links to archaeological features, <code>Figure ID</code> links to published map extents, and <code>Axis ID</code> links to axes of reconstruction.
+<div style="margin-bottom:8px;"><div class="leaflet-bar leaflet-toggle-button leaflet-ruler leaflet-control" style="pointer-events:none;"></div>
+        <div style="margin-left:40px; line-height: 30px;"><strong>Measure Tool</strong>: click repeatedly to measure distances between points. Press <kbd>Esc</kbd> twice to exit the measure tool.</div></div>
+
+<div style="margin-bottom:8px;"><div class="leaflet-bar leaflet-toggle-button leaflet-aos-button leaflet-control" style="pointer-events:none;"></div>
+        <div style="margin-left:40px; "><strong>Animate-On-Scroll</strong>: click to enable/disable. When enabled, scrolling through the thesis will cause the map to pan and zoom to the relevant features.</div></div>
+
+<div style="margin-bottom:8px;"><span class="visibility-toggle-element leaflet-html-legend-icon-eye" style="pointer-events:none; margin-left:10px; width:10px;"></span>
+        <div style="margin-left:10px; display:inline"><strong>Layer Visibility</strong>: click to toggle the visibility of various layers.</div></div>
+
+<h3 id="feature-info-box">Document-Map Links</h3>
+In the feature info box (top right) and throughout the thesis document, all <code>Feature ID</code>, <code>Figure ID</code>, and <code>Axis ID</code> codes are automatically linked to their corresponding features in the map: <code>Feature ID</code> links to archaeological features, <code>Figure ID</code> links to published map extents and profile extents, <code>Axis ID</code> links to axes of reconstruction, and <code>Grid ID</code> links to the reference Grid.
 
 <p>These links can be used to quickly navigate through the dataset:</p>
 <ul>
-<li>left-click on a <code>link</code> to highlight the feature it refers to.</li>
-<li>hold ctrl and then left-click on a <code>link</code> to select the feature it refers to.</li>
+<li>click on a <code>link</code> to highlight the feature it refers to.</li>
+<li><kbd>Ctrl</kbd> + click on a <code>link</code> to select the feature it refers to.</li>
 </ul>
-<h2 id="the-data">The Data</h2>
+
+<h3>Page Numbers</h3>
+<p>All page numbers from the original thesis text have been included in the interactive document. Page breaks are indicated by <a style="font-size:x-small; color:black; text-decoration:none;" href="">##</a> | <a style="font-size:x-small; color:black; text-decoration:none;" href="">##</a>. Each ## is a clickable link to the page number in the original thesis PDF.</p>
+
+<h3>Table of Contents</h3>
+<p>In the upper-left corner of the document, there is a table of contents that can be used to quickly navigate to specific sections.</p>
+
 <h3 id="archaeological-features">Archaeological Features</h3>
-<p>Archaeological features are categorized according to their function, and the category codes comprise the first two characters of the Feature ID code. The most important categories are <strong>CI</strong> (cistern), <strong>MU</strong> (wall), and <strong>PI</strong> (foundation pile). For a more comprehensive breakdown of all of the categories and subcategories, see <a href="https://open.library.ubc.ca/media/stream/pdf/24/1.0401823/3#page=40">Table 2.3</a> in Burkhart 2021.</p>
+
+<p>Archaeological features are categorized according to their function, and the category codes comprise the first two characters of the Feature ID code. The most important categories are <strong>CI</strong> (cistern), <strong>MU</strong> (wall), and <strong>PI</strong> (foundation pile). For a more comprehensive breakdown of all of the categories and subcategories, see Section <a href="#Section-2-2">2.2</a>.</p>
 
 <p>Features are further distinguished by their <em>ontological category</em>, which refers to the confidence with which their presence, position, and form can be known. A general breakdown of these categories is as follows:</p>
 <ul>
@@ -32,16 +56,29 @@ The box in the upper right corner of the map presents essential feature metadata
 <li><strong>Reconstructed</strong> features are directly or indirectly attested in a previous publication in such a way that their presence, position, and form are probable, but not certain. This means that one or more publications either a) directly identify their depiction of the feature as a reconstruction from fragmentary finds, or b) directly describe the feature as wholly extant but does not depict it in a map that can be georeferenced, or c) never directly depict or describe the feature, but nevertheless provide enough indirect information that the feature&#39;s presence, position, and form can be inferred.</li>
 <li><strong>Hypothesized</strong> features are never directly depicted or described in a previous publication, but there is sufficient indirect evidence that their presence and position can be inferred, and that their form can be reasonably hypothesized. </li>
 </ul>
+
 <h3 id="figures">Figures</h3>
-<p>Each figure is designated by a unique <code>Figure ID</code>, which concisely specifies which publication the figure comes from, what page number the figure is on, and who scanned the figure that was georeferenced for this project. For a full overview of the Figure ID code structure, including all pertinent citations, see <a href="https://open.library.ubc.ca/media/stream/pdf/24/1.0401823/3#page=35">Section 2.1</a>, and especially <a href="https://open.library.ubc.ca/media/stream/pdf/24/1.0401823/3#page=37">Tables 2.1 and 2.2</a> in Burkhart 2021.</p>
+
+<p>Each previously published figure (map, profile, photo, etc.) is designated by a unique <code>Figure ID</code>, which concisely specifies which publication the figure comes from, what page number the figure is on, and who scanned the figure that was georeferenced for this project. For a full overview of the Figure ID code structure, including all pertinent citations, see Section <a href="#Section-2-1">2.1</a>, and especially Tables <a href="#Table-2-1">2.1</a> and <a href="#Table-2-2">2.2</a>.</p>
+
 <h3 id="axes-of-reconstruction">Axes of Reconstruction</h3>
+
 <p>For some features, published maps and descriptions were not sufficient for digitization, and so additional assumptions had to be made based on the available evidence. Many of these assumptions are encoded in &quot;axes of reconstruction&quot;, which are lines that were drawn based on georeferenced maps or drawings from previous publications, and then extended based on additional assumptions. Each axis is designated by a unique <code>Axis ID</code>, which allows it to be referenced in feature metadata.</p>
+
 <h2 id="attributions-and-acknowledgements">Attributions and Acknowledgements</h2>
+
 <h3 id="the-code">The Code</h3>
-<p>This map was built using Leaflet, a free and open-source JavaScript package for lightweight interactive web mapping. The measuring tool I implemented was adapted from Göker Tanrısever&#39;s <a href="https://github.com/gokertanrisever/leaflet-ruler">leaflet-ruler</a> plugin, which is published under the MIT license. The legend I implemented was built using the Conservation Biology Institute&#39;s <a href="https://github.com/consbio/Leaflet.HtmlLegend">Leaflet.HtmlLegend</a> plugin, which is published under the ISC license. Some snippets of my code were developed with assistance from GPT-4.0 Turbo—where this is the case, I have indicated it with a comment in the source code. Aside from these instances, all code should be regarded as my own work.</p>
+
+<p>This map was built using Leaflet, a free and open-source JavaScript package for lightweight interactive web mapping. The measuring tool I implemented was adapted from Göker Tanrısever&#39;s <a href="https://github.com/gokertanrisever/leaflet-ruler">leaflet-ruler</a> plugin, which is published under the MIT license. The legend I implemented was adapted from the Conservation Biology Institute&#39;s <a href="https://github.com/consbio/Leaflet.HtmlLegend">Leaflet.HtmlLegend</a> plugin, which is published under the ISC license. Some snippets of my code were developed with assistance from GPT-4.0 Turbo—where this is the case, I have indicated it with a comment in the source code. Aside from these instances, all code should be regarded as my own work.</p>
+
+<p>The interactive thesis document was originally exported as XHTML from LyX, and then heavily modified to suit my needs. The sticky table of contents was made using Tim Scanlin's <a href="https://github.com/tscanlin/tocbot">ToCBot</a>, which is published under the MIT license. The resizeable document-map split (including the resize-pane icon) was achieved using Nathan Cahill's <a href="https://github.com/nathancahill/split">Split</a>, which is also published under the MIT license.</p>
+
 <h3 id="the-data">The Data</h3>
-<p>The data shown in this map were sourced from many different publications, a complete list of which can be found in the <a href="https://open.library.ubc.ca/media/stream/pdf/24/1.0401823/3#page=195">Bibliography</a> of Burkhart 2021.</p>
+
+<p>The data shown in this map were sourced from many different publications, a complete list of which can be found in the <a href="#References">Bibliography</a>.</p>
+
 <h3 id="other-acknowledgements">Other Acknowledgements</h3>
-<p>Digitization, collation, and initial publication of the data in Burkhart 2021 was supported by SSHRC grants #895-2018-1015 and #435-2018-0463. Academic guidance was provided by Prof. Kevin Fisher and Prof. Matt McCarty. Guidance on copyright and permissions was provided by Stephanie Savage. Additional professional guidance was provided by Evan Thornberry, Paul Lesack, Keith Bunnell, and Prof. Alison Wylie.</p>
-<p>This web map was developed as part of a project for SI-649: Information Visualization, at The University of Michigan.</p>
+
+<p>Digitization, collation, and initial publication of the data originally published in Burkhart 2021 was supported by SSHRC grants #895-2018-1015 and #435-2018-0463. Academic guidance was provided by Prof. Kevin Fisher and Prof. Matt McCarty. Guidance on copyright and permissions was provided by Stephanie Savage. Additional professional guidance was provided by Evan Thornberry, Paul Lesack, Keith Bunnell, and Prof. Alison Wylie.</p>
+<p>This web map and interactive document were developed as a series of projecets for SI-649: Information Visualization, at The University of Michigan. A final thanks go to the professor of this course, <a href="https://dallascard.github.io/">Dr. Dallas Card</a>, for encouraging and supporting this work.</p>
 <p style="text-align: center; color: #a6a6a6"><em>click the help button again to remove this message</em></p>

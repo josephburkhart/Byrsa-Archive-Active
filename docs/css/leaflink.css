@@ -1,0 +1,39 @@
+leaf-link {
+    display: inline;
+  }
+leaf-link .wrapper {
+    position: relative;
+}
+  
+leaf-link .code {
+    background-color: rgba(238, 238, 238, 1);
+    border-radius: 3px;
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+leaf-link .code:hover {
+    background-color: rgba(176, 176, 176, 1);
+}
+  
+leaf-link .tooltip {
+    display: none;
+    width: fit-content;
+    padding: 0.2em;
+    position: absolute;
+    z-index: 100;
+    left: 50%;
+    bottom: 100%;
+    margin-left: -30px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    border-radius: 3px;
+    border: 1px solid black;
+    text-align: center;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+}
+  
+leaf-link .code:hover + .tooltip {
+    display: block;
+    opacity: 1;
+}

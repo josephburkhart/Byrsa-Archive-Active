@@ -1,3 +1,4 @@
+/* TITLE */
 .leaflet-title {
     display: flex;
     justify-content: center;
@@ -8,20 +9,54 @@
     background-color: rgba(255,255,255,0.8);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 5px;
+    max-width: fit-content;
 }
 .leaflet-title:hover {
     cursor: default
 }
 
+/* BUTTONS */
 .leaflet-help-button {
     width: 30px;
     height: 30px;
-    background-image: url("../img/help.svg");
+    background-image: url("../img/ui/help.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #ffffff;
+    border: 1px solid #999
 }
+.leaflet-aos-button {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/ui/aos.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #ffffff;
+    background-origin: content-box;
+}
+.leaflet-aos-button[class*="activated"], 
+.leaflet-aos-button:hover, 
+.leaflet-help-button:hover,
+.leaflet-help-button[class*="activated"] {
+    background-color: lightgray;
+}
+.leaflet-aos-button:active,
+.leaflet-help-button:active {
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) inset;
+}
+.leaflet-control-zoom-out:hover, 
+.leaflet-control-zoom-in:hover {
+    background-color: lightgray !important;
+}
+.leaflet-control-zoom-out:active, 
+.leaflet-control-zoom-in:active {
+    box-shadow: 0 0 5px rgba(0,0,0,0.2) inset !important;
+}
+
+/* MESSAGES */
 .leaflet-help-message {
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -36,6 +71,7 @@
     font: 14px/16px Arial, Helvetica, sans-serif;
     padding: 6px 8px;
 }
+
 .leaflet-help-message code {
     background-color: #eee;
     border-radius: 3px;
@@ -46,6 +82,11 @@
     background-color: #b0b0b0;
 }
 
+/* MAP CONTROLS */
+.leaflet-top {
+    max-width: 57%;
+    min-width: 20%;
+}
 .info {
     padding: 6px 8px;
     font: 14px/16px Arial, Helvetica, sans-serif;
@@ -58,21 +99,45 @@
     margin: 0 0 5px;
     color: #777;
 }
+.info tr td:last-child {
+    white-space: wrap;
+}
 .info:hover {
     cursor: default
 }
 
+/* LAYERS */
+.underlay:hover {
+    cursor: default;
+}
+
+/* ANIMATIONS */
 @keyframes flash-animation {
-    0% {
-        stroke: #ff0000;
-        opacity: 1;
+    from {
+        stroke: rgba(255, 0, 0, 1);
+        stroke-width: 3px;
+        fill: rgba(255, 0, 0, 0.2);
     }
-    50% {
-        stroke: #ff0000;
-        opacity: 0.5;
-    }
-    100% {
-        stroke: initial;
-        opacity: 1;
+    to {
+        stroke: rgba(255, 0, 0, 0.25);
+        stroke-width: 3px;
+        fill: rgba(0, 0, 0, 0);
     }
 }
+
+/* HELP */
+kbd {
+    background-color: #eee;
+    border-radius: 3px;
+    border: 1px solid #b4b4b4;
+    box-shadow:
+      0 1px 1px rgba(0, 0, 0, 0.2),
+      0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: #333;
+    display: inline-block;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1;
+    padding: 2px 4px;
+    white-space: nowrap;
+}  
