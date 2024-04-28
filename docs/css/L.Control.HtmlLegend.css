@@ -304,3 +304,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .leaflet-html-legend .legend-row {
     contain: content;
 }
+
+.legend-block + .legend-block > .visibility-toggle {
+    margin-top: 5px;
+}
