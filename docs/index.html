@@ -54,6 +54,7 @@
         <div id="sticky-toc-title"><b>Table of Contents</b></div>
         <div id="sticky-toc-content"></div>
       </div>
+      <div id="help-button" class="leaflet-help-button"></div>
       <div id="thesis-body">
     
         <div class="standard" id="par-1"><br>
@@ -32889,6 +32890,32 @@
       });
     </script>
 
+    <!-- Initialize Help Button -->
+    <script>
+      // Create Help Element
+      let helpElement;
+      fetch('./help.html').then((response) => {
+        response.text().then((text) => {
+          // Create the help element
+          helpElement = document.createElement('div');
+          helpElement.classList.add("leaflet-help-message")
+          helpElement.innerHTML = text;
+          helpElement.style.display = "none";
+          document.body.appendChild(helpElement)
+        })
+      });
+
+      // When the button is clicked, show the help content
+      const helpButton = document.getElementById('help-button');
+      helpButton.addEventListener("click", function() {
+        if (helpElement.style.display === "none") {
+          helpElement.style.display = "block";
+        } else {
+          helpElement.style.display = "none";
+        }
+      });
+    </script>    
+
     <!-- custom code for the leaflet map -->
     <script>
 
@@ -34173,34 +34200,6 @@
           }
         }
         L.control.ruler(rulerOptions).addTo(map);
-
-        // Help Button
-        fetch('./help.html').then((response) => {
-          response.text().then((text) => {
-            // Create the help element
-            let helpElement = L.DomUtil.create('div', null, null);
-            helpElement.classList.add("leaflet-help-message")
-            helpElement.innerHTML = text;
-            helpElement.style.display = "none";
-            document.body.appendChild(helpElement)
-
-            // Create options for control
-            let helpOptions = {
-              position: 'topleft',
-              customClassName: 'leaflet-help-button',
-              toggleCallback: function() {
-                if (helpElement.style.display === "none") {
-                  helpElement.style.display = "block";
-                } else {
-                  helpElement.style.display = "none";
-                }
-              }
-            }
-
-            // Initialize control
-            L.control.toggleButton(helpOptions).addTo(map);
-          })
-        });
 
         // Legend
         let legendOptions = {

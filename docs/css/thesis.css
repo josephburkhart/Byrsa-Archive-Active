@@ -1,3 +1,47 @@
+/* Buttons */
+#sticky-toc-button, #help-button {
+    /* top: 0px; */
+
+    border: 2px solid rgba(0,0,0,0.2);
+    background-color: white;
+    background-clip: padding-box;
+    z-index: 10;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.9);
+    border: 2px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    /* background-image: url('../img/ui/toc.svg'); */
+    background-size: contain;
+    margin-bottom: 3px;
+}
+#sticky-toc-button[class*="active"], #help-button[class*="active"] {
+    background-color: lightgray;
+    box-shadow: none;
+}
+#sticky-toc-button:hover, #help-button:hover {
+    background-color: lightgray;
+}
+#sticky-toc-button {
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    background-image: url('../img/ui/toc.svg');
+}
+#help-button {
+    position: sticky;
+    top: 57px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    background-image: url('../img/ui/help.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: #ffffff;
+    background-origin: content-box;
+    padding: 3px;
+}
+
 /* Sticky Table of Contents */
 #sticky-toc {
     position: sticky;
@@ -18,30 +62,6 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border: 2px solid rgba(0,0,0,0.2);
     border-radius: 5px;
-}
-#sticky-toc-button {
-    top: 0px;
-    width: 30px;
-    height: 30px;
-    border: 2px solid rgba(0,0,0,0.2);
-    background-color: white;
-    background-clip: padding-box;
-    z-index: 10;
-    border-radius: 4px;
-    background-color: rgba(255,255,255,0.9);
-    border: 2px solid rgba(0,0,0,0.2);
-    border-radius: 2px;
-    /* box-shadow: 0 0 15px rgba(0,0,0,0.2); */
-    background-image: url('../img/ui/toc.svg');
-    background-size: contain;
-    margin-bottom: 3px;
-}
-#sticky-toc-button[class*="active"] {
-    background-color: lightgray;
-    box-shadow: none;
-}
-#sticky-toc-button:hover {
-    background-color: lightgray;
 }
 
 #sticky-toc-content, #sticky-toc-title {
