@@ -24,17 +24,26 @@
       #map {
         position: sticky;
         top: 0px;
-        width: 50vw;
+        /* width: 50vw; */
         height: 100vh;
-        flex-basis: 50%;
+        /* flex-basis: 50%; */
       }
       #thesis {
-        width: 50vw;
+        /* width: 50vw; */
         height: 100vh;
-        flex-basis: 50%;
+        /* flex-basis: 50%; */
         overflow-y: scroll;
       }
       .leaflet-fade-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-zoom-animated { will-change:auto !important; }
+      .gutter {
+        background-color: #eee;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-image: url('img/ui/vertical.png');
+      }
+      .gutter.gutter-horizontal {
+        cursor: col-resize;
+      }
     </style>
   </head>
   <body>
@@ -32844,6 +32853,7 @@
     <script src="js/leaflet-title.js"></script>
     <script src="js/pagebreak.js"></script>
     <script src="js/leaflet-togglebutton.js"></script>
+    <script src="https://unpkg.com/split.js/dist/split.min.js"></script>  <!-- tried to include it locally but couldn't get it to work -->
 
     <!-- load data -->
     <script src="data/axesofreconstruction.js"></script>
@@ -34734,6 +34744,13 @@
               goToFeatureLayer(linkedFeatureLayer);
             };
         })
+        
+
+        // Do the split
+        Split(["#thesis", "#map"], {onDragEnd: function() {
+          map.invalidateSize();
+        }})
+        map.invalidateSize();
     </script>
     </body>
 </html>

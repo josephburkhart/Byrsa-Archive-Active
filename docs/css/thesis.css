@@ -277,13 +277,13 @@ div.foot_inner {
     text-decoration: none;
     font-weight: normal;
     font-style: normal;
-    right: calc(-50vw + 104%);  /* absolutely ridiculous, but it works - Alison, I hope you're proud of me */
     left: 102%;
     border: 1px solid rgba(0,0,0,0.2);
     background-color: rgb(255,255,255);
     padding: 1em;
     border-radius: 5px;
     min-width: 10em;
+    width: 32%;
 }
 div.foot:hover div.foot_inner, 
 div.foot_inner.active {
