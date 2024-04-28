@@ -32910,8 +32910,10 @@
       helpButton.addEventListener("click", function() {
         if (helpElement.style.display === "none") {
           helpElement.style.display = "block";
+          helpButton.classList.toggle("activated");
         } else {
           helpElement.style.display = "none";
+          helpButton.classList.toggle("activated");
         }
       });
     </script>    

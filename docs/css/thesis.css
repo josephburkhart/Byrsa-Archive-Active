@@ -12,7 +12,7 @@
     background-size: contain;
     margin-bottom: 3px;
 }
-#sticky-toc-button[class*="activated"], #help-button[class*="active"] {
+#sticky-toc-button[class*="activated"], #help-button[class*="activated"] {
     background-color: lightgray;
     box-shadow: none;
 }
