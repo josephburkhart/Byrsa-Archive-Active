@@ -1,7 +1,6 @@
 /* Buttons */
 #sticky-toc-button, #help-button {
-    /* top: 0px; */
-
+    border-radius: 2px;
     border: 2px solid rgba(0,0,0,0.2);
     background-color: white;
     background-clip: padding-box;
@@ -10,11 +9,10 @@
     background-color: rgba(255,255,255,0.9);
     border: 2px solid rgba(0,0,0,0.2);
     border-radius: 2px;
-    /* background-image: url('../img/ui/toc.svg'); */
     background-size: contain;
     margin-bottom: 3px;
 }
-#sticky-toc-button[class*="active"], #help-button[class*="active"] {
+#sticky-toc-button[class*="activated"], #help-button[class*="active"] {
     background-color: lightgray;
     box-shadow: none;
 }
@@ -57,7 +55,7 @@
     border-radius: 5px;
     font: 14px/16px Arial, Helvetica, sans-serif;
 }
-#sticky-toc:has(#sticky-toc-title[class*="active"]) {
+#sticky-toc:has(#sticky-toc-title[class*="activated"]) {
     background-color: rgba(255,255,255,0.9);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border: 2px solid rgba(0,0,0,0.2);
@@ -69,8 +67,8 @@
     padding: 5px;
 }
 
-#sticky-toc-content[class*="active"], 
-#sticky-toc-title[class*="active"] {
+#sticky-toc-content[class*="activated"], 
+#sticky-toc-title[class*="activated"] {
     display: block;
     padding: 5px;
 }
@@ -78,7 +76,7 @@
     font-size: x-large;
 }
 
-#sticky-toc-content[class*="active"] {
+#sticky-toc-content[class*="activated"] {
     min-width: 30vw;
     width: 100%;
     flex-basis: 100%;
